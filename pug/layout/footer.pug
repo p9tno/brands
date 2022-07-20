@@ -1,0 +1,84 @@
+footer.footer
+    .footer__content
+        .footer__row
+            .footer__col
+                .footer__logo
+                    a(href="/")
+                        img(src="/img/logo.png")
+                .footer__desc
+                    span <b>Патентный центр.</b> Работаем<br> по всему Казахстану с 2015 года
+                .footer__action.dotted
+                    a(href="#") Смотреть сертификаты
+                .footer__messenger
+                    .messenger
+                        .messenger__list
+                            .messenger__item
+                                a(href="#" target="_blank").messenger__link
+                                    i.icon-youtube
+                            .messenger__item
+                                a(href="#" target="_blank").messenger__link
+                                    i.icon-instagram
+
+            .footer__col
+                .footer__label 
+                    span Навигация по сайту
+                        i.icon-drop.mobile
+                ul.menu
+                    each item in ['Главная', 'Услуги', 'Кейсы', 'Блог', 'Рассрочка и оплата', 'О компании', 'Контакты' ]
+                        li.menu-item
+                            a(href="#")=item
+
+            .footer__col
+                .footer__label 
+                    span Услуги
+                        i.icon-drop.mobile
+                ul.menu
+                    each item in ['Регистрация товарного знака', 'Регистрация авторских прав', 'Получение патента', 'Внесение в таможенный реестр', 'Блокировка аккаунтов', 'Правовая защита', 'Составление и регистрация договоров', '', 'Разработка логотипа']
+                        li.menu-item
+                            a(href="#")=item
+                .footer__action.dotted.desktop
+                    a(href="#") Смотреть все услуги
+
+            .footer__col
+                .footer__label 
+                    span Преимущества
+                        i.icon-drop.mobile
+
+                ul.menu.menu_mark
+                    each item in ['100% гарантия регистрации товарного знака', 'Беспроцентная рассрочка', 'Профессионалы своего дела', 'Бесплатная проверка ТЗ', '1000+ отзывов', '97% получают документы с первого раза', '7 лет на рынке', '3000+ успешных дел', 'Стратегический подход' ]
+                        li.menu-item
+                            span=item
+            .footer__col
+                .footer__label
+                    span Контакты
+                .footer__phone
+                    .phone
+                        .phone__time
+                            span Звоните, Пн-ВС 10:00 - 21:00
+                        .phone__link
+                            a(href="tel:+77712101111") +7 (771) 210-11-11
+                .footer__mail
+                    a(href="mailto:info@eurasianbrands.com") info@eurasianbrands.com
+
+                .footer__social
+                    .social
+                        .social__label
+                            span Время ответа всего <b>15 секунд</b>
+                        .social__button
+                            a(href="https://wa.me/+77712101111")
+                                i.icon-whatsapp
+                                span.desktop Написать в WhatsApp
+
+                .footer__action.dotted
+                    a(href="#") Все контакты
+
+
+
+        .footer__row
+            .footer__col
+                span © <script type="text/javascript">document.write(new Date().getFullYear());</script> Международный Патентный Центр "EURASIAN BRANDS"
+            .footer__col
+                span Материалы с сайта защищены законом Республики Казахстан<br> об авторских и смежных правах. Копирование запрещено.<br> Сайт не является договором офферты
+
+            .footer__col
+                span Сделано с любовью в   <a href="https://paradigma.website/" target="_blank">Paradigma.website</a>
