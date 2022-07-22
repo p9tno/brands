@@ -114,22 +114,6 @@ $(document).ready(function() {
     };
     doDrop();
 
-    $('.js-slider').slick({
-        dots: true,
-        // prevArrow: '<i class="icon-left"></i>',
-        // nextArrow: '<i class="icon-right"></i>',
-        speed: 1000,
-        adaptiveHeight: true,
-        responsive: [
-            {
-                breakpoint: 576,
-                settings: {
-                    arrows:false,
-                }
-            },
-        ]
-    })
-
     $('.select').select2({
         placeholder: $(this).data('placeholder'),
         minimumResultsForSearch: Infinity

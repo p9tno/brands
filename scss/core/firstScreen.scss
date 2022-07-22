@@ -1,0 +1,86 @@
+.firstScreen {
+    padding-top: 1.5em;
+    padding-bottom: 0.625em;
+    @media (min-width: 768px) {
+        padding-top: 3.75em;
+        padding-bottom: 2em;
+    }
+
+    &__content {
+        text-align: center;
+        @media (min-width: 768px) {
+            text-align: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+    }
+
+    &__left {
+        letter-spacing: 0.02em;
+    }
+
+    &__title {
+        margin: 0 0 0.5em;
+        font-size: $main_font_size;
+
+        span {
+            font-weight: 300;
+            font-size: 2.1875em;
+        }
+
+        @media (min-width: 768px) {
+            margin: 0 0 1em -0.5em;
+
+            span {
+                font-size: 5em;
+            }
+
+        }
+    }
+
+    &__desc {
+        margin-bottom: 1.25em;
+
+        span {
+            font-size: 1em;
+            font-weight: 300;
+        }
+
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+
+            span {
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    &__right {
+        @media (max-width: 767px) {
+            .btn {
+
+                font-size: 0.625em;
+                width: 23.2em;
+                height: 5.5em;
+
+                &:last-child {
+                    margin-top: 1em;
+                }
+            }
+
+        }
+
+        @media (min-width: 768px) {
+            .btn {
+                &:last-child {
+                    margin-left: 3.875em;
+                }
+
+            }
+
+        }
+    }
+
+}

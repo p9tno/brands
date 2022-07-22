@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?w30syp');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?w30syp#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?w30syp') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?w30syp') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?w30syp##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?sqgzl');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?sqgzl#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?sqgzl') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?sqgzl') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?sqgzl##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -35,6 +35,11 @@
 .icon-drop_right {
   &:before {
     content: $icon-drop_right; 
+  }
+}
+.icon-drop_left {
+  &:before {
+    content: $icon-drop_left; 
   }
 }
 .icon-arrow_left {
@@ -107,9 +112,9 @@
     content: $icon-map; 
   }
 }
-.icon-uniE90B {
+.icon-plus {
   &:before {
-    content: $icon-uniE90B; 
+    content: $icon-plus; 
   }
 }
 .icon-download {
@@ -180,6 +185,11 @@
 .icon-quote {
   &:before {
     content: $icon-quote; 
+  }
+}
+.icon-quote_2 {
+  &:before {
+    content: $icon-quote_2; 
   }
 }
 .icon-check_mark {

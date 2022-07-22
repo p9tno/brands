@@ -2,23 +2,117 @@ extends ../layout/layout.pug
 block variable
     -var path = '../';
 
+
 block content
-    // begin first
-    //section#first.first.section
+
+    // begin firstScreen
+    section#firstScreen.firstScreen.section
         .container_center
-            h2.section__title first section title
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            .firstScreen__content
+                .firstScreen__left
+                    h1.firstScreen__title
+                        span Eurasian Brands
+                    .firstScreen__desc
+                        span патентный центр №1 в Казахстане
+                .firstScreen__right
+                    a(href="#").btn Получить прайс на все услуги
+                        span + коммерческое предложение
+                    a(href="#").btn.btn_whatsapp.btn_success Спросить у нас в WhatsApp
+                        span время ответа 15 секунд
+    // end firstScreen
 
-            p
-                i.icon-home
-                    i.icon-clock2
-                        i.icon-calendar
-                            i.icon-printer
-    // end first
+    // begin advantage
+    section#advantage.advantage.section
+        .advantage__bg(style="background-image: url('../img/advantage_bg.webp')")
+            .advantage__lines.desktop
+                span
+                span
+                span
+                span
+                span
+        .advantage__wrap
+            .container_center
+                .advantage__list
+                    each item in [ {title: '3000+<br> клиентов', subtitle: 'Нас выбирает каждый<br> второй бизнес в стране'},  {title: '1358 товарных<br> знаков', subtitle: 'зарегистрировали,<br> 97% с первого раза'},  {title: '100% гарантия<br> результата', subtitle: 'при отказе добиваемся<br> регистрации за свой счет'},  {title: 'Рассрочка<br> до 12 мес', subtitle: 'Оплачивайте услуги<br> без первого взноса'} ]
 
+                        .advantage__item
+                            i.icon-check_mark
+                            .advantage__title
+                                span!=item.title
+                            .advantage__subtitle
+                                span!=item.subtitle
+
+
+
+
+    // end advantage
+
+    // begin comments
+    section#comments.comments.section
+        .container_center
+            .comments__top
+
+                .comments__content
+                    .comments__label
+                        span Скорее всего
+                    h2.section__title
+                        span Вы точно знаете наших <b>клиентов</b>
+                    .section__subtitle
+                        span За брендами стоят люди. Многие стали нашими хорошими друзьями.
+
+                .comments__slider
+                    .slider__label.mobile
+                        span Передвигайте шаги влево/вправо для просмотра всех этапов работы
+                        .slider__img
+                            img(src="../img/hand.svg")
+                    .slider.commentsSlider.single-slider-js
+                        each item in [ { img: '1', name: 'Алагузова<br> Баян', info: 'Продюсер, бизнес-леди, глава компании "Shine Production", телеведущая, актриса, певица', commit: 'Из огромного выбора компаний на рынке Казахстана, мне порекомендовали именно "Eurasian Brands" как одних из лучших профессионалов в сфере регистрации и защиты авторского права. Команда "Eurasian Brands" выступила в роли моих представителей в качестве защитников в судебном процессе по авторским правам на сценарий и фильм "Станция судьбы".'}, { img: '2', name: 'Володя Репетов', info: 'глава компании "Shine Production"', commit: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, facilis.'}, { img: '3', name: 'Хороший Парень', info: 'Нет достижений', commit: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae distinctio, rem aperiam porro fugiat dolores facere illum ipsum officia natus commodi aut vel sunt cupiditate consequatur eveniet vero, ea perspiciatis?'} ]
+                            .slider__item
+                                .commentsSlider__item
+                                    .commentsSlider__persone
+                                        .commentsSlider__foto(style="background-image: url('../img/persone_"+item.img+".png')")
+                                            .commentsSlider__play
+                                                i.icon-play
+                                        .commentsSlider__description
+                                            .commentsSlider__name
+                                                span!=item.name
+                                            .commentsSlider__info
+                                                span=item.info
+
+
+                                    .commentsSlider__content
+                                        i.icon-quote_2
+                                        span=item.commit
+                                        a(href="#") Читать полностью
+
+                .comments__control
+                    .comments__arrows
+                    .comments__dotte
+
+
+
+            .comments__bottom
+                .slider__label.mobile
+                    span Передвигайте влево/вправо для просмотра логотипов наших клиентов
+                    .slider__img
+                        img(src="../img/hand.svg")
+                .slider.logoSlider.four-slider-js
+                    each item in [1,2,3,4,1]
+                        .slider__item
+                            .logoSlider__grid
+                                each item in [1,2,3,4]
+                                    .logoSlider__item
+                                        .logoSlider__img
+                                            img(src="../img/comments_logo_"+item+".png")
+
+
+            .comments__button
+                a(href="#").btn.btn_warning Смотреть всех клиентов и кейсы
+
+    // end comments
 
     // begin form
-    section#form.form.section
+    //- section#form.form.section
         .container_center
             .form__content
                 h1.form__title Подать заявку на лизинг
@@ -79,7 +173,7 @@ block content
     // Button trigger modal info
     //- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#info") Click to open modal
     // Begin Modal info
-    .modal.fade.info#info
+    //- .modal.fade.info#info
         .modal-dialog
             .modal-content
                 a(href="#" class="modal-close" data-dismiss="modal")
@@ -88,7 +182,7 @@ block content
 
 
     // begin faq
-    section#faq.faq.section
+    //- section#faq.faq.section
         .container_center
             h2.section__title F.A.Q.
             .faq__content
@@ -114,7 +208,7 @@ block content
     // end faq
 
     // begin tabsPreview
-    section#tabsPreview.tabsPreview.section
+    //- section#tabsPreview.tabsPreview.section
         .container_center
             h2.section__title tabs Preview
 
@@ -134,7 +228,7 @@ block content
     // end tabsPreview
 
     // begin dropPreview
-    section#dropPreview.dropPreview.section
+    //- section#dropPreview.dropPreview.section
         .container_center
             h2.section__title drop Preview
             .dropPreview__content
@@ -160,7 +254,7 @@ block content
     // end dropPreview
 
     // begin sliderPreview
-    section#sliderPreview.sliderPreview.section
+    //- section#sliderPreview.sliderPreview.section
         .container_center
             h2.section__title slider Preview
             .sliderPreview__content
@@ -175,7 +269,7 @@ block content
     // end sliderPreview
 
     // begin programsInfo
-    section.section
+    //- section.section
         .container_center
             .programsInfo
                 each item in [{num: '12', text: 'Программ'},{num: '25', text: 'Компетенций'},{num: '29', text: 'Преподавателей <br>и экспертов'}]

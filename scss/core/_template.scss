@@ -37,9 +37,9 @@ body {
 .container_center {
 	max-width: $container_width;
 	padding: 0 1.375em;
-	/* 22/16 */
 	margin-left: auto;
 	margin-right: auto;
+
 	@media (min-width: 768px) {
 		padding: 0 1em;
 
@@ -47,11 +47,51 @@ body {
 }
 
 .section {
-	padding: 2em 0;
+	padding: 1.25em 0;
+	@media (min-width: 768px) {
+		padding: 3.625em 0;
+
+	}
 
 	&__title {
-		font-family: $second_font_family;
-		font-weight: 400;
+		margin: 0;
+		font-size: $main_font_size;
+		font-family: $main_font_family;
+		margin-bottom: 1em;
+
+		@media (min-width: 768px) {
+			margin-bottom: 1.625em;
+		}
+
+		span {
+			font-weight: 300;
+			font-size: 1.625em;
+			@media (min-width: 768px) {
+				font-size: 3.75em;
+
+			}
+		}
+
+		b {
+			font-weight: 700;
+		}
+	}
+
+	&__subtitle {
+		margin-bottom: 1.375em;
+		@media (min-width: 768px) {
+			margin-bottom: 0;
+		}
+
+		span {
+			font-size: 0.9375em;
+			font-weight: 300;
+			@media (min-width: 768px) {
+				font-size: 1.875em;
+				font-weight: 400;
+
+			}
+		}
 	}
 }
 
