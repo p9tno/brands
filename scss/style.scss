@@ -9,9 +9,16 @@
 @import 'core/header';
 @import 'core/navbar';
 
+@import 'vendor/swiper';
+
 @import 'core/firstScreen';
 @import 'core/advantage';
 @import 'core/comments';
+@import 'core/business';
+@import 'core/cases';
+@import 'tabs/logos';
+@import 'tabs/trademarks';
+@import 'tabs/tabServices';
 
 @import 'core/footer';
 
@@ -30,4 +37,25 @@
 @import 'core/programsInfo';
 
 @import 'vendor/modal';
-@import 'vendor/slick';
+// @import 'vendor/slick';
+// @import 'vendor/swiper';
+
+.counter-wrap {
+    counter-reset: line var(--line-num, 0);
+}
+
+.counter-item {
+    counter-increment: line;
+
+    .counter-el {
+        &:before {
+            content: '0';
+
+        }
+
+        &:after {
+            content: counter(line) ' ';
+        }
+
+    }
+}

@@ -60,14 +60,14 @@ block content
                     .section__subtitle
                         span За брендами стоят люди. Многие стали нашими хорошими друзьями.
 
-                .comments__slider
-                    .slider__label.mobile
+                .comments__slider.swiper.comments-swiper-js
+                    .swiper__label.mobile
                         span Передвигайте шаги влево/вправо для просмотра всех этапов работы
-                        .slider__img
+                        .swiper__img
                             img(src="../img/hand.svg")
-                    .slider.commentsSlider.single-slider-js
-                        each item in [ { img: '1', name: 'Алагузова<br> Баян', info: 'Продюсер, бизнес-леди, глава компании "Shine Production", телеведущая, актриса, певица', commit: 'Из огромного выбора компаний на рынке Казахстана, мне порекомендовали именно "Eurasian Brands" как одних из лучших профессионалов в сфере регистрации и защиты авторского права. Команда "Eurasian Brands" выступила в роли моих представителей в качестве защитников в судебном процессе по авторским правам на сценарий и фильм "Станция судьбы".'}, { img: '2', name: 'Володя Репетов', info: 'глава компании "Shine Production"', commit: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, facilis.'}, { img: '3', name: 'Хороший Парень', info: 'Нет достижений', commit: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae distinctio, rem aperiam porro fugiat dolores facere illum ipsum officia natus commodi aut vel sunt cupiditate consequatur eveniet vero, ea perspiciatis?'} ]
-                            .slider__item
+                    .commentsSlider.swiper-wrapper
+                        each item in [ { img: '1', name: 'Алагузова<br> Баян', info: 'Продюсер, бизнес-леди, глава компании "Shine Production", телеведущая, актриса, певица', commit: 'Из огромного выбора компаний на рынке Казахстана, мне порекомендовали именно "Eurasian Brands" как одних из лучших профессионалов в сфере регистрации и защиты авторского права. Команда "Eurasian Brands" выступила в роли моих представителей в качестве защитников в судебном процессе по авторским правам на сценарий и фильм "Станция судьбы".'}, { img: '2', name: 'Lorem.', info: 'глава компании "Shine Production"', commit: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, facilis.'}, { img: '3', name: ' Lorem ipsum.', info: ' Lorem.', commit: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae distinctio, rem aperiam porro fugiat dolores facere illum ipsum officia natus commodi aut vel sunt cupiditate consequatur eveniet vero, ea perspiciatis?'} ]
+                            .swiper-slide
                                 .commentsSlider__item
                                     .commentsSlider__persone
                                         .commentsSlider__foto(style="background-image: url('../img/persone_"+item.img+".png')")
@@ -86,24 +86,28 @@ block content
                                         a(href="#") Читать полностью
 
                 .comments__control
-                    .comments__arrows
+                    .comments__arrows.desktop
+                        i.icon-drop_left
+                        i.icon-drop_right
                     .comments__dotte
 
 
 
-            .comments__bottom
-                .slider__label.mobile
+
+            .comments__bottom.swiper.logoSlider-swiper-js
+                .swiper__label.mobile
                     span Передвигайте влево/вправо для просмотра логотипов наших клиентов
-                    .slider__img
+                    .swiper__img
                         img(src="../img/hand.svg")
-                .slider.logoSlider.four-slider-js
+                .logoSlider.swiper-wrapper
                     each item in [1,2,3,4,1]
-                        .slider__item
+                        .swiper-slide
                             .logoSlider__grid
                                 each item in [1,2,3,4]
                                     .logoSlider__item
                                         .logoSlider__img
                                             img(src="../img/comments_logo_"+item+".png")
+                .logoSlider__doted
 
 
             .comments__button
@@ -111,171 +115,383 @@ block content
 
     // end comments
 
+    // begin business
+    section#business.business.section
+        .container_center
+            h2.section__title 
+                span Работаем со всеми бизнесами, для нас <b>нет нерешаемых задач</b>
+
+            .business__list
+                .business__item(style="background-image: url('../img/business_1.jpg')")
+                    span Медицинские<br> услуги
+                .business__item
+                    i.icon-it
+                    span IT сфера,<br> образование,<br> дизайн
+                .business__item(style="background-image: url('../img/business_2.jpg')")
+                    span Блогеры
+                .business__item
+                    i.icon-by_time
+                    span Досуг и развлечение,<br> медиа, телевидение<br> и музыкальные<br> группы
+                .business__item(style="background-image: url('../img/business_3.jpg')")
+                    span Косметические<br> товары, бьюти<br> индустрия
+                .business__item
+                    i.icon-sector
+                    span Сектор HoReCa,<br> услуги B2B<br> и B2C
+                .business__item(style="background-image: url('../img/business_4.jpg')")
+                    span Магазины
+                .business__item
+                    i.icon-production
+                    span Производство,<br> строительный<br> сектор
+        .business__label
+            span Business
+
+    // end business
+
+    // begin cases
+    section#cases.cases.section
+        .container_center
+            .cases__label
+                h2.section__title
+                    span Бесчисленное количество <b>успешных кейсов за 7 лет</b>
+                ul.cases__list
+                    each item in [ 'Наиболее <b>сложные, уникальные и интересные кейсы</b> из более чем 3 000', '<b>100%  проектов доведены</b> до нужного результата', '<b>Логотипы прошли регистрацию</b> и защищены авторским правом' ]
+
+                        li.cases__item
+                            span!=item
+            .cases__tabs
+                .tabs-wrapper
+                    .tabs
+                        each item in ['Логотипы', 'Товарные знаки', 'Судебная практика', 'Другие услуги']
+                            .tab=item
+
+                    .tabs-content
+                        // start logos
+                        .tab-item
+                            .tab-label.mobile
+                                span Передвигайте указатель на изображении влево/вправо
+                                .tab-img
+                                    img(src="../img/hand.svg")
+                            .logos.swiper.tab-logos-slider-js
+                                .logos__list.swiper-wrapper
+                                    each item in [ {title: 'Доработка логотипа и регистрация товарного знака Наша Узбечка', subtitle: ' Ресторан восточной кухни' }, {title: 'Доработка логотипа и регистрация', subtitle: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, saepe?' }, {title: 'Доработка', subtitle: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis animi perferendis unde aspernatur ea vero eius odio magni ut doloremque.' }, {title: ' Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem ipsum Lorem ipsum', subtitle: ' Lorem ipsum dolor.' },  ]
+
+                                        .logos__item.swiper-slide
+
+                                            .logos__comparison.twentytwenty-container
+                                                img(src="../img/before.jpg")
+                                                img(src="../img/after.jpg")
+
+                                            .logos__wrap
+                                                .logos__content
+                                                    .logos__title 
+                                                        span=item.title
+                                                    .logos__subtitle
+                                                        span=item.subtitle
+                                                .logos__action
+                                                    .tab-label.desktop
+                                                        span Передвигайте указатель на изображении влево/вправо для просмотра результата
+                                                        .tab-img
+                                                            img(src="../img/hand.svg")
+                                                    .logos__button
+                                                        a.btn.btn_md.btn_warning(href="#") Изучить кейс
+
+                                .logos__arrows.mobile
+                                    i.icon-drop_left
+                                    i.icon-drop_right
+                                .tab-logos-doted
+                                //- .swiper-pagination
+                                //- <div class="swiper-button-prev"></div>
+                                //- <div class="swiper-button-next"></div>
+
+                            .tab-action
+                                a.tab-showMore.desktop(href="#") Смотреть еще 4 кейса
+                                a.btn(href="#") Изучить все кейсы
+
+                        // end logos
+
+                        // start trademarks
+                        .tab-item
+                            .tab-label.mobile
+                                span Передвигайте влево/вправо для просмотра товарных знаков наших клиентов
+                                .tab-img
+                                    img(src="../img/hand.svg")
+                            .trademarks.swiper.tab-trademarks-slider-js
+                                .trademarks__slider.swiper-wrapper
+
+                                    .swiper-slide
+                                        .trademarks__grid
+                                            each item in [1,2,3,4,5,6]
+                                                .trademarks__item
+                                                    .trademarks__img
+                                                        img(src="../img/trademarks_"+item+".png", alt="alt")
+                                    .swiper-slide
+                                        .trademarks__grid
+                                            each item in [7,8,9,10,1,12]
+                                                .trademarks__item
+                                                    .trademarks__img
+                                                        img(src="../img/trademarks_"+item+".png", alt="alt")
+
+                                .tab-trademarks-doted
+
+                            .tab-action
+                                a.tab-showMore.desktop(href="#") Смотреть еще 6 кейсов
+                                //- a.btn(href="#") Изучить все кейсы
+
+                        // end trademarks
+
+                        // start practice
+                        .tab-item
+                            //- .tab-label.mobile
+                            //-     span Передвигайте влево/вправо для просмотра судебных практик
+                            //-     .tab-img
+                            //-         img(src="../img/hand.svg")
+                            .tabServices
+                                .tabServices__grid
+                                    each item in [1,2,3,4]
+                                        .tabServices__item
+                                            .tabServices__top
+                                                .tabServices__title
+                                                    span Взыскание компенсации 1 млн. тенге в рамках дела по защите исключительных прав клиента
+                                            .tabServices__bottom
+                                                .tabServices__img
+                                                    img(src="../img/trademarks_"+item+".png", alt="alt")
+                                                .tabServices__content
+                                                    .tabServices__row
+                                                        .tabServices__label
+                                                            span Оказанные услуги:
+                                                        .tabServices__desc
+                                                            span Борьба с контрафактом
+                                                    .tabServices__row
+                                                        .tabServices__label
+                                                            span Отрасль:
+                                                        .tabServices__desc
+                                                            span Торговля
+
+                                                .tabServices__link
+                                                    a(href="#") Изучить кейс
+                            .tab-action
+                                a.tab-showMore(href="#") Смотреть еще 4 кейса
+
+                        // end practice
+
+                        // start tabServices
+                        .tab-item
+                            .tabServices
+                                .tabServices__grid
+                                    each item in [1,2,3,4]
+                                        .tabServices__item
+                                            .tabServices__top
+                                                .tabServices__title
+                                                    span Доработка логотипа и регистрация товарного знака NEMO
+                                            .tabServices__bottom
+                                                .tabServices__link
+                                                    a(href="#") Изучить кейс
+                            .tab-action
+                                a.tab-showMore(href="#") Смотреть еще 4 кейса
+                        // end tabServices
+
+
+
+    // end cases
+
+    // begin services
+    //- section#services.services.section
+    //-     .container_center
+    //-         .services__content
+    //-             .services__tabs
+    //-                 .tabs-wrapper
+    //-                     h2.section__title
+    //-                         span <b>Все услуги</b> патентования в одном месте
+    //-                     .tabs
+    //-                         each item in ['Товарные знаки', 'Авторские права', 'Логотипы','Патенты', 'Внесение в таможенный реестр','Блокировка аккаунтов', 'Суды и споры','Битрикс 24', 'Депозитарий авторских прав', 'Правовые консультации']
+    //-                             .tab=item
+    //- 
+    //-                     .tabs-content
+    //-                         each item in ['Товарные знаки', 'Авторские права', 'Логотипы','Патенты', 'Внесение в таможенный реестр','Блокировка аккаунтов', 'Суды и споры','Битрикс 24', 'Депозитарий авторских прав', 'Правовые консультации']
+    //-                             .tab-item
+    //-                                 .services__grid.counter-wrap
+    //-                                     each item in [1,2]
+    //- 
+    //-                                         .services__item.counter-item
+    //-                                             .services__title
+    //-                                             .services__request
+    //-                                                 a(href="#") Заявка на косультацию
+    //-                                             .services__action
+    //-                                                 .services__number
+    //-                                                     span.counter-el
+    //- 
+    //-                                                 .services__link
+    //-                                                     a(href="#") Подробнее об услуге
+    //-                                                 .services__arrow
+    //-                                                     i.icon-arrow_deg
+
+    // end services
+
     // begin form
     //- section#form.form.section
-        .container_center
-            .form__content
-                h1.form__title Подать заявку на лизинг
-                i.icon_close    
-                form.form.form_grid(action="send.php")
-                    //- из какой формы на сайте
-                    input(type="hidden" name="subject" value="форма в футоре")
-                    //- проверка спама
-                    input(type="hidden" name="notspam" value="")
-                    .form__row
-                        input(type="text", required placeholder="Предмет лизинга*")
-                    .form__row
-                        input(type="number", placeholder="ИНН")
-                    .form__row
-                        input(type="number", placeholder="Стоимость")
-                    .form__row
-                        input(type="text", placeholder="Контактное лицо")
-                    .form__row
-                        input(type="number", placeholder="Колличество")
-                    .form__row
-                        input(type="text", required placeholder="Телефон*")
-                    .form__row
-                        input(type="number", placeholder="Аванс")
-                    .form__label
-                    .form__row
-                        select.select(data-placeholder="Выбор")
-                            option(value="")
-                            option(value="Значение 1") Значение 1
-                            option(value="Значение 2") Значение 2
-                            option(value="Значение 3") Значение 3
-                            option(value="Значение 4") Значение 4
-                    .form__row
-                        input(type="email", placeholder="E-mail")
-                    .form__row
-                        input(type="text", placeholder="Местонахождение")
-                    .form__row.form__row_full
-                        textarea(type="text", placeholder="Дополнительная информация")
-                    .form__row.form__row_full
-                        .form__grup
-                            label.form__check
-                                input(type="radio" name="test" checked="checked" value="test")
-                                span radio 1
-                            label.form__check
-                                input(type="radio" name="test" value="test_2")
-                                span radio 2
-
-                    .form__row
-                        span.form__text Поля, помеченные *, обязательны к заполнения
-                    .form__row
-                        .button
-                            button.btn#btn_didisabled_js(type="submit") Отправить
-                    .form__row.form__row_full
-                        .form__privacy
-                            label.form__check
-                                input#check_checked(type="checkbox" checked="checked")
-                                span Прочитал(-а) Пользовательское соглашение и соглашаюсь с <a href="#" target="_blank">политикой обработки персональных данных</a>
+    //-     .container_center
+    //-         .form__content
+    //-             h1.form__title Подать заявку на лизинг
+    //-             i.icon_close    
+    //-             form.form.form_grid(action="send.php")
+    //-                 //- из какой формы на сайте
+    //-                 input(type="hidden" name="subject" value="форма в футоре")
+    //-                 //- проверка спама
+    //-                 input(type="hidden" name="notspam" value="")
+    //-                 .form__row
+    //-                     input(type="text", required placeholder="Предмет лизинга*")
+    //-                 .form__row
+    //-                     input(type="number", placeholder="ИНН")
+    //-                 .form__row
+    //-                     input(type="number", placeholder="Стоимость")
+    //-                 .form__row
+    //-                     input(type="text", placeholder="Контактное лицо")
+    //-                 .form__row
+    //-                     input(type="number", placeholder="Колличество")
+    //-                 .form__row
+    //-                     input(type="text", required placeholder="Телефон*")
+    //-                 .form__row
+    //-                     input(type="number", placeholder="Аванс")
+    //-                 .form__label
+    //-                 .form__row
+    //-                     select.select(data-placeholder="Выбор")
+    //-                         option(value="")
+    //-                         option(value="Значение 1") Значение 1
+    //-                         option(value="Значение 2") Значение 2
+    //-                         option(value="Значение 3") Значение 3
+    //-                         option(value="Значение 4") Значение 4
+    //-                 .form__row
+    //-                     input(type="email", placeholder="E-mail")
+    //-                 .form__row
+    //-                     input(type="text", placeholder="Местонахождение")
+    //-                 .form__row.form__row_full
+    //-                     textarea(type="text", placeholder="Дополнительная информация")
+    //-                 .form__row.form__row_full
+    //-                     .form__grup
+    //-                         label.form__check
+    //-                             input(type="radio" name="test" checked="checked" value="test")
+    //-                             span radio 1
+    //-                         label.form__check
+    //-                             input(type="radio" name="test" value="test_2")
+    //-                             span radio 2
+    //- 
+    //-                 .form__row
+    //-                     span.form__text Поля, помеченные *, обязательны к заполнения
+    //-                 .form__row
+    //-                     .button
+    //-                         button.btn#btn_didisabled_js(type="submit") Отправить
+    //-                 .form__row.form__row_full
+    //-                     .form__privacy
+    //-                         label.form__check
+    //-                             input#check_checked(type="checkbox" checked="checked")
+    //-                             span Прочитал(-а) Пользовательское соглашение и соглашаюсь с <a href="#" target="_blank">политикой обработки персональных данных</a>
     // end form
     // Button trigger modal info
     //- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#info") Click to open modal
     // Begin Modal info
     //- .modal.fade.info#info
-        .modal-dialog
-            .modal-content
-                a(href="#" class="modal-close" data-dismiss="modal")
-                .form__message
+    //- .modal-dialog
+    //-     .modal-content
+    //-         a(href="#" class="modal-close" data-dismiss="modal")
+    //-         .form__message
     // End modal info
 
 
     // begin faq
     //- section#faq.faq.section
-        .container_center
-            h2.section__title F.A.Q.
-            .faq__content
-                .collapse(data-collapse-wrapper="")
-                    .collapse__title.open(data-collapse="") 
-                        span Вопрос о школе
-                    // Добавить класс open для открытого состояния
-                    .collapse__body.open(data-collapse-body="")
-                        p Ежегодно на несколько дней Санкт‑Петербург становится столицей российского образования, открытой площадкой для дискуссий, обмена опытом, откровенного профессионального диалога ведущих специалистов в области просвещения.
-
-                        p В рамках форума запланировано около 300 мероприятий: конференции, семинары, круглые столы, мастер-классы, дискуссионные площадки, форсайт‑сессии, педагогические олимпиады, конкурсы, квесты, презентации.
-
-                each title in ['Структура рынка нейтрализует повторный контакт, не считаясь с затратами', 'Потребительский рынок упорядочивает рейтинг']
-
-                    .collapse(data-collapse-wrapper="")
-                        .collapse__title(data-collapse="")
-                            span= title
-                        .collapse__body(data-collapse-body="")
-                            p Ежегодно на несколько дней Санкт‑Петербург становится столицей российского образования, открытой площадкой для дискуссий, обмена опытом, откровенного профессионального диалога ведущих специалистов в области просвещения.
-
-                            p В рамках форума запланировано около 300 мероприятий: конференции, семинары, круглые столы, мастер-классы, дискуссионные площадки, форсайт‑сессии, педагогические олимпиады, конкурсы, квесты, презентации.
+    //- .container_center
+    //-     h2.section__title F.A.Q.
+    //-     .faq__content
+    //-         .collapse(data-collapse-wrapper="")
+    //-             .collapse__title.open(data-collapse="") 
+    //-                 span Вопрос о школе
+    //-             // Добавить класс open для открытого состояния
+    //-             .collapse__body.open(data-collapse-body="")
+    //-                 p Ежегодно на несколько дней Санкт‑Петербург становится столицей российского образования, открытой площадкой для дискуссий, обмена опытом, откровенного профессионального диалога ведущих специалистов в области просвещения.
+    //- 
+    //-                 p В рамках форума запланировано около 300 мероприятий: конференции, семинары, круглые столы, мастер-классы, дискуссионные площадки, форсайт‑сессии, педагогические олимпиады, конкурсы, квесты, презентации.
+    //- 
+    //-         each title in ['Структура рынка нейтрализует повторный контакт, не считаясь с затратами', 'Потребительский рынок упорядочивает рейтинг']
+    //- 
+    //-             .collapse(data-collapse-wrapper="")
+    //-                 .collapse__title(data-collapse="")
+    //-                     span= title
+    //-                 .collapse__body(data-collapse-body="")
+    //-                     p Ежегодно на несколько дней Санкт‑Петербург становится столицей российского образования, открытой площадкой для дискуссий, обмена опытом, откровенного профессионального диалога ведущих специалистов в области просвещения.
+    //- 
+    //-                     p В рамках форума запланировано около 300 мероприятий: конференции, семинары, круглые столы, мастер-классы, дискуссионные площадки, форсайт‑сессии, педагогические олимпиады, конкурсы, квесты, презентации.
 
     // end faq
 
     // begin tabsPreview
     //- section#tabsPreview.tabsPreview.section
-        .container_center
-            h2.section__title tabs Preview
-
-            .tabsPreview__content
-                .tabs
-                    .tabs__item.active(data-tab="#plate-1") Item 1
-                    .tabs__item(data-tab="#plate-2") Item 2
-                    .tabs__item(data-tab="#plate-3") Item 3
-                    .tabs__item(data-tab="#plate-4") Item 4
-
-                .tabContent
-                    .tabContent__item.active#plate-1  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, possimus.
-                    .tabContent__item#plate-2  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, saepe. Tempora magnam eius nostrum beatae voluptas, quisquam laborum aliquid mollitia.
-                    .tabContent__item#plate-3  Lorem ipsum dolor sit amet.
-                    .tabContent__item#plate-4  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odio laboriosam nostrum, maxime quo molestiae exercitationem unde, beatae, possimus illum nemo pariatur cumque! Eos, adipisci! Minima, pariatur necessitatibus delectus porro, doloremque, accusamus itaque excepturi deleniti illo a consequuntur magnam et eaque facere numquam nemo. Ut, facilis, repellendus. Aut, magnam, aliquid.
+    //- .container_center
+    //-     h2.section__title tabs Preview
+    //- 
+    //-     .tabsPreview__content
+    //-         .tabs
+    //-             .tabs__item.active(data-tab="#plate-1") Item 1
+    //-             .tabs__item(data-tab="#plate-2") Item 2
+    //-             .tabs__item(data-tab="#plate-3") Item 3
+    //-             .tabs__item(data-tab="#plate-4") Item 4
+    //- 
+    //-         .tabContent
+    //-             .tabContent__item.active#plate-1  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, possimus.
+    //-             .tabContent__item#plate-2  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, saepe. Tempora magnam eius nostrum beatae voluptas, quisquam laborum aliquid mollitia.
+    //-             .tabContent__item#plate-3  Lorem ipsum dolor sit amet.
+    //-             .tabContent__item#plate-4  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odio laboriosam nostrum, maxime quo molestiae exercitationem unde, beatae, possimus illum nemo pariatur cumque! Eos, adipisci! Minima, pariatur necessitatibus delectus porro, doloremque, accusamus itaque excepturi deleniti illo a consequuntur magnam et eaque facere numquam nemo. Ut, facilis, repellendus. Aut, magnam, aliquid.
 
     // end tabsPreview
 
     // begin dropPreview
     //- section#dropPreview.dropPreview.section
-        .container_center
-            h2.section__title drop Preview
-            .dropPreview__content
-                .drop
-                    .drop__toggle Click me
-                    .drop__list
-                        .drop__item Item 1
-                        .drop__item Item 2
-                        .drop__item Item 3
-                        .drop__item Item 4
-
-                .drop
-                    .drop__toggle Click me
-                    .drop__list
-                        .drop__item Item 1
-                        .drop__item Item 2
-                        .drop__item Item 3
-                        .drop__item Item 4
-            .content
-                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim placeat, incidunt unde esse officiis iusto tempora cum saepe, repellendus alias non! Deleniti eius accusamus molestiae! Quo rerum, modi omnis sequi, autem molestias saepe inventore nihil animi voluptas, eaque quia laboriosam dolor, magni ea et error blanditiis tempora deserunt sint repellendus in! Blanditiis, mollitia provident in omnis rerum, magnam ipsa, reiciendis laborum unde, error illum quod. Vero eveniet, nesciunt blanditiis laudantium a ab adipisci saepe perspiciatis ducimus quos quaerat, pariatur necessitatibus illo praesentium. Excepturi veniam neque asperiores temporibus nostrum vitae distinctio eum alias hic molestiae, iste suscipit, voluptate sit dolores accusamus.
-                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim placeat, incidunt unde esse officiis iusto tempora cum saepe, repellendus alias non! Deleniti eius accusamus molestiae! Quo rerum, modi omnis sequi, autem molestias saepe inventore nihil animi voluptas, eaque quia laboriosam dolor, magni ea et error blanditiis tempora deserunt sint repellendus in! Blanditiis, mollitia provident in omnis rerum, magnam ipsa, reiciendis laborum unde, error illum quod. Vero eveniet, nesciunt blanditiis laudantium a ab adipisci saepe perspiciatis ducimus quos quaerat, pariatur necessitatibus illo praesentium. Excepturi veniam neque asperiores temporibus nostrum vitae distinctio eum alias hic molestiae, iste suscipit, voluptate sit dolores accusamus.
+    //- .container_center
+    //-     h2.section__title drop Preview
+    //-     .dropPreview__content
+    //-         .drop
+    //-             .drop__toggle Click me
+    //-             .drop__list
+    //-                 .drop__item Item 1
+    //-                 .drop__item Item 2
+    //-                 .drop__item Item 3
+    //-                 .drop__item Item 4
+    //- 
+    //-         .drop
+    //-             .drop__toggle Click me
+    //-             .drop__list
+    //-                 .drop__item Item 1
+    //-                 .drop__item Item 2
+    //-                 .drop__item Item 3
+    //-                 .drop__item Item 4
+    //-     .content
+    //-         p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim placeat, incidunt unde esse officiis iusto tempora cum saepe, repellendus alias non! Deleniti eius accusamus molestiae! Quo rerum, modi omnis sequi, autem molestias saepe inventore nihil animi voluptas, eaque quia laboriosam dolor, magni ea et error blanditiis tempora deserunt sint repellendus in! Blanditiis, mollitia provident in omnis rerum, magnam ipsa, reiciendis laborum unde, error illum quod. Vero eveniet, nesciunt blanditiis laudantium a ab adipisci saepe perspiciatis ducimus quos quaerat, pariatur necessitatibus illo praesentium. Excepturi veniam neque asperiores temporibus nostrum vitae distinctio eum alias hic molestiae, iste suscipit, voluptate sit dolores accusamus.
+    //-         p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim placeat, incidunt unde esse officiis iusto tempora cum saepe, repellendus alias non! Deleniti eius accusamus molestiae! Quo rerum, modi omnis sequi, autem molestias saepe inventore nihil animi voluptas, eaque quia laboriosam dolor, magni ea et error blanditiis tempora deserunt sint repellendus in! Blanditiis, mollitia provident in omnis rerum, magnam ipsa, reiciendis laborum unde, error illum quod. Vero eveniet, nesciunt blanditiis laudantium a ab adipisci saepe perspiciatis ducimus quos quaerat, pariatur necessitatibus illo praesentium. Excepturi veniam neque asperiores temporibus nostrum vitae distinctio eum alias hic molestiae, iste suscipit, voluptate sit dolores accusamus.
 
     // end dropPreview
 
     // begin sliderPreview
     //- section#sliderPreview.sliderPreview.section
-        .container_center
-            h2.section__title slider Preview
-            .sliderPreview__content
-
-                .slider.js-slider
-                    each item in [1, 2, 3, 4]
-                        .slider__item
-                            .content
-                                h1=item
+    //- .container_center
+    //-     h2.section__title slider Preview
+    //-     .sliderPreview__content
+    //- 
+    //-         .slider.js-slider
+    //-             each item in [1, 2, 3, 4]
+    //-                 .slider__item
+    //-                     .content
+    //-                         h1=item
 
 
     // end sliderPreview
 
     // begin programsInfo
     //- section.section
-        .container_center
-            .programsInfo
-                each item in [{num: '12', text: 'Программ'},{num: '25', text: 'Компетенций'},{num: '29', text: 'Преподавателей <br>и экспертов'}]
-                    .programsInfo__item
-                        .programsInfo__number=item.num
-                        .programsInfo__text!=item.text
+    //- .container_center
+    //-     .programsInfo
+    //-         each item in [{num: '12', text: 'Программ'},{num: '25', text: 'Компетенций'},{num: '29', text: 'Преподавателей <br>и экспертов'}]
+    //-             .programsInfo__item
+    //-                 .programsInfo__number=item.num
+    //-                 .programsInfo__text!=item.text
 
 
     // end programsInfo

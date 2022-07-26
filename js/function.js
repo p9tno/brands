@@ -70,39 +70,14 @@ $(document).ready(function() {
     collapsed();
 
 
-    function doTabs() {
-        $('.tabs__item').on('click', function() {
-            $('.tabs__item').removeClass('active');
-            $(this).addClass('active');
-
-            $('.tabContent__item').removeClass('active');
-            $($(this).data('tab')).addClass('active');
-        });
-    };
-    doTabs();
-
-    // <div class="tabs-wrapper">
-    //     <div class="tabs">
-    //         <span class="tab">Вкладка 1</span>
-    //         <span class="tab">Вкладка 2</span>
-    //         <span class="tab">Вкладка 3</span>
-    //     </div>
-    //     <div class="tabs-content">
-    //         <div class="tab-item">Содержимое 1</div>
-    //         <div class="tab-item">Содержимое 2</div>
-    //         <div class="tab-item">Содержимое 3</div>
-    //     </div>
-    // </div>
-
-    // jQuery
-    // $('.tabs-wrapper').each(function() {
-    //     let ths = $(this);
-    //     ths.find('.tab-item').not(':first').hide();
-    //     ths.find('.tab').click(function() {
-    //         ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
-    //         ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
-    //     }).eq(0).addClass('active');
-    // });
+    $('.tabs-wrapper').each(function() {
+        let ths = $(this);
+        ths.find('.tab-item').not(':first').hide();
+        ths.find('.tab').click(function() {
+            ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
+            ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
+        }).eq(0).addClass('active');
+    });
 
 
     function doDrop() {
@@ -183,4 +158,19 @@ $(document).ready(function() {
     };
 
     uploadYoutubeVideo();
+
+
+
+
+    $(".twentytwenty-container").twentytwenty({
+        default_offset_pct: 0.35, // сколько показывать 'изображение до' в процентах (максимально 1) сразу после загрузки страницы
+        orientation: 'horizontal', // ориентация слайдера ('horizontal' или 'vertical')
+        before_label: 'До', // подпись 'до'
+        after_label: 'После', // подпись 'после'
+        no_overlay: true, // не показывать затемнение с надписями 'до' и 'после'
+        move_slider_on_hover: false, // двигать "бегунок" слайдера вместе с курсором мыши
+        move_with_handle_only: true, // двигать слайдер только за его "бегунок"
+        click_to_move: false // разрешить перемещение "бегунка" слайдера по клику на изображении
+    });
+
 });

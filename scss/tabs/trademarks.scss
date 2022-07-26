@@ -1,0 +1,57 @@
+.trademarks {
+    &__slider {
+        // display: flex;
+        @media (min-width: 768px) {
+            display: block;
+
+        }
+    }
+
+    &__grid {
+        // border: 1px solid #000;
+        display: flex;
+        flex-wrap: wrap;
+        // width: 25%;
+    }
+
+    &__item {
+        // width: 33.33%;
+        width: 50%;
+        border: 0.063em solid #F3F4F7;
+        // border: 1px solid #000;
+        @media (min-width: 768px) {
+            width: 16.66%;
+
+        }
+    }
+
+    &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // width: 7.625em;
+        height: 7.625em;
+        padding: 1em;
+
+        @media (min-width: 768px) {
+            width: 16.25em;
+            height: 16.25em;
+            padding: 1.5em;
+
+        }
+
+        img {
+            width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // &__slider {}
+    //
+    // &__slider {}
+    //
+    // &__slider {}
+    //
+    // &__slider {}
+}

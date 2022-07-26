@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="../css/select2.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/twentytwenty.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/swiper-bundle.min.css"/>
     <link rel="stylesheet" type="text/css" href="../css/style.css"/>
   </head>
   <body>
@@ -146,12 +147,12 @@
                 <h2 class="section__title"><span>Вы точно знаете наших <b>клиентов</b></span></h2>
                 <div class="section__subtitle"><span>За брендами стоят люди. Многие стали нашими хорошими друзьями.</span></div>
               </div>
-              <div class="comments__slider">
-                <div class="slider__label mobile"><span>Передвигайте шаги влево/вправо для просмотра всех этапов работы</span>
-                  <div class="slider__img"><img src="../img/hand.svg"/></div>
+              <div class="comments__slider swiper comments-swiper-js">
+                <div class="swiper__label mobile"><span>Передвигайте шаги влево/вправо для просмотра всех этапов работы</span>
+                  <div class="swiper__img"><img src="../img/hand.svg"/></div>
                 </div>
-                <div class="slider commentsSlider single-slider-js">
-                  <div class="slider__item">
+                <div class="commentsSlider swiper-wrapper">
+                  <div class="swiper-slide">
                     <div class="commentsSlider__item">
                       <div class="commentsSlider__persone">
                         <div class="commentsSlider__foto" style="background-image: url('../img/persone_1.png')">
@@ -165,29 +166,29 @@
                       <div class="commentsSlider__content"><i class="icon-quote_2"></i><span>Из огромного выбора компаний на рынке Казахстана, мне порекомендовали именно &quot;Eurasian Brands&quot; как одних из лучших профессионалов в сфере регистрации и защиты авторского права. Команда &quot;Eurasian Brands&quot; выступила в роли моих представителей в качестве защитников в судебном процессе по авторским правам на сценарий и фильм &quot;Станция судьбы&quot;.</span><a href="#">Читать полностью</a></div>
                     </div>
                   </div>
-                  <div class="slider__item">
+                  <div class="swiper-slide">
                     <div class="commentsSlider__item">
                       <div class="commentsSlider__persone">
                         <div class="commentsSlider__foto" style="background-image: url('../img/persone_2.png')">
                           <div class="commentsSlider__play"><i class="icon-play"></i></div>
                         </div>
                         <div class="commentsSlider__description">
-                          <div class="commentsSlider__name"><span>Володя Репетов</span></div>
+                          <div class="commentsSlider__name"><span>Lorem.</span></div>
                           <div class="commentsSlider__info"><span>глава компании &quot;Shine Production&quot;</span></div>
                         </div>
                       </div>
                       <div class="commentsSlider__content"><i class="icon-quote_2"></i><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, facilis.</span><a href="#">Читать полностью</a></div>
                     </div>
                   </div>
-                  <div class="slider__item">
+                  <div class="swiper-slide">
                     <div class="commentsSlider__item">
                       <div class="commentsSlider__persone">
                         <div class="commentsSlider__foto" style="background-image: url('../img/persone_3.png')">
                           <div class="commentsSlider__play"><i class="icon-play"></i></div>
                         </div>
                         <div class="commentsSlider__description">
-                          <div class="commentsSlider__name"><span>Хороший Парень</span></div>
-                          <div class="commentsSlider__info"><span>Нет достижений</span></div>
+                          <div class="commentsSlider__name"><span> Lorem ipsum.</span></div>
+                          <div class="commentsSlider__info"><span> Lorem.</span></div>
                         </div>
                       </div>
                       <div class="commentsSlider__content"><i class="icon-quote_2"></i><span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae distinctio, rem aperiam porro fugiat dolores facere illum ipsum officia natus commodi aut vel sunt cupiditate consequatur eveniet vero, ea perspiciatis?</span><a href="#">Читать полностью</a></div>
@@ -196,16 +197,16 @@
                 </div>
               </div>
               <div class="comments__control">
-                <div class="comments__arrows"></div>
+                <div class="comments__arrows desktop"><i class="icon-drop_left"></i><i class="icon-drop_right"></i></div>
                 <div class="comments__dotte"></div>
               </div>
             </div>
-            <div class="comments__bottom">
-              <div class="slider__label mobile"><span>Передвигайте влево/вправо для просмотра логотипов наших клиентов</span>
-                <div class="slider__img"><img src="../img/hand.svg"/></div>
+            <div class="comments__bottom swiper logoSlider-swiper-js">
+              <div class="swiper__label mobile"><span>Передвигайте влево/вправо для просмотра логотипов наших клиентов</span>
+                <div class="swiper__img"><img src="../img/hand.svg"/></div>
               </div>
-              <div class="slider logoSlider four-slider-js">
-                <div class="slider__item">
+              <div class="logoSlider swiper-wrapper">
+                <div class="swiper-slide">
                   <div class="logoSlider__grid">
                     <div class="logoSlider__item">
                       <div class="logoSlider__img"><img src="../img/comments_logo_1.png"/></div>
@@ -221,7 +222,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="slider__item">
+                <div class="swiper-slide">
                   <div class="logoSlider__grid">
                     <div class="logoSlider__item">
                       <div class="logoSlider__img"><img src="../img/comments_logo_1.png"/></div>
@@ -237,7 +238,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="slider__item">
+                <div class="swiper-slide">
                   <div class="logoSlider__grid">
                     <div class="logoSlider__item">
                       <div class="logoSlider__img"><img src="../img/comments_logo_1.png"/></div>
@@ -253,7 +254,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="slider__item">
+                <div class="swiper-slide">
                   <div class="logoSlider__grid">
                     <div class="logoSlider__item">
                       <div class="logoSlider__img"><img src="../img/comments_logo_1.png"/></div>
@@ -269,7 +270,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="slider__item">
+                <div class="swiper-slide">
                   <div class="logoSlider__grid">
                     <div class="logoSlider__item">
                       <div class="logoSlider__img"><img src="../img/comments_logo_1.png"/></div>
@@ -286,11 +287,315 @@
                   </div>
                 </div>
               </div>
+              <div class="logoSlider__doted"></div>
             </div>
             <div class="comments__button"><a class="btn btn_warning" href="#">Смотреть всех клиентов и кейсы</a></div>
           </div>
         </section>
         <!-- end comments-->
+        <!-- begin business-->
+        <section class="business section" id="business">
+          <div class="container_center">
+            <h2 class="section__title"> <span>Работаем со всеми бизнесами, для нас <b>нет нерешаемых задач</b></span></h2>
+            <div class="business__list">
+              <div class="business__item" style="background-image: url('../img/business_1.jpg')"><span>Медицинские<br> услуги</span></div>
+              <div class="business__item"><i class="icon-it"></i><span>IT сфера,<br> образование,<br> дизайн</span></div>
+              <div class="business__item" style="background-image: url('../img/business_2.jpg')"><span>Блогеры</span></div>
+              <div class="business__item"><i class="icon-by_time"></i><span>Досуг и развлечение,<br> медиа, телевидение<br> и музыкальные<br> группы</span></div>
+              <div class="business__item" style="background-image: url('../img/business_3.jpg')"><span>Косметические<br> товары, бьюти<br> индустрия</span></div>
+              <div class="business__item"><i class="icon-sector"></i><span>Сектор HoReCa,<br> услуги B2B<br> и B2C</span></div>
+              <div class="business__item" style="background-image: url('../img/business_4.jpg')"><span>Магазины</span></div>
+              <div class="business__item"><i class="icon-production"></i><span>Производство,<br> строительный<br> сектор</span></div>
+            </div>
+          </div>
+          <div class="business__label"><span>Business</span></div>
+        </section>
+        <!-- end business-->
+        <!-- begin cases-->
+        <section class="cases section" id="cases">
+          <div class="container_center">
+            <div class="cases__label">
+              <h2 class="section__title"><span>Бесчисленное количество <b>успешных кейсов за 7 лет</b></span></h2>
+              <ul class="cases__list">
+                <li class="cases__item"><span>Наиболее <b>сложные, уникальные и интересные кейсы</b> из более чем 3 000</span></li>
+                <li class="cases__item"><span><b>100%  проектов доведены</b> до нужного результата</span></li>
+                <li class="cases__item"><span><b>Логотипы прошли регистрацию</b> и защищены авторским правом</span></li>
+              </ul>
+            </div>
+            <div class="cases__tabs">
+              <div class="tabs-wrapper">
+                <div class="tabs">
+                  <div class="tab">Логотипы</div>
+                  <div class="tab">Товарные знаки</div>
+                  <div class="tab">Судебная практика</div>
+                  <div class="tab">Другие услуги</div>
+                </div>
+                <div class="tabs-content">
+                  <!-- start logos-->
+                  <div class="tab-item">
+                    <div class="tab-label mobile"><span>Передвигайте указатель на изображении влево/вправо</span>
+                      <div class="tab-img"><img src="../img/hand.svg"/></div>
+                    </div>
+                    <div class="logos swiper tab-logos-slider-js">
+                      <div class="logos__list swiper-wrapper">
+                        <div class="logos__item swiper-slide">
+                          <div class="logos__comparison twentytwenty-container"><img src="../img/before.jpg"/><img src="../img/after.jpg"/></div>
+                          <div class="logos__wrap">
+                            <div class="logos__content">
+                              <div class="logos__title"> <span>Доработка логотипа и регистрация товарного знака Наша Узбечка</span></div>
+                              <div class="logos__subtitle"><span> Ресторан восточной кухни</span></div>
+                            </div>
+                            <div class="logos__action">
+                              <div class="tab-label desktop"><span>Передвигайте указатель на изображении влево/вправо для просмотра результата</span>
+                                <div class="tab-img"><img src="../img/hand.svg"/></div>
+                              </div>
+                              <div class="logos__button"><a class="btn btn_md btn_warning" href="#">Изучить кейс</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="logos__item swiper-slide">
+                          <div class="logos__comparison twentytwenty-container"><img src="../img/before.jpg"/><img src="../img/after.jpg"/></div>
+                          <div class="logos__wrap">
+                            <div class="logos__content">
+                              <div class="logos__title"> <span>Доработка логотипа и регистрация</span></div>
+                              <div class="logos__subtitle"><span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, saepe?</span></div>
+                            </div>
+                            <div class="logos__action">
+                              <div class="tab-label desktop"><span>Передвигайте указатель на изображении влево/вправо для просмотра результата</span>
+                                <div class="tab-img"><img src="../img/hand.svg"/></div>
+                              </div>
+                              <div class="logos__button"><a class="btn btn_md btn_warning" href="#">Изучить кейс</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="logos__item swiper-slide">
+                          <div class="logos__comparison twentytwenty-container"><img src="../img/before.jpg"/><img src="../img/after.jpg"/></div>
+                          <div class="logos__wrap">
+                            <div class="logos__content">
+                              <div class="logos__title"> <span>Доработка</span></div>
+                              <div class="logos__subtitle"><span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis animi perferendis unde aspernatur ea vero eius odio magni ut doloremque.</span></div>
+                            </div>
+                            <div class="logos__action">
+                              <div class="tab-label desktop"><span>Передвигайте указатель на изображении влево/вправо для просмотра результата</span>
+                                <div class="tab-img"><img src="../img/hand.svg"/></div>
+                              </div>
+                              <div class="logos__button"><a class="btn btn_md btn_warning" href="#">Изучить кейс</a></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="logos__item swiper-slide">
+                          <div class="logos__comparison twentytwenty-container"><img src="../img/before.jpg"/><img src="../img/after.jpg"/></div>
+                          <div class="logos__wrap">
+                            <div class="logos__content">
+                              <div class="logos__title"> <span> Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem ipsum Lorem ipsum</span></div>
+                              <div class="logos__subtitle"><span> Lorem ipsum dolor.</span></div>
+                            </div>
+                            <div class="logos__action">
+                              <div class="tab-label desktop"><span>Передвигайте указатель на изображении влево/вправо для просмотра результата</span>
+                                <div class="tab-img"><img src="../img/hand.svg"/></div>
+                              </div>
+                              <div class="logos__button"><a class="btn btn_md btn_warning" href="#">Изучить кейс</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="logos__arrows mobile"><i class="icon-drop_left"></i><i class="icon-drop_right"></i></div>
+                      <div class="tab-logos-doted"></div>
+                    </div>
+                    <div class="tab-action"><a class="tab-showMore desktop" href="#">Смотреть еще 4 кейса</a><a class="btn" href="#">Изучить все кейсы</a></div>
+                  </div>
+                  <!-- end logos-->
+                  <!-- start trademarks-->
+                  <div class="tab-item">
+                    <div class="tab-label mobile"><span>Передвигайте влево/вправо для просмотра товарных знаков наших клиентов</span>
+                      <div class="tab-img"><img src="../img/hand.svg"/></div>
+                    </div>
+                    <div class="trademarks swiper tab-trademarks-slider-js">
+                      <div class="trademarks__slider swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="trademarks__grid">
+                            <div class="trademarks__item">
+                              <div class="trademarks__img"><img src="../img/trademarks_1.png" alt="alt"/></div>
+                            </div>
+                            <div class="trademarks__item">
+                              <div class="trademarks__img"><img src="../img/trademarks_2.png" alt="alt"/></div>
+                            </div>
+                            <div class="trademarks__item">
+                              <div class="trademarks__img"><img src="../img/trademarks_3.png" alt="alt"/></div>
+                            </div>
+                            <div class="trademarks__item">
+                              <div class="trademarks__img"><img src="../img/trademarks_4.png" alt="alt"/></div>
+                            </div>
+                            <div class="trademarks__item">
+                              <div class="trademarks__img"><img src="../img/trademarks_5.png" alt="alt"/></div>
+                            </div>
+                            <div class="trademarks__item">
+                              <div class="trademarks__img"><img src="../img/trademarks_6.png" alt="alt"/></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="trademarks__grid">
+                            <div class="trademarks__item">
+                              <div class="trademarks__img"><img src="../img/trademarks_7.png" alt="alt"/></div>
+                            </div>
+                            <div class="trademarks__item">
+                              <div class="trademarks__img"><img src="../img/trademarks_8.png" alt="alt"/></div>
+                            </div>
+                            <div class="trademarks__item">
+                              <div class="trademarks__img"><img src="../img/trademarks_9.png" alt="alt"/></div>
+                            </div>
+                            <div class="trademarks__item">
+                              <div class="trademarks__img"><img src="../img/trademarks_10.png" alt="alt"/></div>
+                            </div>
+                            <div class="trademarks__item">
+                              <div class="trademarks__img"><img src="../img/trademarks_1.png" alt="alt"/></div>
+                            </div>
+                            <div class="trademarks__item">
+                              <div class="trademarks__img"><img src="../img/trademarks_12.png" alt="alt"/></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-trademarks-doted"></div>
+                    </div>
+                    <div class="tab-action"><a class="tab-showMore desktop" href="#">Смотреть еще 6 кейсов</a></div>
+                  </div>
+                  <!-- end trademarks-->
+                  <!-- start practice-->
+                  <div class="tab-item">
+                    <div class="tabServices">
+                      <div class="tabServices__grid">
+                        <div class="tabServices__item">
+                          <div class="tabServices__top">
+                            <div class="tabServices__title"><span>Взыскание компенсации 1 млн. тенге в рамках дела по защите исключительных прав клиента</span></div>
+                          </div>
+                          <div class="tabServices__bottom">
+                            <div class="tabServices__img"><img src="../img/trademarks_1.png" alt="alt"/></div>
+                            <div class="tabServices__content">
+                              <div class="tabServices__row">
+                                <div class="tabServices__label"><span>Оказанные услуги:</span></div>
+                                <div class="tabServices__desc"><span>Борьба с контрафактом</span></div>
+                              </div>
+                              <div class="tabServices__row">
+                                <div class="tabServices__label"><span>Отрасль:</span></div>
+                                <div class="tabServices__desc"><span>Торговля</span></div>
+                              </div>
+                            </div>
+                            <div class="tabServices__link"><a href="#">Изучить кейс</a></div>
+                          </div>
+                        </div>
+                        <div class="tabServices__item">
+                          <div class="tabServices__top">
+                            <div class="tabServices__title"><span>Взыскание компенсации 1 млн. тенге в рамках дела по защите исключительных прав клиента</span></div>
+                          </div>
+                          <div class="tabServices__bottom">
+                            <div class="tabServices__img"><img src="../img/trademarks_2.png" alt="alt"/></div>
+                            <div class="tabServices__content">
+                              <div class="tabServices__row">
+                                <div class="tabServices__label"><span>Оказанные услуги:</span></div>
+                                <div class="tabServices__desc"><span>Борьба с контрафактом</span></div>
+                              </div>
+                              <div class="tabServices__row">
+                                <div class="tabServices__label"><span>Отрасль:</span></div>
+                                <div class="tabServices__desc"><span>Торговля</span></div>
+                              </div>
+                            </div>
+                            <div class="tabServices__link"><a href="#">Изучить кейс</a></div>
+                          </div>
+                        </div>
+                        <div class="tabServices__item">
+                          <div class="tabServices__top">
+                            <div class="tabServices__title"><span>Взыскание компенсации 1 млн. тенге в рамках дела по защите исключительных прав клиента</span></div>
+                          </div>
+                          <div class="tabServices__bottom">
+                            <div class="tabServices__img"><img src="../img/trademarks_3.png" alt="alt"/></div>
+                            <div class="tabServices__content">
+                              <div class="tabServices__row">
+                                <div class="tabServices__label"><span>Оказанные услуги:</span></div>
+                                <div class="tabServices__desc"><span>Борьба с контрафактом</span></div>
+                              </div>
+                              <div class="tabServices__row">
+                                <div class="tabServices__label"><span>Отрасль:</span></div>
+                                <div class="tabServices__desc"><span>Торговля</span></div>
+                              </div>
+                            </div>
+                            <div class="tabServices__link"><a href="#">Изучить кейс</a></div>
+                          </div>
+                        </div>
+                        <div class="tabServices__item">
+                          <div class="tabServices__top">
+                            <div class="tabServices__title"><span>Взыскание компенсации 1 млн. тенге в рамках дела по защите исключительных прав клиента</span></div>
+                          </div>
+                          <div class="tabServices__bottom">
+                            <div class="tabServices__img"><img src="../img/trademarks_4.png" alt="alt"/></div>
+                            <div class="tabServices__content">
+                              <div class="tabServices__row">
+                                <div class="tabServices__label"><span>Оказанные услуги:</span></div>
+                                <div class="tabServices__desc"><span>Борьба с контрафактом</span></div>
+                              </div>
+                              <div class="tabServices__row">
+                                <div class="tabServices__label"><span>Отрасль:</span></div>
+                                <div class="tabServices__desc"><span>Торговля</span></div>
+                              </div>
+                            </div>
+                            <div class="tabServices__link"><a href="#">Изучить кейс</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-action"><a class="tab-showMore" href="#">Смотреть еще 4 кейса</a></div>
+                  </div>
+                  <!-- end practice-->
+                  <!-- start tabServices-->
+                  <div class="tab-item">
+                    <div class="tabServices">
+                      <div class="tabServices__grid">
+                        <div class="tabServices__item">
+                          <div class="tabServices__top">
+                            <div class="tabServices__title"><span>Доработка логотипа и регистрация товарного знака NEMO</span></div>
+                          </div>
+                          <div class="tabServices__bottom">
+                            <div class="tabServices__link"><a href="#">Изучить кейс</a></div>
+                          </div>
+                        </div>
+                        <div class="tabServices__item">
+                          <div class="tabServices__top">
+                            <div class="tabServices__title"><span>Доработка логотипа и регистрация товарного знака NEMO</span></div>
+                          </div>
+                          <div class="tabServices__bottom">
+                            <div class="tabServices__link"><a href="#">Изучить кейс</a></div>
+                          </div>
+                        </div>
+                        <div class="tabServices__item">
+                          <div class="tabServices__top">
+                            <div class="tabServices__title"><span>Доработка логотипа и регистрация товарного знака NEMO</span></div>
+                          </div>
+                          <div class="tabServices__bottom">
+                            <div class="tabServices__link"><a href="#">Изучить кейс</a></div>
+                          </div>
+                        </div>
+                        <div class="tabServices__item">
+                          <div class="tabServices__top">
+                            <div class="tabServices__title"><span>Доработка логотипа и регистрация товарного знака NEMO</span></div>
+                          </div>
+                          <div class="tabServices__bottom">
+                            <div class="tabServices__link"><a href="#">Изучить кейс</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-action"><a class="tab-showMore" href="#">Смотреть еще 4 кейса</a></div>
+                  </div>
+                  <!-- end tabServices-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end cases-->
+        <!-- begin services-->
+        <!-- end services-->
         <!-- begin form-->
         <!-- end form-->
         <!-- Button trigger modal info-->
@@ -392,9 +697,11 @@
       <script src="../js/jquery.js"></script>
       <script src="../js/form.js"></script>
       <script src="../js/modal.js"></script>
-      <script src="../js/slick.min.js"></script>
+      <script src="../js/swiper-bundle.min.js"></script>
       <script src="../js/slider.js"></script>
       <script src="../js/select2.min.js"></script>
+      <script src="../js/jquery.event.move.js"></script>
+      <script src="../js/jquery.twentytwenty.js"></script>
       <script src="../js/function.js"></script>
     </div>
   </body>

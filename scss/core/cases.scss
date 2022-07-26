@@ -1,0 +1,80 @@
+.cases {
+    &__label {
+        text-align: center;
+
+        @media (min-width: 768px) {
+            text-align: inherit;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        display: flex;
+        justify-content: space-between;
+
+        letter-spacing: 0.02em;
+        margin-bottom: 1.75em;
+
+        @media (min-width: 768px) {
+            flex: none;
+            align-items: center;
+            margin-bottom: 0;
+            width: 50.125em;
+            margin-left: 8.25em;
+
+        }
+    }
+
+    &__item {
+        line-height: 0.838;
+        width: 4.5em;
+
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            width: 16em;
+            line-height: 1.4;
+
+        }
+
+        span {
+            font-size: 0.5em;
+
+            @media (min-width: 768px) {
+                margin-left: 1.5em;
+                font-size: $main_font_size;
+            }
+
+        }
+
+        &:before {
+            flex: none;
+            content: '\e91d';
+            font-family: 'icomoon';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 5em;
+            height: 5em;
+            border-radius: 50%;
+            background-color: #F9FAFD;
+            font-size: 0.4em;
+            color: $color_success;
+            margin: 0 auto 0.25em;
+
+            @media (min-width: 768px) {
+                margin: 0;
+                font-size: 0.625em;
+            }
+
+        }
+    }
+
+    &__tabs {}
+
+}

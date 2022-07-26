@@ -1,7 +1,6 @@
 .comments {
     @media (max-width: 767px) {
         padding-top: 2.25em;
-        /* 36/16 */
     }
 
     &__top {
@@ -68,7 +67,8 @@
 
     &__arrows {
         @media (min-width: 768px) {
-            .slick-arrow {
+            // .slick-arrow
+            i {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -358,10 +358,21 @@
 }
 
 .logoSlider {
-    .slick-list {
-        margin-left: -0.125em;
+    // .slick-list {
+    //     margin-left: -0.125em;
+    // }
+
+    // .swiper-pagination-bullets {
+    //     @media (min-width: 768px) {
+    //         justify-content: flex-end!important;
+    //     }
+    // }
+
+    &__doted {
+        @media (min-width: 768px) {
+            justify-content: flex-end;
+        }
     }
-    @media (min-width: 768px) {}
 
     &__grid {
         display: flex;
