@@ -1,0 +1,42 @@
+.presentation {
+    .section__subtitle,
+    .section__title {
+        text-align: center;
+        @media (min-width: 768px) {
+            text-align: inherit;
+        }
+    }
+
+    &__bg {
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 19.25em 0.9375em 2.25em;
+        // background-position: 25% 75%;
+        background-position: center;
+
+        @media (min-width: 768px) {
+            padding: 7.1875em 6.875em;
+
+        }
+
+    }
+
+    &__content {
+        @media (min-width: 768px) {
+            width: 31.25em;
+            margin-left: auto;
+
+        }
+    }
+
+    &__form {
+        margin-top: 2em;
+        @media (min-width: 768px) {
+            margin-top: 1em;
+            width: 22.25em;
+
+        }
+
+    }
+
+}

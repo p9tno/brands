@@ -319,6 +319,44 @@ block content
 
     // end services
 
+    // begin presentation
+    section#presentation.presentation.section
+        .container_center
+            .presentation__bg(style="background-image: url('../img/presentation_bg.jpg')")
+                .presentation__content
+                    h2.section__title
+                        span Получите  <i class="icon-download"></i> <b>презентацию Eurasian Brands</b>
+                    .section__subtitle
+                        span со стоимостью услуг через минуту
+
+                    .presentation__form
+                        form.form
+                            .form__label
+                                span Куда прислать презентацию?
+                            .form__row
+                                select.select(data-placeholder="Whatsapp")
+                                    option(value="")
+                                    option(value="whatsapp") Whatsapp
+                                    option(value="Viber") Viber
+                                    option(value="Telegram") Telegram
+
+                            .form__row
+                                input(type="tel" class="tel" required placeholder="Введите ваш номер")
+
+                            .form__row
+                                button.btn.btn_didisabled_js(type="submit") Получить презентацию с ценами на услуги
+
+
+
+                            .form__row
+                                .form__privacy
+                                    label.form__check
+                                        input.check_checked_js(type="checkbox" checked="checked")
+                                        span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
+
+
+    // end presentation
+
     // begin form
     //- section#form.form.section
     //-     .container_center

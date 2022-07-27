@@ -75,6 +75,15 @@ body {
 		b {
 			font-weight: 700;
 		}
+
+		i {
+			color: $color_info;
+			font-size: 1em;
+			@media (min-width: 768px) {
+				font-size: 0.5em;
+
+			}
+		}
 	}
 
 	&__subtitle {

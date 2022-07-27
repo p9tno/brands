@@ -11,7 +11,6 @@
 	height: 4.584em;
 	padding: 0.5em 4em 0.5em 2em;
 	width: 20.334em;
-	/* 232/16 */
 	max-width: 100%;
 	border: none;
 	border-radius: 31.25em;
@@ -19,7 +18,6 @@
 	font-family: $main_font_family;
 	font-weight: 500;
 	font-size: 0.75em;
-	/* 12/16 */
 	text-align: center;
 	text-decoration: none;
 
@@ -98,6 +96,11 @@
 
 		&:before {
 			content: none;
+		}
+
+		&:after {
+			-webkit-animation: none;
+			animation: none;
 		}
 	}
 

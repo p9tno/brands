@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?sqgzl');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?sqgzl#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?sqgzl') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?sqgzl') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?sqgzl##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?h319x7');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?h319x7#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?h319x7') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?h319x7') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?h319x7##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -77,11 +77,6 @@
     content: $icon-arrow_deg; 
   }
 }
-.icon-close {
-  &:before {
-    content: $icon-close; 
-  }
-}
 .icon-loupe {
   &:before {
     content: $icon-loupe; 
@@ -105,6 +100,16 @@
 .icon-whatsapp {
   &:before {
     content: $icon-whatsapp; 
+  }
+}
+.icon-viber {
+  &:before {
+    content: $icon-viber; 
+  }
+}
+.icon-telegram {
+  &:before {
+    content: $icon-telegram; 
   }
 }
 .icon-map {

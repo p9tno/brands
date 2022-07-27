@@ -89,9 +89,29 @@ $(document).ready(function() {
     };
     doDrop();
 
+
+
+    function addIcon(icon) {
+        if (!icon.id) {
+            return icon.text;
+        }
+
+        let $icon = $(
+            '<span><span></span><i></i></span>'
+        );
+
+        $icon.find("span").text(icon.text);
+        $icon.find("i").attr("class", "icon-" + icon.element.value.toLowerCase());
+
+        return $icon;
+
+    }
+
     $('.select').select2({
         placeholder: $(this).data('placeholder'),
-        minimumResultsForSearch: Infinity
+        minimumResultsForSearch: Infinity,
+        // tags: true,
+        templateSelection: addIcon,
     });
 
     function stikyMenu() {
@@ -172,5 +192,22 @@ $(document).ready(function() {
         move_with_handle_only: true, // двигать слайдер только за его "бегунок"
         click_to_move: false // разрешить перемещение "бегунка" слайдера по клику на изображении
     });
+
+    $(function(){
+        $(".tel").mask("+7 ( 9 9 9 ) 9 9 9 - 9 9 - 9 9");
+    });
+
+    function disabledButton() {
+        $('.check_checked_js').on('change', function () {
+            if ( $(this).prop('checked') ) {
+                $(this).closest('.form').find('.btn_didisabled_js').attr('disabled', false);
+
+            } else {
+                $(this).closest('.form').find('.btn_didisabled_js').attr('disabled', true);
+            }
+        });
+
+    }
+    disabledButton();
 
 });
