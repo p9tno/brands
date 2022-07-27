@@ -11,7 +11,16 @@
         }
     }
 
-    &__item {}
+    &__item {
+        margin-bottom: 2em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+        }
+    }
 
     &__comparison {
         margin-bottom: 1.5em;
@@ -91,9 +100,7 @@
             margin: 0;
             border: none;
             width: 0.625em;
-            /* 10/16 */
             height: 0.125em;
-            /* 2/16 */
             background-image: url("../img/toddler.svg");
             background-size: cover;
             background-position: center;

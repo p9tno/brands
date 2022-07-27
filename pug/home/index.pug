@@ -171,12 +171,11 @@ block content
                                 span Передвигайте указатель на изображении влево/вправо
                                 .tab-img
                                     img(src="../img/hand.svg")
-                            .logos.swiper.tab-logos-slider-js
-                                .logos__list.swiper-wrapper
+                            .logos
+                                .logos__list
                                     each item in [ {title: 'Доработка логотипа и регистрация товарного знака Наша Узбечка', subtitle: ' Ресторан восточной кухни' }, {title: 'Доработка логотипа и регистрация', subtitle: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, saepe?' }, {title: 'Доработка', subtitle: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis animi perferendis unde aspernatur ea vero eius odio magni ut doloremque.' }, {title: ' Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem ipsum Lorem ipsum', subtitle: ' Lorem ipsum dolor.' },  ]
 
-                                        .logos__item.swiper-slide
-
+                                        .logos__item
                                             .logos__comparison.twentytwenty-container
                                                 img(src="../img/before.jpg")
                                                 img(src="../img/after.jpg")
@@ -195,14 +194,6 @@ block content
                                                     .logos__button
                                                         a.btn.btn_md.btn_warning(href="#") Изучить кейс
 
-                                .logos__arrows.mobile
-                                    i.icon-drop_left
-                                    i.icon-drop_right
-                                .tab-logos-doted
-                                //- .swiper-pagination
-                                //- <div class="swiper-button-prev"></div>
-                                //- <div class="swiper-button-next"></div>
-
                             .tab-action
                                 a.tab-showMore.desktop(href="#") Смотреть еще 4 кейса
                                 a.btn(href="#") Изучить все кейсы
@@ -211,40 +202,23 @@ block content
 
                         // start trademarks
                         .tab-item
-                            .tab-label.mobile
-                                span Передвигайте влево/вправо для просмотра товарных знаков наших клиентов
-                                .tab-img
-                                    img(src="../img/hand.svg")
-                            .trademarks.swiper.tab-trademarks-slider-js
-                                .trademarks__slider.swiper-wrapper
+                            .trademarks
 
-                                    .swiper-slide
-                                        .trademarks__grid
-                                            each item in [1,2,3,4,5,6]
-                                                .trademarks__item
-                                                    .trademarks__img
-                                                        img(src="../img/trademarks_"+item+".png", alt="alt")
-                                    .swiper-slide
-                                        .trademarks__grid
-                                            each item in [7,8,9,10,1,12]
-                                                .trademarks__item
-                                                    .trademarks__img
-                                                        img(src="../img/trademarks_"+item+".png", alt="alt")
+                                .trademarks__grid
+                                    each item in [1,2,3,4,5,6,7,8,9,10,1,12]
+                                        .trademarks__item
+                                            .trademarks__img
+                                                img(src="../img/trademarks_"+item+".png", alt="alt")
 
-                                .tab-trademarks-doted
 
                             .tab-action
-                                a.tab-showMore.desktop(href="#") Смотреть еще 6 кейсов
+                                a.tab-showMore(href="#") Смотреть еще 6 кейсов
                                 //- a.btn(href="#") Изучить все кейсы
 
                         // end trademarks
 
                         // start practice
                         .tab-item
-                            //- .tab-label.mobile
-                            //-     span Передвигайте влево/вправо для просмотра судебных практик
-                            //-     .tab-img
-                            //-         img(src="../img/hand.svg")
                             .tabServices
                                 .tabServices__grid
                                     each item in [1,2,3,4]
@@ -295,35 +269,53 @@ block content
     // end cases
 
     // begin services
-    //- section#services.services.section
-    //-     .container_center
-    //-         .services__content
-    //-             .services__tabs
-    //-                 .tabs-wrapper
-    //-                     h2.section__title
-    //-                         span <b>Все услуги</b> патентования в одном месте
-    //-                     .tabs
-    //-                         each item in ['Товарные знаки', 'Авторские права', 'Логотипы','Патенты', 'Внесение в таможенный реестр','Блокировка аккаунтов', 'Суды и споры','Битрикс 24', 'Депозитарий авторских прав', 'Правовые консультации']
-    //-                             .tab=item
-    //- 
-    //-                     .tabs-content
-    //-                         each item in ['Товарные знаки', 'Авторские права', 'Логотипы','Патенты', 'Внесение в таможенный реестр','Блокировка аккаунтов', 'Суды и споры','Битрикс 24', 'Депозитарий авторских прав', 'Правовые консультации']
-    //-                             .tab-item
-    //-                                 .services__grid.counter-wrap
-    //-                                     each item in [1,2]
-    //- 
-    //-                                         .services__item.counter-item
-    //-                                             .services__title
-    //-                                             .services__request
-    //-                                                 a(href="#") Заявка на косультацию
-    //-                                             .services__action
-    //-                                                 .services__number
-    //-                                                     span.counter-el
-    //- 
-    //-                                                 .services__link
-    //-                                                     a(href="#") Подробнее об услуге
-    //-                                                 .services__arrow
-    //-                                                     i.icon-arrow_deg
+    section#services.services.section
+        .container_center
+            .services__content
+                .services__tabs
+                    .tabs-wrapper
+                        .tabs-left
+                            h2.section__title
+                                span <b>Все услуги</b> патентования в одном месте
+                            .tabs
+                                each item in ['Товарные знаки', 'Авторские права', 'Логотипы','Патенты', 'Внесение в таможенный реестр','Блокировка аккаунтов', 'Суды и споры','Битрикс 24', 'Депозитарий авторских прав', 'Правовые консультации']
+                                    .tab=item
+
+                        .swiper__label.mobile
+                            span Передвигайте шаги влево/вправо для просмотра всех услуг
+                            .swiper__img
+                                img(src="../img/hand.svg")
+
+                        .tabs-content
+                            each item in [1,1,1,1,1,1,1,1,1,1]
+                                .tab-item.swiper.services-swiper-js
+                                    .services__grid.swiper-wrapper.counter-wrap
+                                        each item in ['Регистрация товарного знака', 'Продление срока регистрации', 'Проверка на уникальность', 'Международная регистрация  по Мадридской системе и за рубежом', 'Регистрация общеизвестного товарного знака', 'Регистрация наименования места происхождения товара', 'Ответ на уведомление или отказ в регистрации',]
+
+
+                                            .services__item.swiper-slide.counter-item
+                                                .services__title
+                                                    span!=item
+                                                .services__request
+                                                    a(href="#") Заявка на косультацию
+                                                .services__action
+                                                    .services__number
+                                                        span.counter-el
+
+                                                    .services__link.dotted
+                                                        a(href="#") Подробнее об услуге
+                                                    .services__arrow
+                                                        i.icon-arrow_deg
+
+                                        .services__item.swiper-slide.services__item_bg
+                                            .services__title
+                                                span Не нашли нужную услугу?
+                                            .services__subtitle
+                                                span Уверены, мы сможем помочь. Просто напишите нам. Ответим за 15 секунд!
+                                            .services__button
+                                                a(href="#").btn.btn_whatsapp_sm.btn_success.btn_md Написать в WhatsApp
+                                    .services__dotted
+
 
     // end services
 

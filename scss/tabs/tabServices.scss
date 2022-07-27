@@ -19,7 +19,7 @@
     &__item {
         background-color: #F9FAFD;
         border-radius: 0.125em;
-        padding: 1em;
+        padding: 0.75em;
         margin-bottom: 1em;
         text-align: center;
 
@@ -40,7 +40,7 @@
     }
 
     &__top {
-        margin-bottom: 0.5em;
+        margin-bottom: 0.25em;
         @media (min-width: 768px) {
             margin-bottom: 1em;
 
@@ -48,6 +48,11 @@
     }
 
     &__title {
+        line-height: 0.9;
+        @media (min-width: 768px) {
+            line-height: $main_line_height;
+        }
+
         span {
             font-size: 0.75em;
             font-weight: 700;

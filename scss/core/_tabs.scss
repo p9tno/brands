@@ -89,7 +89,12 @@
 
 }
 
-.tabs-content {}
+.tabs-content {
+    padding-top: 1em;
+    @media (min-width: 768px) {
+        padding-top: 0;
+    }
+}
 
 .tab-item {}
 
@@ -98,7 +103,7 @@
     align-items: center;
     width: 11.5em;
     margin: 0 auto;
-    padding: 2.375em 0;
+    padding: 1.375em 0 2.375em;
     color: rgba($color_black,0.5);
     text-align: right;
     line-height: 1.5;

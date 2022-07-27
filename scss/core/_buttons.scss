@@ -183,21 +183,21 @@
 
 	}
 
-	// &_whatsapp_sm {
-	// 	font-size: 0.6875em;
-	// 	font-weight: 500;
-	// 	height: 5.455em;
-	// 	padding-left: 3em;
-	// 	padding-right: 4.492em;
-	//
-	// 	&:after {
-	// 		content: '\e909';
-	// 		top: 1em;
-	// 		right: 1.05em;
-	// 		font-size: 1.75em;
-	// 	}
-	//
-	// }
+	&_whatsapp_sm {
+		font-size: 0.6875em;
+		font-weight: 500;
+		height: 5.455em;
+		padding-left: 3em;
+		padding-right: 4.492em;
+
+		&:after {
+			content: '\e909';
+			top: 1em;
+			right: 1.05em;
+			font-size: 1.75em;
+		}
+
+	}
 
 }
 
