@@ -1,0 +1,58 @@
+.runningLine {
+    @media (max-width: 767px) {
+        padding: 2.75em 0;
+    }
+
+    &__content {
+        overflow: hidden;
+
+        padding: 2.526em 0;
+        background-color: #F9FAFD;
+
+        @media (min-width: 768px) {
+            padding: 2.451em 0;
+
+        }
+    }
+
+    &__list {
+        display: flex;
+        letter-spacing: 0.35em;
+    }
+
+    &__item {
+        position: relative;
+        margin-left: 3.25em;
+        @media (min-width: 768px) {
+            margin-left: 6.25em;
+
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -2em;
+            width: 0.3125em;
+            height: 0.3125em;
+            border-radius: 50%;
+            background-color: $main_color;
+            @media (min-width: 768px) {
+                left: -3.5em;
+            }
+
+        }
+
+        span {
+            font-size: 0.75em;
+            font-weight: 500;
+            @media (min-width: 768px) {
+                font-weight: 400;
+                font-size: 1.125em;
+
+            }
+        }
+    }
+
+}

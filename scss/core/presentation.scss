@@ -8,6 +8,7 @@
     }
 
     &__bg {
+        background-image: url("../img/presentation_bg_mob.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         padding: 19.25em 0.9375em 2.25em;
@@ -15,6 +16,7 @@
         background-position: center;
 
         @media (min-width: 768px) {
+            background-image: url("../img/presentation_bg.jpg");
             padding: 7.1875em 6.875em;
 
         }

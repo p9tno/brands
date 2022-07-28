@@ -195,7 +195,7 @@ block content
                                                         a.btn.btn_md.btn_warning(href="#") Изучить кейс
 
                             .tab-action
-                                a.tab-showMore.desktop(href="#") Смотреть еще 4 кейса
+                                a.tab-showMore(href="#") Смотреть еще 4 кейса
                                 a.btn(href="#") Изучить все кейсы
 
                         // end logos
@@ -221,7 +221,7 @@ block content
                         .tab-item
                             .tabServices
                                 .tabServices__grid
-                                    each item in [1,2,3,4]
+                                    each item in [1,1,1,1]
                                         .tabServices__item
                                             .tabServices__top
                                                 .tabServices__title
@@ -322,7 +322,8 @@ block content
     // begin presentation
     section#presentation.presentation.section
         .container_center
-            .presentation__bg(style="background-image: url('../img/presentation_bg.jpg')")
+            //- .presentation__bg(style="background-image: url('../img/presentation_bg.jpg')")
+            .presentation__bg
                 .presentation__content
                     h2.section__title
                         span Получите  <i class="icon-download"></i> <b>презентацию Eurasian Brands</b>
@@ -356,6 +357,167 @@ block content
 
 
     // end presentation
+
+    // begin conditions
+    section#conditions.conditions.section
+        .container_center
+            .conditions__wrap
+                .conditions__caption
+                    h2.section__title
+                        span Предлагаем уникальные <b>условия сотрудничества</b>
+                    .conditions__desc
+                        span Таких преимуществ вы не найдете ни у одной патентной компании в Казахстане — мы проверяли
+                .swiper__label.mobile
+                    span Передвигайте шаги влево/вправо для просмотра всех преимуществ
+                    .swiper__img
+                        img(src="../img/hand.svg")
+                .swiper.conditions-swiper-js
+                    .conditions__grid.swiper-wrapper.counter-wrap
+
+
+                        .conditions__item.swiper-slide.counter-item
+                            .conditions__icon
+                                i.icon-percent
+
+                            .conditions__content.conditions__content_goTop
+                                .conditions__title
+                                    span Рассрочка
+                                .conditions__text
+                                    span Обычно каждый второй клиент оплачивает наши услуги по беспроцентной рассрочке: Альфа-банк, Kaspi Bank или собственной от Eurasian Brands.
+                            .conditions__button
+                                a(href="#").btn.btn_md Подробнее
+                            .conditions__count
+                                span.counter-el
+
+
+                        .conditions__item.swiper-slide.counter-item
+                            .conditions__icon
+                                i.icon-defense
+
+                            .conditions__content.conditions__content_goTop
+                                .conditions__title
+                                    span 100% гарантия регистрации
+                                .conditions__text
+                                    span Берем на себя финансовую ответственность за регистрацию: добьемся регистрации или вернем 100% оплату
+                            .conditions__button
+                                a(href="#").btn.btn_md Подробнее
+                            .conditions__count
+                                span.counter-el
+
+
+                        .conditions__item.swiper-slide.counter-item
+                            .conditions__icon
+                                i.icon-timer
+
+                            .conditions__content
+                                .conditions__title
+                                    span Подаем заявку<br> в день оплаты
+                                .conditions__text
+                                    span Для закрепления приоритетного права на товарный знак крайне важно, не откладывая, подать заявку на регистрацию
+                            .conditions__count
+                                span.counter-el
+
+
+                        .conditions__item.swiper-slide.counter-item
+                            .conditions__icon
+                                i.icon-list
+
+                            .conditions__content
+                                .conditions__title
+                                    span Сражаемся за ваш<br> товарный знак
+                                .conditions__text
+                                    span Даже если вам отказали в регистрации, мы изучим отказ, выработаем и реализуем стратегию беспроигрышных действий, благодаря которым гарантируем регистрацию
+                            .conditions__count
+                                span.counter-el
+
+
+                        .conditions__item.swiper-slide.counter-item
+                            .conditions__icon
+                                i.icon-loupe
+
+                            .conditions__content
+                                .conditions__title
+                                    span Бесплатный поиск
+                                .conditions__text
+                                    span В рамках предварительных договоренностей мы бесплатно проверим ваш товарный знак и выдадим заключение о возможности регистрации
+                            .conditions__count
+                                span.counter-el
+
+                    .conditions__dotted
+
+
+
+    // end conditions
+
+    // begin runningLine
+    section#runningLine.runningLine.section
+        .runningLine__content
+            .runningLine__list
+                each item in ['РЕПУТАЦИЯ', 'ЛИДЕРСТВО', 'ОТКРЫТОСТЬ', 'КОМПЕТЕНТНОСТЬ', 'РЕПУТАЦИЯ', 'ЛИДЕРСТВО', 'ОТКРЫТОСТЬ', 'КОМПЕТЕНТНОСТЬ']
+                    .runningLine__item
+                        span=item
+
+    // end runningLine
+
+    // begin information
+    section#information.information.section
+        .container_center
+            .information__top
+                h2.section__title
+                    span «Приумножаем эффективность и доходы бизнеса»
+                .information__subtitle
+                    span Дорожим своей репутацией <b>40% наших клиентов пришли по рекомендации.</b>
+
+                .information__content
+                    .company
+                        .company__label
+                            span О нашей компании и подходе в видео за 2 минуты
+                        .company__play
+                            i.icon-play
+                    .lider
+                        .lider__icon
+                            i.icon-arrow_deg
+                        .lider__name
+                            span Турсунов Куаныш Абилкасымович
+                        .lider__info
+                            span патентный поверенный Республики Казахстан. Основатель и руководитель компании Eurasian Brands
+
+                .information__list
+                    .list__title
+                        span Поэтому открыто Вам заявляю и гарантирую:
+                    ul.list
+                        each item in [ {label: 'Прозрачная стоимость,  не меняется в ходе работы', text: 'Стоимость наших услуг опубликована здесь на сайте. Оказание услуг оформляется официальным договором. Она окончательная и не изменится в большую сторону в процессе работы;'}, {label: 'Не химичим — знаем закон и работаем легально', text: 'Знаете, что самое плохое? На рынке есть недобросовестные компании, которые на консультации называют одну цену, а в ходе работы увеличивают ее в 2, 3 раза. Будьте бдительны и работайте с проверенными компаниями;'},]
+
+                            li.list__item
+                                .list__label
+                                    span=item.label
+                                .list__text
+                                    span=item.text
+
+            .information__bottom
+                ul.data
+                    each item in [ {number: '3000', symbol: '+', label: 'довольных клиентов'}, {number: '97', symbol: '%', label: 'получают документы<br> с первого раза'}, {number: '1358', symbol: '', label: 'товарных знаков<br> зарегистрировали'}, {number: '1125', symbol: '', label: 'досудебных<br> урегулирований'}, ]
+
+                        li.data__item
+                            .data__content
+                                .data__number
+                                    span!=item.number
+                                    i=item.symbol
+                                .data__label
+                                    span!=item.label
+
+
+
+
+
+
+
+
+    // end information
+
+
+
+
 
     // begin form
     //- section#form.form.section

@@ -142,10 +142,18 @@
     text-align: center;
     margin-top: 2.625em;
     /* 42/16 */
+    .btn {
+        margin-top: 4em;
+    }
     @media (min-width: 768px) {
         margin-top: 5.75em;
 
+        .btn {
+            margin-top: 0;
+        }
+
     }
+
 }
 
 .tab-showMore {
