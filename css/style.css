@@ -572,6 +572,7 @@ body {
   font-size: 1em;
   font-family: "TT Norm";
   margin-bottom: 1em;
+  letter-spacing: 0.02em;
 }
 @media (min-width: 768px) {
   .section__title {
@@ -601,6 +602,7 @@ body {
 }
 .section__subtitle {
   margin-bottom: 1.375em;
+  letter-spacing: 0.02em;
 }
 @media (min-width: 768px) {
   .section__subtitle {
@@ -4105,6 +4107,190 @@ body {
     margin-top: 3em;
   }
 }
+.consultation .section__title {
+  line-height: 1.3;
+}
+.consultation .section__subtitle {
+  line-height: 1.5;
+  margin-bottom: 1.375em;
+  /* 22/16 */
+}
+@media (min-width: 768px) {
+  .consultation .section__subtitle {
+    margin-bottom: 2.9375em;
+  }
+}
+.consultation__wrap {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../img/consultation_bg_mob.jpg");
+  padding: 2.25em 1em 2.5em;
+}
+@media (min-width: 768px) {
+  .consultation__wrap {
+    padding: 6.25em;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background-image: url("../img/consultation_bg.jpg");
+  }
+}
+.consultation__content {
+  text-align: center;
+  margin-bottom: 1.375em;
+}
+@media (min-width: 768px) {
+  .consultation__content {
+    margin-bottom: 0;
+    text-align: inherit;
+    width: 34.25em;
+  }
+}
+.consultation__list {
+  letter-spacing: 0.03em;
+  margin-bottom: 1.375em;
+}
+@media (min-width: 768px) {
+  .consultation__list {
+    margin-bottom: 2.9375em;
+  }
+}
+.consultation__item {
+  margin-bottom: 1em;
+}
+@media (min-width: 768px) {
+  .consultation__item {
+    margin-bottom: 1.5625em;
+  }
+}
+.consultation__item:last-child {
+  margin-bottom: 0;
+}
+.consultation__item span {
+  font-size: 0.625em;
+}
+@media (min-width: 768px) {
+  .consultation__item span {
+    font-size: 1.25em;
+  }
+}
+.consultation__item:before {
+  content: "";
+  font-family: "icomoon";
+  margin-right: 0.75em;
+  color: #12C868;
+  font-size: 0.625em;
+}
+@media (min-width: 768px) {
+  .consultation__item:before {
+    font-size: 1em;
+    margin-right: 1em;
+  }
+}
+.consultation__phone {
+  margin-bottom: 1.375em;
+}
+.consultation__phone .phone__time {
+  margin-bottom: 1em;
+}
+.consultation__phone .phone__time span {
+  font-size: 0.625em;
+}
+.consultation__phone .phone__time span:before {
+  width: 0.5em;
+  height: 0.5em;
+}
+.consultation__phone .phone__link a {
+  font-size: 1.3125em;
+}
+@media (min-width: 768px) {
+  .consultation__phone {
+    margin-bottom: 1.5625em;
+  }
+  .consultation__phone .phone {
+    align-items: flex-start;
+  }
+  .consultation__phone .phone__time {
+    margin-left: 0.6em;
+    margin-bottom: 0.4em;
+  }
+  .consultation__phone .phone__time span {
+    font-size: 1em;
+  }
+  .consultation__phone .phone__time span:before {
+    width: 0.25em;
+    height: 0.25em;
+  }
+  .consultation__phone .phone__link a {
+    font-size: 1.6875em;
+  }
+}
+@media (max-width: 767px) {
+  .consultation__action .btn span {
+    font-size: 0.75em;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .consultation__action {
+    display: flex;
+    align-items: center;
+  }
+}
+.consultation__action span {
+  display: inline-block;
+  letter-spacing: 0.02em;
+  font-size: 0.625em;
+  margin-bottom: 0.5em;
+}
+@media (min-width: 768px) {
+  .consultation__action span {
+    margin-bottom: 0;
+    font-size: 1em;
+    width: 13.125em;
+    margin-right: 1.125em;
+  }
+}
+@media (min-width: 768px) {
+  .consultation__form {
+    width: 22.25em;
+    margin-top: 3em;
+  }
+}
+@media (min-width: 768px) {
+  .consultation__lider {
+    position: absolute;
+    top: 21.5em;
+    left: 58em;
+    width: 9.875em;
+  }
+  .consultation__lider .lider__icon {
+    margin-bottom: 4em;
+  }
+  .consultation__lider .lider__name {
+    margin-bottom: 1.625em;
+    z-index: 1;
+    position: relative;
+  }
+  .consultation__lider .lider__info {
+    z-index: 1;
+    position: relative;
+  }
+  .consultation__lider:before {
+    content: "";
+    position: absolute;
+    top: 6em;
+    left: -2em;
+    width: 10.375em;
+    height: 10.375em;
+    background-image: url("../img/consultation_blur.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
 /* Footer
  ----------------------------------------------------------------------------- */
 .footer {
@@ -4553,8 +4739,41 @@ body {
   width: 100%;
 }
 .form__row textarea {
-  min-height: 6em;
+  min-height: 15.15em;
   resize: vertical;
+  line-height: 1.4;
+  font-weight: 300;
+  border-radius: 3em;
+  padding: 2.4em;
+}
+@media (min-width: 768px) {
+  .form__row textarea {
+    border-radius: 2.15em;
+    font-size: 0.875em;
+    padding: 3.5em 3.2em 2em;
+  }
+}
+.form__title {
+  letter-spacing: 0.02em;
+  text-align: center;
+  line-height: 1.45;
+  margin-bottom: 1em;
+}
+@media (min-width: 768px) {
+  .form__title {
+    margin-bottom: 2em;
+  }
+}
+.form__title span {
+  font-size: 1em;
+}
+@media (min-width: 768px) {
+  .form__title span {
+    font-size: 1.5em;
+  }
+}
+.form__title b {
+  font-weight: 500;
 }
 .form__label {
   margin-bottom: 0.75em;

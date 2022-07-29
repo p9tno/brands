@@ -58,6 +58,7 @@ body {
 		font-size: $main_font_size;
 		font-family: $main_font_family;
 		margin-bottom: 1em;
+		letter-spacing: 0.02em;
 
 		@media (min-width: 768px) {
 			margin-bottom: 1.625em;
@@ -88,6 +89,7 @@ body {
 
 	&__subtitle {
 		margin-bottom: 1.375em;
+		letter-spacing: 0.02em;
 		@media (min-width: 768px) {
 			margin-bottom: 0;
 		}

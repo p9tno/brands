@@ -671,60 +671,63 @@ block content
     // end news
 
     // begin consultation
-    //- section#consultation.consultation.section
-    //-     .container_center
-    //-         .consultation__wrap
-    //-             .consultation__content
-    //-                 h2.section__title
-    //-                     span Давайте мы вас проконсультируем
-    //-                 .section__subtitle
-    //-                     span и предложим варианты решения вашего вопроса
-    //-                 .consultation__list
-    //-                     each item in ['<b>Проанализируем</b> документы', '<b>Дадим рекомендации</b> по дальнейшим действиям;', '<b>Назовем</b> точную стоимость;', '<b>Рассчитаем</b> платежи, если нужна рассрочка;']
-    //-                         .consultation__item
-    //-                             span!=item
-    //- 
-    //-                 .consultation__phone
-    //-                     .phone
-    //-                         .phone__time
-    //-                             span Звоните, Пн-ВС 10:00 - 21:00
-    //-                         .phone__link
-    //-                             a(href="tel:+77712101111") +7 (771) 210-11-11
-    //-                 .consultation__action
-    //-                     span Спрашивайте, мы онлайн, время ответа 15 сек
-    //-                     a(href="#").btn.btn_whatsapp_sm.btn_success Написать в WhatsApp
-    //- 
-    //-             .consultation__form
-    //-                 form.form
-    //-                     .form__title
-    //-                         span После отправки формы мы перезвоним через 30 секундн
-    //- 
-    //-                     .form__row
-    //-                         textarea(type="text", placeholder="Опишите вашу задачу в общих чертах. Это не обязательно, но позволит нам быстрее сориентироваться и направить вашу заявку профильному специалисту.")
-    //- 
-    //-                     .form__row
-    //-                         input(type="tel" class="tel" required placeholder="Введите ваш номер")
-    //- 
-    //-                     .form__row
-    //-                         button.btn.btn_didisabled_js(type="submit") Получить консультацию
-    //- 
-    //- 
-    //- 
-    //-                     .form__row
-    //-                         .form__privacy
-    //-                             label.form__check
-    //-                                 input.check_checked_js(type="checkbox" checked="checked")
-    //-                                 span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
-    //- 
-    //- 
-    //-             .consultation__lider.desktop
-    //-                 .lider__icon
-    //-                     i.icon-arrow_deg
-    //-                 .lider__name
-    //-                     span Клёнова Айя Ибрагимовна
-    //-                 .lider__info
-    //-                     span Юрист, патентовед, эксперт по товарным знакам
-    //- 
+    section#consultation.consultation.section
+        .container_center
+            .consultation__wrap
+                .consultation__content
+                    h2.section__title.desktop
+                        span Давайте мы вас <b>проконсультируем</b>
+                    h2.section__title.mobile
+                        span Давайте <b>проконсультируем</b>
+                    .section__subtitle
+                        span и предложим варианты<br> решения вашего вопроса
+                    .consultation__list
+                        each item in ['<b>Проанализируем</b> документы', '<b>Дадим рекомендации</b> по дальнейшим действиям;', '<b>Назовем</b> точную стоимость;', '<b>Рассчитаем</b> платежи, если нужна рассрочка;']
+                            .consultation__item
+                                span!=item
+
+                    .consultation__phone
+                        .phone
+                            .phone__time
+                                span Звоните, Пн-ВС 10:00 - 21:00
+                            .phone__link
+                                a(href="tel:+77712101111") +7 (771) 210-11-11
+                    .consultation__action
+                        span Спрашивайте, мы онлайн, время ответа 15 сек
+                        a(href="#").btn.btn_whatsapp_sm.btn_success Написать в WhatsApp
+                            span.mobile время ответа 15 секунд
+
+                .consultation__form
+                    form.form
+                        .form__title
+                            span <b>После отправки<br> формы</b> мы перезвоним<br> через 30 секундн
+
+                        .form__row
+                            textarea(type="text", placeholder="Опишите вашу задачу в общих чертах. Это не обязательно, но позволит нам быстрее сориентироваться и направить вашу заявку профильному специалисту.")
+
+                        .form__row
+                            input(type="tel" class="tel" required placeholder="Введите ваш номер")
+
+                        .form__row
+                            button.btn.btn_didisabled_js(type="submit") Получить консультацию
+
+
+
+                        .form__row
+                            .form__privacy
+                                label.form__check
+                                    input.check_checked_js(type="checkbox" checked="checked")
+                                    span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
+
+
+                .consultation__lider.desktop
+                    .lider__icon
+                        i.icon-arrow_deg
+                    .lider__name
+                        span Клёнова Айя Ибрагимовна
+                    .lider__info
+                        span Юрист, патентовед, эксперт по товарным знакам
+
 
     // end consultation
 

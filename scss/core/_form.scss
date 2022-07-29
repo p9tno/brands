@@ -44,10 +44,45 @@
 		}
 
 		textarea {
-			min-height: 6em;
+			min-height: 15.15em;
 			resize: vertical;
+			line-height: 1.4;
+			font-weight: 300;
+			border-radius: 3em;
+			padding: 2.4em;
+			@media (min-width: 768px) {
+				border-radius: 2.15em;
+				font-size: 0.875em;
+				padding: 3.5em 3.2em 2em;
+			}
+
 		}
 
+	}
+
+	&__title {
+		letter-spacing: 0.02em;
+		text-align: center;
+		line-height: 1.45;
+
+		margin-bottom: 1em;
+		@media (min-width: 768px) {
+			margin-bottom: 2em;
+
+		}
+
+		span {
+			font-size: 1em;
+			@media (min-width: 768px) {
+				font-size: 1.5em;
+
+			}
+		}
+
+		b {
+			font-weight: 500;
+
+		}
 	}
 
 	&__label {
