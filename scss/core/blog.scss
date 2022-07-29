@@ -1,0 +1,119 @@
+.blog {
+    &__slider {}
+
+    &__slide {
+        letter-spacing: 0.02em;
+        text-align: center;
+        @media (min-width: 768px) {
+            text-align: inherit;
+        }
+
+        &:hover {
+            .blog__title {
+                a {
+                    color: $color_info;
+                }
+            }
+        }
+    }
+
+    &__item {
+        letter-spacing: 0.02em;
+        text-align: center;
+        @media (min-width: 768px) {
+            text-align: inherit;
+        }
+
+        &:hover {
+            .blog__title {
+                a {
+                    color: $color_info;
+                }
+            }
+        }
+    }
+
+    &__bg {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-bottom: 0.875em;
+        height: 13.875em;
+        @media (min-width: 768px) {
+            margin-bottom: 1em;
+            height: 23.4375em;
+        }
+    }
+
+    &__date {
+        line-height: 0.8;
+        margin-bottom: 0.875em;
+        @media (min-width: 768px) {
+            line-height: $main_line_height;
+            margin-bottom: 0.375em;
+        }
+
+        span {
+            color: #8B8B8B;
+            font-size: 0.5em;
+            @media (min-width: 768px) {
+                font-size: 0.75em;
+
+            }
+        }
+    }
+
+    &__title {
+        line-height: 1.6;
+        margin-bottom: 0.875em;
+        @media (min-width: 768px) {
+            line-height: 1.45;
+            margin-bottom: 0.375em;
+            min-height: 4.375em;
+
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1em;
+            color: $color_black;
+
+            @media (min-width: 768px) {
+                font-size: 1.5em;
+
+            }
+        }
+    }
+
+    &__description {
+        line-height: 0.75;
+        @media (min-width: 768px) {
+            min-height: 2.5625em;
+            line-height: $main_line_height;
+        }
+
+        span {
+            font-weight: 300;
+            font-size: 0.5em;
+            color: $color_black;
+            @media (min-width: 768px) {
+                font-size: 1em;
+
+            }
+        }
+    }
+
+    &__control {
+        @media (min-width: 768px) {
+            margin-top: 3em;
+        }
+    }
+
+    &__link {}
+
+    &__arrows {}
+
+    &__dotted {}
+
+}

@@ -89,7 +89,7 @@ block content
                     .comments__arrows.desktop
                         i.icon-drop_left
                         i.icon-drop_right
-                    .comments__dotte
+                    .comments__dotted
 
 
 
@@ -213,7 +213,7 @@ block content
 
                             .tab-action
                                 a.tab-showMore(href="#") Смотреть еще 6 кейсов
-                                //- a.btn(href="#") Изучить все кейсы
+                                a.btn(href="#") Изучить все кейсы
 
                         // end trademarks
 
@@ -245,6 +245,7 @@ block content
                                                     a(href="#") Изучить кейс
                             .tab-action
                                 a.tab-showMore(href="#") Смотреть еще 4 кейса
+                                a.btn(href="#") Изучить все кейсы
 
                         // end practice
 
@@ -262,6 +263,7 @@ block content
                                                     a(href="#") Изучить кейс
                             .tab-action
                                 a.tab-showMore(href="#") Смотреть еще 4 кейса
+                                a.btn(href="#") Изучить все кейсы
                         // end tabServices
 
 
@@ -514,6 +516,219 @@ block content
 
 
     // end information
+
+    // begin team
+    section#team.team.section
+        .container_center
+            .team__content
+                .team__left
+                    h2.section__title 
+                        span Команда
+                    .section__subtitle
+                        span Сильная. Амбициозная. Надёжная. <b>Наше кредо — готовим все документы как для себя!</b>
+                    .team__text
+                        p В вопросах, где другие уже наломали дров, мы стараемся разобраться максимально эффективно, чтобы перевесить ситуацию в русло клиента.
+                        p Если вопрос потенциально не выгодный — сообщим на берегу и озвучим все риски.
+                    .team__button.desktop
+                        a(href="#").btn.btn_md Подробнее о компании
+                .team__right
+                    .swiper__label.mobile
+                        span Листайте фото влево/вправо для просмотра всех сотрудников 
+                        .swiper__img
+                            img(src="../img/hand.svg")
+                    .swiper.team-swiper-js
+                        .team__slider.swiper-wrapper
+
+                            each item, i in [ {name: 'Кыжырова<br> Улпан<br> Жанбаевна', desc: 'Юрист, патентовед, эксперт по товарным знакам и таможенному реестру'}, {name: 'Клёнова<br> Айя<br> Ибрагимовна', desc: 'Юрист, патентовед, эксперт по товарным знакам'}, {name: 'Кыжырова<br> Улпан<br> Жанбаевна', desc: 'Юрист, патентовед, эксперт по товарным знакам и таможенному реестру'}, {name: 'Клёнова<br> Айя<br> Ибрагимовна', desc: 'Юрист, патентовед, эксперт по товарным знакам'}, ]
+
+                                .team__item.swiper-slide
+                                    .person(style="background-image: url('../img/team_"+(i+1)+".jpg')")
+                                        .person__content
+                                            .person__icon
+                                                i.icon-arrow_deg
+                                            .person__info
+                                                .person__name
+                                                    span!=item.name
+                                                .person__desc
+                                                    span=item.desc
+                        .team__control
+                            .team__arrows.arrows_info.desktop
+                                i.icon-arrow_long_left
+                                i.icon-arrow_long_right
+                            .team__dotted.dotted_info
+
+                .team__button.mobile
+                    a(href="#").btn Подробнее о компании
+
+
+
+    // end team
+
+    // begin certificate
+    //- section#certificate.certificate.section
+    //-     .container_center
+    //-         .certificate__content
+    //-             .certificate__left
+    //-                 h2.section__title
+    //-                     span Посмотрите, все <b>наши свидетельства</b>
+    //- 
+    //-                 .certificate__text
+    //-                     p Даём гарантию на результаты своей работы, когда это действительно очевидно для нас.
+    //-                     p Первые в Казахстане зарегистрировали звуковой товарный знак.
+    //-                 .certificate__button
+    //-                     a(href="#").btn.btn_md Изучит кейс
+    //- 
+    //- 
+    //-             .certificate__right
+    //- 
+    //-                 .swiper__label.mobile
+    //-                     span Передвигайте влево/вправо для просмотра всех  документов
+    //-                     .swiper__img
+    //-                         img(src="../img/hand.svg")
+    //- 
+    //-                 .swiper.certificate-swiper-js
+    //- 
+    //-                     .certificate__control
+    //-                         .certificate__arrows.arrows_info.desktop
+    //-                             i.icon-arrow_long_left
+    //-                             i.icon-arrow_long_right
+    //-                         .certificate__dotted.dotted_info
+    //- 
+    //-                     .certificate__slider.swiper-wrapper
+    //-                         each item in [1]
+    //-                             .team__item.swiper-slide
+    //-                                 .certificate__doc(style="background-image: url('../img/certificate_doc.png')")
+    //- 
+    //-                     .certificate__control.mobile
+    //-                         .certificate__dotted
+
+
+
+    // end certificate
+
+    // begin news
+    section#news.news.section
+        .container_center
+            .news__content
+                .news__left
+                    h3.news__title
+                        span Рассказываем о том, чего не знают другие на YouTube
+
+                    .swiper__label.mobile
+                        span Листайте видео влево/вправо для просмотра всех 
+                        .swiper__img
+                            img(src="../img/hand.svg")
+
+                    .youtubeBox
+                        .swiper.youtubeBox-swiper-js
+                            .youtubeBox__slider.swiper-wrapper
+                                each item in [1,1,1,1]
+                                    .youtubeBox__item.swiper-slide
+                                        .youtubeBox__bg(style="background-image: url('../img/youtubeBox_bg.jpg')")
+                                            .youtubeBox__play
+                                                i.icon-play
+
+                            .news__control.youtubeBox__control
+                                .news__link.dotted
+                                    a(href="#") Перейти на YouTube
+                                .youtubeBox__arrows.arrows_info.desktop
+                                    i.icon-arrow_long_left
+                                    i.icon-arrow_long_right
+                                .youtubeBox__dotted.mobile
+
+                .news__right
+                    h3.news__title
+                        span Щедро делимся информацией в блоге
+
+                    .swiper__label.mobile
+                        span Листайте статьи влево/вправо для просмотра всех 
+                        .swiper__img
+                            img(src="../img/hand.svg")
+                    .blog
+                        .swiper.blog-swiper-js
+                            .blog__slider.swiper-wrapper
+                                each item in [ {date: '29 апреля 2022', title: 'Как зарегистрировать товарный знак в Казахстане', desc: 'Один из популярных вопросов, который волнует клиентов'}, {date: '30 апреля 2022', title: 'Как зарегистрировать', desc: 'Один из популярных вопросов, который волнует клиентов'}, {date: '31 апреля 2022', title: 'Как зарегистрировать товарный знак в Казахстане', desc: 'Один из популярных вопросов, который волнует клиентов Один из популярных вопросов, который волнует клиентов'}, {date: '31 апреля 2022', title: 'Как зарегистрировать товарный знак в Казахстане Как', desc: 'Один из популярных вопросов'},]
+                                    .blog__slide.swiper-slide
+
+                                        .blog__bg(style="background-image: url('../img/blog_bg.jpg')")
+                                        .blog__date
+                                            span=item.date
+                                        .blog__title
+                                            a(href="#")=item.title
+                                        .blog__description
+                                            span=item.desc
+
+                            .news__control.blog__control
+                                .news__link.dotted
+                                    a(href="#") Перейти в блог
+                                .blog__arrows.arrows_info.desktop
+                                    i.icon-arrow_long_left
+                                    i.icon-arrow_long_right
+                                .blog__dotted.mobile
+
+
+
+    // end news
+
+    // begin consultation
+    //- section#consultation.consultation.section
+    //-     .container_center
+    //-         .consultation__wrap
+    //-             .consultation__content
+    //-                 h2.section__title
+    //-                     span Давайте мы вас проконсультируем
+    //-                 .section__subtitle
+    //-                     span и предложим варианты решения вашего вопроса
+    //-                 .consultation__list
+    //-                     each item in ['<b>Проанализируем</b> документы', '<b>Дадим рекомендации</b> по дальнейшим действиям;', '<b>Назовем</b> точную стоимость;', '<b>Рассчитаем</b> платежи, если нужна рассрочка;']
+    //-                         .consultation__item
+    //-                             span!=item
+    //- 
+    //-                 .consultation__phone
+    //-                     .phone
+    //-                         .phone__time
+    //-                             span Звоните, Пн-ВС 10:00 - 21:00
+    //-                         .phone__link
+    //-                             a(href="tel:+77712101111") +7 (771) 210-11-11
+    //-                 .consultation__action
+    //-                     span Спрашивайте, мы онлайн, время ответа 15 сек
+    //-                     a(href="#").btn.btn_whatsapp_sm.btn_success Написать в WhatsApp
+    //- 
+    //-             .consultation__form
+    //-                 form.form
+    //-                     .form__title
+    //-                         span После отправки формы мы перезвоним через 30 секундн
+    //- 
+    //-                     .form__row
+    //-                         textarea(type="text", placeholder="Опишите вашу задачу в общих чертах. Это не обязательно, но позволит нам быстрее сориентироваться и направить вашу заявку профильному специалисту.")
+    //- 
+    //-                     .form__row
+    //-                         input(type="tel" class="tel" required placeholder="Введите ваш номер")
+    //- 
+    //-                     .form__row
+    //-                         button.btn.btn_didisabled_js(type="submit") Получить консультацию
+    //- 
+    //- 
+    //- 
+    //-                     .form__row
+    //-                         .form__privacy
+    //-                             label.form__check
+    //-                                 input.check_checked_js(type="checkbox" checked="checked")
+    //-                                 span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
+    //- 
+    //- 
+    //-             .consultation__lider.desktop
+    //-                 .lider__icon
+    //-                     i.icon-arrow_deg
+    //-                 .lider__name
+    //-                     span Клёнова Айя Ибрагимовна
+    //-                 .lider__info
+    //-                     span Юрист, патентовед, эксперт по товарным знакам
+    //- 
+
+    // end consultation
+
+
 
 
 

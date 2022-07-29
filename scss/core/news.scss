@@ -1,0 +1,206 @@
+.news {
+    &__content {
+
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+
+        }
+    }
+
+    &__left {
+        @media (min-width: 768px) {
+            min-width: 0;
+            width: 32em;
+
+        }
+    }
+
+    &__title {
+        margin: 0;
+        font-size: $main_font_size;
+        letter-spacing: 0.02em;
+        margin-bottom: 1em;
+        font-weight: 500;
+        text-align: center;
+        line-height: 1.52;
+        @media (min-width: 768px) {
+            line-height: $main_line_height;
+            text-align: inherit;
+            margin-bottom: 2.625em;
+        }
+
+        span {
+            font-size: 1.3125em;
+            @media (min-width: 768px) {
+                font-size: 2.25em;
+            }
+        }
+    }
+
+    &__right {
+        margin-top: 2em;
+        @media (min-width: 768px) {
+            margin-top: 0;
+            min-width: 0;
+            width: 60.5em;
+
+        }
+    }
+
+    &__control {
+        margin-top: 1em;
+
+        @media (min-width: 768px) {
+            margin-top: 2.5em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+    }
+
+    &__link {
+        letter-spacing: 0.03em;
+        text-align: center;
+        @media (min-width: 768px) {
+            text-align: inherit;
+        }
+
+        a {
+            text-decoration: none;
+            color: $color_info;
+            font-weight: 500;
+            font-size: 0.6875em;
+            /* 11/16 */
+            @media (min-width: 768px) {
+                font-size: 1em;
+
+            }
+
+        }
+    }
+
+}
+
+.youtubeBox {
+    @media (min-width: 768px) {
+        width: 29.6875em;
+    }
+
+    &__slider {}
+
+    &__item {}
+
+    &__bg {
+        position: relative;
+        overflow: hidden;
+        border-radius: 0.125em;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        height: 18.125em;
+        @media (min-width: 768px) {
+            height: 31.25em;
+
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(28, 28, 28, 0.5);
+        }
+    }
+
+    &__play {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+        background-color: $color_warning;
+
+        width: 3.375em;
+        height: 3.375em;
+        @media (min-width: 768px) {
+            width: 5.75em;
+            height: 5.75em;
+            transform: translate(-50%, -50%) scale(1);
+            transition: transform 0.3s;
+            cursor: pointer;
+
+            &:hover {
+                transform: translate(-50%, -50%) scale(1.2);
+
+            }
+        }
+
+        i {
+            color: $color_white;
+            font-size: 0.75em;
+            @media (min-width: 768px) {
+                font-size: 1em;
+
+            }
+        }
+
+        &:after,
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%),scale(1);
+            border: 0.25em solid $color_warning;
+            @media (min-width: 768px) {
+                border: 0.25em solid $color_warning;
+
+            }
+
+        }
+
+        &:before {
+            opacity: 0.35;
+            animation: 1s pulsePlay1 infinite;
+            width: 3.6em;
+            height: 3.6em;
+            @media (min-width: 768px) {
+                width: 6em;
+                height: 6em;
+            }
+        }
+
+        &:after {
+            opacity: 0.1;
+            animation: 1s pulsePlay2 infinite;
+            width: 4.125em;
+            height: 4.125em;
+            @media (min-width: 768px) {
+                width: 6.5em;
+                height: 6.5em;
+
+            }
+        }
+    }
+
+    &__control {}
+
+    &__link {}
+
+    &__arrows {}
+
+    &__dotted {}
+
+}

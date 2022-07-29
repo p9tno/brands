@@ -9,12 +9,52 @@ $(document).ready(function() {
           delay: 5000,
         },
         pagination: {
-            el: '.comments__dotte',
+            el: '.comments__dotted',
         },
         navigation: {
             nextEl: '.icon-drop_right',
             prevEl: '.icon-drop_left',
         },
+    });
+
+    const youtube = new Swiper('.youtubeBox-swiper-js', {
+        loop: true,
+        slidesPerView: 1,
+        speed: 500,
+        autoplay: {
+          delay: 5000,
+        },
+        pagination: {
+            el: '.youtubeBox__dotted',
+        },
+        navigation: {
+            nextEl: '.icon-arrow_long_right',
+            prevEl: '.icon-arrow_long_left',
+        },
+        spaceBetween: 10,
+    });
+
+    const blog = new Swiper('.blog-swiper-js', {
+        loop: true,
+        slidesPerView: 1,
+        speed: 500,
+        autoplay: {
+          delay: 5000,
+        },
+        pagination: {
+            el: '.blog__dotted',
+        },
+        navigation: {
+            nextEl: '.icon-arrow_long_right',
+            prevEl: '.icon-arrow_long_left',
+        },
+        spaceBetween: 22,
+        breakpoints: {
+            768: {
+                spaceBetween: 38,
+                slidesPerView: 2,
+            },
+        }
     });
 
     const logoSlider = new Swiper('.logoSlider-swiper-js', {
@@ -31,6 +71,30 @@ $(document).ready(function() {
         breakpoints: {
             768: {
                 slidesPerView: 4,
+            },
+        }
+    });
+
+    const teamSlider = new Swiper('.team-swiper-js', {
+        loop: true,
+        slidesPerView: 1,
+        speed: 500,
+        autoplay: {
+          delay: 5000,
+        },
+        pagination: {
+            el: '.team__dotted',
+        },
+        dynamicBullets: true,
+        navigation: {
+            nextEl: '.icon-arrow_long_right',
+            prevEl: '.icon-arrow_long_left',
+        },
+        spaceBetween: 22,
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 34,
             },
         }
     });

@@ -30,6 +30,46 @@
     background-color: $color_warning;
 }
 
+@media (min-width: 768px) {
+    .dotted_info {
+        margin-top: 0;
+
+        .swiper-pagination-bullet-active {
+            background-color: $color_info;
+        }
+
+    }
+
+    .arrows_info {
+        i {
+            display: inline-block;
+            justify-content: center;
+            cursor: pointer;
+            padding: 0.5em 0;
+
+            &:first-child {
+                margin-right: 3.25em;
+                /* 52/16 */
+            }
+
+            &:before {
+                font-size: 0.875em;
+                font-weight: 500;
+                color: $main_color;
+                transition: color 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    color: $color_warning;
+
+                }
+            }
+        }
+    }
+
+}
+
 .swiper {
     &__label {
         display: flex;

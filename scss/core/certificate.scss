@@ -1,0 +1,114 @@
+.certificate {
+    &__content {
+        display: flex;
+        flex-direction: row-reverse;
+
+        padding: 5em 6.875em 0;
+        /* 80/16 */
+        /* 110/16 */
+
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        background-image: url("../img/certificate_bg_mob.jpg");
+        @media (min-width: 768px) {
+            background-image: url("../img/certificate_bg.jpg");
+
+        }
+    }
+
+    &__left {
+        .section__title {
+            line-height: 1.27;
+            width: 28em;
+            margin-bottom: 2em;
+        }
+        width: 32em;
+        padding-bottom: 5em;
+        margin-left: 5em;
+        /* 80/16 */
+    }
+
+    &__text {
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+
+        p {
+            margin: 0 0 1.25em;
+
+            &:last-child {
+                font-weight: 500;
+            }
+            font-size: 1.5em;
+        }
+    }
+
+    &__button {}
+
+    &__right {
+        min-width: 0;
+        border: 1px solid #000;
+        flex-grow: 1;
+    }
+
+    &__control {
+        border: 1px solid #000;
+        // margin-bottom: 1em;
+        padding-bottom: 1em;
+    }
+
+    &__arrows {}
+
+    &__dotted {}
+
+    &__slider {}
+
+    &__doc {
+        border: 1px solid #000;
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-bottom: 40em;
+
+    }
+
+}
+
+.section {
+    &__title {}
+
+}
+
+.container_center {}
+
+.btn {}
+
+.btn_md {}
+
+.mobile {}
+
+.swiper {
+    &__label {}
+
+    &__img {}
+
+}
+
+.certificate-swiper-js {}
+
+.arrows_info {}
+
+.desktop {}
+
+.icon-arrow_long_left {}
+
+.icon-arrow_long_right {}
+
+.dotted_info {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.team__item {}

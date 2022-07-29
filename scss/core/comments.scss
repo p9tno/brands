@@ -98,7 +98,6 @@
 
     &__button {
         margin-top: 1.25em;
-        /* 20/16 */
         text-align: center;
         @media (max-width: 767px) {
             .btn {
@@ -221,23 +220,23 @@
             border-radius: 50%;
             top: 50%;
             left: 50%;
-            border: 1px solid $color_warning;
+            border: 0.125em solid $color_warning;
             transform: translate(-50%,-50%),scale(1);
 
         }
 
         &:before {
-            width: 2.75em;
-            height: 2.75em;
+            width: 2.7em;
+            height: 2.7em;
             opacity: 0.53;
-            animation: 1s pulse1 infinite;
+            animation: 1s pulsePlay1 infinite;
         }
 
         &:after {
-            width: 3.25em;
-            height: 3.25em;
+            width: 3em;
+            height: 3em;
             opacity: 0.18;
-            animation: 1s pulse2 infinite;
+            animation: 1s pulsePlay2 infinite;
         }
     }
 
@@ -358,16 +357,6 @@
 }
 
 .logoSlider {
-    // .slick-list {
-    //     margin-left: -0.125em;
-    // }
-
-    // .swiper-pagination-bullets {
-    //     @media (min-width: 768px) {
-    //         justify-content: flex-end!important;
-    //     }
-    // }
-
     &__doted {
         @media (min-width: 768px) {
             justify-content: flex-end;
@@ -425,31 +414,31 @@
 
 }
 
-@keyframes pulse1 {
-    0% {
-        transform: translate(-50%,-50%) scale(1);
-    }
-
-    60% {
-        opacity: 0.3;
-    }
-
-    to {
-        opacity: 0;
-        transform: translate(-50%,-50%) scale(1.2);
-    }
-}
-@keyframes pulse2 {
-    0% {
-        transform: translate(-50%,-50%) scale(1);
-    }
-
-    60% {
-        opacity: 0.1;
-    }
-
-    to {
-        opacity: 0;
-        transform: translate(-50%,-50%) scale(1.2);
-    }
-}
+// @keyframes pulse1 {
+//     0% {
+//         transform: translate(-50%,-50%) scale(1);
+//     }
+//
+//     60% {
+//         opacity: 0.3;
+//     }
+//
+//     to {
+//         opacity: 0;
+//         transform: translate(-50%,-50%) scale(1.2);
+//     }
+// }
+// @keyframes pulse2 {
+//     0% {
+//         transform: translate(-50%,-50%) scale(1);
+//     }
+//
+//     60% {
+//         opacity: 0.1;
+//     }
+//
+//     to {
+//         opacity: 0;
+//         transform: translate(-50%,-50%) scale(1.2);
+//     }
+// }
