@@ -5990,7 +5990,7 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
 .sidebar__toggle:before {
   content: "";
   font-family: "icomoon";
-  font-size: 0.625em;
+  font-size: 0.75em;
   color: #ffffff;
   transform: rotate(0);
   margin-left: 0;
@@ -5998,7 +5998,12 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
 }
 .sidebar__toggle_hide:before {
   transform: rotate(45deg);
-  margin-left: -0.25em;
+  margin-left: -0.05em;
+}
+@media (min-width: 768px) {
+  .sidebar__toggle_hide:before {
+    margin-left: -0.125em;
+  }
 }
 .sidebar__list {
   position: absolute;
@@ -6247,7 +6252,7 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
   border-radius: 0.0625em;
   background-clip: padding-box;
   outline: 0;
-  padding: 2.5em 1em;
+  padding: 2em 1em 1.5em;
 }
 .modal-backdrop {
   position: fixed;
@@ -6324,6 +6329,21 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
   }
 }
 
+@media (max-width: 767px) {
+  .stop .section__title {
+    margin-bottom: 0.25em;
+    /* 14/16 */
+  }
+  .stop .section__title span {
+    font-size: 0.875em;
+  }
+  .stop .modal-title {
+    margin-bottom: 0.25em;
+  }
+  .stop .modal-title span {
+    font-size: 0.875em;
+  }
+}
 @media (min-width: 768px) {
   .stop .modal-dialog {
     width: 60.625em;
@@ -6397,7 +6417,7 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
 }
 
 .modalVideo .modal-dialog {
-  max-width: 26em;
+  max-width: 19.25em;
   width: 100%;
 }
 @media (min-width: 768px) {
@@ -6422,7 +6442,7 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
 }
 .modalVideo__wraper {
   width: 100%;
-  height: 14.65em;
+  height: 10.75em;
 }
 @media (min-width: 768px) {
   .modalVideo__wraper {

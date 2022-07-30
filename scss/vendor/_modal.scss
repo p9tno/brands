@@ -96,7 +96,7 @@
         border-radius: 0.0625em;
         background-clip: padding-box;
         outline: 0;
-        padding: 2.5em 1em;
+        padding: 2em 1em 1.5em;
     }
 
     &-backdrop {
@@ -184,6 +184,26 @@
 
 // START MODAL STOP
 .stop {
+    @media (max-width: 767px) {
+        .section__title {
+            margin-bottom: 0.25em;
+
+            span {
+                font-size: 0.875em;
+
+            }
+            /* 14/16 */
+        }
+
+        .modal-title {
+            margin-bottom: 0.25em;
+
+            span {
+                font-size: 0.875em;
+            }
+        }
+    }
+
     .modal-dialog {
         @media (min-width: 768px) {
             width: 60.625em;
@@ -286,7 +306,7 @@
 
 .modalVideo {
     .modal-dialog {
-        max-width: 26em;
+        max-width: 19.25em;
         width: 100%;
         @media (min-width: 768px) {
             max-width: 73.25em;
@@ -311,7 +331,9 @@
 
     &__wraper {
         width: 100%;
-        height: 14.65em;
+        // height: 14.65em;
+        height: 10.75em;
+
         @media (min-width: 768px) {
             height: 41.25em;
         }

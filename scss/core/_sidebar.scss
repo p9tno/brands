@@ -27,7 +27,7 @@
         &:before {
             content: '\e90b';
             font-family: 'icomoon';
-            font-size: 0.625em;
+            font-size: 0.75em;
             color: $color_white;
             transform: rotate(0);
             margin-left: 0;
@@ -38,7 +38,12 @@
         &_hide {
             &:before {
                 transform: rotate(45deg);
-                margin-left: -0.25em;
+                margin-left: -0.05em;
+
+                @media (min-width: 768px) {
+                    margin-left: -0.125em;
+
+                }
 
             }
         }
