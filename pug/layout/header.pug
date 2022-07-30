@@ -15,7 +15,7 @@ header.header
                         span выбор языка
                     .language__switch
                         label.switch
-                            input(type="checkbox" id="checkbox" name="checkbox")
+                            input(type="checkbox" id="checkbox" name="languageCheckbox")
                             span
 
             .header__action
@@ -26,7 +26,7 @@ header.header
                         .phone__link
                             a(href="tel:+77712101111") +7 (771) 210-11-11
                         .phone__action.dotted
-                            a(href="#") Перезвоним за 30 сек
+                            a(href="#").call_modal_js Перезвоним за 30 сек
 
                 .header__mail.desktop
                     a(href="mailto:info@eurasianbrands.com") info@eurasianbrands.com
@@ -36,7 +36,7 @@ header.header
                         .social__label.desktop
                             span Время ответа всего <b>15 секунд</b>
                         .social__button
-                            a(href="https://wa.me/+77712101111")
+                            a(href="https://wa.me/+77712101111" target="_blank")
                                 i.icon-whatsapp
                                 span.desktop Написать в WhatsApp
 

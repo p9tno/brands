@@ -15,9 +15,9 @@ block content
                     .firstScreen__desc
                         span патентный центр №1 в Казахстане
                 .firstScreen__right
-                    a(href="#").btn Получить прайс на все услуги
+                    a(href="#").btn.sentence_modal_js Получить прайс на все услуги
                         span + коммерческое предложение
-                    a(href="#").btn.btn_whatsapp.btn_success Спросить у нас в WhatsApp
+                    a(href="https://wa.me/+77712101111" target="_blank").btn.btn_whatsapp.btn_success Спросить у нас в WhatsApp
                         span время ответа 15 секунд
     // end firstScreen
 
@@ -53,11 +53,11 @@ block content
             .comments__top
 
                 .comments__content
-                    .comments__label
+                    .comments__label(data-aos="fade-up")
                         span Скорее всего
-                    h2.section__title
+                    h2.section__title(data-aos="fade-up")
                         span Вы точно знаете наших <b>клиентов</b>
-                    .section__subtitle
+                    .section__subtitle(data-aos="fade-up")
                         span За брендами стоят люди. Многие стали нашими хорошими друзьями.
 
                 .comments__slider.swiper.comments-swiper-js
@@ -71,7 +71,7 @@ block content
                                 .commentsSlider__item
                                     .commentsSlider__persone
                                         .commentsSlider__foto(style="background-image: url('../img/persone_"+item.img+".png')")
-                                            .commentsSlider__play
+                                            .commentsSlider__play.js-youtubeModal#httuerixph8
                                                 i.icon-play
                                         .commentsSlider__description
                                             .commentsSlider__name
@@ -118,30 +118,38 @@ block content
     // begin business
     section#business.business.section
         .container_center
-            h2.section__title 
+            h2.section__title(data-aos="fade-up")
                 span Работаем со всеми бизнесами, для нас <b>нет нерешаемых задач</b>
 
             .business__list
                 .business__item(style="background-image: url('../img/business_1.jpg')")
                     span Медицинские<br> услуги
+
                 .business__item
                     i.icon-it
                     span IT сфера,<br> образование,<br> дизайн
+
                 .business__item(style="background-image: url('../img/business_2.jpg')")
                     span Блогеры
+
                 .business__item
                     i.icon-by_time
                     span Досуг и развлечение,<br> медиа, телевидение<br> и музыкальные<br> группы
+
                 .business__item(style="background-image: url('../img/business_3.jpg')")
                     span Косметические<br> товары, бьюти<br> индустрия
+
                 .business__item
                     i.icon-sector
                     span Сектор HoReCa,<br> услуги B2B<br> и B2C
+
                 .business__item(style="background-image: url('../img/business_4.jpg')")
                     span Магазины
+
                 .business__item
                     i.icon-production
                     span Производство,<br> строительный<br> сектор
+
         .business__label
             span Business
 
@@ -151,7 +159,7 @@ block content
     section#cases.cases.section
         .container_center
             .cases__label
-                h2.section__title
+                h2.section__title(data-aos="fade-up")
                     span Бесчисленное количество <b>успешных кейсов за 7 лет</b>
                 ul.cases__list
                     each item in [ 'Наиболее <b>сложные, уникальные и интересные кейсы</b> из более чем 3 000', '<b>100%  проектов доведены</b> до нужного результата', '<b>Логотипы прошли регистрацию</b> и защищены авторским правом' ]
@@ -277,7 +285,7 @@ block content
                 .services__tabs
                     .tabs-wrapper
                         .tabs-left
-                            h2.section__title
+                            h2.section__title(data-aos="fade-up")
                                 span <b>Все услуги</b> патентования в одном месте
                             .tabs
                                 each item in ['Товарные знаки', 'Авторские права', 'Логотипы','Патенты', 'Внесение в таможенный реестр','Блокировка аккаунтов', 'Суды и споры','Битрикс 24', 'Депозитарий авторских прав', 'Правовые консультации']
@@ -315,7 +323,7 @@ block content
                                             .services__subtitle
                                                 span Уверены, мы сможем помочь. Просто напишите нам. Ответим за 15 секунд!
                                             .services__button
-                                                a(href="#").btn.btn_whatsapp_sm.btn_success.btn_md Написать в WhatsApp
+                                                a(href="https://wa.me/+77712101111" target="_blank").btn.btn_whatsapp_sm.btn_success.btn_md Написать в WhatsApp
                                     .services__dotted
 
 
@@ -327,9 +335,9 @@ block content
             //- .presentation__bg(style="background-image: url('../img/presentation_bg.jpg')")
             .presentation__bg
                 .presentation__content
-                    h2.section__title
+                    h2.section__title(data-aos="fade-up")
                         span Получите  <i class="icon-download"></i> <b>презентацию Eurasian Brands</b>
-                    .section__subtitle
+                    .section__subtitle(data-aos="fade-up")
                         span со стоимостью услуг через минуту
 
                     .presentation__form
@@ -365,9 +373,9 @@ block content
         .container_center
             .conditions__wrap
                 .conditions__caption
-                    h2.section__title
+                    h2.section__title(data-aos="fade-up")
                         span Предлагаем уникальные <b>условия сотрудничества</b>
-                    .conditions__desc
+                    .conditions__desc(data-aos="fade-up")
                         span Таких преимуществ вы не найдете ни у одной патентной компании в Казахстане — мы проверяли
                 .swiper__label.mobile
                     span Передвигайте шаги влево/вправо для просмотра всех преимуществ
@@ -465,7 +473,7 @@ block content
     section#information.information.section
         .container_center
             .information__top
-                h2.section__title
+                h2.section__title(data-aos="fade-up")
                     span «Приумножаем эффективность и доходы бизнеса»
                 .information__subtitle
                     span Дорожим своей репутацией <b>40% наших клиентов пришли по рекомендации.</b>
@@ -474,7 +482,7 @@ block content
                     .company
                         .company__label
                             span О нашей компании и подходе в видео за 2 минуты
-                        .company__play
+                        .company__play.js-youtubeModal#httuerixph8
                             i.icon-play
                     .lider
                         .lider__icon
@@ -498,15 +506,32 @@ block content
 
             .information__bottom
                 ul.data
-                    each item in [ {number: '3000', symbol: '+', label: 'довольных клиентов'}, {number: '97', symbol: '%', label: 'получают документы<br> с первого раза'}, {number: '1358', symbol: '', label: 'товарных знаков<br> зарегистрировали'}, {number: '1125', symbol: '', label: 'досудебных<br> урегулирований'}, ]
-
-                        li.data__item
-                            .data__content
-                                .data__number
-                                    span!=item.number
-                                    i=item.symbol
-                                .data__label
-                                    span!=item.label
+                    li.data__item(data-aos="fade-up")
+                        .data__content
+                            .data__number
+                                span 3000
+                                i +
+                            .data__label
+                                span довольных клиентов
+                    li.data__item(data-aos="fade-up" data-aos-delay="300")
+                        .data__content
+                            .data__number
+                                span 97
+                                i %
+                            .data__label
+                                span получают документы<br> с первого раза
+                    li.data__item(data-aos="fade-up" data-aos-delay="600")
+                        .data__content
+                            .data__number
+                                span 1358
+                            .data__label
+                                span товарных знаков<br> зарегистрировали
+                    li.data__item(data-aos="fade-up" data-aos-delay="900")
+                        .data__content
+                            .data__number
+                                span 1125
+                            .data__label
+                                span досудебных<br> урегулирований
 
 
 
@@ -522,7 +547,7 @@ block content
         .container_center
             .team__content
                 .team__left
-                    h2.section__title 
+                    h2.section__title(data-aos="fade-up")
                         span Команда
                     .section__subtitle
                         span Сильная. Амбициозная. Надёжная. <b>Наше кредо — готовим все документы как для себя!</b>
@@ -625,7 +650,7 @@ block content
                                 each item in [1,1,1,1]
                                     .youtubeBox__item.swiper-slide
                                         .youtubeBox__bg(style="background-image: url('../img/youtubeBox_bg.jpg')")
-                                            .youtubeBox__play
+                                            .youtubeBox__play.js-youtubeModal#httuerixph8
                                                 i.icon-play
 
                             .news__control.youtubeBox__control
@@ -675,7 +700,7 @@ block content
         .container_center
             .consultation__wrap
                 .consultation__content
-                    h2.section__title.desktop
+                    h2.section__title.desktop(data-aos="fade-up")
                         span Давайте мы вас <b>проконсультируем</b>
                     h2.section__title.mobile
                         span Давайте <b>проконсультируем</b>
@@ -683,7 +708,7 @@ block content
                         span и предложим варианты<br> решения вашего вопроса
                     .consultation__list
                         each item in ['<b>Проанализируем</b> документы', '<b>Дадим рекомендации</b> по дальнейшим действиям;', '<b>Назовем</b> точную стоимость;', '<b>Рассчитаем</b> платежи, если нужна рассрочка;']
-                            .consultation__item
+                            .consultation__item(data-aos="fade-right")
                                 span!=item
 
                     .consultation__phone
@@ -694,7 +719,7 @@ block content
                                 a(href="tel:+77712101111") +7 (771) 210-11-11
                     .consultation__action
                         span Спрашивайте, мы онлайн, время ответа 15 сек
-                        a(href="#").btn.btn_whatsapp_sm.btn_success Написать в WhatsApp
+                        a(href="https://wa.me/+77712101111" target="_blank").btn.btn_whatsapp_sm.btn_success Написать в WhatsApp
                             span.mobile время ответа 15 секунд
 
                 .consultation__form
@@ -736,172 +761,32 @@ block content
 
 
 
-
-    // begin form
-    //- section#form.form.section
-    //-     .container_center
-    //-         .form__content
-    //-             h1.form__title Подать заявку на лизинг
-    //-             i.icon_close    
-    //-             form.form.form_grid(action="send.php")
-    //-                 //- из какой формы на сайте
-    //-                 input(type="hidden" name="subject" value="форма в футоре")
-    //-                 //- проверка спама
-    //-                 input(type="hidden" name="notspam" value="")
-    //-                 .form__row
-    //-                     input(type="text", required placeholder="Предмет лизинга*")
-    //-                 .form__row
-    //-                     input(type="number", placeholder="ИНН")
-    //-                 .form__row
-    //-                     input(type="number", placeholder="Стоимость")
-    //-                 .form__row
-    //-                     input(type="text", placeholder="Контактное лицо")
-    //-                 .form__row
-    //-                     input(type="number", placeholder="Колличество")
-    //-                 .form__row
-    //-                     input(type="text", required placeholder="Телефон*")
-    //-                 .form__row
-    //-                     input(type="number", placeholder="Аванс")
-    //-                 .form__label
-    //-                 .form__row
-    //-                     select.select(data-placeholder="Выбор")
-    //-                         option(value="")
-    //-                         option(value="Значение 1") Значение 1
-    //-                         option(value="Значение 2") Значение 2
-    //-                         option(value="Значение 3") Значение 3
-    //-                         option(value="Значение 4") Значение 4
-    //-                 .form__row
-    //-                     input(type="email", placeholder="E-mail")
-    //-                 .form__row
-    //-                     input(type="text", placeholder="Местонахождение")
-    //-                 .form__row.form__row_full
-    //-                     textarea(type="text", placeholder="Дополнительная информация")
-    //-                 .form__row.form__row_full
-    //-                     .form__grup
-    //-                         label.form__check
-    //-                             input(type="radio" name="test" checked="checked" value="test")
-    //-                             span radio 1
-    //-                         label.form__check
-    //-                             input(type="radio" name="test" value="test_2")
-    //-                             span radio 2
-    //- 
-    //-                 .form__row
-    //-                     span.form__text Поля, помеченные *, обязательны к заполнения
-    //-                 .form__row
-    //-                     .button
-    //-                         button.btn#btn_didisabled_js(type="submit") Отправить
-    //-                 .form__row.form__row_full
-    //-                     .form__privacy
-    //-                         label.form__check
-    //-                             input#check_checked(type="checkbox" checked="checked")
-    //-                             span Прочитал(-а) Пользовательское соглашение и соглашаюсь с <a href="#" target="_blank">политикой обработки персональных данных</a>
-    // end form
-    // Button trigger modal info
-    //- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#info") Click to open modal
-    // Begin Modal info
-    //- .modal.fade.info#info
-    //- .modal-dialog
-    //-     .modal-content
-    //-         a(href="#" class="modal-close" data-dismiss="modal")
-    //-         .form__message
-    // End modal info
-
-
     // begin faq
-    //- section#faq.faq.section
-    //- .container_center
-    //-     h2.section__title F.A.Q.
-    //-     .faq__content
-    //-         .collapse(data-collapse-wrapper="")
-    //-             .collapse__title.open(data-collapse="") 
-    //-                 span Вопрос о школе
-    //-             // Добавить класс open для открытого состояния
-    //-             .collapse__body.open(data-collapse-body="")
-    //-                 p Ежегодно на несколько дней Санкт‑Петербург становится столицей российского образования, открытой площадкой для дискуссий, обмена опытом, откровенного профессионального диалога ведущих специалистов в области просвещения.
-    //- 
-    //-                 p В рамках форума запланировано около 300 мероприятий: конференции, семинары, круглые столы, мастер-классы, дискуссионные площадки, форсайт‑сессии, педагогические олимпиады, конкурсы, квесты, презентации.
-    //- 
-    //-         each title in ['Структура рынка нейтрализует повторный контакт, не считаясь с затратами', 'Потребительский рынок упорядочивает рейтинг']
-    //- 
-    //-             .collapse(data-collapse-wrapper="")
-    //-                 .collapse__title(data-collapse="")
-    //-                     span= title
-    //-                 .collapse__body(data-collapse-body="")
-    //-                     p Ежегодно на несколько дней Санкт‑Петербург становится столицей российского образования, открытой площадкой для дискуссий, обмена опытом, откровенного профессионального диалога ведущих специалистов в области просвещения.
-    //- 
-    //-                     p В рамках форума запланировано около 300 мероприятий: конференции, семинары, круглые столы, мастер-классы, дискуссионные площадки, форсайт‑сессии, педагогические олимпиады, конкурсы, квесты, презентации.
+    section#faq.faq.section
+        .container_center
+            h2.section__title(data-aos="fade-up")
+                span <b>Отвечаем</b> на часто задаваемые вопросы
+            .faq__content
+
+                //- .collapse(data-collapse-wrapper="")
+                //-     .collapse__title.open(data-collapse="") 
+                //-         span Вопрос о школе
+                //-     // Добавить класс open для открытого состояния
+                //-     .collapse__body.open(data-collapse-body="")
+                //-         p Ежегодно на несколько дней Санкт‑Петербург становится столицей российского образования, открытой площадкой для дискуссий, обмена опытом, откровенного профессионального диалога ведущих специалистов в области просвещения.
+                //- 
+                //-         p В рамках форума запланировано около 300 мероприятий: конференции, семинары, круглые столы, мастер-классы, дискуссионные площадки, форсайт‑сессии, педагогические олимпиады, конкурсы, квесты, презентации.
+                each item in [1,2]
+
+                    .faq__col
+                        each title in [1,2,3,4]
+
+                            .collapse(data-collapse-wrapper="")
+                                .collapse__title(data-collapse="")
+                                    span Могу ли я получить патент и сохранить свое изобретение в тайне?
+                                .collapse__body(data-collapse-body="")
+                                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                                    p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ratione adipisci nostrum eos, quis ipsa doloremque fugit dolores sunt atque.
 
     // end faq
-
-    // begin tabsPreview
-    //- section#tabsPreview.tabsPreview.section
-    //- .container_center
-    //-     h2.section__title tabs Preview
-    //- 
-    //-     .tabsPreview__content
-    //-         .tabs
-    //-             .tabs__item.active(data-tab="#plate-1") Item 1
-    //-             .tabs__item(data-tab="#plate-2") Item 2
-    //-             .tabs__item(data-tab="#plate-3") Item 3
-    //-             .tabs__item(data-tab="#plate-4") Item 4
-    //- 
-    //-         .tabContent
-    //-             .tabContent__item.active#plate-1  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, possimus.
-    //-             .tabContent__item#plate-2  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, saepe. Tempora magnam eius nostrum beatae voluptas, quisquam laborum aliquid mollitia.
-    //-             .tabContent__item#plate-3  Lorem ipsum dolor sit amet.
-    //-             .tabContent__item#plate-4  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab odio laboriosam nostrum, maxime quo molestiae exercitationem unde, beatae, possimus illum nemo pariatur cumque! Eos, adipisci! Minima, pariatur necessitatibus delectus porro, doloremque, accusamus itaque excepturi deleniti illo a consequuntur magnam et eaque facere numquam nemo. Ut, facilis, repellendus. Aut, magnam, aliquid.
-
-    // end tabsPreview
-
-    // begin dropPreview
-    //- section#dropPreview.dropPreview.section
-    //- .container_center
-    //-     h2.section__title drop Preview
-    //-     .dropPreview__content
-    //-         .drop
-    //-             .drop__toggle Click me
-    //-             .drop__list
-    //-                 .drop__item Item 1
-    //-                 .drop__item Item 2
-    //-                 .drop__item Item 3
-    //-                 .drop__item Item 4
-    //- 
-    //-         .drop
-    //-             .drop__toggle Click me
-    //-             .drop__list
-    //-                 .drop__item Item 1
-    //-                 .drop__item Item 2
-    //-                 .drop__item Item 3
-    //-                 .drop__item Item 4
-    //-     .content
-    //-         p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim placeat, incidunt unde esse officiis iusto tempora cum saepe, repellendus alias non! Deleniti eius accusamus molestiae! Quo rerum, modi omnis sequi, autem molestias saepe inventore nihil animi voluptas, eaque quia laboriosam dolor, magni ea et error blanditiis tempora deserunt sint repellendus in! Blanditiis, mollitia provident in omnis rerum, magnam ipsa, reiciendis laborum unde, error illum quod. Vero eveniet, nesciunt blanditiis laudantium a ab adipisci saepe perspiciatis ducimus quos quaerat, pariatur necessitatibus illo praesentium. Excepturi veniam neque asperiores temporibus nostrum vitae distinctio eum alias hic molestiae, iste suscipit, voluptate sit dolores accusamus.
-    //-         p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim placeat, incidunt unde esse officiis iusto tempora cum saepe, repellendus alias non! Deleniti eius accusamus molestiae! Quo rerum, modi omnis sequi, autem molestias saepe inventore nihil animi voluptas, eaque quia laboriosam dolor, magni ea et error blanditiis tempora deserunt sint repellendus in! Blanditiis, mollitia provident in omnis rerum, magnam ipsa, reiciendis laborum unde, error illum quod. Vero eveniet, nesciunt blanditiis laudantium a ab adipisci saepe perspiciatis ducimus quos quaerat, pariatur necessitatibus illo praesentium. Excepturi veniam neque asperiores temporibus nostrum vitae distinctio eum alias hic molestiae, iste suscipit, voluptate sit dolores accusamus.
-
-    // end dropPreview
-
-    // begin sliderPreview
-    //- section#sliderPreview.sliderPreview.section
-    //- .container_center
-    //-     h2.section__title slider Preview
-    //-     .sliderPreview__content
-    //- 
-    //-         .slider.js-slider
-    //-             each item in [1, 2, 3, 4]
-    //-                 .slider__item
-    //-                     .content
-    //-                         h1=item
-
-
-    // end sliderPreview
-
-    // begin programsInfo
-    //- section.section
-    //- .container_center
-    //-     .programsInfo
-    //-         each item in [{num: '12', text: 'Программ'},{num: '25', text: 'Компетенций'},{num: '29', text: 'Преподавателей <br>и экспертов'}]
-    //-             .programsInfo__item
-    //-                 .programsInfo__number=item.num
-    //-                 .programsInfo__text!=item.text
-
-
-    // end programsInfo

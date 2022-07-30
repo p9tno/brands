@@ -19,22 +19,35 @@
 
     &-close {
         position: absolute;
-        width: 1.5em;
-        height: 1.5em;
-        right: 1em;
-        top: 1em;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: $main_color;
-        // background: image-url('close.svg') no-repeat center center;
+        color: $color_info;
+
+        width: 1em;
+        height: 1em;
+        right: 1em;
+        top: 1em;
+        @media (min-width: 768px) {
+            width: 1.875em;
+            height: 1.875em;
+            right: 4em;
+            top: 4em;
+
+            transform: rotate(0);
+        }
+
         &:after,
         &:before {
             content: '';
             position: absolute;
             display: block;
             width: 100%;
-            border-top: 2px solid;
+            border-top: 0.125em solid;
+            @media (min-width: 768px) {
+                border-top: 0.1875em solid;
+
+            }
         }
 
         &:before {
@@ -47,6 +60,9 @@
 
         &:hover {
             opacity: 0.8;
+            @media (min-width: 768px) {
+                transform: rotate(90deg);
+            }
         }
     }
 
@@ -70,19 +86,17 @@
         position: relative;
         width: auto;
         margin: auto;
-        // max-width: 40em;
-        width: 40em;
+        width: 18em;
     }
 
     &-content {
         position: relative;
-        background-color: #fff;
+        background-color: #f0f1f3;
         border: none;
-        border-radius: 0;
-        box-shadow: 0 0.2em 0.6em rgba(0,0,0,.5);
+        border-radius: 0.0625em;
         background-clip: padding-box;
         outline: 0;
-        padding: 1em 1.1em;
+        padding: 2.5em 1em;
     }
 
     &-backdrop {
@@ -106,23 +120,53 @@
     }
 
     &-header {
-        padding: 1em 0;
-        /* 16/16 */
-        min-height: 1em;
-        /* 16/16 */
-        color: #666;
-        font-size: 1.125em;
-        /* 18/16 */
-
-        .close {
-            margin-top: -0.125em;
-            /* 2/16 */
+        text-align: center;
+        @media (min-width: 768px) {
+            text-align: inherit;
         }
     }
 
     &-title {
-        margin: 0;
-        line-height: 1.4;
+        margin: 0 0 0.75em;
+        line-height: 1.2;
+        @media (min-width: 768px) {
+            margin: 0 0 2em;
+            line-height: 1.67;
+
+        }
+
+        span {
+            color: #282728;
+            font-weight: 400;
+
+            font-size: 1.125em;
+            @media (min-width: 768px) {
+                font-size: 2.25em;
+
+            }
+
+        }
+
+        b {
+            font-weight: 700;
+        }
+    }
+
+    &-label {
+        margin-bottom: 0.5em;
+        @media (min-width: 768px) {
+            margin-bottom: 1em;
+
+        }
+
+        span {
+            color: #282828;
+            font-size: 0.625em;
+            @media (min-width: 768px) {
+                font-size: 1.125em;
+
+            }
+        }
     }
 
     &-body {
@@ -130,29 +174,151 @@
         padding: 0;
     }
 
-    &-footer {
-        margin-top: 1em;
-        /* 16/16 */
-        padding: 1.25em;
-        /* 20/16 */
-        text-align: right;
-        border-top: 0.0625em solid #e5e5e5;
-        /* 1/16 */
+    &-form {
+        @media (min-width: 768px) {
+            width: 22.25em;
 
-        .btn+.btn {
-            margin-left: 0.3125em;
-            /* 5/16 */
-            margin-bottom: 0;
         }
+    }
+}
 
-        .btn-group .btn+.btn {
-            margin-left: -0.0625em;
-            /* 1/16 */
-        }
-
-        .btn-block+.btn-block {
-            margin-left: 0;
+// START MODAL STOP
+.stop {
+    .modal-dialog {
+        @media (min-width: 768px) {
+            width: 60.625em;
         }
     }
 
+    .modal-content {
+
+        @media (min-width: 768px) {
+            padding: 7.5em 5em 3.75em;
+            background-image: url("../img/modal_stop_bg_1.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+    }
+}
+// END MODAL STOP
+// START MODAL CALL
+.call {
+    .modal-dialog {
+        @media (min-width: 768px) {
+            width: 35.625em;
+            /* 570/16 */
+        }
+    }
+
+    .modal-content {
+
+        @media (min-width: 768px) {
+            padding: 7em 5.625em;
+
+        }
+    }
+
+    .modal-close {
+        @media (min-width: 768px) {
+            right: 2.75em;
+        }
+
+    }
+
+    .btn {
+        align-items: center;
+    }
+}
+// END MODAL CALL
+// START MODAL sentence
+.sentence {
+    .modal-dialog {
+        @media (min-width: 768px) {
+            width: 60.625em;
+        }
+    }
+
+    .modal-content {
+
+        @media (min-width: 768px) {
+            padding: 8.75em 5.9375em;
+            background-image: url("../img/modal_price_bg.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+    }
+
+    @media (min-width: 768px) {
+        &__more {
+            position: absolute;
+            top: 21em;
+            left: 31em;
+            letter-spacing: 0.02em;
+            width: 9em;
+            text-align: right;
+        }
+
+        &__name {
+            margin-bottom: 0.5em;
+
+            span {
+                font-weight: 500;
+                font-size: 1.25em;
+                color: $color_black;
+            }
+
+        }
+
+        &__desc {
+            span {
+                color: #6A6A6A;
+                font-size: 0.875em;
+            }
+        }
+    }
+
+}
+// END MODAL sentence
+
+.modalVideo {
+    .modal-dialog {
+        max-width: 26em;
+        width: 100%;
+        @media (min-width: 768px) {
+            max-width: 73.25em;
+        }
+    }
+
+    .modal-content {
+        padding: 0;
+        background: none;
+    }
+
+    .modal-close {
+        right: 1em;
+        top: -2em;
+        color: $color_white;
+        @media (min-width: 768px) {
+            right: -2em;
+            top: -3em;
+        }
+
+    }
+
+    &__wraper {
+        width: 100%;
+        height: 14.65em;
+        @media (min-width: 768px) {
+            height: 41.25em;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
 }

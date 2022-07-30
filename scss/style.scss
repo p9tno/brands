@@ -6,6 +6,8 @@
 @import 'core/reset';
 @import 'core/template';
 
+@import 'core/preloader';
+
 @import 'core/header';
 @import 'core/navbar';
 
@@ -48,6 +50,9 @@
 @import 'core/tabs';
 @import 'core/drop';
 @import 'core/programsInfo';
+
+@import 'core/sidebar';
+@import 'core/toTop';
 
 @import 'vendor/modal';
 // @import 'vendor/slick';

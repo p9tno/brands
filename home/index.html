@@ -7,10 +7,28 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../css/twentytwenty.css"/>
     <link rel="stylesheet" type="text/css" href="../css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aos.css"/>
     <link rel="stylesheet" type="text/css" href="../css/style.css"/>
   </head>
   <body>
-    <div class="wrapper">
+    <div class="preloader" id="preloader"><svg class="ap" viewBox="0 0 128 256" width="128px" height="256px" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="ap-grad1" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="hsl(192,73%,40%)" />
+<stop offset="100%" stop-color="hsl(192,73%,26%)" />
+</linearGradient>
+<linearGradient id="ap-grad2" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="hsl(192,73%,45%)" />
+<stop offset="50%" stop-color="hsl(192,73%,40%)" />
+<stop offset="100%" stop-color="hsl(192,73%,26%)" />
+</linearGradient>
+</defs>
+<circle class="ap__ring" r="56" cx="64" cy="192" fill="none" stroke="#ddd" stroke-width="16" stroke-linecap="round" />
+<circle class="ap__worm1" r="56" cx="64" cy="192" fill="none" stroke="url(#ap-grad1)" stroke-width="16" stroke-linecap="round" stroke-dasharray="87.96 263.89" />
+<path class="ap__worm2" d="M120,192A56,56,0,0,1,8,192C8,161.07,16,8,64,8S120,161.07,120,192Z" fill="none" stroke="url(#ap-grad2)" stroke-width="16" stroke-linecap="round" stroke-dasharray="87.96 494" />
+</svg>
+    </div>
+    <div class="wrapper" id="wrapper">
       <header class="header">
         <div class="header__content">
           <!-- start header__top-->
@@ -23,7 +41,7 @@
                 <div class="language__title"><span>выбор языка</span></div>
                 <div class="language__switch">
                   <label class="switch">
-                    <input type="checkbox" id="checkbox" name="checkbox"/><span></span>
+                    <input type="checkbox" id="checkbox" name="languageCheckbox"/><span></span>
                   </label>
                 </div>
               </div>
@@ -33,14 +51,14 @@
                 <div class="phone">
                   <div class="phone__time"><span>Звоните, Пн-ВС 10:00 - 21:00</span></div>
                   <div class="phone__link"><a href="tel:+77712101111">+7 (771) 210-11-11</a></div>
-                  <div class="phone__action dotted"><a href="#">Перезвоним за 30 сек</a></div>
+                  <div class="phone__action dotted"><a class="call_modal_js" href="#">Перезвоним за 30 сек</a></div>
                 </div>
               </div>
               <div class="header__mail desktop"><a href="mailto:info@eurasianbrands.com">info@eurasianbrands.com</a></div>
               <div class="header__social">
                 <div class="social">
                   <div class="social__label desktop"><span>Время ответа всего <b>15 секунд</b></span></div>
-                  <div class="social__button"><a href="https://wa.me/+77712101111"><i class="icon-whatsapp"></i><span class="desktop">Написать в WhatsApp</span></a></div>
+                  <div class="social__button"><a href="https://wa.me/+77712101111" target="_blank"><i class="icon-whatsapp"></i><span class="desktop">Написать в WhatsApp</span></a></div>
                 </div>
               </div>
             </div>
@@ -104,7 +122,7 @@
                 <h1 class="firstScreen__title"><span>Eurasian Brands</span></h1>
                 <div class="firstScreen__desc"><span>патентный центр №1 в Казахстане</span></div>
               </div>
-              <div class="firstScreen__right"><a class="btn" href="#">Получить прайс на все услуги<span>+ коммерческое предложение</span></a><a class="btn btn_whatsapp btn_success" href="#">Спросить у нас в WhatsApp<span>время ответа 15 секунд</span></a></div>
+              <div class="firstScreen__right"><a class="btn sentence_modal_js" href="#">Получить прайс на все услуги<span>+ коммерческое предложение</span></a><a class="btn btn_whatsapp btn_success" href="https://wa.me/+77712101111" target="_blank">Спросить у нас в WhatsApp<span>время ответа 15 секунд</span></a></div>
             </div>
           </div>
         </section>
@@ -143,9 +161,9 @@
           <div class="container_center">
             <div class="comments__top">
               <div class="comments__content">
-                <div class="comments__label"><span>Скорее всего</span></div>
-                <h2 class="section__title"><span>Вы точно знаете наших <b>клиентов</b></span></h2>
-                <div class="section__subtitle"><span>За брендами стоят люди. Многие стали нашими хорошими друзьями.</span></div>
+                <div class="comments__label" data-aos="fade-up"><span>Скорее всего</span></div>
+                <h2 class="section__title" data-aos="fade-up"><span>Вы точно знаете наших <b>клиентов</b></span></h2>
+                <div class="section__subtitle" data-aos="fade-up"><span>За брендами стоят люди. Многие стали нашими хорошими друзьями.</span></div>
               </div>
               <div class="comments__slider swiper comments-swiper-js">
                 <div class="swiper__label mobile"><span>Передвигайте шаги влево/вправо для просмотра всех этапов работы</span>
@@ -156,7 +174,7 @@
                     <div class="commentsSlider__item">
                       <div class="commentsSlider__persone">
                         <div class="commentsSlider__foto" style="background-image: url('../img/persone_1.png')">
-                          <div class="commentsSlider__play"><i class="icon-play"></i></div>
+                          <div class="commentsSlider__play js-youtubeModal" id="httuerixph8"><i class="icon-play"></i></div>
                         </div>
                         <div class="commentsSlider__description">
                           <div class="commentsSlider__name"><span>Алагузова<br> Баян</span></div>
@@ -170,7 +188,7 @@
                     <div class="commentsSlider__item">
                       <div class="commentsSlider__persone">
                         <div class="commentsSlider__foto" style="background-image: url('../img/persone_2.png')">
-                          <div class="commentsSlider__play"><i class="icon-play"></i></div>
+                          <div class="commentsSlider__play js-youtubeModal" id="httuerixph8"><i class="icon-play"></i></div>
                         </div>
                         <div class="commentsSlider__description">
                           <div class="commentsSlider__name"><span>Lorem.</span></div>
@@ -184,7 +202,7 @@
                     <div class="commentsSlider__item">
                       <div class="commentsSlider__persone">
                         <div class="commentsSlider__foto" style="background-image: url('../img/persone_3.png')">
-                          <div class="commentsSlider__play"><i class="icon-play"></i></div>
+                          <div class="commentsSlider__play js-youtubeModal" id="httuerixph8"><i class="icon-play"></i></div>
                         </div>
                         <div class="commentsSlider__description">
                           <div class="commentsSlider__name"><span> Lorem ipsum.</span></div>
@@ -296,7 +314,7 @@
         <!-- begin business-->
         <section class="business section" id="business">
           <div class="container_center">
-            <h2 class="section__title"> <span>Работаем со всеми бизнесами, для нас <b>нет нерешаемых задач</b></span></h2>
+            <h2 class="section__title" data-aos="fade-up"><span>Работаем со всеми бизнесами, для нас <b>нет нерешаемых задач</b></span></h2>
             <div class="business__list">
               <div class="business__item" style="background-image: url('../img/business_1.jpg')"><span>Медицинские<br> услуги</span></div>
               <div class="business__item"><i class="icon-it"></i><span>IT сфера,<br> образование,<br> дизайн</span></div>
@@ -315,7 +333,7 @@
         <section class="cases section" id="cases">
           <div class="container_center">
             <div class="cases__label">
-              <h2 class="section__title"><span>Бесчисленное количество <b>успешных кейсов за 7 лет</b></span></h2>
+              <h2 class="section__title" data-aos="fade-up"><span>Бесчисленное количество <b>успешных кейсов за 7 лет</b></span></h2>
               <ul class="cases__list">
                 <li class="cases__item"><span>Наиболее <b>сложные, уникальные и интересные кейсы</b> из более чем 3 000</span></li>
                 <li class="cases__item"><span><b>100%  проектов доведены</b> до нужного результата</span></li>
@@ -587,7 +605,7 @@
               <div class="services__tabs">
                 <div class="tabs-wrapper">
                   <div class="tabs-left">
-                    <h2 class="section__title"><span><b>Все услуги</b> патентования в одном месте</span></h2>
+                    <h2 class="section__title" data-aos="fade-up"><span><b>Все услуги</b> патентования в одном месте</span></h2>
                     <div class="tabs">
                       <div class="tab">Товарные знаки</div>
                       <div class="tab">Авторские права</div>
@@ -673,7 +691,7 @@
                         <div class="services__item swiper-slide services__item_bg">
                           <div class="services__title"><span>Не нашли нужную услугу?</span></div>
                           <div class="services__subtitle"><span>Уверены, мы сможем помочь. Просто напишите нам. Ответим за 15 секунд!</span></div>
-                          <div class="services__button"><a class="btn btn_whatsapp_sm btn_success btn_md" href="#">Написать в WhatsApp</a></div>
+                          <div class="services__button"><a class="btn btn_whatsapp_sm btn_success btn_md" href="https://wa.me/+77712101111" target="_blank">Написать в WhatsApp</a></div>
                         </div>
                       </div>
                       <div class="services__dotted"></div>
@@ -746,7 +764,7 @@
                         <div class="services__item swiper-slide services__item_bg">
                           <div class="services__title"><span>Не нашли нужную услугу?</span></div>
                           <div class="services__subtitle"><span>Уверены, мы сможем помочь. Просто напишите нам. Ответим за 15 секунд!</span></div>
-                          <div class="services__button"><a class="btn btn_whatsapp_sm btn_success btn_md" href="#">Написать в WhatsApp</a></div>
+                          <div class="services__button"><a class="btn btn_whatsapp_sm btn_success btn_md" href="https://wa.me/+77712101111" target="_blank">Написать в WhatsApp</a></div>
                         </div>
                       </div>
                       <div class="services__dotted"></div>
@@ -819,7 +837,7 @@
                         <div class="services__item swiper-slide services__item_bg">
                           <div class="services__title"><span>Не нашли нужную услугу?</span></div>
                           <div class="services__subtitle"><span>Уверены, мы сможем помочь. Просто напишите нам. Ответим за 15 секунд!</span></div>
-                          <div class="services__button"><a class="btn btn_whatsapp_sm btn_success btn_md" href="#">Написать в WhatsApp</a></div>
+                          <div class="services__button"><a class="btn btn_whatsapp_sm btn_success btn_md" href="https://wa.me/+77712101111" target="_blank">Написать в WhatsApp</a></div>
                         </div>
                       </div>
                       <div class="services__dotted"></div>
@@ -892,7 +910,7 @@
                         <div class="services__item swiper-slide services__item_bg">
                           <div class="services__title"><span>Не нашли нужную услугу?</span></div>
                           <div class="services__subtitle"><span>Уверены, мы сможем помочь. Просто напишите нам. Ответим за 15 секунд!</span></div>
-                          <div class="services__button"><a class="btn btn_whatsapp_sm btn_success btn_md" href="#">Написать в WhatsApp</a></div>
+                          <div class="services__button"><a class="btn btn_whatsapp_sm btn_success btn_md" href="https://wa.me/+77712101111" target="_blank">Написать в WhatsApp</a></div>
                         </div>
                       </div>
                       <div class="services__dotted"></div>
@@ -965,7 +983,7 @@
                         <div class="services__item swiper-slide services__item_bg">
                           <div class="services__title"><span>Не нашли нужную услугу?</span></div>
                           <div class="services__subtitle"><span>Уверены, мы сможем помочь. Просто напишите нам. Ответим за 15 секунд!</span></div>
-                          <div class="services__button"><a class="btn btn_whatsapp_sm btn_success btn_md" href="#">Написать в WhatsApp</a></div>
+                          <div class="services__button"><a class="btn btn_whatsapp_sm btn_success btn_md" href="https://wa.me/+77712101111" target="_blank">Написать в WhatsApp</a></div>
                         </div>
                       </div>
                       <div class="services__dotted"></div>
@@ -1038,7 +1056,7 @@
                         <div class="services__item swiper-slide services__item_bg">
                           <div class="services__title"><span>Не нашли нужную услугу?</span></div>
                           <div class="services__subtitle"><span>Уверены, мы сможем помочь. Просто напишите нам. Ответим за 15 секунд!</span></div>
-                          <div class="services__button"><a class="btn btn_whatsapp_sm btn_success btn_md" href="#">Написать в WhatsApp</a></div>
+                          <div class="services__button"><a class="btn btn_whatsapp_sm btn_success btn_md" href="https://wa.me/+77712101111" target="_blank">Написать в WhatsApp</a></div>
                         </div>
                       </div>
                       <div class="services__dotted"></div>
@@ -1111,7 +1129,7 @@
                         <div class="services__item swiper-slide services__item_bg">
                           <div class="services__title"><span>Не нашли нужную услугу?</span></div>
                           <div class="services__subtitle"><span>Уверены, мы сможем помочь. Просто напишите нам. Ответим за 15 секунд!</span></div>
-                          <div class="services__button"><a class="btn btn_whatsapp_sm btn_success btn_md" href="#">Написать в WhatsApp</a></div>
+                          <div class="services__button"><a class="btn btn_whatsapp_sm btn_success btn_md" href="https://wa.me/+77712101111" target="_blank">Написать в WhatsApp</a></div>
                         </div>
                       </div>
                       <div class="services__dotted"></div>
@@ -1184,7 +1202,7 @@
                         <div class="services__item swiper-slide services__item_bg">
                           <div class="services__title"><span>Не нашли нужную услугу?</span></div>
                           <div class="services__subtitle"><span>Уверены, мы сможем помочь. Просто напишите нам. Ответим за 15 секунд!</span></div>
-                          <div class="services__button"><a class="btn btn_whatsapp_sm btn_success btn_md" href="#">Написать в WhatsApp</a></div>
+                          <div class="services__button"><a class="btn btn_whatsapp_sm btn_success btn_md" href="https://wa.me/+77712101111" target="_blank">Написать в WhatsApp</a></div>
                         </div>
                       </div>
                       <div class="services__dotted"></div>
@@ -1257,7 +1275,7 @@
                         <div class="services__item swiper-slide services__item_bg">
                           <div class="services__title"><span>Не нашли нужную услугу?</span></div>
                           <div class="services__subtitle"><span>Уверены, мы сможем помочь. Просто напишите нам. Ответим за 15 секунд!</span></div>
-                          <div class="services__button"><a class="btn btn_whatsapp_sm btn_success btn_md" href="#">Написать в WhatsApp</a></div>
+                          <div class="services__button"><a class="btn btn_whatsapp_sm btn_success btn_md" href="https://wa.me/+77712101111" target="_blank">Написать в WhatsApp</a></div>
                         </div>
                       </div>
                       <div class="services__dotted"></div>
@@ -1330,7 +1348,7 @@
                         <div class="services__item swiper-slide services__item_bg">
                           <div class="services__title"><span>Не нашли нужную услугу?</span></div>
                           <div class="services__subtitle"><span>Уверены, мы сможем помочь. Просто напишите нам. Ответим за 15 секунд!</span></div>
-                          <div class="services__button"><a class="btn btn_whatsapp_sm btn_success btn_md" href="#">Написать в WhatsApp</a></div>
+                          <div class="services__button"><a class="btn btn_whatsapp_sm btn_success btn_md" href="https://wa.me/+77712101111" target="_blank">Написать в WhatsApp</a></div>
                         </div>
                       </div>
                       <div class="services__dotted"></div>
@@ -1347,8 +1365,8 @@
           <div class="container_center">
             <div class="presentation__bg">
               <div class="presentation__content">
-                <h2 class="section__title"><span>Получите  <i class="icon-download"></i> <b>презентацию Eurasian Brands</b></span></h2>
-                <div class="section__subtitle"><span>со стоимостью услуг через минуту</span></div>
+                <h2 class="section__title" data-aos="fade-up"><span>Получите  <i class="icon-download"></i> <b>презентацию Eurasian Brands</b></span></h2>
+                <div class="section__subtitle" data-aos="fade-up"><span>со стоимостью услуг через минуту</span></div>
                 <div class="presentation__form">
                   <form class="form">
                     <div class="form__label"><span>Куда прислать презентацию?</span></div>
@@ -1385,8 +1403,8 @@
           <div class="container_center">
             <div class="conditions__wrap">
               <div class="conditions__caption">
-                <h2 class="section__title"><span>Предлагаем уникальные <b>условия сотрудничества</b></span></h2>
-                <div class="conditions__desc"><span>Таких преимуществ вы не найдете ни у одной патентной компании в Казахстане — мы проверяли</span></div>
+                <h2 class="section__title" data-aos="fade-up"><span>Предлагаем уникальные <b>условия сотрудничества</b></span></h2>
+                <div class="conditions__desc" data-aos="fade-up"><span>Таких преимуществ вы не найдете ни у одной патентной компании в Казахстане — мы проверяли</span></div>
               </div>
               <div class="swiper__label mobile"><span>Передвигайте шаги влево/вправо для просмотра всех преимуществ</span>
                 <div class="swiper__img"><img src="../img/hand.svg"/></div>
@@ -1462,12 +1480,12 @@
         <section class="information section" id="information">
           <div class="container_center">
             <div class="information__top">
-              <h2 class="section__title"><span>«Приумножаем эффективность и доходы бизнеса»</span></h2>
+              <h2 class="section__title" data-aos="fade-up"><span>«Приумножаем эффективность и доходы бизнеса»</span></h2>
               <div class="information__subtitle"><span>Дорожим своей репутацией <b>40% наших клиентов пришли по рекомендации.</b></span></div>
               <div class="information__content">
                 <div class="company">
                   <div class="company__label"><span>О нашей компании и подходе в видео за 2 минуты</span></div>
-                  <div class="company__play"><i class="icon-play"></i></div>
+                  <div class="company__play js-youtubeModal" id="httuerixph8"><i class="icon-play"></i></div>
                 </div>
                 <div class="lider">
                   <div class="lider__icon"><i class="icon-arrow_deg"></i></div>
@@ -1491,27 +1509,27 @@
             </div>
             <div class="information__bottom">
               <ul class="data">
-                <li class="data__item">
+                <li class="data__item" data-aos="fade-up">
                   <div class="data__content">
                     <div class="data__number"><span>3000</span><i>+</i></div>
                     <div class="data__label"><span>довольных клиентов</span></div>
                   </div>
                 </li>
-                <li class="data__item">
+                <li class="data__item" data-aos="fade-up" data-aos-delay="300">
                   <div class="data__content">
                     <div class="data__number"><span>97</span><i>%</i></div>
                     <div class="data__label"><span>получают документы<br> с первого раза</span></div>
                   </div>
                 </li>
-                <li class="data__item">
+                <li class="data__item" data-aos="fade-up" data-aos-delay="600">
                   <div class="data__content">
-                    <div class="data__number"><span>1358</span><i></i></div>
+                    <div class="data__number"><span>1358</span></div>
                     <div class="data__label"><span>товарных знаков<br> зарегистрировали</span></div>
                   </div>
                 </li>
-                <li class="data__item">
+                <li class="data__item" data-aos="fade-up" data-aos-delay="900">
                   <div class="data__content">
-                    <div class="data__number"><span>1125</span><i></i></div>
+                    <div class="data__number"><span>1125</span></div>
                     <div class="data__label"><span>досудебных<br> урегулирований</span></div>
                   </div>
                 </li>
@@ -1525,7 +1543,7 @@
           <div class="container_center">
             <div class="team__content">
               <div class="team__left">
-                <h2 class="section__title"> <span>Команда</span></h2>
+                <h2 class="section__title" data-aos="fade-up"><span>Команда</span></h2>
                 <div class="section__subtitle"><span>Сильная. Амбициозная. Надёжная. <b>Наше кредо — готовим все документы как для себя!</b></span></div>
                 <div class="team__text">
                   <p>В вопросах, где другие уже наломали дров, мы стараемся разобраться максимально эффективно, чтобы перевесить ситуацию в русло клиента.</p>
@@ -1611,22 +1629,22 @@
                     <div class="youtubeBox__slider swiper-wrapper">
                       <div class="youtubeBox__item swiper-slide">
                         <div class="youtubeBox__bg" style="background-image: url('../img/youtubeBox_bg.jpg')">
-                          <div class="youtubeBox__play"><i class="icon-play"></i></div>
+                          <div class="youtubeBox__play js-youtubeModal" id="httuerixph8"><i class="icon-play"></i></div>
                         </div>
                       </div>
                       <div class="youtubeBox__item swiper-slide">
                         <div class="youtubeBox__bg" style="background-image: url('../img/youtubeBox_bg.jpg')">
-                          <div class="youtubeBox__play"><i class="icon-play"></i></div>
+                          <div class="youtubeBox__play js-youtubeModal" id="httuerixph8"><i class="icon-play"></i></div>
                         </div>
                       </div>
                       <div class="youtubeBox__item swiper-slide">
                         <div class="youtubeBox__bg" style="background-image: url('../img/youtubeBox_bg.jpg')">
-                          <div class="youtubeBox__play"><i class="icon-play"></i></div>
+                          <div class="youtubeBox__play js-youtubeModal" id="httuerixph8"><i class="icon-play"></i></div>
                         </div>
                       </div>
                       <div class="youtubeBox__item swiper-slide">
                         <div class="youtubeBox__bg" style="background-image: url('../img/youtubeBox_bg.jpg')">
-                          <div class="youtubeBox__play"><i class="icon-play"></i></div>
+                          <div class="youtubeBox__play js-youtubeModal" id="httuerixph8"><i class="icon-play"></i></div>
                         </div>
                       </div>
                     </div>
@@ -1688,14 +1706,14 @@
           <div class="container_center">
             <div class="consultation__wrap">
               <div class="consultation__content">
-                <h2 class="section__title desktop"><span>Давайте мы вас <b>проконсультируем</b></span></h2>
+                <h2 class="section__title desktop" data-aos="fade-up"><span>Давайте мы вас <b>проконсультируем</b></span></h2>
                 <h2 class="section__title mobile"><span>Давайте <b>проконсультируем</b></span></h2>
                 <div class="section__subtitle"><span>и предложим варианты<br> решения вашего вопроса</span></div>
                 <div class="consultation__list">
-                  <div class="consultation__item"><span><b>Проанализируем</b> документы</span></div>
-                  <div class="consultation__item"><span><b>Дадим рекомендации</b> по дальнейшим действиям;</span></div>
-                  <div class="consultation__item"><span><b>Назовем</b> точную стоимость;</span></div>
-                  <div class="consultation__item"><span><b>Рассчитаем</b> платежи, если нужна рассрочка;</span></div>
+                  <div class="consultation__item" data-aos="fade-right"><span><b>Проанализируем</b> документы</span></div>
+                  <div class="consultation__item" data-aos="fade-right"><span><b>Дадим рекомендации</b> по дальнейшим действиям;</span></div>
+                  <div class="consultation__item" data-aos="fade-right"><span><b>Назовем</b> точную стоимость;</span></div>
+                  <div class="consultation__item" data-aos="fade-right"><span><b>Рассчитаем</b> платежи, если нужна рассрочка;</span></div>
                 </div>
                 <div class="consultation__phone">
                   <div class="phone">
@@ -1703,7 +1721,7 @@
                     <div class="phone__link"><a href="tel:+77712101111">+7 (771) 210-11-11</a></div>
                   </div>
                 </div>
-                <div class="consultation__action"><span>Спрашивайте, мы онлайн, время ответа 15 сек</span><a class="btn btn_whatsapp_sm btn_success" href="#">Написать в WhatsApp<span class="mobile">время ответа 15 секунд</span></a></div>
+                <div class="consultation__action"><span>Спрашивайте, мы онлайн, время ответа 15 сек</span><a class="btn btn_whatsapp_sm btn_success" href="https://wa.me/+77712101111" target="_blank">Написать в WhatsApp<span class="mobile">время ответа 15 секунд</span></a></div>
               </div>
               <div class="consultation__form">
                 <form class="form">
@@ -1735,22 +1753,97 @@
           </div>
         </section>
         <!-- end consultation-->
-        <!-- begin form-->
-        <!-- end form-->
-        <!-- Button trigger modal info-->
-        <!-- Begin Modal info-->
-        <!-- End modal info-->
         <!-- begin faq-->
+        <section class="faq section" id="faq">
+          <div class="container_center">
+            <h2 class="section__title" data-aos="fade-up"><span><b>Отвечаем</b> на часто задаваемые вопросы</span></h2>
+            <div class="faq__content">
+              <div class="faq__col">
+                <div class="collapse" data-collapse-wrapper="">
+                  <div class="collapse__title" data-collapse=""><span>Могу ли я получить патент и сохранить свое изобретение в тайне?</span></div>
+                  <div class="collapse__body" data-collapse-body="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ratione adipisci nostrum eos, quis ipsa doloremque fugit dolores sunt atque.</p>
+                  </div>
+                </div>
+                <div class="collapse" data-collapse-wrapper="">
+                  <div class="collapse__title" data-collapse=""><span>Могу ли я получить патент и сохранить свое изобретение в тайне?</span></div>
+                  <div class="collapse__body" data-collapse-body="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ratione adipisci nostrum eos, quis ipsa doloremque fugit dolores sunt atque.</p>
+                  </div>
+                </div>
+                <div class="collapse" data-collapse-wrapper="">
+                  <div class="collapse__title" data-collapse=""><span>Могу ли я получить патент и сохранить свое изобретение в тайне?</span></div>
+                  <div class="collapse__body" data-collapse-body="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ratione adipisci nostrum eos, quis ipsa doloremque fugit dolores sunt atque.</p>
+                  </div>
+                </div>
+                <div class="collapse" data-collapse-wrapper="">
+                  <div class="collapse__title" data-collapse=""><span>Могу ли я получить патент и сохранить свое изобретение в тайне?</span></div>
+                  <div class="collapse__body" data-collapse-body="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ratione adipisci nostrum eos, quis ipsa doloremque fugit dolores sunt atque.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="faq__col">
+                <div class="collapse" data-collapse-wrapper="">
+                  <div class="collapse__title" data-collapse=""><span>Могу ли я получить патент и сохранить свое изобретение в тайне?</span></div>
+                  <div class="collapse__body" data-collapse-body="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ratione adipisci nostrum eos, quis ipsa doloremque fugit dolores sunt atque.</p>
+                  </div>
+                </div>
+                <div class="collapse" data-collapse-wrapper="">
+                  <div class="collapse__title" data-collapse=""><span>Могу ли я получить патент и сохранить свое изобретение в тайне?</span></div>
+                  <div class="collapse__body" data-collapse-body="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ratione adipisci nostrum eos, quis ipsa doloremque fugit dolores sunt atque.</p>
+                  </div>
+                </div>
+                <div class="collapse" data-collapse-wrapper="">
+                  <div class="collapse__title" data-collapse=""><span>Могу ли я получить патент и сохранить свое изобретение в тайне?</span></div>
+                  <div class="collapse__body" data-collapse-body="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ratione adipisci nostrum eos, quis ipsa doloremque fugit dolores sunt atque.</p>
+                  </div>
+                </div>
+                <div class="collapse" data-collapse-wrapper="">
+                  <div class="collapse__title" data-collapse=""><span>Могу ли я получить патент и сохранить свое изобретение в тайне?</span></div>
+                  <div class="collapse__body" data-collapse-body="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ratione adipisci nostrum eos, quis ipsa doloremque fugit dolores sunt atque.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <!-- end faq-->
-        <!-- begin tabsPreview-->
-        <!-- end tabsPreview-->
-        <!-- begin dropPreview-->
-        <!-- end dropPreview-->
-        <!-- begin sliderPreview-->
-        <!-- end sliderPreview-->
-        <!-- begin programsInfo-->
-        <!-- end programsInfo-->
       </main>
+      <!-- begin sidebar-->
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar__toggle sidebar__toggle_hide"></div>
+        <div class="sidebar__list sidebar__list_hide"><a class="sidebar__item call_modal_js" href="#">
+            <div class="sidebar__content">
+              <div class="sidebar__icon"><i class="icon-phone"></i></div>
+              <div class="sidebar__text"><span>Получить консультацию</span></div>
+            </div></a><a class="sidebar__item sentence_modal_js" href="#">
+            <div class="sidebar__content">
+              <div class="sidebar__icon"><i class="icon-pdf"></i></div>
+              <div class="sidebar__text"><span>Скачать презентацию с ценами</span></div>
+            </div></a><a class="sidebar__item" href="https://wa.me/+77712101111" target="_blank">
+            <div class="sidebar__content">
+              <div class="sidebar__icon"><i class="icon-whatsapp"></i></div>
+              <div class="sidebar__text"><span>Написать в WhatsApp</span></div>
+            </div></a></div>
+      </div>
+      <!-- end sidebar-->
+      <!-- begin toTop-->
+      <div class="toTop desktop"><a href="#wrapper"> <i class="icon-drop_top"></i><span>Наверх  </span></a></div>
+      <!-- end toTop-->
       <footer class="footer">
         <div class="footer__content">
           <div class="footer__row">
@@ -1820,7 +1913,7 @@
               <div class="footer__social">
                 <div class="social">
                   <div class="social__label"><span>Время ответа всего <b>15 секунд</b></span></div>
-                  <div class="social__button"><a href="https://wa.me/+77712101111"><i class="icon-whatsapp"></i><span class="desktop">Написать в WhatsApp</span></a></div>
+                  <div class="social__button"><a href="https://wa.me/+77712101111" target="_blank"><i class="icon-whatsapp"></i><span class="desktop">Написать в WhatsApp</span></a></div>
                 </div>
               </div>
               <div class="footer__action dotted"><a href="#">Все контакты</a></div>
@@ -1833,6 +1926,122 @@
           </div>
         </div>
       </footer>
+      <!-- Begin Modal stop-->
+      <div class="modal fade stop" id="stop">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal" id="closeModalStop"></a>
+            <div class="modal-header">
+              <div class="section__title"><span>СТОЙТЕ! <b>НЕ УХОДИТЕ!</b></span></div>
+              <div class="modal-label"><span>Скачайте инструкцию от экспертов Eurasian Brands</span></div>
+              <div class="modal-title"><span><b>Как зарегистрировать товарный знак с первого раза:</b> 10 причин отказа  Казпатента и как их избежать</span></div>
+            </div>
+            <div class="modal-body">
+              <div class="modal-form">
+                <form class="form">
+                  <div class="form__label"><span>Куда прислать презентацию?</span></div>
+                  <div class="form__row">
+                    <select class="select" data-placeholder="Whatsapp">
+                      <option value=""></option>
+                      <option value="whatsapp">Whatsapp</option>
+                      <option value="Viber">Viber</option>
+                      <option value="Telegram">Telegram</option>
+                    </select>
+                  </div>
+                  <div class="form__row">
+                    <input class="tel" type="tel" required="required" placeholder="Введите ваш номер"/>
+                  </div>
+                  <div class="form__row">
+                    <button class="btn btn_didisabled_js" type="submit">Получить презентацию с ценами на услуги</button>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__privacy">
+                      <label class="form__check">
+                        <input class="check_checked_js" type="checkbox" checked="checked"/><span>Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a></span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal stop-->
+      <!-- Begin Modal call-->
+      <div class="modal fade call" id="call">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="modal-header">
+              <div class="modal-title"> <span>Оставьте номер<br> <b>позвоним за 15 сек</b></span></div>
+            </div>
+            <div class="modal-body">
+              <div class="modal-form">
+                <form class="form">
+                  <div class="form__row">
+                    <input class="tel" type="tel" required="required" placeholder="Введите ваш номер"/>
+                  </div>
+                  <div class="form__row">
+                    <button class="btn btn_didisabled_js" type="submit">Жду звонка</button>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__privacy">
+                      <label class="form__check">
+                        <input class="check_checked_js" type="checkbox" checked="checked"/><span>Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a></span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal call-->
+      <!-- Begin Modal sentence-->
+      <div class="modal fade sentence" id="sentence">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="modal-header">
+              <div class="modal-title"><span>Подготовим <b>прайс<br> и коммерческое<br> предложение</b> для вас</span></div>
+            </div>
+            <div class="modal-body">
+              <div class="modal-form">
+                <form class="form">
+                  <div class="form__row">
+                    <input class="tel" type="tel" required="required" placeholder="Введите ваш номер"/>
+                  </div>
+                  <div class="form__row">
+                    <button class="btn btn_didisabled_js" type="submit">Жду звонка</button>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__privacy">
+                      <label class="form__check">
+                        <input class="check_checked_js" type="checkbox" checked="checked"/><span>Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a></span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="sentence__more desktop">
+              <div class="sentence__name"><span>Айя Ибрагимовна</span></div>
+              <div class="sentence__desc"><span>эксперт по товарным знакам</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal sentence-->
+      <!-- Begin Modal modalVideo-->
+      <div class="modal fade modalVideo" id="modalVideo">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="modal-body"> 
+              <div class="modalVideo__wraper"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal modalVideo-->
       <script src="../js/jquery.js"></script>
       <script src="../js/jquery.maskedinput.min.js"></script>
       <script src="../js/modal.js"></script>
@@ -1842,6 +2051,7 @@
       <script src="../js/jquery.event.move.js"></script>
       <script src="../js/jquery.twentytwenty.js"></script>
       <script src="../js/jquery.marquee.min.js"></script>
+      <script src="../js/aos.js"></script>
       <script src="../js/function.js"></script>
     </div>
   </body>

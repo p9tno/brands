@@ -1,0 +1,126 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+
+
+block content
+
+    // begin testModals
+    section#testModals.testModals.section
+        .container_center
+            h2.section__title 
+                span Модальные окна
+            .testModals__content
+
+                // Button trigger modal stop
+                button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#stop") стойте не уходите
+
+                //- // Begin Modal stop
+                //- .modal.fade.stop#stop
+                //-     .modal-dialog
+                //-         .modal-content
+                //-             a(href="#" class="modal-close" data-dismiss="modal")
+                //-             .modal-header
+                //-                 .section__title
+                //-                     span СТОЙТЕ! <b>НЕ УХОДИТЕ!</b>
+                //-                 .modal-label
+                //-                     span Скачайте инструкцию от экспертов Eurasian Brands
+                //-                 .modal-title
+                //-                     span <b>Как зарегистрировать товарный знак с первого раза:</b> 10 причин отказа  Казпатента и как их избежать
+                //-             .modal-body
+                //-                 .modal-form
+                //-                     form.form
+                //-                         .form__label
+                //-                             span Куда прислать презентацию?
+                //-                         .form__row
+                //-                             select.select(data-placeholder="Whatsapp")
+                //-                                 option(value="")
+                //-                                 option(value="whatsapp") Whatsapp
+                //-                                 option(value="Viber") Viber
+                //-                                 option(value="Telegram") Telegram
+                //- 
+                //-                         .form__row
+                //-                             input(type="tel" class="tel" required placeholder="Введите ваш номер")
+                //- 
+                //-                         .form__row
+                //-                             button.btn.btn_didisabled_js(type="submit") Получить презентацию с ценами на услуги
+                //- 
+                //- 
+                //- 
+                //-                         .form__row
+                //-                             .form__privacy
+                //-                                 label.form__check
+                //-                                     input.check_checked_js(type="checkbox" checked="checked")
+                //-                                     span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
+
+                // End modal stop
+
+                br
+                br
+
+
+                // Button trigger modal call
+                button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#call") Оставьте номер
+                // Begin Modal call
+                //- .modal.fade.call#call
+                //-     .modal-dialog
+                //-         .modal-content
+                //-             a(href="#" class="modal-close" data-dismiss="modal")
+                //-             .modal-header
+                //-                 .modal-title 
+                //-                     span Оставьте номер<br> <b>позвоним за 15 сек</b>
+                //-             .modal-body
+                //-                 .modal-form
+                //-                     form.form
+                //-                         .form__row
+                //-                             input(type="tel" class="tel" required placeholder="Введите ваш номер")
+                //- 
+                //-                         .form__row
+                //-                             button.btn.btn_didisabled_js(type="submit") Жду звонка
+                //-                         .form__row
+                //-                             .form__privacy
+                //-                                 label.form__check
+                //-                                     input.check_checked_js(type="checkbox" checked="checked")
+                //-                                     span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
+                // End modal call
+
+                br
+                br
+
+                // Button trigger modal sentence
+                button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sentence") коммерческое предложение
+                // Begin Modal sentence
+                //- .modal.fade.sentence#sentence
+                //-     .modal-dialog
+                //-         .modal-content
+                //-             a(href="#" class="modal-close" data-dismiss="modal")
+                //-             .modal-header
+                //-                 .modal-title
+                //-                     span Подготовим <b>прайс<br> и коммерческое<br> предложение</b> для вас
+                //-             .modal-body
+                //-                 .modal-form
+                //-                     form.form
+                //-                         .form__row
+                //-                             input(type="tel" class="tel" required placeholder="Введите ваш номер")
+                //- 
+                //-                         .form__row
+                //-                             button.btn.btn_didisabled_js(type="submit") Жду звонка
+                //-                         .form__row
+                //-                             .form__privacy
+                //-                                 label.form__check
+                //-                                     input.check_checked_js(type="checkbox" checked="checked")
+                //-                                     span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
+                //- 
+                //-             .sentence__more.desktop
+                //-                 .sentence__name
+                //-                     span Айя Ибрагимовна
+                //-                 .sentence__desc
+                //-                     span эксперт по товарным знакам
+
+                // End modal sentence
+
+                br
+                br
+                a(href="#").btn.js-youtubeModal#httuerixph8 ютуб
+
+    // end testModals

@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?2x41hm');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?2x41hm#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?2x41hm') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?2x41hm') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?2x41hm##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?vmtrun');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?vmtrun#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?vmtrun') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?vmtrun') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?vmtrun##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -30,6 +30,11 @@
 .icon-drop {
   &:before {
     content: $icon-drop; 
+  }
+}
+.icon-drop_top {
+  &:before {
+    content: $icon-drop_top; 
   }
 }
 .icon-drop_right {

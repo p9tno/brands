@@ -1,9 +1,48 @@
 $(document).ready(function() {
 
+    function preloader() {
+        $(()=>{
+
+            setTimeout( () => {
+                let p = $('#preloader');
+                p.addClass('hide');
+
+                setTimeout( () => {
+                    p.remove()
+                },1000);
+
+            },1000);
+        });
+    }
+    preloader();
+    // setTimeout( ()=> preloader(),15000 )
+
+    function showStop() {
+        $('.stop_modal_js').on('click', function (e) {
+            e.preventDefault();
+             $('#stop').modal('show');
+        });
+    }
+    showStop();
+
+    function showCall() {
+        $('.call_modal_js').on('click', function (e) {
+            e.preventDefault();
+             $('#call').modal('show');
+        });
+    }
+    showCall();
+
+    function showSentence() {
+        $('.sentence_modal_js').on('click', function (e) {
+            e.preventDefault();
+             $('#sentence').modal('show');
+        });
+    }
+    showSentence();
 
     function openMobileNav() {
         $('.header__toggle').click(function(event) {
-            // console.log('Показ меню');
             $('.header__bottom').toggleClass('header__bottom_open');
             $('.header__toggle').toggleClass('header__toggle_open');
             $( 'body' ).toggleClass( 'nav-open' );
@@ -30,16 +69,6 @@ $(document).ready(function() {
         });
     }
     openDropMenuFooter();
-
-    // function activeNav() {
-    //     $('.menu-item').on('click', function() {
-    //         console.log('click');
-    //         $('.menu-item').removeClass('current-menu-item');
-    //         $(this).addClass('current-menu-item');
-    //     })
-    // };
-    // activeNav();
-
 
     function collapsed() {
         let toggle = $('[data-collapse]');
@@ -79,18 +108,7 @@ $(document).ready(function() {
         }).eq(0).addClass('active');
     });
 
-
-    function doDrop() {
-        $('.drop__toggle').on('click', function() {
-            // $('.drop__list').toggleClass('open');
-            $(this).toggleClass('active');
-            $(this).closest('.drop').find('.drop__list').toggleClass('open');
-        });
-    };
-    doDrop();
-
-
-
+    // for select2
     function addIcon(icon) {
         if (!icon.id) {
             return icon.text;
@@ -142,26 +160,20 @@ $(document).ready(function() {
 
     stikyMenu();
 
-    // Видео youtube для страницы
-    function uploadYoutubeVideo() {
-        if ( $( ".js-youtube" ) ) {
+    function uploadYoutubeVideoForModal() {
+        if ( $( ".js-youtubeModal" ) ) {
 
-            $( ".js-youtube" ).each( function () {
-                // Зная идентификатор видео на YouTube, легко можно найти его миниатюру
-                $( this ).css( 'background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)' );
+            $( '.js-youtubeModal' ).on( 'click', function () {
+                $('#modalVideo').modal('show');
+                console.log('click');
 
-                // Добавляем иконку Play поверх миниатюры, чтобы было похоже на видеоплеер
-                $( this ).append( $( '<img src="../wp-content/themes/gymn/assets/img/play.png" alt="Play" class="video__play">' ) );
-
-            } );
-
-            $( '.video__play, .video__prev' ).on( 'click', function () {
                 // создаем iframe со включенной опцией autoplay
-                let wrapp = $( this ).closest( '.js-youtube' ),
-                    videoId = wrapp.attr( 'id' ),
-                    iframe_url = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1";
+                let wrapp = $( this ).closest( '.js-youtubeModal' );
+                let videoId = wrapp.attr( 'id' );
+                let iframe_url = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1";
 
-                if ( $( this ).data( 'params' ) ) iframe_url += '&' + $( this ).data( 'params' );
+                // доп параметры для видоса
+                // if ( $( this ).data( 'params' ) ) iframe_url += '&' + $( this ).data( 'params' );
 
                 // Высота и ширина iframe должны быть такими же, как и у родительского блока
                 let iframe = $( '<iframe/>', {
@@ -169,18 +181,68 @@ $(document).ready(function() {
                     'src': iframe_url,
                     'allow': "autoplay"
                 } )
+                $(".modalVideo__wraper").append(iframe);
 
-                // Заменяем миниатюру HTML5 плеером с YouTube
-                $( this ).closest( '.video__wrapper' ).append( iframe );
+                $("#modalVideo").on('hide.bs.modal', function () {
+                    $(".modalVideo__wraper").html('');
+                });
 
             } );
         }
     };
+    uploadYoutubeVideoForModal();
 
-    uploadYoutubeVideo();
+    // Видео youtube для страницы
+    // function uploadYoutubeVideo() {
+    //     if ( $( ".js-youtube" ) ) {
+    //
+    //         $( ".js-youtube" ).each( function () {
+    //             // Зная идентификатор видео на YouTube, легко можно найти его миниатюру
+    //             $( this ).css( 'background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)' );
+    //
+    //             // Добавляем иконку Play поверх миниатюры, чтобы было похоже на видеоплеер
+    //             $( this ).append( $( '<img src="../wp-content/themes/gymn/assets/img/play.png" alt="Play" class="video__play">' ) );
+    //
+    //         } );
+    //
+    //         $( '.video__play, .video__prev' ).on( 'click', function () {
+    //             // создаем iframe со включенной опцией autoplay
+    //             let wrapp = $( this ).closest( '.js-youtube' ),
+    //                 videoId = wrapp.attr( 'id' ),
+    //                 iframe_url = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1";
+    //
+    //             if ( $( this ).data( 'params' ) ) iframe_url += '&' + $( this ).data( 'params' );
+    //
+    //             // Высота и ширина iframe должны быть такими же, как и у родительского блока
+    //             let iframe = $( '<iframe/>', {
+    //                 'frameborder': '0',
+    //                 'src': iframe_url,
+    //                 'allow': "autoplay"
+    //             } )
+    //
+    //             // Заменяем миниатюру HTML5 плеером с YouTube
+    //             $( this ).closest( '.video__wrapper' ).append( iframe );
+    //
+    //         } );
+    //     }
+    // };
+    //
+    // uploadYoutubeVideo();
 
+    // https://github.com/michalsnik/aos
+    AOS.init({
+        disable: 'mobile',
+        // anchorPlacement: 'bottom-bottom',
+        duration: 1000, // values from 0 to 3000, with step 50ms
+        // offset: 20,
+    });
 
-
+    AOS.init({
+        disable: function () {
+            var maxWidth = 768;
+            return window.innerWidth < maxWidth;
+        }
+    });
 
     $(".twentytwenty-container").twentytwenty({
         default_offset_pct: 0.35, // сколько показывать 'изображение до' в процентах (максимально 1) сразу после загрузки страницы
@@ -217,6 +279,34 @@ $(document).ready(function() {
             duplicated: true
         });
     });
+
+
+    // console.log(localStorage.getItem('statusSidebar'));
+    if (localStorage.getItem('statusSidebar') !== 'active') {
+        $('.sidebar__toggle').removeClass('sidebar__toggle_hide');
+        $('.sidebar__list').removeClass('sidebar__list_hide');
+    }
+    function openSidebar() {
+        $('.sidebar__toggle').click(function(event) {
+            $('.sidebar__toggle').toggleClass('sidebar__toggle_hide');
+            $('.sidebar__list').toggleClass('sidebar__list_hide');
+
+            if (localStorage.getItem('statusSidebar') == 'active') {
+                localStorage.removeItem("statusSidebar", "active");
+
+            } else {
+                localStorage.setItem("statusSidebar", "active");
+                // console.log('сохранить пару ключ/значение.');
+            }
+        });
+    };
+    openSidebar();
+
+
+
+
+
+
 
 
     // start animate numbers
@@ -262,4 +352,80 @@ $(document).ready(function() {
     //     }, duration / final  );
     // }
     // end animate numbers
+});
+
+
+
+// scrollTop
+$(document).ready(function(){
+    //отменяем стандартную обработку нажатия по ссылке
+    $(".toTop").on("click","a", function (event) {
+        event.preventDefault();
+        console.log('toTop');
+        //забираем идентификатор блока с атрибута href
+        let id  = $(this).attr('href'),
+        //узнаем высоту от начала страницы до блока на который ссылается якорь
+        top = $(id).offset().top;
+        //анимируем переход на расстояние - top за 1500 мс
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+});
+
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if($(window).scrollTop()>500){
+            $('.toTop').fadeIn(900)
+        }else{
+            $('.toTop').fadeOut(700)
+        }
+    });
+});
+
+// end scrollTop
+
+
+$(document).ready(function() {
+    console.log(localStorage.getItem('language'));
+
+    $('input[name=languageCheckbox]').change(function() {
+
+        if ($(this).is(':checked')) {
+            localStorage.setItem("language", "kz");
+            $('input[name=languageCheckbox]').prop('checked', true);
+
+        } else {
+            localStorage.setItem("language", "ru");
+            $('input[name=languageCheckbox]').prop('checked', false);
+
+        }
+
+        // $( 'body' ).toggleClass('dark_theme');
+        // console.log(localStorage.getItem('language'));
+    });
+
+    if (localStorage.getItem("language") == "kz") {
+        $('input[name=languageCheckbox]').prop('checked', true);
+        // console.log(localStorage.getItem('language'));
+        // $( 'body' ).toggleClass('dark_theme');
+    }
+
+});
+
+
+$(document).ready(function() {
+
+    if (localStorage.getItem('showModalStop') == 'disable') {
+        // console.log('disable');
+    } else {
+        setTimeout(function () {
+            $('#stop').modal('show');
+        }, 5000);
+
+        $('#closeModalStop').on('click', function() {
+            // console.log('stop modal hide click');
+
+            localStorage.setItem('showModalStop', 'disable');
+        })
+    }
+    // localStorage.clear();
 });
