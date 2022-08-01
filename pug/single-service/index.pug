@@ -1,0 +1,39 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs
+        .container_center
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+                span.kb_sep 
+                    i.icon-arrow_right
+                span
+                    a(href="#")
+                        span Услуги
+                span.kb_sep 
+                    i.icon-arrow_right
+
+                span.kb_title Регистрация товарного знака
+
+    // end breadcrumbs
+
+    // begin head
+    section#head.head.section
+        .head__bg
+            .container_center
+                .head__content
+                    h2.section__title 
+                        span Регистрация товарного знака в Казахстане <b>со 100% гарантией</b>
+                    .section__subtitle
+                        span Добиваемся регистрации даже в тех случаях, где другие развели руками и отказались
+                .head__list
+                    .head__item
+
+
+    // end head

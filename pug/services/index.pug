@@ -1,0 +1,146 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+                span.kb_sep 
+                    i.icon-arrow_right
+                span.kb_title Услуги
+    // end breadcrumbs
+
+    // begin services
+    section#services.services.section
+        .container_center
+            .services__content
+                .services__tabs
+                    .tabs-wrapper
+                        .tabs-left
+                            h2.section__title(data-aos="fade-up")
+                                span <b>Все услуги</b> патентования в одном месте
+                            .tabs
+                                each item in ['Товарные знаки', 'Авторские права', 'Логотипы','Патенты', 'Внесение в таможенный реестр','Блокировка аккаунтов', 'Суды и споры','Битрикс 24', 'Депозитарий авторских прав', 'Правовые консультации']
+                                    .tab=item
+
+                        .swiper__label.mobile
+                            span Передвигайте шаги влево/вправо для просмотра всех услуг
+                            .swiper__img
+                                img(src="../img/hand.svg")
+
+                        .tabs-content
+                            each item in [1,1,1,1,1,1,1,1,1,1]
+                                .tab-item.swiper.services-swiper-js
+                                    .services__grid.swiper-wrapper.counter-wrap
+                                        each item in ['Регистрация товарного знака', 'Продление срока регистрации', 'Проверка на уникальность', 'Международная регистрация  по Мадридской системе и за рубежом', 'Регистрация общеизвестного товарного знака', 'Регистрация наименования места происхождения товара', 'Ответ на уведомление или отказ в регистрации',]
+
+
+                                            .services__item.swiper-slide.counter-item
+                                                .services__title
+                                                    span!=item
+                                                .services__request.sentence_modal_js
+                                                    a(href="#") Заявка на косультацию
+                                                .services__action
+                                                    .services__number
+                                                        span.counter-el
+
+                                                    .services__link.dotted
+                                                        a(href="#") Подробнее об услуге
+                                                    .services__arrow
+                                                        i.icon-arrow_deg
+
+                                        .services__item.swiper-slide.services__item_bg
+                                            .services__title
+                                                span Не нашли нужную услугу?
+                                            .services__subtitle
+                                                span Уверены, мы сможем помочь. Просто напишите нам. Ответим за 15 секунд!
+                                            .services__button
+                                                a(href="https://wa.me/+77712101111" target="_blank").btn.btn_whatsapp_sm.btn_success.btn_md Написать в WhatsApp
+                                    .services__dotted
+
+
+    // end services
+    // begin presentation
+    section#presentation.presentation.section
+        .container_center
+            //- .presentation__bg(style="background-image: url('../img/presentation_bg.jpg')")
+            .presentation__bg
+                .presentation__content
+                    h2.section__title(data-aos="fade-up")
+                        span Получите  <i class="icon-download"></i> <b>презентацию Eurasian Brands</b>
+                    .section__subtitle(data-aos="fade-up")
+                        span со стоимостью услуг через минуту
+
+                    .presentation__form
+                        form.form
+                            .form__label
+                                span Куда прислать презентацию?
+                            .form__row
+                                select.select(data-placeholder="Whatsapp")
+                                    option(value="")
+                                    option(value="whatsapp") Whatsapp
+                                    option(value="Viber") Viber
+                                    option(value="Telegram") Telegram
+
+                            .form__row
+                                input(type="tel" class="tel" required placeholder="Введите ваш номер")
+
+                            .form__row
+                                button.btn.btn_didisabled_js(type="submit") Получить презентацию с ценами на услуги
+
+
+
+                            .form__row
+                                .form__privacy
+                                    label.form__check
+                                        input.check_checked_js(type="checkbox" checked="checked")
+                                        span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
+
+
+    // end presentation
+
+    // begin significant
+    section#significant.significant.section
+        .container_center
+            h2.significant__title
+                span Заголовок который важен для SEO
+            .significant__content
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo lla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            .significant__collapse
+                .collapse(data-collapse-wrapper="")
+                    .collapse__title(data-collapse="")
+
+                    .collapse__body(data-collapse-body="")
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ratione adipisci nostrum eos, quis ipsa doloremque fugit dolores sunt atque.
+                        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ratione adipisci nostrum eos, quis ipsa doloremque fugit dolores sunt atque. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                        h1 заголовок h1
+                        h2 заголовок h2
+                        h3 заголовок h3
+                        h4 заголовок h4
+                        h5 заголовок h5
+                        h6 заголовок h6
+
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                        h3 заголовок третьего уровня
+
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        h1 список ul
+
+                        ul
+                            each item in ['защищенность от размокания;', 'использование водостойких материалов и покрытий;', 'широкий диапазон рабочих температур;', 'обработка составами, предотвращающими появление плесени или грибков;']
+                                li=item
+
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+    // end significant

@@ -17,6 +17,23 @@ $(document).ready(function() {
         },
     });
 
+    const certificate = new Swiper('.certificate-swiper-js', {
+        // loop: true,
+        slidesPerView: 1,
+        speed: 500,
+        // autoplay: {
+        //   delay: 5000,
+        // },
+        pagination: {
+            el: '.certificate__dotted',
+        },
+        navigation: {
+            nextEl: '.icon-arrow_long_right',
+            prevEl: '.icon-arrow_long_left',
+        },
+        spaceBetween: 10,
+    });
+
     const youtube = new Swiper('.youtubeBox-swiper-js', {
         loop: true,
         slidesPerView: 1,

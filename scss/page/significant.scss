@@ -1,0 +1,145 @@
+.significant {
+    text-align: center;
+    padding-bottom: 1em;
+
+    @media (min-width: 768px) {
+        .container_center {
+            max-width: 91em;
+        }
+    }
+
+    &__title {
+        font-size: 1em;
+        margin: 0 0 0.875em;
+
+        span {
+            font-size: 1em;
+            font-weight: 500;
+            color: $color_black;
+
+            @media (min-width: 768px) {
+                font-size: 1.5em;
+
+            }
+        }
+    }
+
+    &__content {
+        line-height: 1.6;
+        color: #9F9F9F;
+
+        p {
+            margin: 0.75em 0;
+            font-size: 0.625em;
+            @media (min-width: 768px) {
+                font-size: 1.125em;
+
+            }
+        }
+    }
+
+    &__collapse {
+        .collapse {
+            border-bottom: none;
+        }
+
+        .collapse__title {
+            justify-content: center;
+
+            &:after {
+                color: $color_black;
+                content: '\e920';
+                font-size: 1.25em;
+                transform: rotate(90deg) scale(1);
+                @media (min-width: 768px) {
+                    font-size: 1.5em;
+
+                }
+
+            }
+
+            &.open {
+                &:after {
+                    transform: rotate(90deg) scale(-1);
+                }
+            }
+        }
+
+        .collapse__body {
+            line-height: 1.6;
+            color: #9F9F9F;
+
+            p {
+                margin: 0.75em 0;
+                font-size: 0.625em;
+                @media (min-width: 768px) {
+                    font-size: 1.125em;
+
+                }
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                color: $color_black;
+                font-weight: 500;
+            }
+
+            @media (max-width: 767px) {
+                h1 {
+                    font-size: 1.25em;
+                }
+
+                h2 {
+                    font-size: 1em;
+                }
+
+                h3 {
+                    font-size: 0.875em;
+                }
+
+                h4 {
+                    font-size: 0.75em;
+                }
+
+                h5 {
+                    font-size: 0.675em;
+                }
+
+                h6 {
+                    font-size: 0.625em;
+                }
+            }
+
+            ul {
+                text-align: left;
+                padding: 0 0 0 1.5em;
+                list-style: none;
+
+                li {
+                    font-size: 0.625em;
+                    @media (min-width: 768px) {
+                        font-size: 1.125em;
+                    }
+                    position: relative;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 0.75em;
+                        left: -1em;
+                        width: 0.25em;
+                        height: 0.25em;
+                        border-radius: 50%;
+                        background-color: #9F9F9F;
+                    }
+                }
+            }
+
+        }
+    }
+
+}

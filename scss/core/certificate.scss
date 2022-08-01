@@ -1,33 +1,59 @@
 .certificate {
     &__content {
-        display: flex;
-        flex-direction: row-reverse;
-
-        padding: 5em 6.875em 0;
-        /* 80/16 */
-        /* 110/16 */
+        position: relative;
+        overflow: hidden;
 
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
 
         background-image: url("../img/certificate_bg_mob.jpg");
+
+        padding: 1.5em 1em 2.125em;
+        text-align: center;
+
         @media (min-width: 768px) {
             background-image: url("../img/certificate_bg.jpg");
+            padding: 5em 6.875em 0;
+            text-align: inherit;
+
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: flex-end;
 
         }
     }
 
     &__left {
-        .section__title {
-            line-height: 1.27;
-            width: 28em;
-            margin-bottom: 2em;
+        margin-bottom: 2.5em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+
+        @media (min-width: 768px) {
+            padding-left: 0;
+            padding-right: 0;
+            margin-bottom: 0;
+            width: 32em;
+            padding-bottom: 5em;
+
         }
-        width: 32em;
-        padding-bottom: 5em;
-        margin-left: 5em;
-        /* 80/16 */
+
+        .section__title {
+            line-height: 1.35;
+            width: 12em;
+            margin-left: auto;
+            margin-right: auto;
+
+            @media (min-width: 768px) {
+                line-height: 1.27;
+                width: 28em;
+                margin-bottom: 2em;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+
     }
 
     &__text {
@@ -35,80 +61,95 @@
         letter-spacing: 0.02em;
 
         p {
-            margin: 0 0 1.25em;
+            &:first-child {
+                font-weight: 300;
+            }
 
             &:last-child {
                 font-weight: 500;
             }
-            font-size: 1.5em;
+
+            margin: 0 0 2.125em;
+            font-size: 0.9375em;
+
+            @media (min-width: 768px) {
+                margin: 0 0 1.25em;
+                font-size: 1.5em;
+
+            }
         }
     }
 
     &__button {}
 
     &__right {
+        margin-left: 0.5em;
+        margin-right: 2em;
         min-width: 0;
-        border: 1px solid #000;
-        flex-grow: 1;
+        @media (min-width: 768px) {
+            margin-left: 0;
+            margin-right: 0;
+            width: 38.75em;
+        }
     }
 
     &__control {
-        border: 1px solid #000;
-        // margin-bottom: 1em;
-        padding-bottom: 1em;
+        @media (min-width: 768px) {
+            padding-bottom: 2.75em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
-
-    &__arrows {}
-
-    &__dotted {}
-
-    &__slider {}
 
     &__doc {
-        border: 1px solid #000;
-        background-position: top;
         background-size: cover;
         background-repeat: no-repeat;
-        padding-bottom: 40em;
+        background-position: center;
+        height: 16.375em;
+        @media (min-width: 768px) {
+            background-position: top;
+            height: 33.75em;
+        }
+
+        a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+
+    &__pen {
+        background-image: url("../img/pen.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 4em;
+        right: -0.5em;
+        width: 3.5em;
+        height: 10em;
+
+        @media (min-width: 768px) {
+            bottom: -14em;
+            right: 42em;
+            width: 11.875em;
+            height: 34em;
+
+        }
+
+    }
+
+    @media (max-width: 767px) {
+        .swiper-pagination-bullet {
+            background-color: $color_white;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: $color_warning;
+        }
 
     }
 
 }
-
-.section {
-    &__title {}
-
-}
-
-.container_center {}
-
-.btn {}
-
-.btn_md {}
-
-.mobile {}
-
-.swiper {
-    &__label {}
-
-    &__img {}
-
-}
-
-.certificate-swiper-js {}
-
-.arrows_info {}
-
-.desktop {}
-
-.icon-arrow_long_left {}
-
-.icon-arrow_long_right {}
-
-.dotted_info {}
-
-.swiper-wrapper {}
-
-.swiper-slide {}
-
-.team__item {}

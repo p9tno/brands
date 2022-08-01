@@ -306,7 +306,7 @@ block content
                                             .services__item.swiper-slide.counter-item
                                                 .services__title
                                                     span!=item
-                                                .services__request
+                                                .services__request.sentence_modal_js
                                                     a(href="#") Заявка на косультацию
                                                 .services__action
                                                     .services__number
@@ -590,42 +590,46 @@ block content
     // end team
 
     // begin certificate
-    //- section#certificate.certificate.section
-    //-     .container_center
-    //-         .certificate__content
-    //-             .certificate__left
-    //-                 h2.section__title
-    //-                     span Посмотрите, все <b>наши свидетельства</b>
-    //- 
-    //-                 .certificate__text
-    //-                     p Даём гарантию на результаты своей работы, когда это действительно очевидно для нас.
-    //-                     p Первые в Казахстане зарегистрировали звуковой товарный знак.
-    //-                 .certificate__button
-    //-                     a(href="#").btn.btn_md Изучит кейс
-    //- 
-    //- 
-    //-             .certificate__right
-    //- 
-    //-                 .swiper__label.mobile
-    //-                     span Передвигайте влево/вправо для просмотра всех  документов
-    //-                     .swiper__img
-    //-                         img(src="../img/hand.svg")
-    //- 
-    //-                 .swiper.certificate-swiper-js
-    //- 
-    //-                     .certificate__control
-    //-                         .certificate__arrows.arrows_info.desktop
-    //-                             i.icon-arrow_long_left
-    //-                             i.icon-arrow_long_right
-    //-                         .certificate__dotted.dotted_info
-    //- 
-    //-                     .certificate__slider.swiper-wrapper
-    //-                         each item in [1]
-    //-                             .team__item.swiper-slide
-    //-                                 .certificate__doc(style="background-image: url('../img/certificate_doc.png')")
-    //- 
-    //-                     .certificate__control.mobile
-    //-                         .certificate__dotted
+    section#certificate.certificate.section
+        .container_center
+            .certificate__content
+                .certificate__left
+                    h2.section__title(data-aos="fade-up")
+                        span Посмотрите, все <b>наши свидетельства</b>
+
+                    .certificate__text
+                        p Даём гарантию на результаты своей работы, когда это действительно очевидно для нас.
+                        p Первые в Казахстане зарегистрировали звуковой товарный знак.
+                    .certificate__button
+                        a(href="#").btn.btn_md Изучит кейс
+
+
+                .certificate__right
+
+                    .swiper__label.mobile
+                        span Передвигайте влево/вправо для просмотра всех  документов
+                        .swiper__img
+                            img(src="../img/hand.svg")
+
+                    .swiper.certificate-swiper-js
+
+                        .certificate__control.desktop
+                            .certificate__arrows.arrows_info
+                                i.icon-arrow_long_left
+                                i.icon-arrow_long_right
+                            .certificate__dotted.dotted_info
+
+                        .certificate__slider.swiper-wrapper
+                            each item in [1,1,1,1]
+                                .certificate__item.swiper-slide
+                                    .certificate__doc(style="background-image: url('../img/certificate_doc.jpg')")
+                                        a(href="../img/certificate_doc.jpg" data-fancybox data-type="image")
+
+                        .certificate__control.mobile
+                            .certificate__dotted
+
+                .certificate__pen(data-aos="fade-up")
+
 
 
 
@@ -706,9 +710,9 @@ block content
                         span Давайте <b>проконсультируем</b>
                     .section__subtitle
                         span и предложим варианты<br> решения вашего вопроса
-                    .consultation__list
+                    .consultation__list(data-aos="fade-right")
                         each item in ['<b>Проанализируем</b> документы', '<b>Дадим рекомендации</b> по дальнейшим действиям;', '<b>Назовем</b> точную стоимость;', '<b>Рассчитаем</b> платежи, если нужна рассрочка;']
-                            .consultation__item(data-aos="fade-right")
+                            .consultation__item
                                 span!=item
 
                     .consultation__phone

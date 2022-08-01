@@ -1,56 +1,72 @@
 .toTop {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    bottom: 3em;
+    right: 0.75em;
+    /* 12/16 */
     @media (min-width: 768px) {
-        display: none;
-        position: fixed;
         bottom: 4em;
         right: 2.16em;
 
-        a {
-            text-decoration: none;
-            font-size: 1em;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+    }
 
-        }
+    a {
+        text-decoration: none;
+        font-size: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-        i {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    }
+
+    i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: $color_info;
+
+        width: 1.5em;
+        height: 1.5em;
+
+        @media (min-width: 768px) {
+            margin-bottom: 0.875em;
             width: 3.375em;
             height: 3.375em;
-            border-radius: 50%;
-            margin-bottom: 0.875em;
-            background-color: $color_info;
 
-            &:before {
-                color: $color_white;
-                font-weight: bold;
-                font-size: 1.5em;
-                -webkit-animation: action 0.5s linear alternate infinite;
-                animation: action 0.5s linear alternate infinite;
-
-            }
         }
 
+        &:before {
+            color: $color_white;
+            font-weight: bold;
+            font-size: 0.75em;
+            -webkit-animation: action 0.5s linear alternate infinite;
+            animation: action 0.5s linear alternate infinite;
+
+            @media (min-width: 768px) {
+                font-size: 1.5em;
+
+            }
+
+        }
+    }
+    @media (min-width: 768px) {
         span {
             color: $color_black;
             font-size: 0.75em;
         }
     }
+
 }
 
-@media (min-width: 768px) {
-    @keyframes action {
-        0% {
-            transform: translateY(-2px);
-        }
-
-        100% {
-            transform: translateY(2px);
-
-        }
+@keyframes action {
+    0% {
+        transform: translateY(-2px);
     }
 
+    100% {
+        transform: translateY(2px);
+
+    }
 }

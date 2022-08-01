@@ -134,7 +134,7 @@ $(document).ready(function() {
 
     function stikyMenu() {
 
-        let HeaderTop = $( 'header' ).offset().top;
+        let HeaderTop = $( '.header__bottom' ).offset().top;
         // let HeaderTop = $( 'header' ).offset().top + $( '.section' ).innerHeight();
         let currentTop = $( window ).scrollTop();
 
@@ -149,9 +149,11 @@ $(document).ready(function() {
 
             if ( currentTop > HeaderTop ) {
                 $( 'header' ).addClass( 'stiky' );
+                // $( '.main_content' ).addClass( 'header-styky' );
                 // $('.header__top').hide(1300);
             } else {
                 $( 'header' ).removeClass( 'stiky' );
+                // $( '.main_content' ).removeClass( 'header-styky' );
                 // $('.header__top').show(1300);
             }
 
@@ -302,6 +304,55 @@ $(document).ready(function() {
     };
     openSidebar();
 
+
+
+
+    // function openDetailed() {
+    //     $('.btn-detailed').click(function() {
+    //         $(this).closest('.detailed').find('.detailed__icon').toggleClass('detailed__icon_active');
+    //
+    //         if ($(this).closest('.detailed').find('.detailed__content').is(':visible')) {
+    //             $(this).closest('.detailed').find('.detailed__content').hide('fast');
+    //         }
+    //         else {
+    //             $(this).closest('.detailed').find('.detailed__content').show('fast');
+    //         }
+    //     })
+    // };
+    // openDetailed();
+
+//     .detailed {
+//   margin-bottom: 10px;
+// }
+// .detailed__icon {
+//   position: absolute;
+//   top: 5px;
+//   right: 5px;
+//   font-size: 21px;
+//   font-weight: bold;
+//   transform: rotate(0deg);
+//   transition: transform 0.5s;
+// }
+// .detailed__icon_active {
+//   transform: rotate(180deg);
+// }
+// .detailed__content {
+//   display: none;
+// }
+
+// <div class="detailed">
+//
+//     <div class="detailed__button ' . $params[ 'position' ] . '">
+//         <button class="btn btn-detailed ' . $params[ 'size' ] .' '. $params[ 'color' ] . '" type="submit">
+//             <sapn>Подробнее</sapn><i class="icon-bottom detailed__icon"></i>
+//         </button>
+//     </div>
+//
+//     <div class="detailed__content">
+//         ' . $params[ 'content' ] . '
+//     </div>
+//
+// </div>
 
 
 

@@ -1,6 +1,11 @@
 /* Header
  ----------------------------------------------------------------------------- */
 .header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+
 	background-color: $color_white;
 	padding-top: 0.375em;
 	padding-bottom: 1em;
@@ -89,16 +94,17 @@
 	&__top {
 		display: flex;
 		align-items: center;
+
 		@media (min-width: 768px) {
 			justify-content: space-between;
 			margin-bottom: 2.5em;
 
-			opacity: 1;
-			height: auto;
-			visibility: visible;
-			pointer-events: auto;
-			transition: all ease 0.4s;
-			transform: translate(0, 0);
+			// opacity: 1;
+			// height: auto;
+			// visibility: visible;
+			// pointer-events: auto;
+			// transition: all ease 0.4s;
+			// transform: translate(0, 0);
 
 		}
 	}
@@ -208,13 +214,15 @@
 
 	@media (min-width: 768px) {
 		.header__top {
-			margin-bottom: 0;
-			height: 0;
-			opacity: 0;
-			visibility: hidden;
-			pointer-events: none;
-			transition: all ease 0.4s;
-			transform: translate(0, -20%);
+			// margin-bottom: 0;
+			// height: 0;
+			// opacity: 0;
+			// visibility: hidden;
+			// pointer-events: none;
+			// transition: all ease 0.4s;
+			// transform: translate(0, -20%);
+
+			display: none;
 
 		}
 
