@@ -608,6 +608,25 @@ body {
     font-size: 0.5em;
   }
 }
+.section__title_page {
+  line-height: 1.286;
+}
+@media (min-width: 768px) {
+  .section__title_page {
+    line-height: 1.3334;
+  }
+}
+.section__title_page span {
+  font-size: 2.1875em;
+}
+@media (min-width: 768px) {
+  .section__title_page span {
+    font-size: 3.75em;
+  }
+}
+.section__title_page b {
+  font-weight: 500;
+}
 .section__subtitle {
   margin-bottom: 1.375em;
   letter-spacing: 0.02em;
@@ -624,7 +643,6 @@ body {
 @media (min-width: 768px) {
   .section__subtitle span {
     font-size: 1.875em;
-    font-weight: 400;
   }
 }
 
@@ -666,6 +684,7 @@ body {
 
 .breadcrumbs {
   padding-top: 4.5em !important;
+  padding-bottom: 0;
 }
 @media (min-width: 768px) {
   .breadcrumbs {
@@ -4621,6 +4640,192 @@ body {
   height: 0.25em;
   border-radius: 50%;
   background-color: #9F9F9F;
+}
+
+.head {
+  padding-top: 0.5em;
+}
+@media (min-width: 768px) {
+  .head {
+    padding-top: 1.625em;
+  }
+}
+.head__bg {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.head__bg:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.head__wrap {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  padding: 2.5em 0 3.5em;
+}
+@media (min-width: 768px) {
+  .head__wrap {
+    padding: 5.625em 0 8.125em;
+  }
+}
+.head__wrap .section__title {
+  margin-bottom: 1.25em;
+}
+@media (min-width: 768px) {
+  .head__wrap .section__title {
+    margin-bottom: 3.625em;
+  }
+}
+.head__wrap .section__subtitle {
+  margin-bottom: 3.625em;
+}
+.head__subtitle {
+  letter-spacing: 0.02em;
+  line-height: 1.438;
+  margin-bottom: 2em;
+}
+@media (min-width: 768px) {
+  .head__subtitle {
+    line-height: 1.5334;
+    margin-bottom: 3.625em;
+  }
+}
+.head__subtitle span {
+  font-size: 1em;
+  font-weight: 300;
+}
+@media (min-width: 768px) {
+  .head__subtitle span {
+    font-size: 1.875em;
+  }
+}
+.head__subtitle b {
+  font-weight: 700;
+}
+.head__top {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .head__bottom {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 82.8125em;
+    margin: 0 auto;
+  }
+}
+.head__action {
+  text-align: center;
+  margin-bottom: 2.5em;
+}
+@media (min-width: 768px) {
+  .head__action {
+    margin-bottom: 0;
+    text-align: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.head__action .btn:first-child {
+  margin-bottom: 1em;
+}
+@media (min-width: 768px) {
+  .head__action .btn:first-child {
+    margin-right: 1.875em;
+    margin-bottom: 0;
+  }
+}
+.head__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  .head__list {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 3.625em;
+  }
+}
+.head__item {
+  display: flex;
+  width: 50%;
+  margin-bottom: 1em;
+}
+@media (min-width: 768px) {
+  .head__item {
+    width: 18.75em;
+    margin-bottom: 0;
+  }
+}
+.head__icon {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: #125F73;
+  border-radius: 50%;
+  width: 1.875em;
+  height: 1.875em;
+  margin-right: 0.625em;
+}
+@media (min-width: 768px) {
+  .head__icon {
+    width: 2.625em;
+    height: 2.625em;
+    margin-right: 1.5em;
+  }
+}
+.head__icon i {
+  font-size: 0.3634em;
+}
+@media (min-width: 768px) {
+  .head__icon i {
+    font-size: 0.545em;
+  }
+}
+.head__label {
+  margin-bottom: 0.375em;
+}
+@media (min-width: 768px) {
+  .head__label {
+    margin-bottom: 0.5em;
+  }
+}
+.head__label span {
+  font-size: 0.875em;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .head__label span {
+    font-size: 1.25em;
+  }
+}
+.head__text {
+  line-height: 0.813;
+  width: 5.5em;
+}
+@media (min-width: 768px) {
+  .head__text {
+    line-height: 1.6;
+    width: 100%;
+  }
+}
+.head__text span {
+  font-size: 0.625em;
+}
+@media (min-width: 768px) {
+  .head__text span {
+    font-size: 1em;
+  }
 }
 
 /* Footer

@@ -5,7 +5,7 @@ block variable
 
 block content
     // begin breadcrumbs
-    .breadcrumbs
+    .breadcrumbs.section
         .container_center
             .kama_breadcrumbs
                 span
@@ -25,15 +25,30 @@ block content
 
     // begin head
     section#head.head.section
-        .head__bg
+        .head__bg(style="background-image: url('../img/advantage_bg.webp')")
             .container_center
-                .head__content
-                    h2.section__title 
-                        span Регистрация товарного знака в Казахстане <b>со 100% гарантией</b>
-                    .section__subtitle
-                        span Добиваемся регистрации даже в тех случаях, где другие развели руками и отказались
-                .head__list
-                    .head__item
+                .head__wrap
+                    .head__top
+                        h1.section__title.section__title_page
+                            span Регистрация товарного знака<br> в Казахстане <b>со 100% гарантией</b>
+                        .head__subtitle
+                            span Добиваемся регистрации даже в тех случаях, где другие развели руками и отказались
+                    .head__bottom
+                        .head__action
+                            a(href="#").btn.btn_warning Бесплатная проверка знака
+                            a(href="https://wa.me/+77712101111" target="_blank").btn.btn_whatsapp.btn_success Спросить у нас в WhatsApp
+                                span время ответа 15 секунд
+                        .head__list
+                            each item in [ {label: '3000+ клиентов', text: 'Нас выбирает каждый второй бизнес'}, {label: '1358 товарных знаков', text: 'зарегистрировали. 97% с первого раза'}, {label: 'Гарантия результата', text: 'при отказе добиваемся регистрации за свой счет'}, {label: 'Рассрочка до 12 мес.', text: 'Оплачивайте услуги без первого взноса'} ]
+                                .head__item
+                                    .head__icon
+                                        i.icon-check_mark
+                                    .head__content
+                                        .head__label
+                                            span=item.label
+                                        .head__text
+                                            span=item.text
+
 
 
     // end head
