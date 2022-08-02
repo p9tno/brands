@@ -1,0 +1,75 @@
+.individual {
+    @media (min-width: 768px) {
+        .section__title {
+            line-height: 1.25;
+            margin-bottom: 2em;
+        }
+
+        .section__subtitle {
+            line-height: 1.5;
+
+        }
+
+    }
+
+    &__bg {
+        background-position: 65%;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @media (min-width: 768px) {
+            background-position: center;
+
+        }
+    }
+
+    &__content {
+        padding: 2em 1em;
+
+        @media (min-width: 768px) {
+            position: relative;
+            padding: 6.25em 50em 6.25em 6.25em;
+
+        }
+    }
+
+    &__caption {
+        text-align: center;
+        @media (min-width: 768px) {
+            text-align: inherit;
+        }
+    }
+
+    &__form {
+        margin-top: 1em;
+        @media (min-width: 768px) {
+            margin-top: 3em;
+            width: 25em;
+
+        }
+    }
+
+    &__lider {
+        @media (min-width: 768px) {
+            position: absolute;
+            top: 24em;
+            right: 40em;
+            width: 9.875em;
+
+            .lider__info,
+            .lider__name {
+                text-align: right;
+            }
+
+            .lider__icon {
+                margin-left: auto;
+            }
+
+            .lider__name {
+                margin-bottom: 1.625em;
+            }
+        }
+
+    }
+
+}

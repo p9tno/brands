@@ -61,6 +61,15 @@
         }
     }
 
+    &__button {
+        text-align: center;
+        margin-top: 1em;
+        @media (min-width: 768px) {
+            margin-top: 3em;
+
+        }
+    }
+
 }
 
 .company {

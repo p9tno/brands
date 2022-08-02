@@ -29,10 +29,9 @@
 
 		}
 
-		.btn,
-		input:not([type]),
-		input[type=date],
-		input[type=email],
+		.btn, input:not([type]), input[type=date], input[type=email],
+		// input[type=file],
+		.form__file,
 		input[type=number],
 		input[type=password],
 		input[type=search],
@@ -115,8 +114,11 @@
 			color: $color_info;
 		}
 	}
+
+	&__file {}
 }
 // Input text and textarea ================================================
+.form__file,
 input:not([type]),
 input[type=date],
 input[type=email],
@@ -127,6 +129,7 @@ input[type=tel],
 input[type=text],
 input[type=url],
 textarea {
+	// background-color: red;
 	background-color: $color_white;
 	border: none;
 	font-family: $main_font_family;
@@ -162,6 +165,24 @@ textarea {
 	// Placeholder for input +++++++++++++++
 	@include placeholder {
 		color: #B0B0B1;
+	}
+}
+
+.form__file {
+	display: inline-block;
+	position: relative;
+	color: #B0B0B1;
+
+	input[type=file] {
+		width: 0.1px;
+		height: 0.1px;
+		opacity: 0;
+		position: absolute;
+		z-index: -10;
+	};
+	@media (min-width: 768px) {
+
+		cursor: url('../img/download.png'), auto;
 	}
 }
 

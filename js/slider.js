@@ -181,6 +181,87 @@ $(document).ready(function() {
     }
     mobilSlider();
 
+
+    const steps = new Swiper('.steps-swiper-js', {
+        // loop: true,
+        slidesPerView: 1,
+        speed: 500,
+        // autoplay: {
+        //   delay: 5000,
+        // },
+        // grabCursor: true,
+        pagination: {
+            el: '.steps__dotted',
+        },
+        dynamicBullets: true,
+
+        spaceBetween: 22,
+        breakpoints: {
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 0,
+                navigation: {
+                    nextEl: '.icon-arrow_long_right',
+                    prevEl: '.icon-arrow_long_left',
+                },
+            },
+        }
+    });
+
+    const tariffs = new Swiper('.tariffs-swiper-js', {
+        // loop: true,
+        slidesPerView: 1,
+        autoHeight: true,
+        speed: 500,
+        // autoplay: {
+        //   delay: 5000,
+        // },
+        // grabCursor: true,
+        pagination: {
+            el: '.tariffs__dotted',
+        },
+        // dynamicBullets: true,
+
+        spaceBetween: 22,
+        breakpoints: {
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+                // navigation: {
+                //     nextEl: '.icon-arrow_long_right',
+                //     prevEl: '.icon-arrow_long_left',
+                // },
+            },
+        }
+    });
+
+    const moreServices = new Swiper('.moreServices-swiper-js', {
+        // loop: true,
+        slidesPerView: 1,
+        autoHeight: true,
+        speed: 500,
+        // autoplay: {
+        //   delay: 5000,
+        // },
+        // grabCursor: true,
+        pagination: {
+            el: '.moreServices__dotted',
+        },
+        // dynamicBullets: true,
+
+        spaceBetween: 22,
+        breakpoints: {
+            768: {
+                slidesPerView: 5,
+                spaceBetween: 16,
+                // navigation: {
+                //     nextEl: '.icon-arrow_long_right',
+                //     prevEl: '.icon-arrow_long_left',
+                // },
+            },
+        }
+    });
+
 });
 
 // jQuery(function($){

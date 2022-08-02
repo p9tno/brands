@@ -261,6 +261,7 @@ $(document).ready(function() {
         $(".tel").mask("+7 ( 9 9 9 ) 9 9 9 - 9 9 - 9 9");
     });
 
+
     function disabledButton() {
         $('.check_checked_js').on('change', function () {
             if ( $(this).prop('checked') ) {

@@ -52,3 +52,570 @@ block content
 
 
     // end head
+
+    // begin steps
+    section#steps.steps.section
+        .container_center
+            h2.section__title(data-aos="fade-up")
+                span <b>3 шага</b> к регистрации вашего<br> товарного знака
+            .section__subtitle.section__subtitle_sm(data-aos="fade-up")
+                span Честно оцениваем риски, подаем заявку на нужные вам  товары/услуги (МКТУ), полностью<br> сопровождаем и доводим до результата
+
+            .swiper__label.mobile
+                span Листайте, чтобы увидеть следующие шаги
+                .swiper__img
+                    img(src="../img/hand.svg")
+
+            .swiper.steps-swiper-js
+
+                .steps__list.swiper-wrapper.counter-wrap
+
+                    .steps__item.swiper-slide.counter-item
+                        .steps__label
+                            span Проверка
+                        ul
+                            each item in ['Проверим обозначение на соответствие требованиям закона.', 'Выявим сходные до степени смешения обозначения.', 'Подготовим письменный отчет с оценкой ситуации и подробными рекомендациями.', 'Устраним препятствия и предложим внести изменения при необходимости.', 'Сроки : до 2 дней' ]
+                                li
+                                    span!=item
+                        .steps__result
+                            span <b>Результат:</b> отчет с заключением о возможности регистрации.
+                        .steps__count
+                            span.counter-el
+
+                    .steps__item.swiper-slide.counter-item
+                        .steps__label
+                            span Заявка в Казпатент
+                        ul
+                            each item in ['Подберем классы МКТУ и оформим заявку.', 'Рассчитаем и поможем оплатить пошлину за подачу заявки.', 'Подготовим письменный отчет с оценкой ситуации и подробными рекомендациями.', 'После оплаты пошлины подадим заявку в течение 1 дня.' ]
+                                li
+                                    span!=item
+                        .steps__result
+                            span <b>Результат:</b> официально поданная заявка
+                        .steps__count
+                            span.counter-el
+
+                    .steps__item.swiper-slide.counter-item
+                        .steps__label
+                            span Регистрация
+                        ul
+                            each item in ['Между подачей заявки и получением свидетельства 6 - 8 месяцев.', 'После решения об успешной регистрации ТЗ необходимо оплатить пошлину. В течение месяца Казпатент выдает свидетельство, которое мы передадим вам в нашем офисе или направим почтой.', 'Проконсультируем и поможем в <a href="#">международной регистрации за рубежом, по Мадридской системе, внесению в таможенный реестр.</a>' ]
+                                li
+                                    span!=item
+                        .steps__result
+                            span <b>Результат:</b> свидетельство о регистрации.
+                        .steps__count
+                            span.counter-el
+
+                .steps__control
+                    //- .box.desktop
+                    .steps__dotted.dotted_info
+                    //- .steps__arrows.arrows_info.desktop
+                    //-     i.icon-arrow_long_left
+                    //-     i.icon-arrow_long_right
+
+
+    // end steps
+
+    // begin individual
+    section#individual.individual.section
+        .container_center
+            .individual__bg(style="background-image: url('../img/individual_bg.webp')")
+                .individual__content
+                    .individual__caption
+                        h2.section__title(data-aos="fade-up")
+                            span Закажите <b>индивидуальную ﻿проверку</b> товарного знака, ﻿которая покажет ﻿все риски
+                        .section__subtitle(data-aos="fade-up")
+                            span + получите консультацию эксперта<br> Eurasian Brands уже через минуту
+                    .individual__form
+                        form.form
+
+                            .form__row
+                                label.form__file Прикрепить файл
+                                    //- span Прикрепить файл
+                                    input(type="file" id="file-input" class="file-input" name="file")
+
+                            .form__row
+                                input(type="tel" class="tel" required placeholder="Введите ваш номер")
+
+                            .form__row
+                                button.btn.btn_didisabled_js(type="submit") Заказать бесплатную проверку
+
+                            .form__row
+                                .form__privacy
+                                    label.form__check
+                                        input.check_checked_js(type="checkbox" checked="checked")
+                                        span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
+                    .individual__lider.desktop
+                        .lider__icon
+                            i.icon-arrow_deg
+                        .lider__name
+                            span Клёнова Айя Ибрагимовна
+                        .lider__info
+                            span эксперт по товарным знакам
+
+
+    // end individual
+
+    // begin conditions
+    section#conditions.conditions.section
+        .container_center
+            .conditions__wrap
+                .conditions__caption
+                    h2.section__title(data-aos="fade-up")
+                        span Предлагаем уникальные <b>условия сотрудничества</b>
+                    .conditions__desc(data-aos="fade-up")
+                        span Таких преимуществ вы не найдете ни у одной патентной компании в Казахстане — мы проверяли
+                .swiper__label.mobile
+                    span Передвигайте шаги влево/вправо для просмотра всех преимуществ
+                    .swiper__img
+                        img(src="../img/hand.svg")
+                .swiper.conditions-swiper-js
+                    .conditions__grid.swiper-wrapper.counter-wrap
+
+
+                        .conditions__item.swiper-slide.counter-item
+                            .conditions__icon
+                                i.icon-percent
+
+                            .conditions__content.conditions__content_goTop
+                                .conditions__title
+                                    span Рассрочка
+                                .conditions__text
+                                    span Обычно каждый второй клиент оплачивает наши услуги по беспроцентной рассрочке: Альфа-банк, Kaspi Bank или собственной от Eurasian Brands.
+                            .conditions__button
+                                a(href="#").btn.btn_md Подробнее
+                            .conditions__count
+                                span.counter-el
+
+
+                        .conditions__item.swiper-slide.counter-item
+                            .conditions__icon
+                                i.icon-defense
+
+                            .conditions__content.conditions__content_goTop
+                                .conditions__title
+                                    span 100% гарантия регистрации
+                                .conditions__text
+                                    span Берем на себя финансовую ответственность за регистрацию: добьемся регистрации или вернем 100% оплату
+                            .conditions__button
+                                a(href="#").btn.btn_md Подробнее
+                            .conditions__count
+                                span.counter-el
+
+
+                        .conditions__item.swiper-slide.counter-item
+                            .conditions__icon
+                                i.icon-timer
+
+                            .conditions__content
+                                .conditions__title
+                                    span Подаем заявку<br> в день оплаты
+                                .conditions__text
+                                    span Для закрепления приоритетного права на товарный знак крайне важно, не откладывая, подать заявку на регистрацию
+                            .conditions__count
+                                span.counter-el
+
+
+                        .conditions__item.swiper-slide.counter-item
+                            .conditions__icon
+                                i.icon-list
+
+                            .conditions__content
+                                .conditions__title
+                                    span Сражаемся за ваш<br> товарный знак
+                                .conditions__text
+                                    span Даже если вам отказали в регистрации, мы изучим отказ, выработаем и реализуем стратегию беспроигрышных действий, благодаря которым гарантируем регистрацию
+                            .conditions__count
+                                span.counter-el
+
+
+                        .conditions__item.swiper-slide.counter-item
+                            .conditions__icon
+                                i.icon-loupe
+
+                            .conditions__content
+                                .conditions__title
+                                    span Бесплатный поиск
+                                .conditions__text
+                                    span В рамках предварительных договоренностей мы бесплатно проверим ваш товарный знак и выдадим заключение о возможности регистрации
+                            .conditions__count
+                                span.counter-el
+
+                    .conditions__dotted
+
+
+
+    // end conditions
+
+    // begin tariffs
+    section#tariffs.tariffs.section
+        .container_center
+            .tariffs__content
+                h2.section__title(data-aos="fade-up")
+                    span Начнем регистрировать ваш<br> товарный знак <b>уже сегодня</b>
+                .section__subtitle.section__subtitle_sm(data-aos="fade-up")
+                    span Выбирайте подходящий портфель услуг
+
+                .swiper__label.mobile
+                    span Листайте статьи влево/вправо для просмотра всех 
+                    .swiper__img
+                        img(src="../img/hand.svg")
+
+                .swiper.tariffs-swiper-js
+                    .tariffs__list.swiper-wrapper
+                        // start slide
+                        .tariffs__item.swiper-slide
+                            .tariffs__title
+                                span Стандарт
+                            .tariffs__subtitle
+                                span Минимальный, без гарантии регистрации
+                            ul
+                                each item in ['Составление и подача', 'Составление МКТУ', 'Сопровождение регистрации в НИИС', 'Все платежи за услуги НИИС', 'Поиск аналогов в Госреестре']
+                                    li
+                                        span=item
+                            .tariffs__price
+                                span 40 000 ₸
+                            .tariffs__info
+                                span Доступна оплата в рассрочку
+                            .tariffs__button
+                                a(href="#").btn.btn_md.btn_warning Оставить заявку
+                        // end slide
+
+                        // start slide
+                        .tariffs__item.swiper-slide.popular
+                            .tariffs__title
+                                span Бизнес
+                            .tariffs__subtitle
+                                span Спокойствие и уверенность в регистрации
+                            ul
+                                each item in ['Составление и подача', 'Составление МКТУ', 'Сопровождение регистрации в НИИС', 'Все платежи за услуги НИИС', 'Поиск аналогов в Госреестре','Поиск и анализ аналогов по закрытым реестрам с детальным отчетом', 'Блокировка конкурентов в соц. сетях']
+                                    li
+                                        span=item
+                            .tariffs__price
+                                span 220 000 ₸
+                            .tariffs__info
+                                span Доступна оплата в рассрочку
+                            .tariffs__button
+                                a(href="#").btn.btn_md.btn_warning Оставить заявку
+                        // end slide
+
+                        // start slide
+                        .tariffs__item.swiper-slide
+                            .tariffs__title
+                                span Премиум
+                            .tariffs__subtitle
+                                span Хитрый легальный маневр против невозможности регистрации
+                            ul
+                                each item in ['Составление и подача', 'Составление МКТУ', 'Сопровождение регистрации в НИИС', 'Все платежи за услуги НИИС', 'Поиск аналогов в Госреестре','Поиск и анализ аналогов по закрытым реестрам с детальным отчетом', 'Блокировка конкурентов в соц. сетях', 'Корректировка или разработка логотипа', 'Оспаривание заключения об отказе']
+                                    li
+                                        span=item
+                            .tariffs__price
+                                span 750 000 ₸
+                            .tariffs__info
+                                span Доступна оплата в рассрочку
+                            .tariffs__button
+                                a(href="#").btn.btn_md.btn_warning Оставить заявку
+                        // end slide
+
+                        // start slide
+                        .tariffs__item.swiper-slide
+                            .tariffs__title
+                                span Монополист
+                            .tariffs__subtitle
+                                span Абсолютная власть на рынке
+                            ul
+                                each item in ['Составление и подача', 'Составление МКТУ', 'Сопровождение регистрации в НИИС', 'Все платежи за услуги НИИС', 'Поиск аналогов в Госреестре','Поиск и анализ аналогов по закрытым реестрам с детальным отчетом', 'Блокировка конкурентов в соц. сетях', 'Корректировка или разработка логотипа', 'Оспаривание заключения об отказе', 'Составление претензии к конкурентам', 'Привлечение конкурентов к суду']
+                                    li
+                                        span=item
+                            .tariffs__price
+                                span 1400 000 ₸
+                            .tariffs__info
+                                span Доступна оплата в рассрочку
+                            .tariffs__button
+                                a(href="#").btn.btn_md.btn_warning Оставить заявку
+                        // end slide
+
+
+
+                    .tariffs__dotted.mobile
+
+
+
+                .tariffs__important
+                    span 100 000 ₸ — госпошлина оплачивается отдельно в момент подачи заявления на регистрацию товарного знака
+
+
+
+
+    // end tariffs
+
+    // begin runningLine
+    section#runningLine.runningLine.section
+        .runningLine__content
+            .runningLine__list
+                each item in ['РЕПУТАЦИЯ', 'ЛИДЕРСТВО', 'ОТКРЫТОСТЬ', 'КОМПЕТЕНТНОСТЬ', 'РЕПУТАЦИЯ', 'ЛИДЕРСТВО', 'ОТКРЫТОСТЬ', 'КОМПЕТЕНТНОСТЬ']
+                    .runningLine__item
+                        span=item
+
+    // end runningLine
+
+    // begin information
+    section#information.information.section
+        .container_center
+            .information__top
+                h2.section__title(data-aos="fade-up")
+                    span «Приумножаем эффективность и доходы бизнеса»
+                .information__subtitle
+                    span Дорожим своей репутацией <b>40% наших клиентов пришли по рекомендации.</b>
+
+                .information__content
+                    .company
+                        .company__label
+                            span О нашей компании и подходе в видео за 2 минуты
+                        .company__play.js-youtubeModal#httuerixph8
+                            i.icon-play
+                    .lider
+                        .lider__icon
+                            i.icon-arrow_deg
+                        .lider__name
+                            span Турсунов Куаныш Абилкасымович
+                        .lider__info
+                            span патентный поверенный Республики Казахстан. Основатель и руководитель компании Eurasian Brands
+
+                .information__list
+                    .list__title
+                        span Поэтому открыто Вам заявляю и гарантирую:
+                    ul.list
+                        each item in [ {label: 'Прозрачная стоимость,  не меняется в ходе работы', text: 'Стоимость наших услуг опубликована здесь на сайте. Оказание услуг оформляется официальным договором. Она окончательная и не изменится в большую сторону в процессе работы;'}, {label: 'Не химичим — знаем закон и работаем легально', text: 'Знаете, что самое плохое? На рынке есть недобросовестные компании, которые на консультации называют одну цену, а в ходе работы увеличивают ее в 2, 3 раза. Будьте бдительны и работайте с проверенными компаниями;'},]
+
+                            li.list__item
+                                .list__label
+                                    span=item.label
+                                .list__text
+                                    span=item.text
+
+            .information__bottom
+                ul.data
+                    li.data__item(data-aos="fade-up")
+                        .data__content
+                            .data__number
+                                span 3000
+                                i +
+                            .data__label
+                                span довольных клиентов
+                    li.data__item(data-aos="fade-up" data-aos-delay="300")
+                        .data__content
+                            .data__number
+                                span 97
+                                i %
+                            .data__label
+                                span получают документы<br> с первого раза
+                    li.data__item(data-aos="fade-up" data-aos-delay="600")
+                        .data__content
+                            .data__number
+                                span 1358
+                            .data__label
+                                span товарных знаков<br> зарегистрировали
+                    li.data__item(data-aos="fade-up" data-aos-delay="900")
+                        .data__content
+                            .data__number
+                                span 1125
+                            .data__label
+                                span досудебных<br> урегулирований
+
+            .information__button
+                a(href="#").btn.btn_md.btn_warning Подробнее о компании
+
+    // end information
+
+    // begin comments
+    section#comments.comments.section
+        .container_center
+            .comments__top
+
+                .comments__content
+                    .comments__label(data-aos="fade-up")
+                        span Скорее всего
+                    h2.section__title(data-aos="fade-up")
+                        span Вы точно знаете наших <b>клиентов</b>
+                    .section__subtitle(data-aos="fade-up")
+                        span За брендами стоят люди. Многие стали нашими хорошими друзьями.
+
+                .comments__slider.swiper.comments-swiper-js
+                    .swiper__label.mobile
+                        span Передвигайте шаги влево/вправо для просмотра всех этапов работы
+                        .swiper__img
+                            img(src="../img/hand.svg")
+                    .commentsSlider.swiper-wrapper
+                        each item in [ { img: '1', name: 'Алагузова<br> Баян', info: 'Продюсер, бизнес-леди, глава компании "Shine Production", телеведущая, актриса, певица', commit: 'Из огромного выбора компаний на рынке Казахстана, мне порекомендовали именно "Eurasian Brands" как одних из лучших профессионалов в сфере регистрации и защиты авторского права. Команда "Eurasian Brands" выступила в роли моих представителей в качестве защитников в судебном процессе по авторским правам на сценарий и фильм "Станция судьбы".'}, { img: '2', name: 'Lorem.', info: 'глава компании "Shine Production"', commit: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, facilis.'}, { img: '3', name: ' Lorem ipsum.', info: ' Lorem.', commit: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae distinctio, rem aperiam porro fugiat dolores facere illum ipsum officia natus commodi aut vel sunt cupiditate consequatur eveniet vero, ea perspiciatis?'} ]
+                            .swiper-slide
+                                .commentsSlider__item
+                                    .commentsSlider__persone
+                                        .commentsSlider__foto(style="background-image: url('../img/persone_"+item.img+".png')")
+                                            .commentsSlider__play.js-youtubeModal#httuerixph8
+                                                i.icon-play
+                                        .commentsSlider__description
+                                            .commentsSlider__name
+                                                span!=item.name
+                                            .commentsSlider__info
+                                                span=item.info
+
+
+                                    .commentsSlider__content
+                                        i.icon-quote_2
+                                        span=item.commit
+                                        a(href="#") Читать полностью
+
+                .comments__control
+                    .comments__arrows.desktop
+                        i.icon-drop_left
+                        i.icon-drop_right
+                    .comments__dotted
+
+
+
+
+            .comments__bottom.swiper.logoSlider-swiper-js
+                .swiper__label.mobile
+                    span Передвигайте влево/вправо для просмотра логотипов наших клиентов
+                    .swiper__img
+                        img(src="../img/hand.svg")
+                .logoSlider.swiper-wrapper
+                    each item in [1,2,3,4,1]
+                        .swiper-slide
+                            .logoSlider__grid
+                                each item in [1,2,3,4]
+                                    .logoSlider__item
+                                        .logoSlider__img
+                                            img(src="../img/comments_logo_"+item+".png")
+                .logoSlider__doted
+
+
+            .comments__button
+                a(href="#").btn.btn_warning Смотреть всех клиентов и кейсы
+
+    // end comments
+
+    // begin consultation
+    section#consultation.consultation.section
+        .container_center
+            .consultation__wrap
+                .consultation__content
+                    h2.section__title.desktop(data-aos="fade-up")
+                        span Давайте мы вас <b>проконсультируем</b>
+                    h2.section__title.mobile
+                        span Давайте <b>проконсультируем</b>
+                    .section__subtitle
+                        span и предложим варианты<br> решения вашего вопроса
+                    .consultation__list(data-aos="fade-right")
+                        each item in ['<b>Проанализируем</b> документы', '<b>Дадим рекомендации</b> по дальнейшим действиям;', '<b>Назовем</b> точную стоимость;', '<b>Рассчитаем</b> платежи, если нужна рассрочка;']
+                            .consultation__item
+                                span!=item
+
+                    .consultation__phone
+                        .phone
+                            .phone__time
+                                span Звоните, Пн-ВС 10:00 - 21:00
+                            .phone__link
+                                a(href="tel:+77712101111") +7 (771) 210-11-11
+                    .consultation__action
+                        span Спрашивайте, мы онлайн, время ответа 15 сек
+                        a(href="https://wa.me/+77712101111" target="_blank").btn.btn_whatsapp_sm.btn_success Написать в WhatsApp
+                            span.mobile время ответа 15 секунд
+
+                .consultation__form
+                    form.form
+                        .form__title
+                            span <b>После отправки<br> формы</b> мы перезвоним<br> через 30 секундн
+
+                        .form__row
+                            textarea(type="text", placeholder="Опишите вашу задачу в общих чертах. Это не обязательно, но позволит нам быстрее сориентироваться и направить вашу заявку профильному специалисту.")
+
+                        .form__row
+                            input(type="tel" class="tel" required placeholder="Введите ваш номер")
+
+                        .form__row
+                            button.btn.btn_didisabled_js(type="submit") Получить консультацию
+
+
+
+                        .form__row
+                            .form__privacy
+                                label.form__check
+                                    input.check_checked_js(type="checkbox" checked="checked")
+                                    span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
+
+
+                .consultation__lider.desktop
+                    .lider__icon
+                        i.icon-arrow_deg
+                    .lider__name
+                        span Клёнова Айя Ибрагимовна
+                    .lider__info
+                        span Юрист, патентовед, эксперт по товарным знакам
+
+
+    // end consultation
+
+    // begin moreServices
+    section#moreServices.moreServices.section
+        .container_center
+            h2.section__title(data-aos="fade-up")
+                span Дополнительные <b>услуги</b>
+
+            .swiper__label.mobile
+                span Передвигайте шаги влево/вправо для просмотра всех услуг
+                .swiper__img
+                    img(src="../img/hand.svg")
+
+            .swiper.moreServices-swiper-js
+                .swiper-wrapper.counter-wrap
+
+                    each item in ['Продление срока регистрации', 'Проверка на уникальность', 'Международная регистрация  по Мадридской системе и за рубежом', 'Регистрация наименования места происхождения товара']
+
+                        .services__item.swiper-slide.counter-item
+                            .services__title
+                                span!=item
+                            .services__request.sentence_modal_js
+                                a(href="#") Заявка на косультацию
+                            .services__action
+                                .services__number
+                                    span.counter-el
+
+                                .services__link.dotted
+                                    a(href="#") Подробнее об услуге
+                                .services__arrow
+                                    i.icon-arrow_deg
+
+                    .services__item.swiper-slide.services__item_bg
+                        .services__title
+                            span Не нашли нужную услугу?
+                        .services__subtitle
+                            span Уверены, мы сможем помочь. Просто напишите нам. Ответим за 15 секунд!
+                        .services__button
+                            a(href="https://wa.me/+77712101111" target="_blank").btn.btn_whatsapp_sm.btn_success.btn_md Написать в WhatsApp
+
+                .moreServices__dotted
+
+    // end moreServices
+
+    // begin faq
+    section#faq.faq.section
+        .container_center
+            h2.section__title(data-aos="fade-up")
+                span <b>Отвечаем</b> на часто задаваемые вопросы
+            .faq__content
+                each item in [1,2]
+
+                    .faq__col
+                        each title in [1,2,3,4]
+
+                            .collapse(data-collapse-wrapper="")
+                                .collapse__title(data-collapse="")
+                                    span Могу ли я получить патент и сохранить свое изобретение в тайне?
+                                .collapse__body(data-collapse-body="")
+                                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                                    p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ratione adipisci nostrum eos, quis ipsa doloremque fugit dolores sunt atque.
+
+    // end faq

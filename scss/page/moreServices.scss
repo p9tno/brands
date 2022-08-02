@@ -1,0 +1,23 @@
+.moreServices {
+    &__list {}
+
+    .section__title {
+        text-align: center;
+        @media (min-width: 768px) {
+            margin-bottom: 3em;
+        }
+    }
+
+    .services__item {
+        @media (min-width: 768px) {
+            min-height: 21.875em;
+        }
+    }
+
+    .moreServices__dotted {
+        @media (min-width: 768px) {
+            justify-content: flex-end;
+        }
+    }
+
+}
