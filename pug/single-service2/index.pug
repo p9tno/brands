@@ -19,7 +19,7 @@ block content
                 span.kb_sep 
                     i.icon-arrow_right
 
-                span.kb_title Регистрация товарного знака
+                span.kb_title Международная регистрация товарного знака
 
     // end breadcrumbs
 
@@ -30,9 +30,9 @@ block content
                 .head__wrap
                     .head__top
                         h1.section__title.section__title_page
-                            span Регистрация товарного знака<br> в Казахстане <b>со 100% гарантией</b>
+                            span Международная регистрация<br> товарного знака <b>со 100% гарантией</b>
                         .head__subtitle
-                            span Добиваемся регистрации даже в тех случаях, где другие развели руками и отказались
+                            span Поможем получите правовую охрану на территории других стран по <b>Мадридской<br> системе</b> или с помощью <b>национальной регистрации в иностранных государствах</b>
                     .head__bottom
                         .head__action
                             a(href="#").btn.btn_warning Бесплатная проверка знака
@@ -57,9 +57,9 @@ block content
     section#steps.steps.section
         .container_center
             h2.section__title(data-aos="fade-up")
-                span <b>3 шага</b> к регистрации вашего<br> товарного знака
-            .section__subtitle.section__subtitle_sm(data-aos="fade-up")
-                span Честно оцениваем риски, подаем заявку на нужные вам  товары/услуги (МКТУ), полностью<br> сопровождаем и доводим до результата
+                span Как мы действуем
+            .section__subtitle(data-aos="fade-up")
+                span <b>Регистрация по Мадридской системе</b> через Международное Бюро Всемирной Организации по Интеллектуальной Собственности
 
             .swiper__label.mobile
                 span Листайте, чтобы увидеть следующие шаги
@@ -70,81 +70,143 @@ block content
 
                 .steps__list.swiper-wrapper.counter-wrap
 
-                    .steps__item.swiper-slide.counter-item
-                        .steps__label
-                            span Проверка
-                        ul
-                            each item in ['Проверим обозначение на соответствие требованиям закона.', 'Выявим сходные до степени смешения обозначения.', 'Подготовим письменный отчет с оценкой ситуации и подробными рекомендациями.', 'Устраним препятствия и предложим внести изменения при необходимости.', 'Сроки : до 2 дней' ]
-                                li
-                                    span!=item
-                        .steps__result
-                            span <b>Результат:</b> отчет с заключением о возможности регистрации.
-                        .steps__count
-                            span.counter-el
+                    each item in ['', '']
 
-                    .steps__item.swiper-slide.counter-item
-                        .steps__label
-                            span Заявка в Казпатент
-                        ul
-                            each item in ['Подберем классы МКТУ и оформим заявку.', 'Рассчитаем и поможем оплатить пошлину за подачу заявки.', 'Подготовим письменный отчет с оценкой ситуации и подробными рекомендациями.', 'После оплаты пошлины подадим заявку в течение 1 дня.' ]
-                                li
-                                    span!=item
-                        .steps__result
-                            span <b>Результат:</b> официально поданная заявка
-                        .steps__count
-                            span.counter-el
+                        .steps__item.swiper-slide.counter-item
+                            .steps__label
+                                span Проверка
+                            ul
+                                each item in ['Проверим обозначение на соответствие требованиям закона.', 'Выявим сходные до степени смешения обозначения.', 'Подготовим письменный отчет с оценкой ситуации и подробными рекомендациями.', 'Устраним препятствия и предложим внести изменения при необходимости.', 'Сроки : до 2 дней' ]
+                                    li
+                                        span!=item
+                            .steps__result
+                                span <b>Результат:</b> отчет с заключением о возможности регистрации.
+                            .steps__count
+                                span.counter-el
 
-                    .steps__item.swiper-slide.counter-item
-                        .steps__label
-                            span Регистрация
-                        ul
-                            each item in ['Между подачей заявки и получением свидетельства 6 - 8 месяцев.', 'После решения об успешной регистрации ТЗ необходимо оплатить пошлину. В течение месяца Казпатент выдает свидетельство, которое мы передадим вам в нашем офисе или направим почтой.', 'Проконсультируем и поможем в <a href="#">международной регистрации за рубежом, по Мадридской системе, внесению в таможенный реестр.</a>' ]
-                                li
-                                    span!=item
-                        .steps__result
-                            span <b>Результат:</b> свидетельство о регистрации.
-                        .steps__count
-                            span.counter-el
+                        .steps__item.swiper-slide.counter-item
+                            .steps__label
+                                span Заявка в Казпатент
+                            ul
+                                each item in ['Подберем классы МКТУ и оформим заявку.', 'Рассчитаем и поможем оплатить пошлину за подачу заявки.', 'Подготовим письменный отчет с оценкой ситуации и подробными рекомендациями.', 'После оплаты пошлины подадим заявку в течение 1 дня.' ]
+                                    li
+                                        span!=item
+                            .steps__result
+                                span <b>Результат:</b> официально поданная заявка
+                            .steps__count
+                                span.counter-el
+
+                        .steps__item.swiper-slide.counter-item
+                            .steps__label
+                                span Регистрация
+                            ul
+                                each item in ['Между подачей заявки и получением свидетельства 6 - 8 месяцев.', 'После решения об успешной регистрации ТЗ необходимо оплатить пошлину. В течение месяца Казпатент выдает свидетельство, которое мы передадим вам в нашем офисе или направим почтой.', 'Проконсультируем и поможем в <a href="#">международной регистрации за рубежом, по Мадридской системе, внесению в таможенный реестр.</a>' ]
+                                    li
+                                        span!=item
+                            .steps__result
+                                span <b>Результат:</b> свидетельство о регистрации.
+                            .steps__count
+                                span.counter-el
 
                 .steps__control
-                    //- .box.desktop
+                    .box.desktop
                     .steps__dotted.dotted_info
-                    //- .steps__arrows.arrows_info.desktop
-                    //-     i.icon-arrow_long_left
-                    //-     i.icon-arrow_long_right
+                    .steps__arrows.arrows_info.desktop
+                        i.icon-arrow_long_left
+                        i.icon-arrow_long_right
 
 
     // end steps
 
-    // begin individual
-    section#individual.individual.section
+    // begin steps 2
+    section#steps.steps.steps_second.section
         .container_center
-            .individual__bg(style="background-image: url('../img/individual_bg.webp')")
-                .individual__content
+            .section__subtitle(data-aos="fade-up")
+                span <b>Национальная регистрация</b> через патентное ведомство иностранного государства:
+
+            .swiper__label.mobile
+                span Листайте, чтобы увидеть следующие шаги
+                .swiper__img
+                    img(src="../img/hand.svg")
+
+            .swiper.steps-swiper-js
+
+                .steps__list.swiper-wrapper.counter-wrap
+
+                    each item in ['', '', '']
+
+                        .steps__item.swiper-slide.counter-item
+                            .steps__label
+                                span Проверка
+                            ul
+                                each item in ['Проверим обозначение на соответствие требованиям закона.', 'Выявим сходные до степени смешения обозначения.', 'Подготовим письменный отчет с оценкой ситуации и подробными рекомендациями.', 'Устраним препятствия и предложим внести изменения при необходимости.', 'Сроки : до 2 дней' ]
+                                    li
+                                        span!=item
+                            .steps__result
+                                span <b>Результат:</b> отчет с заключением о возможности регистрации.
+                            .steps__count
+                                span.counter-el
+
+                        .steps__item.swiper-slide.counter-item
+                            .steps__label
+                                span Заявка в Казпатент
+                            ul
+                                each item in ['Подберем классы МКТУ и оформим заявку.', 'Рассчитаем и поможем оплатить пошлину за подачу заявки.', 'Подготовим письменный отчет с оценкой ситуации и подробными рекомендациями.', 'После оплаты пошлины подадим заявку в течение 1 дня.' ]
+                                    li
+                                        span!=item
+                            .steps__result
+                                span <b>Результат:</b> официально поданная заявка
+                            .steps__count
+                                span.counter-el
+
+                        .steps__item.swiper-slide.counter-item
+                            .steps__label
+                                span Регистрация
+                            ul
+                                each item in ['Между подачей заявки и получением свидетельства 6 - 8 месяцев.', 'После решения об успешной регистрации ТЗ необходимо оплатить пошлину. В течение месяца Казпатент выдает свидетельство, которое мы передадим вам в нашем офисе или направим почтой.', 'Проконсультируем и поможем в <a href="#">международной регистрации за рубежом, по Мадридской системе, внесению в таможенный реестр.</a>' ]
+                                    li
+                                        span!=item
+                            .steps__result
+                                span <b>Результат:</b> свидетельство о регистрации.
+                            .steps__count
+                                span.counter-el
+
+                .steps__control
+                    .box.desktop
+                    .steps__dotted.dotted_info
+                    .steps__arrows.arrows_info.desktop
+                        i.icon-arrow_long_left
+                        i.icon-arrow_long_right
+
+
+    // end steps 2
+
+    // begin individual
+    section#individual.individual.individual_full.section
+        .container_center
+            .individual__bg(style="background-image: url('../img/individual_bg_2.webp')")
+                .individual__content.individual__content_full
                     .individual__caption
                         h2.section__title(data-aos="fade-up")
-                            span Закажите<br> <b>индивидуальную<br> ﻿проверку</b> товарного<br> знака, ﻿которая покажет<br> ﻿все риски
-                        .section__subtitle(data-aos="fade-up")
-                            span + получите консультацию эксперта<br> Eurasian Brands уже через минуту
+                            span Получите<br> <b>индивидуальную<br> ﻿консультация эксперта</b><br> по международной<br> регистрации
+
                     .individual__form
-                        form.form
+                        form.form.form_gridCol
+                            .form__col
+                                .form__row
+                                    textarea(type="text", placeholder="Опишите вашу задачу в общих чертах. Это не обязательно, но позволит нам быстрее сориентироваться и направить вашу заявку профильному специалисту.")
+                            .form__col
+                                .form__row
+                                    input(type="tel" class="tel" required placeholder="Введите ваш номер")
 
-                            .form__row
-                                label.form__file Прикрепить файл
-                                    //- span Прикрепить файл
-                                    input(type="file" id="file-input" class="file-input" name="file")
+                                .form__row
+                                    button.btn.btn_didisabled_js(type="submit") Заказать бесплатную проверку
 
-                            .form__row
-                                input(type="tel" class="tel" required placeholder="Введите ваш номер")
-
-                            .form__row
-                                button.btn.btn_didisabled_js(type="submit") Заказать бесплатную проверку
-
-                            .form__row
-                                .form__privacy
-                                    label.form__check
-                                        input.check_checked_js(type="checkbox" checked="checked")
-                                        span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
+                                .form__row
+                                    .form__privacy
+                                        label.form__check
+                                            input.check_checked_js(type="checkbox" checked="checked")
+                                            span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
                     .individual__lider.desktop
                         .lider__icon
                             i.icon-arrow_deg
@@ -247,107 +309,149 @@ block content
 
     // end conditions
 
-    // begin tariffs
-    section#tariffs.tariffs.section
+    // begin cost
+    section#cost.cost.section
         .container_center
-            .tariffs__content
+            h2.section__title(data-aos="fade-up")
+                span Стоимость и сроки
+            .cost__content
+
+                .collapse(data-collapse-wrapper="")
+                    .collapse__title(data-collapse="")
+                        span Международная регистрация за рубежом
+                    .collapse__body(data-collapse-body="")
+                        p Рассчитаем индивидуально и сформируем предложение под вашу задачу на консультации
+
+                        a(href="#").btn.btn_warning Оставить заявку
+
+                .collapse(data-collapse-wrapper="")
+                    .collapse__title(data-collapse="")
+                        span Международная регистрация товарного знака по Мадридской системе
+                    .collapse__body(data-collapse-body="")
+                        .tariffs__content
+                            .swiper__label.mobile
+                                span Листайте влево/вправо для просмотра всех 
+                                .swiper__img
+                                    img(src="../img/hand.svg")
+
+                            .swiper.tariffs-swiper-js
+                                .tariffs__list.swiper-wrapper
+                                    // start slide
+                                    .tariffs__item.swiper-slide
+                                        .tariffs__title
+                                            span Стандарт
+                                        .tariffs__subtitle
+                                            span Минимальный, без гарантии регистрации
+                                        ul
+                                            each item in ['Составление и подача', 'Составление МКТУ', 'Сопровождение регистрации в НИИС', 'Все платежи за услуги НИИС', 'Поиск аналогов в Госреестре']
+                                                li
+                                                    span=item
+                                        .tariffs__price
+                                            span 40 000 ₸
+                                        .tariffs__info
+                                            span Доступна оплата в рассрочку
+                                        .tariffs__button
+                                            a(href="#").btn.btn_md.btn_warning Оставить заявку
+                                    // end slide
+
+                                    // start slide
+                                    .tariffs__item.swiper-slide.popular
+                                        .tariffs__title
+                                            span Бизнес
+                                        .tariffs__subtitle
+                                            span Спокойствие и уверенность в регистрации
+                                        ul
+                                            each item in ['Составление и подача', 'Составление МКТУ', 'Сопровождение регистрации в НИИС', 'Все платежи за услуги НИИС', 'Поиск аналогов в Госреестре','Поиск и анализ аналогов по закрытым реестрам с детальным отчетом', 'Блокировка конкурентов в соц. сетях']
+                                                li
+                                                    span=item
+                                        .tariffs__price
+                                            span 220 000 ₸
+                                        .tariffs__info
+                                            span Доступна оплата в рассрочку
+                                        .tariffs__button
+                                            a(href="#").btn.btn_md.btn_warning Оставить заявку
+                                    // end slide
+
+                                    // start slide
+                                    .tariffs__item.swiper-slide
+                                        .tariffs__title
+                                            span Премиум
+                                        .tariffs__subtitle
+                                            span Хитрый легальный маневр против невозможности регистрации
+                                        ul
+                                            each item in ['Составление и подача', 'Составление МКТУ', 'Сопровождение регистрации в НИИС', 'Все платежи за услуги НИИС', 'Поиск аналогов в Госреестре','Поиск и анализ аналогов по закрытым реестрам с детальным отчетом', 'Блокировка конкурентов в соц. сетях', 'Корректировка или разработка логотипа', 'Оспаривание заключения об отказе']
+                                                li
+                                                    span=item
+                                        .tariffs__price
+                                            span 750 000 ₸
+                                        .tariffs__info
+                                            span Доступна оплата в рассрочку
+                                        .tariffs__button
+                                            a(href="#").btn.btn_md.btn_warning Оставить заявку
+                                    // end slide
+
+                                    // start slide
+                                    .tariffs__item.swiper-slide
+                                        .tariffs__title
+                                            span Монополист
+                                        .tariffs__subtitle
+                                            span Абсолютная власть на рынке
+                                        ul
+                                            each item in ['Составление и подача', 'Составление МКТУ', 'Сопровождение регистрации в НИИС', 'Все платежи за услуги НИИС', 'Поиск аналогов в Госреестре','Поиск и анализ аналогов по закрытым реестрам с детальным отчетом', 'Блокировка конкурентов в соц. сетях', 'Корректировка или разработка логотипа', 'Оспаривание заключения об отказе', 'Составление претензии к конкурентам', 'Привлечение конкурентов к суду']
+                                                li
+                                                    span=item
+                                        .tariffs__price
+                                            span 1400 000 ₸
+                                        .tariffs__info
+                                            span Доступна оплата в рассрочку
+                                        .tariffs__button
+                                            a(href="#").btn.btn_md.btn_warning Оставить заявку
+                                    // end slide
+
+
+
+                                .tariffs__dotted.mobile
+
+
+
+                            .tariffs__important
+                                span 100 000 ₸ — госпошлина оплачивается отдельно в момент подачи заявления на регистрацию товарного знака
+
+
+
+    // end cost
+
+    // begin offer
+    section#offer.offer.section
+        .container_center
+            .offer__bg(style="background-image: url('../img/ofter_bg.webp')")
                 h2.section__title(data-aos="fade-up")
-                    span Начнем регистрировать ваш<br> товарный знак <b>уже сегодня</b>
+                    span Подготовим <b>прайс-лист и коммерческое предложение</b> для вас
                 .section__subtitle.section__subtitle_sm(data-aos="fade-up")
-                    span Выбирайте подходящий портфель услуг
-
-                .swiper__label.mobile
-                    span Листайте влево/вправо для просмотра всех 
-                    .swiper__img
-                        img(src="../img/hand.svg")
-
-                .swiper.tariffs-swiper-js
-                    .tariffs__list.swiper-wrapper
-                        // start slide
-                        .tariffs__item.swiper-slide
-                            .tariffs__title
-                                span Стандарт
-                            .tariffs__subtitle
-                                span Минимальный, без гарантии регистрации
-                            ul
-                                each item in ['Составление и подача', 'Составление МКТУ', 'Сопровождение регистрации в НИИС', 'Все платежи за услуги НИИС', 'Поиск аналогов в Госреестре']
-                                    li
-                                        span=item
-                            .tariffs__price
-                                span 40 000 ₸
-                            .tariffs__info
-                                span Доступна оплата в рассрочку
-                            .tariffs__button
-                                a(href="#").btn.btn_md.btn_warning Оставить заявку
-                        // end slide
-
-                        // start slide
-                        .tariffs__item.swiper-slide.popular
-                            .tariffs__title
-                                span Бизнес
-                            .tariffs__subtitle
-                                span Спокойствие и уверенность в регистрации
-                            ul
-                                each item in ['Составление и подача', 'Составление МКТУ', 'Сопровождение регистрации в НИИС', 'Все платежи за услуги НИИС', 'Поиск аналогов в Госреестре','Поиск и анализ аналогов по закрытым реестрам с детальным отчетом', 'Блокировка конкурентов в соц. сетях']
-                                    li
-                                        span=item
-                            .tariffs__price
-                                span 220 000 ₸
-                            .tariffs__info
-                                span Доступна оплата в рассрочку
-                            .tariffs__button
-                                a(href="#").btn.btn_md.btn_warning Оставить заявку
-                        // end slide
-
-                        // start slide
-                        .tariffs__item.swiper-slide
-                            .tariffs__title
-                                span Премиум
-                            .tariffs__subtitle
-                                span Хитрый легальный маневр против невозможности регистрации
-                            ul
-                                each item in ['Составление и подача', 'Составление МКТУ', 'Сопровождение регистрации в НИИС', 'Все платежи за услуги НИИС', 'Поиск аналогов в Госреестре','Поиск и анализ аналогов по закрытым реестрам с детальным отчетом', 'Блокировка конкурентов в соц. сетях', 'Корректировка или разработка логотипа', 'Оспаривание заключения об отказе']
-                                    li
-                                        span=item
-                            .tariffs__price
-                                span 750 000 ₸
-                            .tariffs__info
-                                span Доступна оплата в рассрочку
-                            .tariffs__button
-                                a(href="#").btn.btn_md.btn_warning Оставить заявку
-                        // end slide
-
-                        // start slide
-                        .tariffs__item.swiper-slide
-                            .tariffs__title
-                                span Монополист
-                            .tariffs__subtitle
-                                span Абсолютная власть на рынке
-                            ul
-                                each item in ['Составление и подача', 'Составление МКТУ', 'Сопровождение регистрации в НИИС', 'Все платежи за услуги НИИС', 'Поиск аналогов в Госреестре','Поиск и анализ аналогов по закрытым реестрам с детальным отчетом', 'Блокировка конкурентов в соц. сетях', 'Корректировка или разработка логотипа', 'Оспаривание заключения об отказе', 'Составление претензии к конкурентам', 'Привлечение конкурентов к суду']
-                                    li
-                                        span=item
-                            .tariffs__price
-                                span 1400 000 ₸
-                            .tariffs__info
-                                span Доступна оплата в рассрочку
-                            .tariffs__button
-                                a(href="#").btn.btn_md.btn_warning Оставить заявку
-                        // end slide
-
-
-
-                    .tariffs__dotted.mobile
-
-
-
-                .tariffs__important
-                    span 100 000 ₸ — госпошлина оплачивается отдельно в момент подачи заявления на регистрацию товарного знака
+                    span по регистрации товарного знака через Мадридскую систему или за рубежом
+                .offer__content
+                    .offer__form
+                        form.form
+                            .form__row
+                                input(type="tel" class="tel" required placeholder="Введите ваш номер")
+                            .form__row
+                                button.btn.btn_didisabled_js(type="submit") Получить прайс и предложение
+                            .form__row
+                                .form__privacy
+                                    label.form__check
+                                        input.check_checked_js(type="checkbox" checked="checked")
+                                        span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
+                    .offer__action
+                        .offer__label
+                            span <b>Или напишите нам,</b> мы уточним задачу и все рассчитаем
+                        .offer__button
+                            a(href="https://wa.me/+77712101111" target="_blank").btn.btn_whatsapp.btn_success Спросить у нас в WhatsApp
+                                span время ответа 15 секунд
 
 
 
 
-    // end tariffs
+    // end offer
 
     // begin runningLine
     section#runningLine.runningLine.section

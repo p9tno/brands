@@ -1,0 +1,76 @@
+.cost {
+    background-color: #F9FAFD;
+
+    @media (max-width: 767px) {
+        .section__title {
+            text-align: center;
+        }
+
+        .swiper__label {
+            padding-top: 1em;
+        }
+    }
+
+    padding: 3em 0;
+
+    @media (min-width: 768px) {
+        padding: 7.375em 0;
+
+    }
+
+    &__content {
+        .collapse {
+            border-bottom: none;
+
+        }
+
+        .collapse__title {
+            width: fit-content;
+
+            span {
+                width: auto;
+                letter-spacing: 0.02em;
+                color: $color_info;
+                text-decoration: underline;
+                font-size: 0.9375em;
+
+                @media (min-width: 768px) {
+                    font-size: 1.875em;
+
+                }
+            }
+
+            &:after {
+                color: $color_info;
+                content: '\e920';
+                font-size: 1em;
+                transform: rotate(90deg) scale(1);
+                margin-left: 1em;
+                margin-top: 0.25em;
+                @media (min-width: 768px) {
+                    margin-top: 0.5em;
+                    font-size: 1.5em;
+                }
+
+            }
+
+            &.open {
+                &:after {
+                    transform: rotate(90deg) scale(-1);
+                }
+            }
+        }
+
+        .collapse__body {
+            p {
+                letter-spacing: 0.02em;
+                font-size: 0.75em;
+
+                @media (min-width: 768px) {
+                    font-size: 1.5em;
+
+                }
+            }
+        }
+    }
+}

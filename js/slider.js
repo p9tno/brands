@@ -211,6 +211,7 @@ $(document).ready(function() {
     const tariffs = new Swiper('.tariffs-swiper-js', {
         // loop: true,
         slidesPerView: 1,
+        initialSlide: 1,
         autoHeight: true,
         speed: 500,
         // autoplay: {

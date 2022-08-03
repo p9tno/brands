@@ -1,9 +1,5 @@
 .form {
 	&_grid {
-		display: flex;
-		flex-wrap: wrap;
-		margin: 0 -1em;
-
 		.form__row {
 			margin: 0 1em 2em;
 			width: 100%;
@@ -17,6 +13,26 @@
 			}
 		}
 	}
+
+	&_gridCol {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -1.1875em;
+
+		.form__col {
+			margin: 0 1.1875em 1em;
+			width: 100%;
+
+			@media (min-width: 768px) {
+				width: calc(50% - 2.375em);
+				margin-bottom: 0;
+			}
+
+		}
+	}
+
+	&__col {
+		}
 
 	&__row {
 		margin-bottom: 1em;

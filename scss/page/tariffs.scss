@@ -19,6 +19,7 @@
 
     &__item {
         border: 1px solid #E6EBEE;
+        background-color: $color_white;
         padding: 1.5em 1em;
         @media (min-width: 768px) {
             padding: 4em 1.5em;
