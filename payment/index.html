@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/twentytwenty.css"/>
-    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/aos.css"/>
-    <link rel="stylesheet" type="text/css" href="css/fancybox.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/twentytwenty.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aos.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/fancybox.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
   </head>
   <body>
     <div class="preloader" id="preloader"><svg class="ap" viewBox="0 0 128 256" width="128px" height="256px" xmlns="http://www.w3.org/2000/svg">
@@ -115,33 +115,136 @@
         </div>
       </header>
       <main class="main_content">
-        <!-- begin mainNaw-->
-        <section class="mainNaw section" id="mainNaw">
+        <!-- begin breadcrumbs-->
+        <div class="breadcrumbs section">
           <div class="container_center">
-            <h2 class="section__title"> <span>Страницы</span></h2>
-            <ul>
-              <li><a href="home">главная</a></li>
-              <li><a href="services">услуги</a></li>
-              <li><a href="single-service">одна услуга</a></li>
-              <li><a href="single-service2">одна услуга 2</a></li>
-              <li><a href="сases">кейсы</a></li>
-              <li><a href="single-сases">один кейс</a></li>
-              <li><a href="single-сases2">один кейс 2</a></li>
-            </ul>
+            <div class="kama_breadcrumbs"><span><a href="#"><span>Главная</span></a></span><span class="kb_sep"> <i class="icon-arrow_right"></i></span><span class="kb_title">Рассрочка и оплата</span></div>
+          </div>
+        </div>
+        <!-- end breadcrumbs-->
+        <!-- begin payment-->
+        <section class="payment section" id="payment">
+          <div class="container_center">
+            <div class="payment__top">
+              <div class="payment__caption">
+                <h2 class="section__title"><span>Работаем по 100% предоплате или <b>воспользуйтесь беспроцентной рассрочкой</b></span></h2>
+                <div class="section__subtitle section__subtitle_sm"><span><b>Это выгодно:</b> каждый второй клиент оплачивает наши услуги в рассрочку</span></div>
+              </div>
+              <ul class="payment__desc">
+                <li><span>Для любых услуг</span></li>
+                <li><span>До 12 месяцев</span></li>
+                <li><span>Без первого взноса</span></li>
+              </ul>
+            </div>
+            <div class="payment__bottom">
+              <div class="swiper__label mobile"><span>Листайте видео влево/вправо для просмотра всех </span>
+                <div class="swiper__img"><img src="../img/hand.svg"/></div>
+              </div>
+              <div class="swiper payment-swiper-js">
+                <div class="payment__list swiper-wrapper counter-wrap">
+                  <div class="payment__item swiper-slide counter-item">
+                    <div class="payment__head">
+                      <div class="payment__label"><span>От банков</span></div>
+                      <ul class="payment__logos">
+                        <li>
+                          <div class="payment__img"><img src="../img/payment_1.png"/></div>
+                        </li>
+                        <li>
+                          <div class="payment__img"><img src="../img/payment_2.png"/></div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="payment__terms">
+                      <div class="payment__label"><span>Условия</span></div>
+                      <ul>
+                        <li><span>Срок: до 12 мес.</span></li>
+                        <li><span>Без поручителей, справок и первого взноса</span></li>
+                        <li><span>Процент одобрения: 50-60%</span></li>
+                      </ul>
+                    </div>
+                    <div class="payment__count"><span class="counter-el"></span></div>
+                  </div>
+                  <div class="payment__item swiper-slide counter-item">
+                    <div class="payment__head">
+                      <div class="payment__label"><span>От банков</span></div>
+                      <ul class="payment__logos">
+                        <li>
+                          <div class="payment__img"><img src="../img/payment_1.png"/></div>
+                        </li>
+                        <li>
+                          <div class="payment__img"><img src="../img/payment_2.png"/></div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="payment__terms">
+                      <div class="payment__label"><span>Условия</span></div>
+                      <ul>
+                        <li><span>Срок: до 12 мес.</span></li>
+                        <li><span>Без поручителей, справок и первого взноса</span></li>
+                        <li><span>Процент одобрения: 50-60%</span></li>
+                      </ul>
+                    </div>
+                    <div class="payment__count"><span class="counter-el"></span></div>
+                  </div>
+                </div>
+                <div class="payment__dotted"></div>
+              </div>
+            </div>
           </div>
         </section>
-        <!-- end mainNaw-->
-        <!-- begin secondNaw-->
-        <section class="secondNaw section" id="secondNaw">
+        <!-- end payment-->
+        <!-- begin consultation-->
+        <section class="consultation section" id="consultation">
           <div class="container_center">
-            <h2 class="section__title"> <span>Части</span></h2>
-            <ul>
-              <li><a href="buttons">кнопки</a></li>
-              <li><a href="modals">модальные окна</a></li>
-            </ul>
+            <div class="consultation__wrap">
+              <div class="consultation__content">
+                <h2 class="section__title desktop" data-aos="fade-up"><span>Давайте мы вас <b>проконсультируем</b></span></h2>
+                <h2 class="section__title mobile"><span>Давайте <b>проконсультируем</b></span></h2>
+                <div class="section__subtitle"><span>и предложим варианты<br> решения вашего вопроса</span></div>
+                <div class="consultation__list" data-aos="fade-right">
+                  <div class="consultation__item"><span><b>Проанализируем</b> документы</span></div>
+                  <div class="consultation__item"><span><b>Дадим рекомендации</b> по дальнейшим действиям;</span></div>
+                  <div class="consultation__item"><span><b>Назовем</b> точную стоимость;</span></div>
+                  <div class="consultation__item"><span><b>Рассчитаем</b> платежи, если нужна рассрочка;</span></div>
+                </div>
+                <div class="consultation__phone">
+                  <div class="phone">
+                    <div class="phone__time"><span>Звоните, Пн-ВС 10:00 - 21:00</span></div>
+                    <div class="phone__link"><a href="tel:+77712101111">+7 (771) 210-11-11</a></div>
+                  </div>
+                </div>
+                <div class="consultation__action"><span>Спрашивайте, мы онлайн, время ответа 15 сек</span><a class="btn btn_whatsapp_sm btn_success" href="https://wa.me/+77712101111" target="_blank">Написать в WhatsApp<span class="mobile">время ответа 15 секунд</span></a></div>
+              </div>
+              <div class="consultation__form">
+                <form class="form">
+                  <div class="form__title"><span><b>После отправки<br> формы</b> мы перезвоним<br> через 30 секундн</span></div>
+                  <div class="form__row">
+                    <textarea type="text" placeholder="Опишите вашу задачу в общих чертах. Это не обязательно, но позволит нам быстрее сориентироваться и направить вашу заявку профильному специалисту."></textarea>
+                  </div>
+                  <div class="form__row">
+                    <input class="tel" type="tel" required="required" placeholder="Введите ваш номер"/>
+                  </div>
+                  <div class="form__row">
+                    <button class="btn btn_didisabled_js" type="submit">Получить консультацию</button>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__privacy">
+                      <label class="form__check">
+                        <input class="check_checked_js" type="checkbox" checked="checked"/><span>Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a></span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="consultation__lider desktop">
+                <div class="lider__icon"><i class="icon-arrow_deg"></i></div>
+                <div class="lider__name"><span>Клёнова Айя Ибрагимовна</span></div>
+                <div class="lider__info"><span>Юрист, патентовед, эксперт по товарным знакам</span></div>
+              </div>
+            </div>
           </div>
         </section>
-        <!-- end secondNaw-->
+        <!-- end consultation-->
       </main>
       <!-- begin sidebar-->
       <div class="sidebar" id="sidebar">
@@ -362,18 +465,18 @@
         </div>
       </div>
       <!-- End modal modalVideo-->
-      <script src="js/jquery.js"></script>
-      <script src="js/jquery.maskedinput.min.js"></script>
-      <script src="js/modal.js"></script>
-      <script src="js/swiper-bundle.min.js"></script>
-      <script src="js/slider.js"></script>
-      <script src="js/select2.min.js"></script>
-      <script src="js/jquery.event.move.js"></script>
-      <script src="js/jquery.twentytwenty.js"></script>
-      <script src="js/jquery.marquee.min.js"></script>
-      <script src="js/aos.js"></script>
-      <script src="js/fancybox.min.js"></script>
-      <script src="js/function.js"></script>
+      <script src="../js/jquery.js"></script>
+      <script src="../js/jquery.maskedinput.min.js"></script>
+      <script src="../js/modal.js"></script>
+      <script src="../js/swiper-bundle.min.js"></script>
+      <script src="../js/slider.js"></script>
+      <script src="../js/select2.min.js"></script>
+      <script src="../js/jquery.event.move.js"></script>
+      <script src="../js/jquery.twentytwenty.js"></script>
+      <script src="../js/jquery.marquee.min.js"></script>
+      <script src="../js/aos.js"></script>
+      <script src="../js/fancybox.min.js"></script>
+      <script src="../js/function.js"></script>
     </div>
   </body>
 </html>

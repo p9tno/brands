@@ -1,0 +1,113 @@
+.more {
+    padding-top: 0;
+    margin-top: -2em;
+    @media (min-width: 768px) {
+        margin-top: 0;
+    }
+
+    &__content {}
+
+    &__list {}
+
+    &__item {
+        position: relative;
+        border: 1px solid #E6EBEE;
+        background-color: $color_white;
+        color: $main_color;
+        transition: 0.3s;
+        padding: 2em 1em 3em;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            text-align: inherit;
+            height: 24em;
+            padding: 5.5em 5em 5.5em 3em;
+
+        }
+
+        &:hover {
+            color: $color_white;
+            background-color: $color_info;
+
+            .more__count {
+
+                background-color: #0F4857;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 0.5em;
+        @media (min-width: 768px) {
+            margin-bottom: 1em;
+
+        }
+
+        span {
+            font-size: 1em;
+            font-weight: 500;
+
+            @media (min-width: 768px) {
+                font-size: 1.5em;
+
+            }
+        }
+    }
+
+    &__text {
+        letter-spacing: 0.02em;
+        line-height: 1.2;
+
+        @media (min-width: 768px) {
+            line-height: 1.688;
+
+        }
+
+        span {
+            font-size: 0.75em;
+            font-weight: 300;
+            @media (min-width: 768px) {
+                font-size: 1em;
+
+            }
+        }
+    }
+
+    &__count {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #E6EBEE;
+        color: $color_white;
+        transition: 0.3s;
+
+        letter-spacing: 0.02em;
+
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 1.875em;
+        width: 100%;
+
+        @media (min-width: 768px) {
+            bottom: 0;
+            right: 0;
+            height: 100%;
+            width: 1.875em;
+
+        }
+
+        i {
+            font-size: 1em;
+            font-weight: 500;
+        }
+    }
+
+    &__dotted {
+        @media (min-width: 768px) {
+            justify-content: flex-end;
+
+        }
+    }
+
+}

@@ -1,4 +1,32 @@
 .cases {
+
+    @media (min-width: 768px) {
+        &_page {
+            .section__title {
+                width: 67em;
+                margin-bottom: 4em;
+            }
+
+            .cases__label {
+                display: block;
+            }
+
+            .cases__list {
+                width: 100%;
+                margin-left: 0;
+                margin-bottom: 4em;
+
+                span {
+                    font-size: 1.5em;
+                }
+            }
+
+            .cases__item {
+                width: 25em;
+            }
+        }
+    }
+
     &__label {
         text-align: center;
 

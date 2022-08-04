@@ -1,0 +1,39 @@
+.content {
+    // border: 1px solid #000;
+    letter-spacing: 0.01em;
+
+    h1,
+    h2 {
+        font-size: 1.125em;
+        @media (min-width: 768px) {
+            font-size: 2em;
+            font-weight: 500;
+            margin-bottom: 0.75em;
+
+        }
+    }
+
+    ul {
+        li {
+            font-size: 0.875em;
+            @media (min-width: 768px) {
+                font-size: 1em;
+
+            }
+        }
+    }
+
+    a {
+        color: $color_info;
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 0.875em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+
+        }
+    }
+
+}

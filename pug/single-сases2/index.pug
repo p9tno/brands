@@ -1,0 +1,123 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+                span.kb_sep 
+                    i.icon-arrow_right
+                span
+                    a(href="#")
+                        span Кейсы
+                span.kb_sep 
+                    i.icon-arrow_right
+
+                span.kb_title Доработка логотипа и регистрация товарного знака NEMO
+    // end breadcrumbs
+
+    // begin singleCase
+    section#singleCase.singleCase.section
+        .container_center
+            .singleCase__caption
+                h1.section__title
+                    span Взыскание компенсации <b>1 млн. тенге</b> в рамках дела по защите исключительных прав клиента
+            .singleCase__wrap
+
+
+                .singleCase__content
+                    .singleCase__trademarks
+                        .singleCase__img
+                            img(src="../img/trademarks_1.png", alt="alt")
+                        .singleCase__desc
+                            span Зоомагазин и магазин <br>товаров для животных
+                    .content
+                        h2 Цель
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
+                        h2 Суть проекта
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
+                        h2 Результат
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
+
+
+
+
+
+                .singleCase__aside
+                    .aside
+                        .aside__arrow
+                            i.icon-arrow_deg
+
+                        .aside__item
+                            .aside__label
+                                span Команда проекта:
+                            ul.aside__list
+                                li
+                                    span ФИО 1
+                                li
+                                    span ФИО 1
+                        .aside__item
+                            .aside__label
+                                span Оказанные услуги:
+                            .aside__text
+                                span Разработка и регистрация логотипа
+                        .aside__item
+                            .aside__label
+                                span Сроки проекта:
+                            .aside__text
+                                span 01.01.2021 - 01.01.2021 
+                        .aside__action
+                            .aside__caption
+                                span У вас похожая задача?
+                            .aside__desc
+                                span Давайте расскажем, как будем действовать в вашей ситуации
+                            .aside__button
+                                a(href="#").btn Получить консультацию
+
+            .singleCase__action
+                a(href="#") Вернуться ко всем кейсам
+
+    // end singleCase
+
+    // begin presentation
+    section#presentation.presentation.section
+        .container_center
+            .presentation__bg
+                .presentation__content
+                    h2.section__title(data-aos="fade-up")
+                        span Получите  <i class="icon-download"></i> <b>презентацию Eurasian Brands</b>
+                    .section__subtitle(data-aos="fade-up")
+                        span со стоимостью услуг через минуту
+
+                    .presentation__form
+                        form.form
+                            .form__label
+                                span Куда прислать презентацию?
+                            .form__row
+                                select.select(data-placeholder="Whatsapp")
+                                    option(value="")
+                                    option(value="whatsapp") Whatsapp
+                                    option(value="Viber") Viber
+                                    option(value="Telegram") Telegram
+
+                            .form__row
+                                input(type="tel" class="tel" required placeholder="Введите ваш номер")
+
+                            .form__row
+                                button.btn.btn_didisabled_js(type="submit") Получить презентацию с ценами на услуги
+
+
+
+                            .form__row
+                                .form__privacy
+                                    label.form__check
+                                        input.check_checked_js(type="checkbox" checked="checked")
+                                        span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
+
+    // end presentation

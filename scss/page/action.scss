@@ -1,0 +1,116 @@
+.action {
+    &__wrap {
+        @media (min-width: 768px) {
+            display: flex;
+            gap: 1.875em;
+
+            > * {
+                width: 50%;
+            }
+        }
+    }
+
+    &__bg {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 0.125em;
+        overflow: hidden;
+
+        @media (min-width: 768px) {
+            height: 37.25em;
+
+        }
+    }
+
+    &__left {
+        padding: 2em 1em;
+        margin-bottom: 1.5em;
+
+        @media (min-width: 768px) {
+            padding: 3.5em 4.5em;
+            margin-bottom: 0;
+        }
+
+    }
+
+    &__right {
+        position: relative;
+        color: $color_white;
+
+        padding: 2em 1em;
+        @media (min-width: 768px) {
+            padding: 5em 4.75em;
+
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(243.04deg, #125F73 28.8%, rgba(255, 255, 255, 0) 122.78%);
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+
+        }
+
+        .action__content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .form__label {
+            span {
+                color: $color_white;
+            }
+        }
+
+        .form__check {
+            a {
+                color: $color_white;
+            }
+        }
+
+        input[type=checkbox] {
+            background-color: $color_warning;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 1em;
+        letter-spacing: 0.01em;
+        margin-bottom: 0.75em;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            margin-bottom: 1.25em;
+            text-align: inherit;
+            line-height: 1.429;
+
+        }
+
+        span {
+            font-size: 1.125em;
+            font-weight: 400;
+            @media (min-width: 768px) {
+                font-size: 2.1875em;
+
+            }
+        }
+
+        b {
+            font-weight: 700;
+        }
+
+    }
+
+    &__form {
+        @media (min-width: 768px) {
+            width: 22.25em;
+        }
+    }
+
+}

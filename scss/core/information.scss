@@ -19,6 +19,11 @@
             text-align: inherit;
             background-image: url("../img/information_bg.jpg");
             padding: 3.75em 6.25em;
+
+            &_high {
+                padding: 5.75em 6.25em;
+                background-position: top;
+            }
         }
     }
 

@@ -1,0 +1,424 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+                span.kb_sep 
+                    i.icon-arrow_right
+                span.kb_title О компании
+    // end breadcrumbs
+
+    // begin about
+    section#about.about.section
+        .container_center
+
+            .about__top
+                h2.section__title
+                    span «Приумножаем эффективность и доходы бизнеса»
+                .about__bg(style="background-image: url('../img/about_bg.webp')")
+                .about__list
+                    each item in ['<b>Мы открыли нашу компанию в 2015 году,</b> когда подача документов происходила на бумажном носителе.', 'В настоящее время технологии продвинулись вперёд, что облегчило административные процедуры подачи заявок.', 'Однако процесс подготовки материалов и готовый результат — самые важные дела в нашем деле.']
+
+                        .about__item
+                            .about__icon
+                                i.icon-check_mark
+                            .about__text
+                                span!=item
+            .about__bottom
+                ul.data
+                    li.data__item(data-aos="fade-up")
+                        .data__content
+                            .data__number
+                                span 3000
+                                i +
+                            .data__label
+                                span довольных клиентов
+                    li.data__item(data-aos="fade-up" data-aos-delay="300")
+                        .data__content
+                            .data__number
+                                span 97
+                                i %
+                            .data__label
+                                span получают документы<br> с первого раза
+                    li.data__item(data-aos="fade-up" data-aos-delay="600")
+                        .data__content
+                            .data__number
+                                span 1358
+                            .data__label
+                                span товарных знаков<br> зарегистрировали
+                    li.data__item(data-aos="fade-up" data-aos-delay="900")
+                        .data__content
+                            .data__number
+                                span 1125
+                            .data__label
+                                span досудебных<br> урегулирований
+
+    // end about
+
+    // begin location
+    section#location.location.section
+        .container_center
+            .location__content
+                h2.section__title(data-aos="fade-up")
+                    span <b>География услуг:</b> Казахстан + 18 стран-партнеров
+                .section__subtitle(data-aos="fade-up")
+                    span Поможем защитить вашу интеллектуальную собственность через наших партнеров
+        .location__map
+
+
+    // end location
+
+    // begin more
+    section#more.more.section
+        .container_center
+            .more__content
+                .swiper__label.mobile
+                    span Листайте видео влево/вправо для просмотра всех 
+                    .swiper__img
+                        img(src="../img/hand.svg")
+
+                .swiper.more-swiper-js
+                    .more__list.swiper-wrapper.counter-wrap
+                        each item in [ {title: 'Сфера деятельности', text: 'Регистрация товарных знаков,  авторских прав в Казахстане и за рубежом, помощь в получении патентов, внесении в таможенный реестр, досудебная защита и защита в суде, блокировка аккаунтов недобросовестных конкурентов,  внедрение Битрикс24, правовые консультации. '}, {title: 'Миссия Eurasian Brands', text: 'Предлагать клиентам лучшие условия сотрудничества, максимально упростив взаимодействие, быть ведущей компанией в нише патентования Казахстана'}, {title: 'Ценности компании', text: 'Люди — основа и главная движущая сила нашей работы. Клиенты, сотрудники, партнеры.'} ]
+                            .more__item.swiper-slide.counter-item
+                                .more__title
+                                    span=item.title
+                                .more__text
+                                    span=item.text
+                                .more__count
+                                    span.counter-el
+                .more__dotted
+
+    // end more
+
+    // begin team
+    section#team.team.section
+        .container_center
+            .team__content
+                .team__left
+                    h2.section__title(data-aos="fade-up")
+                        span Команда
+                    .section__subtitle
+                        span Сильная. Амбициозная. Надёжная. <b>Наше кредо — готовим все документы как для себя!</b>
+                    .team__text
+                        p В вопросах, где другие уже наломали дров, мы стараемся разобраться максимально эффективно, чтобы перевесить ситуацию в русло клиента.
+                        p Если вопрос потенциально не выгодный — сообщим на берегу и озвучим все риски.
+                    .team__button.desktop
+                        a(href="#").btn.btn_md Подробнее о компании
+                .team__right
+                    .swiper__label.mobile
+                        span Листайте фото влево/вправо для просмотра всех сотрудников 
+                        .swiper__img
+                            img(src="../img/hand.svg")
+                    .swiper.team-swiper-js
+                        .team__slider.swiper-wrapper
+
+                            each item, i in [ {name: 'Кыжырова<br> Улпан<br> Жанбаевна', desc: 'Юрист, патентовед, эксперт по товарным знакам и таможенному реестру'}, {name: 'Клёнова<br> Айя<br> Ибрагимовна', desc: 'Юрист, патентовед, эксперт по товарным знакам'}, {name: 'Кыжырова<br> Улпан<br> Жанбаевна', desc: 'Юрист, патентовед, эксперт по товарным знакам и таможенному реестру'}, {name: 'Клёнова<br> Айя<br> Ибрагимовна', desc: 'Юрист, патентовед, эксперт по товарным знакам'}, ]
+
+                                .team__item.swiper-slide
+                                    .person(style="background-image: url('../img/team_"+(i+1)+".jpg')")
+                                        .person__content
+                                            .person__icon
+                                                i.icon-arrow_deg
+                                            .person__info
+                                                .person__name
+                                                    span!=item.name
+                                                .person__desc
+                                                    span=item.desc
+                        .team__control
+                            .team__arrows.arrows_info.desktop
+                                i.icon-arrow_long_left
+                                i.icon-arrow_long_right
+                            .team__dotted.dotted_info
+
+                .team__button.mobile
+                    a(href="#").btn Подробнее о компании
+
+    // end team
+
+    // begin certificate
+    section#certificate.certificate.section
+        .container_center
+            .certificate__content
+                .certificate__left
+                    h2.section__title(data-aos="fade-up")
+                        span Посмотрите, все <b>наши свидетельства</b>
+
+                    .certificate__text
+                        p Даём гарантию на результаты своей работы, когда это действительно очевидно для нас.
+                        p Первые в Казахстане зарегистрировали звуковой товарный знак.
+                    .certificate__button
+                        a(href="#").btn.btn_md Изучит кейс
+
+
+                .certificate__right
+
+                    .swiper__label.mobile
+                        span Передвигайте влево/вправо для просмотра всех  документов
+                        .swiper__img
+                            img(src="../img/hand.svg")
+
+                    .swiper.certificate-swiper-js
+
+                        .certificate__control.desktop
+                            .certificate__arrows.arrows_info
+                                i.icon-arrow_long_left
+                                i.icon-arrow_long_right
+                            .certificate__dotted.dotted_info
+
+                        .certificate__slider.swiper-wrapper
+                            each item in [1,1,1,1]
+                                .certificate__item.swiper-slide
+                                    .certificate__doc(style="background-image: url('../img/certificate_doc.jpg')")
+                                        a(href="../img/certificate_doc.jpg" data-fancybox data-type="image")
+
+                        .certificate__control.mobile
+                            .certificate__dotted
+
+                .certificate__pen(data-aos="fade-up")
+
+
+
+
+    // end certificate
+
+    // begin information
+    section#information.information.section
+        .container_center
+            .information__top.information__top_high
+                .information__subtitle
+                    span Дорожим своей репутацией <b>40% наших клиентов пришли по рекомендации.</b>
+
+                .information__content
+                    .company
+                        .company__label
+                            span О нашей компании и подходе в видео за 2 минуты
+                        .company__play.js-youtubeModal#httuerixph8
+                            i.icon-play
+                    .lider
+                        .lider__icon
+                            i.icon-arrow_deg
+                        .lider__name
+                            span Турсунов Куаныш Абилкасымович
+                        .lider__info
+                            span патентный поверенный Республики Казахстан. Основатель и руководитель компании Eurasian Brands
+
+                .information__list
+                    .list__title
+                        span Поэтому открыто Вам заявляю и гарантирую:
+                    ul.list
+                        each item in [ {label: 'Прозрачная стоимость,  не меняется в ходе работы', text: 'Стоимость наших услуг опубликована здесь на сайте. Оказание услуг оформляется официальным договором. Она окончательная и не изменится в большую сторону в процессе работы;'}, {label: 'Не химичим — знаем закон и работаем легально', text: 'Знаете, что самое плохое? На рынке есть недобросовестные компании, которые на консультации называют одну цену, а в ходе работы увеличивают ее в 2, 3 раза. Будьте бдительны и работайте с проверенными компаниями;'},]
+
+                            li.list__item
+                                .list__label
+                                    span=item.label
+                                .list__text
+                                    span=item.text
+
+
+    // end information
+
+    // begin conditions
+    section#conditions.conditions.section
+        .container_center
+            .conditions__wrap
+                .conditions__caption
+                    h2.section__title(data-aos="fade-up")
+                        span Предлагаем уникальные <b>условия сотрудничества</b>
+                    .conditions__desc(data-aos="fade-up")
+                        span Таких преимуществ вы не найдете ни у одной патентной компании в Казахстане — мы проверяли
+                .swiper__label.mobile
+                    span Передвигайте шаги влево/вправо для просмотра всех преимуществ
+                    .swiper__img
+                        img(src="../img/hand.svg")
+                .swiper.conditions-swiper-js
+                    .conditions__grid.swiper-wrapper.counter-wrap
+
+
+                        .conditions__item.swiper-slide.counter-item
+                            .conditions__icon
+                                i.icon-percent
+
+                            .conditions__content.conditions__content_goTop
+                                .conditions__title
+                                    span Рассрочка
+                                .conditions__text
+                                    span Обычно каждый второй клиент оплачивает наши услуги по беспроцентной рассрочке: Альфа-банк, Kaspi Bank или собственной от Eurasian Brands.
+                            .conditions__button
+                                a(href="#").btn.btn_md Подробнее
+                            .conditions__count
+                                span.counter-el
+
+
+                        .conditions__item.swiper-slide.counter-item
+                            .conditions__icon
+                                i.icon-defense
+
+                            .conditions__content.conditions__content_goTop
+                                .conditions__title
+                                    span 100% гарантия регистрации
+                                .conditions__text
+                                    span Берем на себя финансовую ответственность за регистрацию: добьемся регистрации или вернем 100% оплату
+                            .conditions__button
+                                a(href="#").btn.btn_md Подробнее
+                            .conditions__count
+                                span.counter-el
+
+
+                        .conditions__item.swiper-slide.counter-item
+                            .conditions__icon
+                                i.icon-timer
+
+                            .conditions__content
+                                .conditions__title
+                                    span Подаем заявку<br> в день оплаты
+                                .conditions__text
+                                    span Для закрепления приоритетного права на товарный знак крайне важно, не откладывая, подать заявку на регистрацию
+                            .conditions__count
+                                span.counter-el
+
+
+                        .conditions__item.swiper-slide.counter-item
+                            .conditions__icon
+                                i.icon-list
+
+                            .conditions__content
+                                .conditions__title
+                                    span Сражаемся за ваш<br> товарный знак
+                                .conditions__text
+                                    span Даже если вам отказали в регистрации, мы изучим отказ, выработаем и реализуем стратегию беспроигрышных действий, благодаря которым гарантируем регистрацию
+                            .conditions__count
+                                span.counter-el
+
+
+                        .conditions__item.swiper-slide.counter-item
+                            .conditions__icon
+                                i.icon-loupe
+
+                            .conditions__content
+                                .conditions__title
+                                    span Бесплатный поиск
+                                .conditions__text
+                                    span В рамках предварительных договоренностей мы бесплатно проверим ваш товарный знак и выдадим заключение о возможности регистрации
+                            .conditions__count
+                                span.counter-el
+
+                    .conditions__dotted
+
+
+
+    // end conditions
+
+    // begin comments
+    section#comments.comments.section
+        .container_center
+            .comments__top
+
+                .comments__content
+                    .comments__label(data-aos="fade-up")
+                        span Скорее всего
+                    h2.section__title(data-aos="fade-up")
+                        span Вы точно знаете наших <b>клиентов</b>
+                    .section__subtitle(data-aos="fade-up")
+                        span За брендами стоят люди. Многие стали нашими хорошими друзьями.
+
+                .comments__slider.swiper.comments-swiper-js
+                    .swiper__label.mobile
+                        span Передвигайте шаги влево/вправо для просмотра всех этапов работы
+                        .swiper__img
+                            img(src="../img/hand.svg")
+                    .commentsSlider.swiper-wrapper
+                        each item in [ { img: '1', name: 'Алагузова<br> Баян', info: 'Продюсер, бизнес-леди, глава компании "Shine Production", телеведущая, актриса, певица', commit: 'Из огромного выбора компаний на рынке Казахстана, мне порекомендовали именно "Eurasian Brands" как одних из лучших профессионалов в сфере регистрации и защиты авторского права. Команда "Eurasian Brands" выступила в роли моих представителей в качестве защитников в судебном процессе по авторским правам на сценарий и фильм "Станция судьбы".'}, { img: '2', name: 'Lorem.', info: 'глава компании "Shine Production"', commit: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, facilis.'}, { img: '3', name: ' Lorem ipsum.', info: ' Lorem.', commit: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae distinctio, rem aperiam porro fugiat dolores facere illum ipsum officia natus commodi aut vel sunt cupiditate consequatur eveniet vero, ea perspiciatis?'} ]
+                            .swiper-slide
+                                .commentsSlider__item
+                                    .commentsSlider__persone
+                                        .commentsSlider__foto(style="background-image: url('../img/persone_"+item.img+".png')")
+                                            .commentsSlider__play.js-youtubeModal#httuerixph8
+                                                i.icon-play
+                                        .commentsSlider__description
+                                            .commentsSlider__name
+                                                span!=item.name
+                                            .commentsSlider__info
+                                                span=item.info
+
+
+                                    .commentsSlider__content
+                                        i.icon-quote_2
+                                        span=item.commit
+                                        a(href="#") Читать полностью
+
+                .comments__control
+                    .comments__arrows.desktop
+                        i.icon-drop_left
+                        i.icon-drop_right
+                    .comments__dotted
+
+
+
+
+            .comments__bottom.swiper.logoSlider-swiper-js
+                .swiper__label.mobile
+                    span Передвигайте влево/вправо для просмотра логотипов наших клиентов
+                    .swiper__img
+                        img(src="../img/hand.svg")
+                .logoSlider.swiper-wrapper
+                    each item in [1,2,3,4,1]
+                        .swiper-slide
+                            .logoSlider__grid
+                                each item in [1,2,3,4]
+                                    .logoSlider__item
+                                        .logoSlider__img
+                                            img(src="../img/comments_logo_"+item+".png")
+                .logoSlider__doted
+
+
+            .comments__button
+                a(href="#").btn.btn_warning Смотреть всех клиентов и кейсы
+
+    // end comments
+
+    // begin presentation
+    section#presentation.presentation.section
+        .container_center
+            .presentation__bg
+                .presentation__content
+                    h2.section__title(data-aos="fade-up")
+                        span Получите  <i class="icon-download"></i> <b>презентацию Eurasian Brands</b>
+                    .section__subtitle(data-aos="fade-up")
+                        span со стоимостью услуг через минуту
+
+                    .presentation__form
+                        form.form
+                            .form__label
+                                span Куда прислать презентацию?
+                            .form__row
+                                select.select(data-placeholder="Whatsapp")
+                                    option(value="")
+                                    option(value="whatsapp") Whatsapp
+                                    option(value="Viber") Viber
+                                    option(value="Telegram") Telegram
+
+                            .form__row
+                                input(type="tel" class="tel" required placeholder="Введите ваш номер")
+
+                            .form__row
+                                button.btn.btn_didisabled_js(type="submit") Получить презентацию с ценами на услуги
+
+
+
+                            .form__row
+                                .form__privacy
+                                    label.form__check
+                                        input.check_checked_js(type="checkbox" checked="checked")
+                                        span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
+
+
+    // end presentation

@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/twentytwenty.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aos.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/fancybox.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+  </head>
+  <body>
+    <div class="preloader" id="preloader"><svg class="ap" viewBox="0 0 128 256" width="128px" height="256px" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="ap-grad1" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="hsl(192,73%,40%)" />
+<stop offset="100%" stop-color="hsl(192,73%,26%)" />
+</linearGradient>
+<linearGradient id="ap-grad2" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="hsl(192,73%,45%)" />
+<stop offset="50%" stop-color="hsl(192,73%,40%)" />
+<stop offset="100%" stop-color="hsl(192,73%,26%)" />
+</linearGradient>
+</defs>
+<circle class="ap__ring" r="56" cx="64" cy="192" fill="none" stroke="#ddd" stroke-width="16" stroke-linecap="round" />
+<circle class="ap__worm1" r="56" cx="64" cy="192" fill="none" stroke="url(#ap-grad1)" stroke-width="16" stroke-linecap="round" stroke-dasharray="87.96 263.89" />
+<path class="ap__worm2" d="M120,192A56,56,0,0,1,8,192C8,161.07,16,8,64,8S120,161.07,120,192Z" fill="none" stroke="url(#ap-grad2)" stroke-width="16" stroke-linecap="round" stroke-dasharray="87.96 494" />
+</svg>
+    </div>
+    <div class="wrapper" id="wrapper">
+      <header class="header">
+        <div class="header__content">
+          <!-- start header__top-->
+          <div class="header__top">
+            <div class="header__logo"><a class="logo" href="/"><img src="/img/logo.png"/></a>
+              <div class="logo__info desktop"><span><b>Патентный центр.</b> Работаем по всему Казахстану с 2015 года</span></div>
+            </div>
+            <div class="header__language desktop">
+              <div class="language">
+                <div class="language__title"><span>выбор языка</span></div>
+                <div class="language__switch">
+                  <label class="switch">
+                    <input type="checkbox" id="checkbox" name="languageCheckbox"/><span></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="header__action">
+              <div class="header__phone">
+                <div class="phone">
+                  <div class="phone__time"><span>Звоните, Пн-ВС 10:00 - 21:00</span></div>
+                  <div class="phone__link"><a href="tel:+77712101111">+7 (771) 210-11-11</a></div>
+                  <div class="phone__action dotted"><a class="call_modal_js" href="#">Перезвоним за 30 сек</a></div>
+                </div>
+              </div>
+              <div class="header__mail desktop"><a href="mailto:info@eurasianbrands.com">info@eurasianbrands.com</a></div>
+              <div class="header__social">
+                <div class="social">
+                  <div class="social__label desktop"><span>Время ответа всего <b>15 секунд</b></span></div>
+                  <div class="social__button"><a href="https://wa.me/+77712101111" target="_blank"><i class="icon-whatsapp"></i><span class="desktop">Написать в WhatsApp</span></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end header__top-->
+          <!-- start header__bottom-->
+          <div class="header__bottom">
+            <div class="logo__info mobile"><span><b>Патентный центр.</b> Работаем по всему Казахстану с 2015 года</span></div>
+            <div class="header__mail mobile"><a href="mailto:info@eurasianbrands.com">info@eurasianbrands.com</a></div>
+            <nav class="navbar" id="navbar">
+              <ul class="menu">
+                <li class="menu-item current-menu-item"><a href="#">Главная</a></li>
+                <li class="menu-item menu-item-has-children"><a href="#">услуги<i class="icon-drop"></i></a>
+                  <ul class="sub-menu">
+                    <li class="menu-item menu-item-has-children"><a>Товарные знаки<i class="icon-drop"></i></a>
+                      <ul class="sub-menu">
+                        <li class="menu-item"><a href="#">Регистрация товарного знака</a></li>
+                        <li class="menu-item"><a href="#">Продление срока регистрации</a></li>
+                        <li class="menu-item"><a href="#">Проверка на уникальность</a></li>
+                        <li class="menu-item"><a href="#">Международная регистрация по Мадридской системе и за рубежом</a></li>
+                        <li class="menu-item"><a href="#">Регистрация общеизвестного товарного знака</a></li>
+                        <li class="menu-item"><a href="#">Регистрация наименования места происхождения товара</a></li>
+                        <li class="menu-item"><a href="#">Ответ на уведомление или отказ в регистрации</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item"><a>Авторские права</a></li>
+                    <li class="menu-item"><a>Патенты</a></li>
+                    <li class="menu-item"><a>Логотипы</a></li>
+                    <li class="menu-item"><a>Внесенив таможенный реестр</a></li>
+                    <li class="menu-item"><a>Блокировка</a></li>
+                    <li class="menu-item"><a>Суды и споры</a></li>
+                    <li class="menu-item menu-item-has-children"><a>Битрикс24<i class="icon-drop"></i></a>
+                      <ul class="sub-menu">
+                        <li class="menu-item"><a href="#">Регистрация общеизвестного товарного знака</a></li>
+                        <li class="menu-item"><a href="#">Регистрация наименования места происхождения товара</a></li>
+                        <li class="menu-item"><a href="#">Ответ на уведомление или отказ в регистрации </a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item important"><a>Правовые консультации</a></li>
+                    <li class="menu-item"><a>Депозитарий авторских прав                                </a></li>
+                  </ul>
+                </li>
+                <li class="menu-item"><a href="#">рассрочка и оплата</a></li>
+                <li class="menu-item info"><a href="#">кейсы<span>+3</span></a></li>
+                <li class="menu-item"><a href="#">блог</a></li>
+                <li class="menu-item"><a href="#">о компании</a></li>
+                <li class="menu-item"><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+          <!-- end header__bottom-->
+          <div class="header__toggle"></div>
+        </div>
+      </header>
+      <main class="main_content">
+        <!-- begin breadcrumbs-->
+        <div class="breadcrumbs section">
+          <div class="container_center">
+            <div class="kama_breadcrumbs"><span><a href="#"><span>Главная</span></a></span><span class="kb_sep"> <i class="icon-arrow_right"></i></span><span class="kb_title">О компании</span></div>
+          </div>
+        </div>
+        <!-- end breadcrumbs-->
+        <!-- begin about-->
+        <section class="about section" id="about">
+          <div class="container_center">
+            <div class="about__top">
+              <h2 class="section__title"><span>«Приумножаем эффективность и доходы бизнеса»</span></h2>
+              <div class="about__bg" style="background-image: url('../img/about_bg.webp')"></div>
+              <div class="about__list">
+                <div class="about__item">
+                  <div class="about__icon"><i class="icon-check_mark"></i></div>
+                  <div class="about__text"><span><b>Мы открыли нашу компанию в 2015 году,</b> когда подача документов происходила на бумажном носителе.</span></div>
+                </div>
+                <div class="about__item">
+                  <div class="about__icon"><i class="icon-check_mark"></i></div>
+                  <div class="about__text"><span>В настоящее время технологии продвинулись вперёд, что облегчило административные процедуры подачи заявок.</span></div>
+                </div>
+                <div class="about__item">
+                  <div class="about__icon"><i class="icon-check_mark"></i></div>
+                  <div class="about__text"><span>Однако процесс подготовки материалов и готовый результат — самые важные дела в нашем деле.</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="about__bottom">
+              <ul class="data">
+                <li class="data__item" data-aos="fade-up">
+                  <div class="data__content">
+                    <div class="data__number"><span>3000</span><i>+</i></div>
+                    <div class="data__label"><span>довольных клиентов</span></div>
+                  </div>
+                </li>
+                <li class="data__item" data-aos="fade-up" data-aos-delay="300">
+                  <div class="data__content">
+                    <div class="data__number"><span>97</span><i>%</i></div>
+                    <div class="data__label"><span>получают документы<br> с первого раза</span></div>
+                  </div>
+                </li>
+                <li class="data__item" data-aos="fade-up" data-aos-delay="600">
+                  <div class="data__content">
+                    <div class="data__number"><span>1358</span></div>
+                    <div class="data__label"><span>товарных знаков<br> зарегистрировали</span></div>
+                  </div>
+                </li>
+                <li class="data__item" data-aos="fade-up" data-aos-delay="900">
+                  <div class="data__content">
+                    <div class="data__number"><span>1125</span></div>
+                    <div class="data__label"><span>досудебных<br> урегулирований</span></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- end about-->
+        <!-- begin location-->
+        <section class="location section" id="location">
+          <div class="container_center">
+            <div class="location__content">
+              <h2 class="section__title" data-aos="fade-up"><span><b>География услуг:</b> Казахстан + 18 стран-партнеров</span></h2>
+              <div class="section__subtitle" data-aos="fade-up"><span>Поможем защитить вашу интеллектуальную собственность через наших партнеров</span></div>
+            </div>
+          </div>
+          <div class="location__map"></div>
+        </section>
+        <!-- end location-->
+        <!-- begin more-->
+        <section class="more section" id="more">
+          <div class="container_center">
+            <div class="more__content">
+              <div class="swiper__label mobile"><span>Листайте видео влево/вправо для просмотра всех </span>
+                <div class="swiper__img"><img src="../img/hand.svg"/></div>
+              </div>
+              <div class="swiper more-swiper-js">
+                <div class="more__list swiper-wrapper counter-wrap">
+                  <div class="more__item swiper-slide counter-item">
+                    <div class="more__title"><span>Сфера деятельности</span></div>
+                    <div class="more__text"><span>Регистрация товарных знаков,  авторских прав в Казахстане и за рубежом, помощь в получении патентов, внесении в таможенный реестр, досудебная защита и защита в суде, блокировка аккаунтов недобросовестных конкурентов,  внедрение Битрикс24, правовые консультации. </span></div>
+                    <div class="more__count"><span class="counter-el"></span></div>
+                  </div>
+                  <div class="more__item swiper-slide counter-item">
+                    <div class="more__title"><span>Миссия Eurasian Brands</span></div>
+                    <div class="more__text"><span>Предлагать клиентам лучшие условия сотрудничества, максимально упростив взаимодействие, быть ведущей компанией в нише патентования Казахстана</span></div>
+                    <div class="more__count"><span class="counter-el"></span></div>
+                  </div>
+                  <div class="more__item swiper-slide counter-item">
+                    <div class="more__title"><span>Ценности компании</span></div>
+                    <div class="more__text"><span>Люди — основа и главная движущая сила нашей работы. Клиенты, сотрудники, партнеры.</span></div>
+                    <div class="more__count"><span class="counter-el"></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="more__dotted"></div>
+            </div>
+          </div>
+        </section>
+        <!-- end more-->
+        <!-- begin team-->
+        <section class="team section" id="team">
+          <div class="container_center">
+            <div class="team__content">
+              <div class="team__left">
+                <h2 class="section__title" data-aos="fade-up"><span>Команда</span></h2>
+                <div class="section__subtitle"><span>Сильная. Амбициозная. Надёжная. <b>Наше кредо — готовим все документы как для себя!</b></span></div>
+                <div class="team__text">
+                  <p>В вопросах, где другие уже наломали дров, мы стараемся разобраться максимально эффективно, чтобы перевесить ситуацию в русло клиента.</p>
+                  <p>Если вопрос потенциально не выгодный — сообщим на берегу и озвучим все риски.</p>
+                </div>
+                <div class="team__button desktop"><a class="btn btn_md" href="#">Подробнее о компании</a></div>
+              </div>
+              <div class="team__right">
+                <div class="swiper__label mobile"><span>Листайте фото влево/вправо для просмотра всех сотрудников </span>
+                  <div class="swiper__img"><img src="../img/hand.svg"/></div>
+                </div>
+                <div class="swiper team-swiper-js">
+                  <div class="team__slider swiper-wrapper">
+                    <div class="team__item swiper-slide">
+                      <div class="person" style="background-image: url('../img/team_1.jpg')">
+                        <div class="person__content">
+                          <div class="person__icon"><i class="icon-arrow_deg"></i></div>
+                          <div class="person__info">
+                            <div class="person__name"><span>Кыжырова<br> Улпан<br> Жанбаевна</span></div>
+                            <div class="person__desc"><span>Юрист, патентовед, эксперт по товарным знакам и таможенному реестру</span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="team__item swiper-slide">
+                      <div class="person" style="background-image: url('../img/team_2.jpg')">
+                        <div class="person__content">
+                          <div class="person__icon"><i class="icon-arrow_deg"></i></div>
+                          <div class="person__info">
+                            <div class="person__name"><span>Клёнова<br> Айя<br> Ибрагимовна</span></div>
+                            <div class="person__desc"><span>Юрист, патентовед, эксперт по товарным знакам</span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="team__item swiper-slide">
+                      <div class="person" style="background-image: url('../img/team_3.jpg')">
+                        <div class="person__content">
+                          <div class="person__icon"><i class="icon-arrow_deg"></i></div>
+                          <div class="person__info">
+                            <div class="person__name"><span>Кыжырова<br> Улпан<br> Жанбаевна</span></div>
+                            <div class="person__desc"><span>Юрист, патентовед, эксперт по товарным знакам и таможенному реестру</span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="team__item swiper-slide">
+                      <div class="person" style="background-image: url('../img/team_4.jpg')">
+                        <div class="person__content">
+                          <div class="person__icon"><i class="icon-arrow_deg"></i></div>
+                          <div class="person__info">
+                            <div class="person__name"><span>Клёнова<br> Айя<br> Ибрагимовна</span></div>
+                            <div class="person__desc"><span>Юрист, патентовед, эксперт по товарным знакам</span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="team__control">
+                    <div class="team__arrows arrows_info desktop"><i class="icon-arrow_long_left"></i><i class="icon-arrow_long_right"></i></div>
+                    <div class="team__dotted dotted_info"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="team__button mobile"><a class="btn" href="#">Подробнее о компании</a></div>
+            </div>
+          </div>
+        </section>
+        <!-- end team-->
+        <!-- begin certificate-->
+        <section class="certificate section" id="certificate">
+          <div class="container_center">
+            <div class="certificate__content">
+              <div class="certificate__left">
+                <h2 class="section__title" data-aos="fade-up"><span>Посмотрите, все <b>наши свидетельства</b></span></h2>
+                <div class="certificate__text">
+                  <p>Даём гарантию на результаты своей работы, когда это действительно очевидно для нас.</p>
+                  <p>Первые в Казахстане зарегистрировали звуковой товарный знак.</p>
+                </div>
+                <div class="certificate__button"><a class="btn btn_md" href="#">Изучит кейс</a></div>
+              </div>
+              <div class="certificate__right">
+                <div class="swiper__label mobile"><span>Передвигайте влево/вправо для просмотра всех  документов</span>
+                  <div class="swiper__img"><img src="../img/hand.svg"/></div>
+                </div>
+                <div class="swiper certificate-swiper-js">
+                  <div class="certificate__control desktop">
+                    <div class="certificate__arrows arrows_info"><i class="icon-arrow_long_left"></i><i class="icon-arrow_long_right"></i></div>
+                    <div class="certificate__dotted dotted_info"></div>
+                  </div>
+                  <div class="certificate__slider swiper-wrapper">
+                    <div class="certificate__item swiper-slide">
+                      <div class="certificate__doc" style="background-image: url('../img/certificate_doc.jpg')"><a href="../img/certificate_doc.jpg" data-fancybox="data-fancybox" data-type="image"></a></div>
+                    </div>
+                    <div class="certificate__item swiper-slide">
+                      <div class="certificate__doc" style="background-image: url('../img/certificate_doc.jpg')"><a href="../img/certificate_doc.jpg" data-fancybox="data-fancybox" data-type="image"></a></div>
+                    </div>
+                    <div class="certificate__item swiper-slide">
+                      <div class="certificate__doc" style="background-image: url('../img/certificate_doc.jpg')"><a href="../img/certificate_doc.jpg" data-fancybox="data-fancybox" data-type="image"></a></div>
+                    </div>
+                    <div class="certificate__item swiper-slide">
+                      <div class="certificate__doc" style="background-image: url('../img/certificate_doc.jpg')"><a href="../img/certificate_doc.jpg" data-fancybox="data-fancybox" data-type="image"></a></div>
+                    </div>
+                  </div>
+                  <div class="certificate__control mobile">
+                    <div class="certificate__dotted"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="certificate__pen" data-aos="fade-up"></div>
+            </div>
+          </div>
+        </section>
+        <!-- end certificate-->
+        <!-- begin information-->
+        <section class="information section" id="information">
+          <div class="container_center">
+            <div class="information__top information__top_high">
+              <div class="information__subtitle"><span>Дорожим своей репутацией <b>40% наших клиентов пришли по рекомендации.</b></span></div>
+              <div class="information__content">
+                <div class="company">
+                  <div class="company__label"><span>О нашей компании и подходе в видео за 2 минуты</span></div>
+                  <div class="company__play js-youtubeModal" id="httuerixph8"><i class="icon-play"></i></div>
+                </div>
+                <div class="lider">
+                  <div class="lider__icon"><i class="icon-arrow_deg"></i></div>
+                  <div class="lider__name"><span>Турсунов Куаныш Абилкасымович</span></div>
+                  <div class="lider__info"><span>патентный поверенный Республики Казахстан. Основатель и руководитель компании Eurasian Brands</span></div>
+                </div>
+              </div>
+              <div class="information__list">
+                <div class="list__title"><span>Поэтому открыто Вам заявляю и гарантирую:</span></div>
+                <ul class="list">
+                  <li class="list__item">
+                    <div class="list__label"><span>Прозрачная стоимость,  не меняется в ходе работы</span></div>
+                    <div class="list__text"><span>Стоимость наших услуг опубликована здесь на сайте. Оказание услуг оформляется официальным договором. Она окончательная и не изменится в большую сторону в процессе работы;</span></div>
+                  </li>
+                  <li class="list__item">
+                    <div class="list__label"><span>Не химичим — знаем закон и работаем легально</span></div>
+                    <div class="list__text"><span>Знаете, что самое плохое? На рынке есть недобросовестные компании, которые на консультации называют одну цену, а в ходе работы увеличивают ее в 2, 3 раза. Будьте бдительны и работайте с проверенными компаниями;</span></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end information-->
+        <!-- begin conditions-->
+        <section class="conditions section" id="conditions">
+          <div class="container_center">
+            <div class="conditions__wrap">
+              <div class="conditions__caption">
+                <h2 class="section__title" data-aos="fade-up"><span>Предлагаем уникальные <b>условия сотрудничества</b></span></h2>
+                <div class="conditions__desc" data-aos="fade-up"><span>Таких преимуществ вы не найдете ни у одной патентной компании в Казахстане — мы проверяли</span></div>
+              </div>
+              <div class="swiper__label mobile"><span>Передвигайте шаги влево/вправо для просмотра всех преимуществ</span>
+                <div class="swiper__img"><img src="../img/hand.svg"/></div>
+              </div>
+              <div class="swiper conditions-swiper-js">
+                <div class="conditions__grid swiper-wrapper counter-wrap">
+                  <div class="conditions__item swiper-slide counter-item">
+                    <div class="conditions__icon"><i class="icon-percent"></i></div>
+                    <div class="conditions__content conditions__content_goTop">
+                      <div class="conditions__title"><span>Рассрочка</span></div>
+                      <div class="conditions__text"><span>Обычно каждый второй клиент оплачивает наши услуги по беспроцентной рассрочке: Альфа-банк, Kaspi Bank или собственной от Eurasian Brands.</span></div>
+                    </div>
+                    <div class="conditions__button"><a class="btn btn_md" href="#">Подробнее</a></div>
+                    <div class="conditions__count"><span class="counter-el"></span></div>
+                  </div>
+                  <div class="conditions__item swiper-slide counter-item">
+                    <div class="conditions__icon"><i class="icon-defense"></i></div>
+                    <div class="conditions__content conditions__content_goTop">
+                      <div class="conditions__title"><span>100% гарантия регистрации</span></div>
+                      <div class="conditions__text"><span>Берем на себя финансовую ответственность за регистрацию: добьемся регистрации или вернем 100% оплату</span></div>
+                    </div>
+                    <div class="conditions__button"><a class="btn btn_md" href="#">Подробнее</a></div>
+                    <div class="conditions__count"><span class="counter-el"></span></div>
+                  </div>
+                  <div class="conditions__item swiper-slide counter-item">
+                    <div class="conditions__icon"><i class="icon-timer"></i></div>
+                    <div class="conditions__content">
+                      <div class="conditions__title"><span>Подаем заявку<br> в день оплаты</span></div>
+                      <div class="conditions__text"><span>Для закрепления приоритетного права на товарный знак крайне важно, не откладывая, подать заявку на регистрацию</span></div>
+                    </div>
+                    <div class="conditions__count"><span class="counter-el"></span></div>
+                  </div>
+                  <div class="conditions__item swiper-slide counter-item">
+                    <div class="conditions__icon"><i class="icon-list"></i></div>
+                    <div class="conditions__content">
+                      <div class="conditions__title"><span>Сражаемся за ваш<br> товарный знак</span></div>
+                      <div class="conditions__text"><span>Даже если вам отказали в регистрации, мы изучим отказ, выработаем и реализуем стратегию беспроигрышных действий, благодаря которым гарантируем регистрацию</span></div>
+                    </div>
+                    <div class="conditions__count"><span class="counter-el"></span></div>
+                  </div>
+                  <div class="conditions__item swiper-slide counter-item">
+                    <div class="conditions__icon"><i class="icon-loupe"></i></div>
+                    <div class="conditions__content">
+                      <div class="conditions__title"><span>Бесплатный поиск</span></div>
+                      <div class="conditions__text"><span>В рамках предварительных договоренностей мы бесплатно проверим ваш товарный знак и выдадим заключение о возможности регистрации</span></div>
+                    </div>
+                    <div class="conditions__count"><span class="counter-el"></span></div>
+                  </div>
+                </div>
+                <div class="conditions__dotted"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end conditions-->
+        <!-- begin comments-->
+        <section class="comments section" id="comments">
+          <div class="container_center">
+            <div class="comments__top">
+              <div class="comments__content">
+                <div class="comments__label" data-aos="fade-up"><span>Скорее всего</span></div>
+                <h2 class="section__title" data-aos="fade-up"><span>Вы точно знаете наших <b>клиентов</b></span></h2>
+                <div class="section__subtitle" data-aos="fade-up"><span>За брендами стоят люди. Многие стали нашими хорошими друзьями.</span></div>
+              </div>
+              <div class="comments__slider swiper comments-swiper-js">
+                <div class="swiper__label mobile"><span>Передвигайте шаги влево/вправо для просмотра всех этапов работы</span>
+                  <div class="swiper__img"><img src="../img/hand.svg"/></div>
+                </div>
+                <div class="commentsSlider swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="commentsSlider__item">
+                      <div class="commentsSlider__persone">
+                        <div class="commentsSlider__foto" style="background-image: url('../img/persone_1.png')">
+                          <div class="commentsSlider__play js-youtubeModal" id="httuerixph8"><i class="icon-play"></i></div>
+                        </div>
+                        <div class="commentsSlider__description">
+                          <div class="commentsSlider__name"><span>Алагузова<br> Баян</span></div>
+                          <div class="commentsSlider__info"><span>Продюсер, бизнес-леди, глава компании &quot;Shine Production&quot;, телеведущая, актриса, певица</span></div>
+                        </div>
+                      </div>
+                      <div class="commentsSlider__content"><i class="icon-quote_2"></i><span>Из огромного выбора компаний на рынке Казахстана, мне порекомендовали именно &quot;Eurasian Brands&quot; как одних из лучших профессионалов в сфере регистрации и защиты авторского права. Команда &quot;Eurasian Brands&quot; выступила в роли моих представителей в качестве защитников в судебном процессе по авторским правам на сценарий и фильм &quot;Станция судьбы&quot;.</span><a href="#">Читать полностью</a></div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="commentsSlider__item">
+                      <div class="commentsSlider__persone">
+                        <div class="commentsSlider__foto" style="background-image: url('../img/persone_2.png')">
+                          <div class="commentsSlider__play js-youtubeModal" id="httuerixph8"><i class="icon-play"></i></div>
+                        </div>
+                        <div class="commentsSlider__description">
+                          <div class="commentsSlider__name"><span>Lorem.</span></div>
+                          <div class="commentsSlider__info"><span>глава компании &quot;Shine Production&quot;</span></div>
+                        </div>
+                      </div>
+                      <div class="commentsSlider__content"><i class="icon-quote_2"></i><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, facilis.</span><a href="#">Читать полностью</a></div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="commentsSlider__item">
+                      <div class="commentsSlider__persone">
+                        <div class="commentsSlider__foto" style="background-image: url('../img/persone_3.png')">
+                          <div class="commentsSlider__play js-youtubeModal" id="httuerixph8"><i class="icon-play"></i></div>
+                        </div>
+                        <div class="commentsSlider__description">
+                          <div class="commentsSlider__name"><span> Lorem ipsum.</span></div>
+                          <div class="commentsSlider__info"><span> Lorem.</span></div>
+                        </div>
+                      </div>
+                      <div class="commentsSlider__content"><i class="icon-quote_2"></i><span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae distinctio, rem aperiam porro fugiat dolores facere illum ipsum officia natus commodi aut vel sunt cupiditate consequatur eveniet vero, ea perspiciatis?</span><a href="#">Читать полностью</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="comments__control">
+                <div class="comments__arrows desktop"><i class="icon-drop_left"></i><i class="icon-drop_right"></i></div>
+                <div class="comments__dotted"></div>
+              </div>
+            </div>
+            <div class="comments__bottom swiper logoSlider-swiper-js">
+              <div class="swiper__label mobile"><span>Передвигайте влево/вправо для просмотра логотипов наших клиентов</span>
+                <div class="swiper__img"><img src="../img/hand.svg"/></div>
+              </div>
+              <div class="logoSlider swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="logoSlider__grid">
+                    <div class="logoSlider__item">
+                      <div class="logoSlider__img"><img src="../img/comments_logo_1.png"/></div>
+                    </div>
+                    <div class="logoSlider__item">
+                      <div class="logoSlider__img"><img src="../img/comments_logo_2.png"/></div>
+                    </div>
+                    <div class="logoSlider__item">
+                      <div class="logoSlider__img"><img src="../img/comments_logo_3.png"/></div>
+                    </div>
+                    <div class="logoSlider__item">
+                      <div class="logoSlider__img"><img src="../img/comments_logo_4.png"/></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="logoSlider__grid">
+                    <div class="logoSlider__item">
+                      <div class="logoSlider__img"><img src="../img/comments_logo_1.png"/></div>
+                    </div>
+                    <div class="logoSlider__item">
+                      <div class="logoSlider__img"><img src="../img/comments_logo_2.png"/></div>
+                    </div>
+                    <div class="logoSlider__item">
+                      <div class="logoSlider__img"><img src="../img/comments_logo_3.png"/></div>
+                    </div>
+                    <div class="logoSlider__item">
+                      <div class="logoSlider__img"><img src="../img/comments_logo_4.png"/></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="logoSlider__grid">
+                    <div class="logoSlider__item">
+                      <div class="logoSlider__img"><img src="../img/comments_logo_1.png"/></div>
+                    </div>
+                    <div class="logoSlider__item">
+                      <div class="logoSlider__img"><img src="../img/comments_logo_2.png"/></div>
+                    </div>
+                    <div class="logoSlider__item">
+                      <div class="logoSlider__img"><img src="../img/comments_logo_3.png"/></div>
+                    </div>
+                    <div class="logoSlider__item">
+                      <div class="logoSlider__img"><img src="../img/comments_logo_4.png"/></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="logoSlider__grid">
+                    <div class="logoSlider__item">
+                      <div class="logoSlider__img"><img src="../img/comments_logo_1.png"/></div>
+                    </div>
+                    <div class="logoSlider__item">
+                      <div class="logoSlider__img"><img src="../img/comments_logo_2.png"/></div>
+                    </div>
+                    <div class="logoSlider__item">
+                      <div class="logoSlider__img"><img src="../img/comments_logo_3.png"/></div>
+                    </div>
+                    <div class="logoSlider__item">
+                      <div class="logoSlider__img"><img src="../img/comments_logo_4.png"/></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="logoSlider__grid">
+                    <div class="logoSlider__item">
+                      <div class="logoSlider__img"><img src="../img/comments_logo_1.png"/></div>
+                    </div>
+                    <div class="logoSlider__item">
+                      <div class="logoSlider__img"><img src="../img/comments_logo_2.png"/></div>
+                    </div>
+                    <div class="logoSlider__item">
+                      <div class="logoSlider__img"><img src="../img/comments_logo_3.png"/></div>
+                    </div>
+                    <div class="logoSlider__item">
+                      <div class="logoSlider__img"><img src="../img/comments_logo_4.png"/></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="logoSlider__doted"></div>
+            </div>
+            <div class="comments__button"><a class="btn btn_warning" href="#">Смотреть всех клиентов и кейсы</a></div>
+          </div>
+        </section>
+        <!-- end comments-->
+        <!-- begin presentation-->
+        <section class="presentation section" id="presentation">
+          <div class="container_center">
+            <div class="presentation__bg">
+              <div class="presentation__content">
+                <h2 class="section__title" data-aos="fade-up"><span>Получите  <i class="icon-download"></i> <b>презентацию Eurasian Brands</b></span></h2>
+                <div class="section__subtitle" data-aos="fade-up"><span>со стоимостью услуг через минуту</span></div>
+                <div class="presentation__form">
+                  <form class="form">
+                    <div class="form__label"><span>Куда прислать презентацию?</span></div>
+                    <div class="form__row">
+                      <select class="select" data-placeholder="Whatsapp">
+                        <option value=""></option>
+                        <option value="whatsapp">Whatsapp</option>
+                        <option value="Viber">Viber</option>
+                        <option value="Telegram">Telegram</option>
+                      </select>
+                    </div>
+                    <div class="form__row">
+                      <input class="tel" type="tel" required="required" placeholder="Введите ваш номер"/>
+                    </div>
+                    <div class="form__row">
+                      <button class="btn btn_didisabled_js" type="submit">Получить презентацию с ценами на услуги</button>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__privacy">
+                        <label class="form__check">
+                          <input class="check_checked_js" type="checkbox" checked="checked"/><span>Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a></span>
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end presentation-->
+      </main>
+      <!-- begin sidebar-->
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar__toggle sidebar__toggle_hide"></div>
+        <div class="sidebar__list sidebar__list_hide"><a class="sidebar__item call_modal_js" href="#">
+            <div class="sidebar__content">
+              <div class="sidebar__icon"><i class="icon-phone"></i></div>
+              <div class="sidebar__text"><span>Получить консультацию</span></div>
+            </div></a><a class="sidebar__item sentence_modal_js" href="#">
+            <div class="sidebar__content">
+              <div class="sidebar__icon"><i class="icon-pdf"></i></div>
+              <div class="sidebar__text"><span>Скачать презентацию с ценами</span></div>
+            </div></a><a class="sidebar__item" href="https://wa.me/+77712101111" target="_blank">
+            <div class="sidebar__content">
+              <div class="sidebar__icon"><i class="icon-whatsapp"></i></div>
+              <div class="sidebar__text"><span>Написать в WhatsApp</span></div>
+            </div></a></div>
+      </div>
+      <!-- end sidebar-->
+      <!-- begin toTop-->
+      <div class="toTop"><a href="#wrapper"> <i class="icon-drop_top"></i><span class="desktop">Наверх  </span></a></div>
+      <!-- end toTop-->
+      <footer class="footer">
+        <div class="footer__content">
+          <div class="footer__row">
+            <div class="footer__col">
+              <div class="footer__logo"><a href="/"><img src="/img/logo.png"/></a></div>
+              <div class="footer__desc"><span><b>Патентный центр.</b> Работаем<br> по всему Казахстану с 2015 года</span></div>
+              <div class="footer__action dotted"><a href="#">Смотреть сертификаты</a></div>
+              <div class="footer__messenger">
+                <div class="messenger">
+                  <div class="messenger__list">
+                    <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon-youtube"></i></a></div>
+                    <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon-instagram"></i></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__col">
+              <div class="footer__label"> <span>Навигация по сайту<i class="icon-drop mobile"></i></span></div>
+              <ul class="menu">
+                <li class="menu-item"><a href="#">Главная</a></li>
+                <li class="menu-item"><a href="#">Услуги</a></li>
+                <li class="menu-item"><a href="#">Кейсы</a></li>
+                <li class="menu-item"><a href="#">Блог</a></li>
+                <li class="menu-item"><a href="#">Рассрочка и оплата</a></li>
+                <li class="menu-item"><a href="#">О компании</a></li>
+                <li class="menu-item"><a href="#">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="footer__col">
+              <div class="footer__label"> <span>Услуги<i class="icon-drop mobile"></i></span></div>
+              <ul class="menu">
+                <li class="menu-item"><a href="#">Регистрация товарного знака</a></li>
+                <li class="menu-item"><a href="#">Регистрация авторских прав</a></li>
+                <li class="menu-item"><a href="#">Получение патента</a></li>
+                <li class="menu-item"><a href="#">Внесение в таможенный реестр</a></li>
+                <li class="menu-item"><a href="#">Блокировка аккаунтов</a></li>
+                <li class="menu-item"><a href="#">Правовая защита</a></li>
+                <li class="menu-item"><a href="#">Составление и регистрация договоров</a></li>
+                <li class="menu-item"><a href="#"></a></li>
+                <li class="menu-item"><a href="#">Разработка логотипа</a></li>
+              </ul>
+              <div class="footer__action dotted desktop"><a href="#">Смотреть все услуги</a></div>
+            </div>
+            <div class="footer__col">
+              <div class="footer__label"> <span>Преимущества<i class="icon-drop mobile"></i></span></div>
+              <ul class="menu menu_mark">
+                <li class="menu-item"><span>100% гарантия регистрации товарного знака</span></li>
+                <li class="menu-item"><span>Беспроцентная рассрочка</span></li>
+                <li class="menu-item"><span>Профессионалы своего дела</span></li>
+                <li class="menu-item"><span>Бесплатная проверка ТЗ</span></li>
+                <li class="menu-item"><span>1000+ отзывов</span></li>
+                <li class="menu-item"><span>97% получают документы с первого раза</span></li>
+                <li class="menu-item"><span>7 лет на рынке</span></li>
+                <li class="menu-item"><span>3000+ успешных дел</span></li>
+                <li class="menu-item"><span>Стратегический подход</span></li>
+              </ul>
+            </div>
+            <div class="footer__col">
+              <div class="footer__label"><span>Контакты</span></div>
+              <div class="footer__phone">
+                <div class="phone">
+                  <div class="phone__time"><span>Звоните, Пн-ВС 10:00 - 21:00</span></div>
+                  <div class="phone__link"><a href="tel:+77712101111">+7 (771) 210-11-11</a></div>
+                </div>
+              </div>
+              <div class="footer__mail"><a href="mailto:info@eurasianbrands.com">info@eurasianbrands.com</a></div>
+              <div class="footer__social">
+                <div class="social">
+                  <div class="social__label"><span>Время ответа всего <b>15 секунд</b></span></div>
+                  <div class="social__button"><a href="https://wa.me/+77712101111" target="_blank"><i class="icon-whatsapp"></i><span class="desktop">Написать в WhatsApp</span></a></div>
+                </div>
+              </div>
+              <div class="footer__action dotted"><a href="#">Все контакты</a></div>
+            </div>
+          </div>
+          <div class="footer__row">
+            <div class="footer__col"><span>© <script type="text/javascript">document.write(new Date().getFullYear());</script> Международный Патентный Центр "EURASIAN BRANDS"</span></div>
+            <div class="footer__col"><span>Материалы с сайта защищены законом Республики Казахстан<br> об авторских и смежных правах. Копирование запрещено.<br> Сайт не является договором офферты</span></div>
+            <div class="footer__col"><span>Сделано с любовью в   <a href="https://paradigma.website/" target="_blank">Paradigma.website</a></span></div>
+          </div>
+        </div>
+      </footer>
+      <!-- Begin Modal stop-->
+      <div class="modal fade stop" id="stop">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal" id="closeModalStop"></a>
+            <div class="modal-header">
+              <div class="section__title"><span>СТОЙТЕ! <b>НЕ УХОДИТЕ!</b></span></div>
+              <div class="modal-label"><span>Скачайте инструкцию от экспертов Eurasian Brands</span></div>
+              <div class="modal-title"><span><b>Как зарегистрировать товарный знак с первого раза:</b> 10 причин отказа  Казпатента и как их избежать</span></div>
+            </div>
+            <div class="modal-body">
+              <div class="modal-form">
+                <form class="form">
+                  <div class="form__label"><span>Куда прислать презентацию?</span></div>
+                  <div class="form__row">
+                    <select class="select" data-placeholder="Whatsapp">
+                      <option value=""></option>
+                      <option value="whatsapp">Whatsapp</option>
+                      <option value="Viber">Viber</option>
+                      <option value="Telegram">Telegram</option>
+                    </select>
+                  </div>
+                  <div class="form__row">
+                    <input class="tel" type="tel" required="required" placeholder="Введите ваш номер"/>
+                  </div>
+                  <div class="form__row">
+                    <button class="btn btn_didisabled_js" type="submit">Получить презентацию с ценами на услуги</button>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__privacy">
+                      <label class="form__check">
+                        <input class="check_checked_js" type="checkbox" checked="checked"/><span>Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a></span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal stop-->
+      <!-- Begin Modal call-->
+      <div class="modal fade call" id="call">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="modal-header">
+              <div class="modal-title"> <span>Оставьте номер<br> <b>позвоним за 15 сек</b></span></div>
+            </div>
+            <div class="modal-body">
+              <div class="modal-form">
+                <form class="form">
+                  <div class="form__row">
+                    <input class="tel" type="tel" required="required" placeholder="Введите ваш номер"/>
+                  </div>
+                  <div class="form__row">
+                    <button class="btn btn_didisabled_js" type="submit">Жду звонка</button>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__privacy">
+                      <label class="form__check">
+                        <input class="check_checked_js" type="checkbox" checked="checked"/><span>Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a></span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal call-->
+      <!-- Begin Modal sentence-->
+      <div class="modal fade sentence" id="sentence">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="modal-header">
+              <div class="modal-title"><span>Подготовим <b>прайс<br> и коммерческое<br> предложение</b> для вас</span></div>
+            </div>
+            <div class="modal-body">
+              <div class="modal-form">
+                <form class="form">
+                  <div class="form__row">
+                    <input class="tel" type="tel" required="required" placeholder="Введите ваш номер"/>
+                  </div>
+                  <div class="form__row">
+                    <button class="btn btn_didisabled_js" type="submit">Жду звонка</button>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__privacy">
+                      <label class="form__check">
+                        <input class="check_checked_js" type="checkbox" checked="checked"/><span>Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a></span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="sentence__more desktop">
+              <div class="sentence__name"><span>Айя Ибрагимовна</span></div>
+              <div class="sentence__desc"><span>эксперт по товарным знакам</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal sentence-->
+      <!-- Begin Modal modalVideo-->
+      <div class="modal fade modalVideo" id="modalVideo">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="modal-body"> 
+              <div class="modalVideo__wraper"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal modalVideo-->
+      <script src="../js/jquery.js"></script>
+      <script src="../js/jquery.maskedinput.min.js"></script>
+      <script src="../js/modal.js"></script>
+      <script src="../js/swiper-bundle.min.js"></script>
+      <script src="../js/slider.js"></script>
+      <script src="../js/select2.min.js"></script>
+      <script src="../js/jquery.event.move.js"></script>
+      <script src="../js/jquery.twentytwenty.js"></script>
+      <script src="../js/jquery.marquee.min.js"></script>
+      <script src="../js/aos.js"></script>
+      <script src="../js/fancybox.min.js"></script>
+      <script src="../js/function.js"></script>
+    </div>
+  </body>
+</html>

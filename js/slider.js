@@ -263,6 +263,58 @@ $(document).ready(function() {
         }
     });
 
+    const payment = new Swiper('.payment-swiper-js', {
+        // loop: true,
+        slidesPerView: 1,
+        autoHeight: true,
+        speed: 500,
+        // autoplay: {
+        //   delay: 5000,
+        // },
+        // grabCursor: true,
+        pagination: {
+            el: '.payment__dotted',
+        },
+        // dynamicBullets: true,
+
+        spaceBetween: 22,
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 84,
+                // navigation: {
+                //     nextEl: '.icon-arrow_long_right',
+                //     prevEl: '.icon-arrow_long_left',
+                // },
+            },
+        }
+    });
+
+    const more = new Swiper('.more-swiper-js', {
+        // loop: true,
+        slidesPerView: 1,
+        autoHeight: true,
+        speed: 500,
+        // autoplay: {
+        //   delay: 5000,
+        // },
+        // grabCursor: true,
+        pagination: {
+            el: '.more__dotted',
+        },
+        // dynamicBullets: true,
+
+        spaceBetween: 22,
+        breakpoints: {
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 0,
+                autoHeight: false,
+
+            },
+        }
+    });
+
 });
 
 // jQuery(function($){

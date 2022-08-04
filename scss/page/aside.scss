@@ -1,0 +1,147 @@
+.aside {
+    position: relative;
+    background-color: #F9FAFD;
+    padding: 2em 1em;
+
+    @media (min-width: 768px) {
+        padding: 3.125em 2.5em 2em;
+        position: sticky;
+        position: -webkit-sticky;
+        width: 27.25em;
+        top: 3em;
+
+    }
+
+    &__arrow {
+        position: absolute;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        top: 2em;
+        right: 1em;
+        width: 1.75em;
+        height: 1.75em;
+        @media (min-width: 768px) {
+            top: 3.125em;
+            right: 2.5em;
+            width: 2.8125em;
+            height: 2.8125em;
+
+        }
+        border-radius: 50%;
+
+        background-color: $color_white;
+        color: $color_info;
+        transform: rotate(180deg);
+
+        i {
+            font-size: 0.35em;
+
+            @media (min-width: 768px) {
+                font-size: 0.55em;
+
+            }
+        }
+    }
+
+    &__item {
+        margin-bottom: 1.25em;
+        text-align: center;
+        @media (min-width: 768px) {
+            text-align: inherit;
+            margin-bottom: 2.625em;
+            margin-left: 1em;
+
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__label {
+        margin-bottom: 0.65em;
+        @media (min-width: 768px) {
+            margin-bottom: 1.125em;
+
+        }
+
+        span {
+            font-size: 1em;
+            font-weight: 700;
+            @media (min-width: 768px) {
+                font-size: 1.25em;
+
+            }
+        }
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            margin-bottom: 0.5em;
+            @media (min-width: 768px) {
+                margin-bottom: 1em;
+
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .aside__list span,
+    .aside__text span {
+        font-size: 0.75em;
+        @media (min-width: 768px) {
+            font-size: 1.25em;
+
+        }
+    }
+
+    &__text {}
+
+    &__action {
+        text-align: center;
+    }
+
+    &__caption {
+        margin-bottom: 0.125em;
+        @media (min-width: 768px) {
+            margin-bottom: 1.5em;
+
+        }
+
+        span {
+            font-size: 1.25em;
+            font-weight: 700;
+            @media (min-width: 768px) {
+                font-size: 1.875em;
+
+            }
+        }
+    }
+
+    &__desc {
+        margin-bottom: 0.5em;
+        @media (min-width: 768px) {
+            margin-bottom: 1.5em;
+
+        }
+
+        span {
+            font-size: 0.75em;
+            @media (min-width: 768px) {
+                font-size: 1.125em;
+
+            }
+        }
+    }
+
+}
