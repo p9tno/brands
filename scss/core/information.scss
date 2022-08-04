@@ -5,6 +5,20 @@
         }
     }
 
+    &_page {
+        @media (max-width: 767px) {
+            .information__content {
+                height: 18em;
+            }
+        }
+        @media (min-width: 768px) {
+            .information__top {
+                padding: 5.75em 6.25em;
+                background-position: top;
+            }
+        }
+    }
+
     &__top {
         position: relative;
         background-position: center;
@@ -20,10 +34,6 @@
             background-image: url("../img/information_bg.jpg");
             padding: 3.75em 6.25em;
 
-            &_high {
-                padding: 5.75em 6.25em;
-                background-position: top;
-            }
         }
     }
 

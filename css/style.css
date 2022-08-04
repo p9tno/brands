@@ -3320,6 +3320,17 @@ body {
     width: 30.625em;
   }
 }
+@media (max-width: 767px) {
+  .information_page .information__content {
+    height: 18em;
+  }
+}
+@media (min-width: 768px) {
+  .information_page .information__top {
+    padding: 5.75em 6.25em;
+    background-position: top;
+  }
+}
 .information__top {
   position: relative;
   background-position: center;
@@ -3334,10 +3345,6 @@ body {
     text-align: inherit;
     background-image: url("../img/information_bg.jpg");
     padding: 3.75em 6.25em;
-  }
-  .information__top_high {
-    padding: 5.75em 6.25em;
-    background-position: top;
   }
 }
 .information__subtitle {
