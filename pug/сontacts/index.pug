@@ -1,0 +1,119 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+                span.kb_sep 
+                    i.icon-arrow_right
+                span.kb_title контакты
+    // end breadcrumbs
+
+    // begin contacts
+    section#contacts.contacts.section
+        .container_center
+            .contacts__top
+                .contacts__caption
+                    h2.section__title.section__title_page
+                        span Работаем <b>с людьми и бизнесами</b> по всему Казахстану <small>+ в 18 странах-партнерах</small>
+
+                    .contacts__subtitle
+                        span в 90% случаях решаем задачи клиентов удаленно
+
+                .contacts__map
+
+            .contacts__bottom
+
+                // begin col
+                .contacts__col.contacts__col_connection
+                    .contacts__title
+                        span Свяжитесь с нами
+                    .contacts__list
+                        .contacts__item
+                            .contacts__label
+                                span.dot Звоните, Пн-ВС 10:00 - 21:00
+                            .contacts__action.contacts__action_mt8
+                                a(href="tel:+77712101111").contacts__phone +7 (771) 210-11-11
+
+                        .contacts__item
+                            .contacts__label
+                                span.dot Спрашивайте, мы онлайн
+                            .contacts__action
+                                a(href="https://wa.me/+77712101111" target="_blank").btn.btn_whatsapp.btn_success Спросить у нас в WhatsApp
+                                    span время ответа 15 секунд
+
+                        .contacts__item
+                            .contacts__label
+                                span Email:
+                            .contacts__action.contacts__action_mt8
+                                a(href="mailto:info@eurasianbrands.com").contacts__mail info@eurasianbrands.com
+
+                        .contacts__item
+                            .contacts__label
+                                span.dot.bold Мы в социальных сетях
+                            .contacts__action
+                                .messenger
+                                    .messenger__list
+                                        .messenger__item
+                                            a(href="#" target="_blank").messenger__link
+                                                i.icon-youtube
+                                        .messenger__item
+                                            a(href="#" target="_blank").messenger__link
+                                                i.icon-instagram
+                        .contacts__item
+                            .contacts__link.dotted
+                                a(href="#") Реквизиты
+
+
+                // end col
+
+                // begin col
+                .contacts__col.contacts__col_form
+                    .contacts__title
+                        span Заполните форму, перезвоним за 30 сек
+                    form.form
+                        .form__row
+                            input(type="tel" class="tel" required placeholder="Введите ваш номер")
+                        .form__row
+                            input(type="email" class="email" placeholder="Введите ваш e-mail")
+                        .form__row
+                            textarea(type="text", placeholder="Опишите вашу задачу в общих чертах. Это не обязательно, но позволит нам быстрее сориентироваться и направить вашу заявку профильному специалисту.")
+                        .form__row
+                            label.form__file Прикрепить файл
+                                input(type="file" id="file-input" class="file-input" name="file")
+                        .form__row
+                            button.btn.btn_didisabled_js(type="submit") Отправить
+                        .form__row
+                            .form__privacy
+                                label.form__check
+                                    input.check_checked_js(type="checkbox" checked="checked")
+                                    span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
+                // end col
+
+                // begin col
+                .contacts__col.contacts__col_more
+                    .contacts__gallery
+                        .gallery
+                            each item in [1,2,3,4,1]
+                                .gallery__item
+                                    a(href="../img/contacts.webp" data-fancybox data-type="image")
+                                        img(src="../img/contacts.webp")
+                    .contacts__title
+                        span Ждем вас в офисе,
+                    .contacts__location
+                        span г.Нур-Султан, ул.Шарля де Голля, здание 13, Бизнес Центр "Energetic", офис 103
+                    .contacts__link.dotted
+                        a(href="#") Смотреть на карте
+                // end col
+
+
+
+
+    // end contacts

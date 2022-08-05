@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/twentytwenty.css"/>
-    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/aos.css"/>
-    <link rel="stylesheet" type="text/css" href="css/fancybox.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/twentytwenty.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aos.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/fancybox.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
   </head>
   <body>
     <div class="preloader" id="preloader"><svg class="ap" viewBox="0 0 128 256" width="128px" height="256px" xmlns="http://www.w3.org/2000/svg">
@@ -115,34 +115,108 @@
         </div>
       </header>
       <main class="main_content">
-        <!-- begin mainNaw-->
-        <section class="mainNaw section" id="mainNaw">
+        <!-- begin breadcrumbs-->
+        <div class="breadcrumbs section">
           <div class="container_center">
-            <h2 class="section__title"> <span>Страницы</span></h2>
-            <ul>
-              <li><a href="home">главная</a></li>
-              <li><a href="services">услуги</a></li>
-              <li><a href="single-service">одна услуга</a></li>
-              <li><a href="single-service2">одна услуга 2</a></li>
-              <li><a href="сases">кейсы</a></li>
-              <li><a href="single-сases">один кейс</a></li>
-              <li><a href="single-сases2">один кейс 2</a></li>
-              <li><a href="about">о компании</a></li>
-            </ul>
+            <div class="kama_breadcrumbs"><span><a href="#"><span>Главная</span></a></span><span class="kb_sep"> <i class="icon-arrow_right"></i></span><span class="kb_title">контакты</span></div>
+          </div>
+        </div>
+        <!-- end breadcrumbs-->
+        <!-- begin contacts-->
+        <section class="contacts section" id="contacts">
+          <div class="container_center">
+            <div class="contacts__top">
+              <div class="contacts__caption">
+                <h2 class="section__title section__title_page"><span>Работаем <b>с людьми и бизнесами</b> по всему Казахстану <small>+ в 18 странах-партнерах</small></span></h2>
+                <div class="contacts__subtitle"><span>в 90% случаях решаем задачи клиентов удаленно</span></div>
+              </div>
+              <div class="contacts__map"></div>
+            </div>
+            <div class="contacts__bottom">
+              <!-- begin col-->
+              <div class="contacts__col contacts__col_connection">
+                <div class="contacts__title"><span>Свяжитесь с нами</span></div>
+                <div class="contacts__list">
+                  <div class="contacts__item">
+                    <div class="contacts__label"><span class="dot">Звоните, Пн-ВС 10:00 - 21:00</span></div>
+                    <div class="contacts__action contacts__action_mt8"><a class="contacts__phone" href="tel:+77712101111">+7 (771) 210-11-11</a></div>
+                  </div>
+                  <div class="contacts__item">
+                    <div class="contacts__label"><span class="dot">Спрашивайте, мы онлайн</span></div>
+                    <div class="contacts__action"><a class="btn btn_whatsapp btn_success" href="https://wa.me/+77712101111" target="_blank">Спросить у нас в WhatsApp<span>время ответа 15 секунд</span></a></div>
+                  </div>
+                  <div class="contacts__item">
+                    <div class="contacts__label"><span>Email:</span></div>
+                    <div class="contacts__action contacts__action_mt8"><a class="contacts__mail" href="mailto:info@eurasianbrands.com">info@eurasianbrands.com</a></div>
+                  </div>
+                  <div class="contacts__item">
+                    <div class="contacts__label"><span class="dot bold">Мы в социальных сетях</span></div>
+                    <div class="contacts__action">
+                      <div class="messenger">
+                        <div class="messenger__list">
+                          <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon-youtube"></i></a></div>
+                          <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon-instagram"></i></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contacts__item">
+                    <div class="contacts__link dotted"><a href="#">Реквизиты</a></div>
+                  </div>
+                </div>
+              </div>
+              <!-- end col-->
+              <!-- begin col-->
+              <div class="contacts__col contacts__col_form">
+                <div class="contacts__title"><span>Заполните форму, перезвоним за 30 сек</span></div>
+                <form class="form">
+                  <div class="form__row">
+                    <input class="tel" type="tel" required="required" placeholder="Введите ваш номер"/>
+                  </div>
+                  <div class="form__row">
+                    <input class="email" type="email" placeholder="Введите ваш e-mail"/>
+                  </div>
+                  <div class="form__row">
+                    <textarea type="text" placeholder="Опишите вашу задачу в общих чертах. Это не обязательно, но позволит нам быстрее сориентироваться и направить вашу заявку профильному специалисту."></textarea>
+                  </div>
+                  <div class="form__row">
+                    <label class="form__file">Прикрепить файл
+                      <input class="file-input" type="file" id="file-input" name="file"/>
+                    </label>
+                  </div>
+                  <div class="form__row">
+                    <button class="btn btn_didisabled_js" type="submit">Отправить</button>
+                  </div>
+                  <div class="form__row">
+                    <div class="form__privacy">
+                      <label class="form__check">
+                        <input class="check_checked_js" type="checkbox" checked="checked"/><span>Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a></span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- end col-->
+              <!-- begin col-->
+              <div class="contacts__col contacts__col_more">
+                <div class="contacts__gallery">
+                  <div class="gallery">
+                    <div class="gallery__item"><a href="../img/contacts.webp" data-fancybox="data-fancybox" data-type="image"><img src="../img/contacts.webp"/></a></div>
+                    <div class="gallery__item"><a href="../img/contacts.webp" data-fancybox="data-fancybox" data-type="image"><img src="../img/contacts.webp"/></a></div>
+                    <div class="gallery__item"><a href="../img/contacts.webp" data-fancybox="data-fancybox" data-type="image"><img src="../img/contacts.webp"/></a></div>
+                    <div class="gallery__item"><a href="../img/contacts.webp" data-fancybox="data-fancybox" data-type="image"><img src="../img/contacts.webp"/></a></div>
+                    <div class="gallery__item"><a href="../img/contacts.webp" data-fancybox="data-fancybox" data-type="image"><img src="../img/contacts.webp"/></a></div>
+                  </div>
+                </div>
+                <div class="contacts__title"><span>Ждем вас в офисе,</span></div>
+                <div class="contacts__location"><span>г.Нур-Султан, ул.Шарля де Голля, здание 13, Бизнес Центр "Energetic", офис 103</span></div>
+                <div class="contacts__link dotted"><a href="#">Смотреть на карте</a></div>
+              </div>
+              <!-- end col-->
+            </div>
           </div>
         </section>
-        <!-- end mainNaw-->
-        <!-- begin secondNaw-->
-        <section class="secondNaw section" id="secondNaw">
-          <div class="container_center">
-            <h2 class="section__title"> <span>Части</span></h2>
-            <ul>
-              <li><a href="buttons">кнопки</a></li>
-              <li><a href="modals">модальные окна</a></li>
-            </ul>
-          </div>
-        </section>
-        <!-- end secondNaw-->
+        <!-- end contacts-->
       </main>
       <!-- begin sidebar-->
       <div class="sidebar" id="sidebar">
@@ -363,18 +437,18 @@
         </div>
       </div>
       <!-- End modal modalVideo-->
-      <script src="js/jquery.js"></script>
-      <script src="js/jquery.maskedinput.min.js"></script>
-      <script src="js/modal.js"></script>
-      <script src="js/swiper-bundle.min.js"></script>
-      <script src="js/slider.js"></script>
-      <script src="js/select2.min.js"></script>
-      <script src="js/jquery.event.move.js"></script>
-      <script src="js/jquery.twentytwenty.js"></script>
-      <script src="js/jquery.marquee.min.js"></script>
-      <script src="js/aos.js"></script>
-      <script src="js/fancybox.min.js"></script>
-      <script src="js/function.js"></script>
+      <script src="../js/jquery.js"></script>
+      <script src="../js/jquery.maskedinput.min.js"></script>
+      <script src="../js/modal.js"></script>
+      <script src="../js/swiper-bundle.min.js"></script>
+      <script src="../js/slider.js"></script>
+      <script src="../js/select2.min.js"></script>
+      <script src="../js/jquery.event.move.js"></script>
+      <script src="../js/jquery.twentytwenty.js"></script>
+      <script src="../js/jquery.marquee.min.js"></script>
+      <script src="../js/aos.js"></script>
+      <script src="../js/fancybox.min.js"></script>
+      <script src="../js/function.js"></script>
     </div>
   </body>
 </html>

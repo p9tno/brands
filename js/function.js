@@ -237,6 +237,7 @@ $(document).ready(function() {
         // anchorPlacement: 'bottom-bottom',
         duration: 1000, // values from 0 to 3000, with step 50ms
         // offset: 20,
+        once: true,
     });
 
     AOS.init({

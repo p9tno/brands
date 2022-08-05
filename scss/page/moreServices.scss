@@ -20,4 +20,17 @@
         }
     }
 
+    .services__request {
+        text-align: left;
+
+        @media (min-width: 768px) {
+            text-align: inherit;
+            // 
+            // a {
+            //     padding: 1.3em 3em;
+            // }
+
+        }
+    }
+
 }
