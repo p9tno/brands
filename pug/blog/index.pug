@@ -1,0 +1,66 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+                span.kb_sep
+                    i.icon-arrow_right
+                span.kb_title Блог
+    // end breadcrumbs
+
+    // begin blog
+    section#blog.blog.section
+        .container_center
+            .blog__caption
+                h1.section__title
+                    span Блог <b>Eurasian Brands</b>
+                .section__subtitle
+                    span Щедро делимся многолетним опытом и рассказываем о вопросах патентования
+
+            .blog__tabs
+                .tabs-wrapper
+                    .tabs
+                        each item in ['Товарные знаки', 'Авторские права', 'Патенты', 'Таможенный реес', 'Правовая защита', 'Битрикс24', 'Договора', 'НМПТ', 'Разное']
+                            .tab=item
+
+                    .tabs-content
+                        .tab-item
+
+                            .blog__grid
+                                each item in [1,2,3,4,5,6,7,8,9]
+                                    .blog__item
+                                        .blog__bg_wrap
+                                            .blog__bg(style="background-image: url('../img/blog_bg.jpg')")
+                                        .blog__date
+                                            span 29 апреля 2022
+                                        .blog__title
+                                            a(href="#") Как зарегистрировать товарный знак в Казахстане
+                                        .blog__description
+                                            span Один из популярных вопросов, который волнует клиентов
+                                        .blog__link.dotted
+                                            a(href="#") Читать подробнее
+                            .pagination
+                                ul.page-numbers
+                                    li
+                                        a.page-numbers.prev
+                                            i.icon-arrow_left
+                                    li
+                                        span.page-numbers.current 1
+                                    li
+                                        a(href="#").page-numbers 2
+                                    li
+                                        a(href="#").page-numbers 3
+                                    li
+                                        a(href="#").page-numbers.next
+                                            i.icon-arrow_right
+
+
+    // end blog

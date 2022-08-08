@@ -69,7 +69,7 @@ block content
                                                 i.icon-instagram
                         .contacts__item
                             .contacts__link.dotted
-                                a(href="#") Реквизиты
+                                a(href="../img/test-2.pdf" target="_blank") Реквизиты
 
 
                 // end col
@@ -100,16 +100,16 @@ block content
                 // begin col
                 .contacts__col.contacts__col_more
                     .contacts__gallery
-                        .gallery
+                        .galleryPage
                             each item in [1,2,3,4,1]
-                                .gallery__item
+                                .galleryPage__item
                                     a(href="../img/contacts.webp" data-fancybox data-type="image")
                                         img(src="../img/contacts.webp")
                     .contacts__title
                         span Ждем вас в офисе,
                     .contacts__location
                         span г.Нур-Султан, ул.Шарля де Голля, здание 13, Бизнес Центр "Energetic", офис 103
-                    .contacts__link.dotted
+                    .contacts__link.dotted.map_modal_js
                         a(href="#") Смотреть на карте
                 // end col
 

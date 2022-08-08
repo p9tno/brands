@@ -315,6 +315,35 @@ $(document).ready(function() {
         }
     });
 
+    const gallery = new Swiper('.gallery-swiper-js', {
+        loop: true,
+        slidesPerView: 1,
+        // autoHeight: true,
+        speed: 500,
+        // autoplay: {
+        //   delay: 5000,
+        // },
+        // grabCursor: true,
+        // pagination: {
+        //     el: '.more__dotted',
+        // },
+        // dynamicBullets: true,
+
+        spaceBetween: 22,
+        navigation: {
+            nextEl: '.icon-arrow_right',
+            prevEl: '.icon-arrow_left',
+        },
+        // breakpoints: {
+        //     768: {
+        //         slidesPerView: 3,
+        //         spaceBetween: 0,
+        //         autoHeight: false,
+        //
+        //     },
+        // }
+    });
+
 });
 
 // jQuery(function($){

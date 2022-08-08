@@ -31,8 +31,7 @@
 		}
 	}
 
-	&__col {
-		}
+	&__col {}
 
 	&__row {
 		margin-bottom: 1em;
@@ -73,6 +72,32 @@
 
 		}
 
+	}
+
+	&__row_icon {
+		position: relative;
+
+		&:after {
+			content: '\e909';
+			font-family: 'icomoon';
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 1em;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 2.083333em;
+			height: 2.083333em;
+			font-size: 0.75em;
+			border-radius: 50%;
+			background-color: $color_success;
+			color: $color_white;
+			@media (min-width: 768px) {
+				font-size: 1.5em;
+
+			}
+		}
 	}
 
 	&__title {

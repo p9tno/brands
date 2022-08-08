@@ -672,8 +672,8 @@ block content
                             .blog__slider.swiper-wrapper
                                 each item in [ {date: '29 апреля 2022', title: 'Как зарегистрировать товарный знак в Казахстане', desc: 'Один из популярных вопросов, который волнует клиентов'}, {date: '30 апреля 2022', title: 'Как зарегистрировать', desc: 'Один из популярных вопросов, который волнует клиентов'}, {date: '31 апреля 2022', title: 'Как зарегистрировать товарный знак в Казахстане', desc: 'Один из популярных вопросов, который волнует клиентов Один из популярных вопросов, который волнует клиентов'}, {date: '31 апреля 2022', title: 'Как зарегистрировать товарный знак в Казахстане Как', desc: 'Один из популярных вопросов'},]
                                     .blog__slide.swiper-slide
-
-                                        .blog__bg(style="background-image: url('../img/blog_bg.jpg')")
+                                        .blog__bg_wrap
+                                            .blog__bg(style="background-image: url('../img/blog_bg.jpg')")
                                         .blog__date
                                             span=item.date
                                         .blog__title

@@ -33,6 +33,14 @@ $(document).ready(function() {
     }
     showCall();
 
+    function showMap() {
+        $('.map_modal_js').on('click', function (e) {
+            e.preventDefault();
+             $('#map').modal('show');
+        });
+    }
+    showMap();
+
     function showSentence() {
         $('.sentence_modal_js').on('click', function (e) {
             e.preventDefault();
@@ -405,6 +413,22 @@ $(document).ready(function() {
     //     }, duration / final  );
     // }
     // end animate numbers
+
+    function addImgWrap() {
+        $('.alignleft, .alignright').parent().addClass( "img__wrap" );
+        $('.alignleft').parent().addClass( "img__wrap_left" );
+        $('.alignright').parent().addClass( "img__wrap_right" );
+    }
+    addImgWrap();
+
+    // function addGallerySlider() {
+    //     let gallery = $('.gallery');
+    //     let wrap = $('<div class="gallery-wrap"></div>');
+    //     gallery.addClass('swiper');
+    //     gallery.append(wrap);
+    //
+    // }
+    // addGallerySlider()
 });
 
 

@@ -1,0 +1,132 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+                span.kb_sep 
+                    i.icon-arrow_right
+                span
+                    a(href="#")
+                        span Услуги
+                span.kb_sep 
+                    i.icon-arrow_right
+
+                span.kb_title Как зарегистрировать товарный знак в Казахстане
+
+    // end breadcrumbs
+
+    // begin singleBlog
+    section#singleBlog.singleBlog.section
+        .container_center
+
+            h1.section__title
+                span Как зарегистрировать<br> <b>товарный знак в Казахстане</b>
+            .singleBlog__desc
+                .singleBlog__info
+                    .singleBlog__item
+                        i.icon-calendar
+                        span 01.12. 2021
+                    .singleBlog__item
+                        i.icon-time
+                        span Читать примерно 3 минуты
+                .singleBlog__messenger
+                    .messenger
+                        .messenger__list
+                            .messenger__item
+                                a(href="#" target="_blank").messenger__link
+                                    i.icon-youtube
+                            .messenger__item
+                                a(href="#" target="_blank").messenger__link
+                                    i.icon-instagram
+            .singleBlog__wrap
+                .singleBlog__content
+                    .content
+                        h2 Заголовок
+                        p Lorem ipsum dolor sit amet, ссылка adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
+
+                        figure.wp-caption.alignnone
+                            img(src="../img/content_img.webp", alt="alt")
+                            figcaption.wp-caption-text Подпись к иллюстрации
+
+                        br
+                        br
+                        h3 Заголовок
+                        ul
+                            li Lorem ipsum dolor sit amet, adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. 
+                            li Lorem ipsum dolor sit amet, adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.
+
+
+                        p Lorem ipsum dolor sit amet, ссылка adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. 111
+                        p
+                            img(src="../img/content_img_sm.webp", alt="alt").alignright
+
+                        h2 Картинка справа,<br> текст слева
+
+                        p Lorem ipsum dolor sit amet, ссылка adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
+                        p Lorem ipsum dolor sit amet, ссылка adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
+                        br
+
+
+                        p
+                            img(src="../img/content_img_sm.webp", alt="alt").alignleft
+
+                        h2 И наоборот, если информации больше
+
+                        p Lorem ipsum dolor sit amet, ссылка adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
+
+                        p Lorem ipsum dolor sit amet, ссылка adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
+
+                        br
+
+                        blockquote
+                            p Если нужно выделить главный смысл или цитату из статьи
+                        br
+
+
+
+
+
+
+                    .gallery-wrap
+                        .gallery.swiper.gallery-swiper-js
+                            .swiper-wrapper
+                                each item in [1,2,3,4]
+
+                                    figure.gallery-item.swiper-slide
+                                        .gallery-icon
+                                            a(href="../img/content_img.webp" data-fancybox data-type="image")
+                                                img(src="../img/content_img.webp", alt="alt")
+                        .gallery-arrows
+                            i.icon-arrow_left
+                            i.icon-arrow_right
+
+
+                .singleBlog__aside
+                    .aside.aside_bg
+                        .aside__heading
+                            span Скачайте инструкцию бесплатно:
+                        p Как самостоятельно провести патентный поиск в Интернете
+                        .aside__form
+                            form.form
+                                .form__row.form__row_icon
+                                    input(type="tel" class="tel" required placeholder="Введите ваш номер в WhatsApp")
+                                .form__row
+                                    button.btn.btn_didisabled_js(type="submit") Введите ваш номер в WhatsApp
+                                .form__row
+                                    .form__privacy
+                                        label.form__check
+                                            input.check_checked_js(type="checkbox" checked="checked")
+                                            span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
+
+
+
+
+    // end singleBlog
