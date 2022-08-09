@@ -1,0 +1,196 @@
+.success {
+    padding-bottom: 0;
+
+    @media (min-width: 768px) {
+        padding-top: 13em!important;
+    }
+
+    .section__title {
+        @media (min-width: 768px) {
+            margin-bottom: 2em;
+        }
+    }
+
+    .section__subtitle {
+        @media (min-width: 768px) {
+            line-height: 1.5;
+            margin-bottom: 3.125em;
+        }
+    }
+
+    &__wrap {
+        position: relative;
+        height: 53.75em;
+
+        @media (min-width: 768px) {}
+    }
+
+    &__content {
+        text-align: center;
+        @media (min-width: 768px) {
+            text-align: inherit;
+            width: 54.25em;
+            margin-left: 6em;
+            padding-top: 4em;
+        }
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        background-color: $color_white;
+        border-radius: 6.25em;
+        width: fit-content;
+        padding: 0.5em 2em 0.5em 0.5em;
+
+        font-size: 0.5em;
+        margin: 0 auto 1.75em;
+        @media (min-width: 768px) {
+            margin: 0 0 1.75em;
+            font-size: 1em;
+        }
+
+        i {
+            flex: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3.5em;
+            height: 3.5em;
+            border-radius: 50%;
+            font-size: 1em;
+            background-color: $color_success;
+            color: $color_white;
+            margin-right: 1.5em;
+        }
+
+        span {
+            letter-spacing: 0.02em;
+            font-size: 1.25em;
+            font-weight: 500;
+        }
+    }
+
+    &__desc {
+        margin-bottom: 1em;
+        @media (min-width: 768px) {
+            margin-bottom: 4.25em;
+
+        }
+
+        span {
+            letter-spacing: 0.02em;
+            font-size: 0.75em;
+            font-weight: 500;
+            @media (min-width: 768px) {
+                font-size: 1.25em;
+
+            }
+        }
+    }
+
+    &__action {
+        margin-bottom: 2em;
+        @media (min-width: 768px) {
+            margin-bottom: 5.375em;
+
+        }
+
+        .btn {
+            margin-bottom: 1em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @media (min-width: 768px) {
+                width: 22.875em;
+                margin-bottom: 0;
+                margin-right: 3.625em;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    &__back {
+        letter-spacing: 0.05em;
+
+        a {
+            position: relative;
+            color: $color_warning;
+            text-decoration: none;
+            font-size: 0.8125em;
+            font-weight: 700;
+
+            &:after {
+                display: inline-block;
+                content: '\e903';
+                font-family: 'icomoon';
+                font-size: 0.5em;
+                margin-left: 1em;
+                transform: translateY(-0.025em);
+
+            }
+
+        }
+    }
+
+    &__lider {
+        width: 4em;
+        position: absolute;
+        bottom: 14em;
+        right: 13em;
+        z-index: 1;
+
+        @media (min-width: 768px) {
+            width: 12em;
+            position: absolute;
+            bottom: 30em;
+            right: 23em;
+            z-index: 1;
+
+        }
+
+        .lider__icon {
+            margin-left: auto;
+        }
+
+        .lider__info,
+        .lider__name {
+            text-align: right;
+
+        }
+    }
+
+    &__persone {
+        position: absolute;
+        bottom: 0;
+        right: -1em;
+        width: 18.75em;
+        height: 25.3125em;
+
+        background-image: url("../img/success_persone.webp");
+        background-position: right;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @media (min-width: 48em) {
+            background-position: center;
+            bottom: 0;
+            right: -6.25em;
+            width: 39.6875em;
+            height: 53.75em;
+        }
+    }
+
+}
+
+.success_bg {
+    background-image: url("../img/success_bg.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

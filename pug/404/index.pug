@@ -1,0 +1,36 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+
+
+block content
+    // begin breadcrumbs
+    .breadcrumbs.section
+        .container_center
+            .kama_breadcrumbs
+                span
+                    a(href="#")
+                        span Главная
+                span.kb_sep 
+                    i.icon-arrow_right
+                span.kb_title 404
+    // end breadcrumbs
+
+    // begin notfound
+    section#notfound.notfound.section
+        .container_center
+            .notfound__content
+                .notfound__left
+                    h1.section__title
+                        span Страница <b>не найдена</b>
+                    .section__subtitle
+                        span Кажется, что-то пошло не так! Запрашиваемая страница не существует. Возможно, она устарела или была удалена.
+                    .notfound__button
+                        a.btn.btn_warning(href="#") Вернуться на главную
+                    .section__subtitle
+                        span или позвоните нам, чтобы сообщить об ошибке <a href="tel:+77712101111" >+7 (771) 210-11-11</a>
+                .notfound__right
+                    span 404
+
+
+    // end notfound

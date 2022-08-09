@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/twentytwenty.css" />
+    <link rel="stylesheet" type="text/css" href="../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aos.css" />
+    <link rel="stylesheet" type="text/css" href="../css/fancybox.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+</head>
+
+<body>
+    <div class="preloader" id="preloader"><svg class="ap" viewBox="0 0 128 256" width="128px" height="256px" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="ap-grad1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="hsl(192,73%,40%)" />
+                    <stop offset="100%" stop-color="hsl(192,73%,26%)" />
+                </linearGradient>
+                <linearGradient id="ap-grad2" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="hsl(192,73%,45%)" />
+                    <stop offset="50%" stop-color="hsl(192,73%,40%)" />
+                    <stop offset="100%" stop-color="hsl(192,73%,26%)" />
+                </linearGradient>
+            </defs>
+            <circle class="ap__ring" r="56" cx="64" cy="192" fill="none" stroke="#ddd" stroke-width="16" stroke-linecap="round" />
+            <circle class="ap__worm1" r="56" cx="64" cy="192" fill="none" stroke="url(#ap-grad1)" stroke-width="16" stroke-linecap="round" stroke-dasharray="87.96 263.89" />
+            <path class="ap__worm2" d="M120,192A56,56,0,0,1,8,192C8,161.07,16,8,64,8S120,161.07,120,192Z" fill="none" stroke="url(#ap-grad2)" stroke-width="16" stroke-linecap="round" stroke-dasharray="87.96 494" />
+        </svg>
+    </div>
+    <div class="wrapper" id="wrapper">
+        <header class="header">
+            <div class="header__content">
+                <!-- start header__top-->
+                <div class="header__top">
+                    <div class="header__logo"><a class="logo" href="/"><img src="/img/logo.png" /></a>
+                        <div class="logo__info desktop"><span><b>Патентный центр.</b> Работаем по всему Казахстану с 2015 года</span></div>
+                    </div>
+                    <div class="header__language desktop">
+                        <div class="language">
+                            <div class="language__title"><span>выбор языка</span></div>
+                            <div class="language__switch">
+                                <label class="switch">
+                                    <input type="checkbox" id="checkbox" name="languageCheckbox" /><span></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__action">
+                        <div class="header__phone">
+                            <div class="phone">
+                                <div class="phone__time"><span>Звоните, Пн-ВС 10:00 - 21:00</span></div>
+                                <div class="phone__link"><a href="tel:+77712101111">+7 (771) 210-11-11</a></div>
+                                <div class="phone__action dotted"><a class="call_modal_js" href="#">Перезвоним за 30 сек</a></div>
+                            </div>
+                        </div>
+                        <div class="header__mail desktop"><a href="mailto:info@eurasianbrands.com">info@eurasianbrands.com</a></div>
+                        <div class="header__social">
+                            <div class="social">
+                                <div class="social__label desktop"><span>Время ответа всего <b>15 секунд</b></span></div>
+                                <div class="social__button"><a href="https://wa.me/+77712101111" target="_blank"><i class="icon-whatsapp"></i><span class="desktop">Написать в WhatsApp</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end header__top-->
+                <!-- start header__bottom-->
+                <div class="header__bottom">
+                    <div class="logo__info mobile"><span><b>Патентный центр.</b> Работаем по всему Казахстану с 2015 года</span></div>
+                    <div class="header__mail mobile"><a href="mailto:info@eurasianbrands.com">info@eurasianbrands.com</a></div>
+                    <nav class="navbar" id="navbar">
+                        <ul class="menu">
+                            <li class="menu-item current-menu-item"><a href="#">Главная</a></li>
+                            <li class="menu-item menu-item-has-children"><a href="#">услуги<i class="icon-drop"></i></a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item menu-item-has-children"><a>Товарные знаки<i class="icon-drop"></i></a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a href="#">Регистрация товарного знака</a></li>
+                                            <li class="menu-item"><a href="#">Продление срока регистрации</a></li>
+                                            <li class="menu-item"><a href="#">Проверка на уникальность</a></li>
+                                            <li class="menu-item"><a href="#">Международная регистрация по Мадридской системе и за рубежом</a></li>
+                                            <li class="menu-item"><a href="#">Регистрация общеизвестного товарного знака</a></li>
+                                            <li class="menu-item"><a href="#">Регистрация наименования места происхождения товара</a></li>
+                                            <li class="menu-item"><a href="#">Ответ на уведомление или отказ в регистрации</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item"><a>Авторские права</a></li>
+                                    <li class="menu-item"><a>Патенты</a></li>
+                                    <li class="menu-item"><a>Логотипы</a></li>
+                                    <li class="menu-item"><a>Внесенив таможенный реестр</a></li>
+                                    <li class="menu-item"><a>Блокировка</a></li>
+                                    <li class="menu-item"><a>Суды и споры</a></li>
+                                    <li class="menu-item menu-item-has-children"><a>Битрикс24<i class="icon-drop"></i></a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a href="#">Регистрация общеизвестного товарного знака</a></li>
+                                            <li class="menu-item"><a href="#">Регистрация наименования места происхождения товара</a></li>
+                                            <li class="menu-item"><a href="#">Ответ на уведомление или отказ в регистрации </a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item important"><a>Правовые консультации</a></li>
+                                    <li class="menu-item"><a>Депозитарий авторских прав </a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="#">рассрочка и оплата</a></li>
+                            <li class="menu-item info"><a href="#">кейсы<span>+3</span></a></li>
+                            <li class="menu-item"><a href="#">блог</a></li>
+                            <li class="menu-item"><a href="#">о компании</a></li>
+                            <li class="menu-item"><a href="#">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- end header__bottom-->
+                <div class="header__toggle"></div>
+            </div>
+        </header>
+        <main class="main_content notfound_bg">
+            <!-- begin breadcrumbs-->
+            <div class="breadcrumbs section">
+                <div class="container_center">
+                    <div class="kama_breadcrumbs"><span><a href="#"><span>Главная</span></a></span><span class="kb_sep"> <i class="icon-arrow_right"></i></span><span class="kb_title">404</span></div>
+                </div>
+            </div>
+            <!-- end breadcrumbs-->
+            <!-- begin notfound-->
+            <section class="notfound section" id="notfound">
+                <div class="container_center">
+                    <div class="notfound__content">
+                        <div class="notfound__left">
+                            <h1 class="section__title"><span>Страница <b>не найдена</b></span></h1>
+                            <div class="section__subtitle"><span>Кажется, что-то пошло не так! Запрашиваемая страница не существует. Возможно, она устарела или была удалена.</span></div>
+                            <div class="notfound__button"><a class="btn btn_warning" href="#">Вернуться на главную</a></div>
+                            <div class="section__subtitle"><span>или позвоните нам, чтобы сообщить об ошибке <a href="tel:+77712101111">+7 (771) 210-11-11</a></span></div>
+                        </div>
+                        <div class="notfound__right"><span>404</span></div>
+                    </div>
+                </div>
+            </section>
+            <!-- end notfound-->
+        </main>
+        <!-- begin sidebar-->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar__toggle sidebar__toggle_hide"></div>
+            <div class="sidebar__list sidebar__list_hide"><a class="sidebar__item call_modal_js" href="#">
+                    <div class="sidebar__content">
+                        <div class="sidebar__icon"><i class="icon-phone"></i></div>
+                        <div class="sidebar__text"><span>Получить консультацию</span></div>
+                    </div>
+                </a><a class="sidebar__item sentence_modal_js" href="#">
+                    <div class="sidebar__content">
+                        <div class="sidebar__icon"><i class="icon-pdf"></i></div>
+                        <div class="sidebar__text"><span>Скачать презентацию с ценами</span></div>
+                    </div>
+                </a><a class="sidebar__item" href="https://wa.me/+77712101111" target="_blank">
+                    <div class="sidebar__content">
+                        <div class="sidebar__icon"><i class="icon-whatsapp"></i></div>
+                        <div class="sidebar__text"><span>Написать в WhatsApp</span></div>
+                    </div>
+                </a></div>
+        </div>
+        <!-- end sidebar-->
+        <!-- begin toTop-->
+        <div class="toTop"><a href="#wrapper"> <i class="icon-drop_top"></i><span class="desktop">Наверх </span></a></div>
+        <!-- end toTop-->
+        <footer class="footer">
+            <div class="footer__content">
+                <div class="footer__row">
+                    <div class="footer__col">
+                        <div class="footer__logo"><a href="/"><img src="/img/logo.png" /></a></div>
+                        <div class="footer__desc"><span><b>Патентный центр.</b> Работаем<br> по всему Казахстану с 2015 года</span></div>
+                        <div class="footer__action dotted"><a href="#">Смотреть сертификаты</a></div>
+                        <div class="footer__messenger">
+                            <div class="messenger">
+                                <div class="messenger__list">
+                                    <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon-youtube"></i></a></div>
+                                    <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon-instagram"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__col">
+                        <div class="footer__label"> <span>Навигация по сайту<i class="icon-drop mobile"></i></span></div>
+                        <ul class="menu">
+                            <li class="menu-item"><a href="#">Главная</a></li>
+                            <li class="menu-item"><a href="#">Услуги</a></li>
+                            <li class="menu-item"><a href="#">Кейсы</a></li>
+                            <li class="menu-item"><a href="#">Блог</a></li>
+                            <li class="menu-item"><a href="#">Рассрочка и оплата</a></li>
+                            <li class="menu-item"><a href="#">О компании</a></li>
+                            <li class="menu-item"><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <div class="footer__label"> <span>Услуги<i class="icon-drop mobile"></i></span></div>
+                        <ul class="menu">
+                            <li class="menu-item"><a href="#">Регистрация товарного знака</a></li>
+                            <li class="menu-item"><a href="#">Регистрация авторских прав</a></li>
+                            <li class="menu-item"><a href="#">Получение патента</a></li>
+                            <li class="menu-item"><a href="#">Внесение в таможенный реестр</a></li>
+                            <li class="menu-item"><a href="#">Блокировка аккаунтов</a></li>
+                            <li class="menu-item"><a href="#">Правовая защита</a></li>
+                            <li class="menu-item"><a href="#">Составление и регистрация договоров</a></li>
+                            <li class="menu-item"><a href="#"></a></li>
+                            <li class="menu-item"><a href="#">Разработка логотипа</a></li>
+                        </ul>
+                        <div class="footer__action dotted desktop"><a href="#">Смотреть все услуги</a></div>
+                    </div>
+                    <div class="footer__col">
+                        <div class="footer__label"> <span>Преимущества<i class="icon-drop mobile"></i></span></div>
+                        <ul class="menu menu_mark">
+                            <li class="menu-item"><span>100% гарантия регистрации товарного знака</span></li>
+                            <li class="menu-item"><span>Беспроцентная рассрочка</span></li>
+                            <li class="menu-item"><span>Профессионалы своего дела</span></li>
+                            <li class="menu-item"><span>Бесплатная проверка ТЗ</span></li>
+                            <li class="menu-item"><span>1000+ отзывов</span></li>
+                            <li class="menu-item"><span>97% получают документы с первого раза</span></li>
+                            <li class="menu-item"><span>7 лет на рынке</span></li>
+                            <li class="menu-item"><span>3000+ успешных дел</span></li>
+                            <li class="menu-item"><span>Стратегический подход</span></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <div class="footer__label"><span>Контакты</span></div>
+                        <div class="footer__phone">
+                            <div class="phone">
+                                <div class="phone__time"><span>Звоните, Пн-ВС 10:00 - 21:00</span></div>
+                                <div class="phone__link"><a href="tel:+77712101111">+7 (771) 210-11-11</a></div>
+                            </div>
+                        </div>
+                        <div class="footer__mail"><a href="mailto:info@eurasianbrands.com">info@eurasianbrands.com</a></div>
+                        <div class="footer__social">
+                            <div class="social">
+                                <div class="social__label"><span>Время ответа всего <b>15 секунд</b></span></div>
+                                <div class="social__button"><a href="https://wa.me/+77712101111" target="_blank"><i class="icon-whatsapp"></i><span class="desktop">Написать в WhatsApp</span></a></div>
+                            </div>
+                        </div>
+                        <div class="footer__action dotted"><a href="#">Все контакты</a></div>
+                    </div>
+                </div>
+                <div class="footer__row">
+                    <div class="footer__col"><span>© <script type="text/javascript">
+                                document.write(new Date().getFullYear());
+
+                            </script> Международный Патентный Центр "EURASIAN BRANDS"</span></div>
+                    <div class="footer__col"><span>Материалы с сайта защищены законом Республики Казахстан<br> об авторских и смежных правах. Копирование запрещено.<br> Сайт не является договором офферты</span></div>
+                    <div class="footer__col"><span>Сделано с любовью в <a href="https://paradigma.website/" target="_blank">Paradigma.website</a></span></div>
+                </div>
+            </div>
+        </footer>
+        <!-- Begin Modal stop-->
+        <div class="modal fade stop" id="stop">
+            <div class="modal-dialog">
+                <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal" id="closeModalStop"></a>
+                    <div class="modal-header">
+                        <div class="section__title"><span>СТОЙТЕ! <b>НЕ УХОДИТЕ!</b></span></div>
+                        <div class="modal-label"><span>Скачайте инструкцию от экспертов Eurasian Brands</span></div>
+                        <div class="modal-title"><span><b>Как зарегистрировать товарный знак с первого раза:</b> 10 причин отказа Казпатента и как их избежать</span></div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-form">
+                            <form class="form">
+                                <div class="form__label"><span>Куда прислать презентацию?</span></div>
+                                <div class="form__row">
+                                    <select class="select" data-placeholder="Whatsapp">
+                                        <option value=""></option>
+                                        <option value="whatsapp">Whatsapp</option>
+                                        <option value="Viber">Viber</option>
+                                        <option value="Telegram">Telegram</option>
+                                    </select>
+                                </div>
+                                <div class="form__row">
+                                    <input class="tel" type="tel" required="required" placeholder="Введите ваш номер" />
+                                </div>
+                                <div class="form__row">
+                                    <button class="btn btn_didisabled_js" type="submit">Получить презентацию с ценами на услуги</button>
+                                </div>
+                                <div class="form__row">
+                                    <div class="form__privacy">
+                                        <label class="form__check">
+                                            <input class="check_checked_js" type="checkbox" checked="checked" /><span>Нажимая кнопку вы соглашаетесь с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End modal stop-->
+        <!-- Begin Modal map-->
+        <div class="modal fade map" id="map">
+            <div class="modal-dialog">
+                <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+                    <div class="modal-body">
+                        <div class="map__content">
+                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A517f80209eff5be70d54d90135057484989abca4bf803d75b37acf02aee4b0d4&amp;amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End modal map-->
+        <!-- Begin Modal call-->
+        <div class="modal fade call" id="call">
+            <div class="modal-dialog">
+                <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+                    <div class="modal-header">
+                        <div class="modal-title"> <span>Оставьте номер<br> <b>позвоним за 15 сек</b></span></div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-form">
+                            <form class="form">
+                                <div class="form__row">
+                                    <input class="tel" type="tel" required="required" placeholder="Введите ваш номер" />
+                                </div>
+                                <div class="form__row">
+                                    <button class="btn btn_didisabled_js" type="submit">Жду звонка</button>
+                                </div>
+                                <div class="form__row">
+                                    <div class="form__privacy">
+                                        <label class="form__check">
+                                            <input class="check_checked_js" type="checkbox" checked="checked" /><span>Нажимая кнопку вы соглашаетесь с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End modal call-->
+        <!-- Begin Modal sentence-->
+        <div class="modal fade sentence" id="sentence">
+            <div class="modal-dialog">
+                <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+                    <div class="modal-header">
+                        <div class="modal-title"><span>Подготовим <b>прайс<br> и коммерческое<br> предложение</b> для вас</span></div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-form">
+                            <form class="form">
+                                <div class="form__row">
+                                    <input class="tel" type="tel" required="required" placeholder="Введите ваш номер" />
+                                </div>
+                                <div class="form__row">
+                                    <button class="btn btn_didisabled_js" type="submit">Жду звонка</button>
+                                </div>
+                                <div class="form__row">
+                                    <div class="form__privacy">
+                                        <label class="form__check">
+                                            <input class="check_checked_js" type="checkbox" checked="checked" /><span>Нажимая кнопку вы соглашаетесь с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="sentence__more desktop">
+                        <div class="sentence__name"><span>Айя Ибрагимовна</span></div>
+                        <div class="sentence__desc"><span>эксперт по товарным знакам</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End modal sentence-->
+        <!-- Begin Modal modalVideo-->
+        <div class="modal fade modalVideo" id="modalVideo">
+            <div class="modal-dialog">
+                <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+                    <div class="modal-body">
+                        <div class="modalVideo__wraper"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End modal modalVideo-->
+        <script src="../js/jquery.js"></script>
+        <script src="../js/jquery.maskedinput.min.js"></script>
+        <script src="../js/modal.js"></script>
+        <script src="../js/swiper-bundle.min.js"></script>
+        <script src="../js/slider.js"></script>
+        <script src="../js/select2.min.js"></script>
+        <script src="../js/jquery.event.move.js"></script>
+        <script src="../js/jquery.twentytwenty.js"></script>
+        <script src="../js/jquery.marquee.min.js"></script>
+        <script src="../js/aos.js"></script>
+        <script src="../js/fancybox.min.js"></script>
+        <script src="../js/function.js"></script>
+    </div>
+</body>
+
+</html>

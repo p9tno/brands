@@ -1,0 +1,36 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+
+
+block content
+    // begin success
+    section#success.success.section
+        .container_center
+            .success__wrap
+                .success__content
+                    .success__label
+                        i.icon-check_mark
+                        span Форма успешно отправлена
+                    h1.section__title
+                        span Скоро свяжемся с вами
+                    .section__subtitle
+                        span Если Вы оставили заявку в нерабочее время — начнем следующий рабочий день со звонка Вам.
+                    .success__desc
+                        span А пока ожидаете — подписывайтесь на наши соц. сети.
+                    .success__action
+                        a.btn.btn_warning(href="#") Перейти в Instagram 
+                        a.btn(href="#") Перейти на YouTube
+                    .success__back
+                        a(href="#") Вернуться на главную
+                    .success__lider
+
+                        .lider__icon
+                            i.icon-arrow_deg
+                        .lider__name
+                            span Турсунов Куаныш Абилкасымович
+                        .lider__info
+                            span патентный поверенный Республики Казахстан. Основатель и руководитель компании Eurasian Brands 
+                    .success__persone
+
+    // end success

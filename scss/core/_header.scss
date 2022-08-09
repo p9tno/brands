@@ -6,13 +6,16 @@
 	left: 0;
 	width: 100%;
 
-	background-color: $color_white;
 	padding-top: 0.375em;
 	padding-bottom: 1em;
+	background-color: $color_white;
 
 	@media (min-width: 768px) {
+		background-color: transparent;
+
 		&.stiky {
 			padding-top: 0.75em;
+			background-color: $color_white;
 		}
 		padding-top: 2em;
 		padding-bottom: 0;
