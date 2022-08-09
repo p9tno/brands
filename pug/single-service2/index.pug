@@ -25,7 +25,7 @@ block content
 
     // begin head
     section#head.head.section
-        .head__bg(style="background-image: url('../img/advantage_bg.webp')")
+        .head__bg(style="background-image: url('../img/single_service_2.webp')")
             .container_center
                 .head__wrap
                     .head__top
@@ -424,7 +424,8 @@ block content
     // begin offer
     section#offer.offer.section
         .container_center
-            .offer__bg(style="background-image: url('../img/ofter_bg.webp')")
+            .offer__bg
+                .offer__part.offer__part_top
                 h2.section__title(data-aos="fade-up")
                     span Подготовим <b>прайс-лист и коммерческое предложение</b> для вас
                 .section__subtitle.section__subtitle_sm(data-aos="fade-up")
@@ -447,6 +448,7 @@ block content
                         .offer__button
                             a(href="https://wa.me/+77712101111" target="_blank").btn.btn_whatsapp.btn_success Спросить у нас в WhatsApp
                                 span время ответа 15 секунд
+                    .offer__part.offer__part_bottom
 
 
 
@@ -649,8 +651,8 @@ block content
                                     input.check_checked_js(type="checkbox" checked="checked")
                                     span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
 
-
-                .consultation__lider.desktop
+                .consultation__person
+                .consultation__lider
                     .lider__icon
                         i.icon-arrow_deg
                     .lider__name

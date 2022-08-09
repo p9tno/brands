@@ -10,10 +10,13 @@
     }
 
     &__bg {
+        position: relative;
+        overflow: hidden;
+        background-image: url("../img/offer_bg.webp");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        padding: 2em 1em;
+        padding: 0 1em;
         @media (min-width: 768px) {
             padding: 6.25em;
 
@@ -64,6 +67,47 @@
 
             }
         }
+    }
+
+    &__part {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        @media (min-width: 768px) {
+            position: absolute;
+
+        }
+    }
+
+    &__part_top {
+        background-image: url("../img/offer_part_top.webp");
+        top: 0;
+        right: 0;
+        width: 17.25em;
+        height: 10.4375em;
+
+        @media (min-width: 768px) {
+            width: 33.125em;
+            height: 20em;
+        }
+    }
+
+    &__part_bottom {
+        background-image: url("../img/offer_part_bottom.webp");
+        bottom: 0;
+        right: 0;
+        width: 17.25em;
+        height: 11.5em;
+        margin-top: 1em;
+
+        @media (min-width: 768px) {
+            right: -1em;
+            width: 39.375em;
+            height: 26.25em;
+            margin-top: 0;
+        }
+
     }
 
 }

@@ -1,8 +1,32 @@
 .sidebar {
     position: fixed;
-    top: 25%;
+    top: 50%;
+    transform: translateY(-50%);
     right: 0;
     z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: right 0.3s;
+    width: 3.9em;
+    min-height: 4em;
+
+    @media (min-width: 768px) {
+        min-height: 8em;
+        width: 7.8125em;
+
+    }
+
+    &_hide {
+        right: -3.9em;
+        @media (min-width: 768px) {
+            right: -7.8125em;
+        }
+
+    }
 
     &__toggle {
         display: flex;
@@ -11,12 +35,10 @@
         background-color: $color_info;
         border-radius: 50%;
 
-        margin-right: 0.75em;
         width: 1.5em;
         height: 1.5em;
 
         @media (min-width: 768px) {
-            margin-right: 2.95em;
             width: 2.0625em;
             height: 2.0625em;
 
@@ -50,32 +72,60 @@
 
     }
 
+    &__collapse {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color_info;
+        border-radius: 50%;
+        width: 1.5em;
+        height: 1.5em;
+
+        @media (min-width: 768px) {
+            width: 2.0625em;
+            height: 2.0625em;
+
+        }
+
+        cursor: pointer;
+
+        &:before {
+            content: '\e924';
+            font-family: 'icomoon';
+            color: $color_white;
+            transform: scale(1);
+            // margin-left: 0;
+            transition: 0.3s;
+
+            font-size: 1em;
+            @media (min-width: 768px) {
+                font-size: 1.25em;
+
+            }
+        }
+
+        &_collapse {
+            &:before {
+                transform: scale(-1);
+            }
+        }
+
+    }
+
     &__list {
-        position: absolute;
+        position: relative;
         right: 0;
         display: flex;
         flex-direction: column;
+        width: 100%;
 
         background: rgba(255, 255, 255, 0.75);
         box-shadow: 0 0 100px rgba(0, 0, 0, 0.05);
         border-radius: 1em;
 
-        width: 3.9em;
-        top: 2.5em;
-
+        margin: 1em 0;
         @media (min-width: 768px) {
-            width: 7.8125em;
-            top: 4.375em;
-        }
-
-        transition: right 0.3s;
-
-        &_hide {
-            right: -3.9em;
-            @media (min-width: 768px) {
-                right: -7.8125em;
-
-            }
+            margin: 2em 0;
         }
     }
 

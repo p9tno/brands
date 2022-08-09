@@ -294,26 +294,58 @@ $(document).ready(function() {
 
 
     // console.log(localStorage.getItem('statusSidebar'));
-    if (localStorage.getItem('statusSidebar') !== 'active') {
-        $('.sidebar__toggle').removeClass('sidebar__toggle_hide');
-        $('.sidebar__list').removeClass('sidebar__list_hide');
-    }
+    // if (localStorage.getItem('statusSidebar') !== 'active') {
+    //     $('.sidebar__toggle').removeClass('sidebar__toggle_hide');
+    //     $('.sidebar__list').removeClass('sidebar__list_hide');
+    // }
+
     function openSidebar() {
         $('.sidebar__toggle').click(function(event) {
             $('.sidebar__toggle').toggleClass('sidebar__toggle_hide');
-            $('.sidebar__list').toggleClass('sidebar__list_hide');
+            $('.sidebar__list').slideUp();
+            setTimeout(function(){
+              $('.sidebar').toggleClass('sidebar_hide');
+            }, 500);
+            setTimeout(function(){
+              $('.sidebar__list').slideDown();
+            }, 3000);
 
-            if (localStorage.getItem('statusSidebar') == 'active') {
-                localStorage.removeItem("statusSidebar", "active");
+            setTimeout(function(){
+              $('.sidebar').toggleClass('sidebar_hide');
+            }, 10000);
 
-            } else {
-                localStorage.setItem("statusSidebar", "active");
-                // console.log('сохранить пару ключ/значение.');
-            }
+
+
+
+
+            // if (localStorage.getItem('statusSidebar') == 'active') {
+            //     localStorage.removeItem("statusSidebar", "active");
+            //
+            // } else {
+            //     localStorage.setItem("statusSidebar", "active");
+            //     // console.log('сохранить пару ключ/значение.');
+            // }
+
         });
-    };
-    openSidebar();
 
+        $('.sidebar__collapse').click(function(event) {
+            console.log('collapse');
+
+            $('.sidebar__list').toggleClass('sidebar__list_collapse');
+            $('.sidebar__collapse').toggleClass('sidebar__collapse_collapse');
+
+
+            if ($('.sidebar__list').hasClass('sidebar__list_collapse')) {
+                $('.sidebar__list').slideUp();
+            } else {
+                $('.sidebar__list').slideDown();
+            }
+
+        });
+
+    };
+
+    openSidebar();
 
 
 

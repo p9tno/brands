@@ -41,23 +41,23 @@
 
     }
 
-    &__bg {
-        background-position: 65%;
-        background-size: cover;
-        background-repeat: no-repeat;
-
-        @media (min-width: 768px) {
-            background-position: center;
-
-        }
-    }
+    // &__bg {
+    //     background-position: 65%;
+    //     background-size: cover;
+    //     background-repeat: no-repeat;
+    //
+    //     @media (min-width: 768px) {
+    //         background-position: center;
+    //
+    //     }
+    // }
 
     &__content {
+        position: relative;
+        background-color: #F9FAFD;
         padding: 2em 1em;
 
         @media (min-width: 768px) {
-            position: relative;
-            // padding: 6.25em 50em 6.25em 6.25em;
             padding: 6.25em;
 
         }
@@ -100,6 +100,35 @@
             }
         }
 
+    }
+
+    &__person {
+        border: 1px solid #000;
+        position: absolute;
+        bottom: 0;
+        right: 1em;
+        width: 38.125em;
+        height: 56.25em;
+        background-image: url("../img/individual_person.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    &__part {
+        border: 1px solid #000;
+        position: absolute;
+        bottom: 0;
+        right: 1em;
+        width: 52.8125em;
+        /* 845/16 */
+        height: 25.9375em;
+        /* 415/16 */
+        background-image: url("../img/individual_part.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
 }

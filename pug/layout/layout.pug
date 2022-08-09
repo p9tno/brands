@@ -48,8 +48,10 @@ html(lang="en")
 
             // begin sidebar
             #sidebar.sidebar
-                .sidebar__toggle.sidebar__toggle_hide
-                .sidebar__list.sidebar__list_hide
+                //- .sidebar__toggle.sidebar__toggle_hide
+                //- .sidebar__list.sidebar__list_hide
+                .sidebar__toggle
+                .sidebar__list
                     a(href="#").sidebar__item.call_modal_js
                         .sidebar__content
                             .sidebar__icon
@@ -70,6 +72,7 @@ html(lang="en")
                                 i.icon-whatsapp
                             .sidebar__text
                                 span Написать в WhatsApp
+                .sidebar__collapse
 
             // end sidebar
 
