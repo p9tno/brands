@@ -152,12 +152,12 @@
                   <ul>
                     <li>Lorem ipsum dolor sit amet, adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. </li>
                     <li>Lorem ipsum dolor sit amet, adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.</li>
-                  </ul>
-                  <p>Lorem ipsum dolor sit amet, ссылка adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. 111</p>
+                  </ul><br/><br/>
+                  <p>Lorem ipsum dolor sit amet, ссылка adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. 111</p><br/>
                   <p><img class="alignright" src="../img/content_img_sm.webp" alt="alt"/></p>
                   <h2>Картинка справа,<br> текст слева</h2>
                   <p>Lorem ipsum dolor sit amet, ссылка adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.</p>
-                  <p>Lorem ipsum dolor sit amet, ссылка adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.</p><br/>
+                  <p>Lorem ipsum dolor sit amet, ссылка adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.</p><br/><br/><br/>
                   <p><img class="alignleft" src="../img/content_img_sm.webp" alt="alt"/></p>
                   <h2>И наоборот, если информации больше</h2>
                   <p>Lorem ipsum dolor sit amet, ссылка adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.</p>
@@ -197,7 +197,7 @@
                         <input class="tel" type="tel" required="required" placeholder="Введите ваш номер в WhatsApp"/>
                       </div>
                       <div class="form__row">
-                        <button class="btn btn_didisabled_js" type="submit">Введите ваш номер в WhatsApp</button>
+                        <button class="btn btn_didisabled_js" type="submit">Получить на WhatsApp</button>
                       </div>
                       <div class="form__row">
                         <div class="form__privacy">
@@ -222,10 +222,10 @@
             <div class="sidebar__content">
               <div class="sidebar__icon"><i class="icon-phone"></i></div>
               <div class="sidebar__text"><span>Получить консультацию</span></div>
-            </div></a><a class="sidebar__item sentence_modal_js" href="#">
+            </div></a><a class="sidebar__item modalQuiz_modal_js" href="#">
             <div class="sidebar__content">
-              <div class="sidebar__icon"><i class="icon-pdf"></i></div>
-              <div class="sidebar__text"><span>Скачать презентацию с ценами</span></div>
+              <div class="sidebar__icon"><i class="icon-calc"></i></div>
+              <div class="sidebar__text"><span>Калькулятор стоимости услуг</span></div>
             </div></a><a class="sidebar__item" href="https://wa.me/+77712101111" target="_blank">
             <div class="sidebar__content">
               <div class="sidebar__icon"><i class="icon-whatsapp"></i></div>
@@ -448,6 +448,37 @@
         </div>
       </div>
       <!-- End modal modalVideo-->
+      <!-- Begin Modal modalQuiz-->
+      <div class="modal fade modalQuiz" id="modalQuiz">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="modal-header">
+              <div class="modal-title"><span><b>Стоимость какой услуги<br> вам нужно рассчитать?</b></span></div>
+            </div>
+            <div class="modal-body">
+              <div class="modalQuiz__content">
+                <ul>
+                  <li><a href="#">Регистрация товарного знака</a></li>
+                  <li><a href="#">Регистрация наименования места происхождения товара</a></li>
+                  <li><a href="#">Международная регистрация  по Мадридской системе и за рубежом</a></li>
+                  <li><a href="#">Регистрация общеизвестного товарного знака</a></li>
+                </ul>
+                <div class="modalQuiz__subtitle"><span>Если нужно услуги нет в нашем калькуляторе - <br> просто напишите на WhatsApp</span></div>
+                <div class="modalQuiz__button mobile"><a class="btn btn_success btn_whatsapp_sm" href="#">Написать в WhatsApp</a></div>
+                <div class="modalQuiz__social_wrap desktop">
+                  <div class="modalQuiz__social">
+                    <div class="social">
+                      <div class="social__label"><span>Время ответа всего <b>15 секунд</b></span></div>
+                      <div class="social__button"><a href="https://wa.me/+77712101111" target="_blank"><i class="icon-whatsapp"></i><span class="desktop">Написать в WhatsApp</span></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal modalQuiz-->
       <script src="../js/jquery.js"></script>
       <script src="../js/jquery.maskedinput.min.js"></script>
       <script src="../js/modal.js"></script>

@@ -51,24 +51,25 @@
             font-family: 'icomoon';
             font-size: 0.75em;
             color: $color_white;
-            transform: rotate(0);
+            // transform: rotate(0);
+            transform: rotate(45deg);
             margin-left: 0;
-            transition: 0.3s;
+            // transition: 0.3s;
 
         }
 
-        &_hide {
-            &:before {
-                transform: rotate(45deg);
-                margin-left: -0.05em;
-
-                @media (min-width: 768px) {
-                    margin-left: -0.125em;
-
-                }
-
-            }
-        }
+        // &_hide {
+        //     &:before {
+        //         transform: rotate(45deg);
+        //         margin-left: -0.05em;
+        //
+        //         @media (min-width: 768px) {
+        //             margin-left: -0.125em;
+        //
+        //         }
+        //
+        //     }
+        // }
 
     }
 
@@ -211,10 +212,10 @@
         }
     }
 
-    i.icon-pdf {
-        font-size: 0.45em;
+    i.icon-calc {
+        font-size: 0.75em;
         @media (min-width: 768px) {
-            font-size: 0.75em;
+            font-size: 1.25em;
 
         }
 

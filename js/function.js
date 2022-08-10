@@ -41,6 +41,14 @@ $(document).ready(function() {
     }
     showMap();
 
+    function showModalQuiz() {
+        $('.modalQuiz_modal_js').on('click', function (e) {
+            e.preventDefault();
+             $('#modalQuiz').modal('show');
+        });
+    }
+    showModalQuiz();
+
     function showSentence() {
         $('.sentence_modal_js').on('click', function (e) {
             e.preventDefault();
@@ -293,15 +301,28 @@ $(document).ready(function() {
     });
 
 
-    // console.log(localStorage.getItem('statusSidebar'));
-    // if (localStorage.getItem('statusSidebar') !== 'active') {
-    //     $('.sidebar__toggle').removeClass('sidebar__toggle_hide');
-    //     $('.sidebar__list').removeClass('sidebar__list_hide');
-    // }
 
     function openSidebar() {
+
+        console.log(localStorage.getItem('collapseSidebar'));
+        console.log(localStorage.getItem('hideSidebar'));
+
+        if (localStorage.getItem('collapseSidebar') !== 'collapse') {
+            $('.sidebar__collapse').addClass('sidebar__collapse_collapse');
+            $('.sidebar__list').addClass('sidebar__list_collapse');
+            $('.sidebar__list').slideUp(0);
+        }
+
+        if (localStorage.getItem('hideSidebar') !== 'hide') {
+            $('.sidebar').addClass('sidebar_hide');
+            setTimeout(function(){
+                $('.sidebar').removeClass('sidebar_hide');
+                localStorage.setItem("hideSidebar", "hide");
+            }, 20000);
+        }
+
+
         $('.sidebar__toggle').click(function(event) {
-            $('.sidebar__toggle').toggleClass('sidebar__toggle_hide');
             $('.sidebar__list').slideUp();
             setTimeout(function(){
               $('.sidebar').toggleClass('sidebar_hide');
@@ -312,24 +333,19 @@ $(document).ready(function() {
 
             setTimeout(function(){
               $('.sidebar').toggleClass('sidebar_hide');
-            }, 10000);
+          }, 60000);
 
+            if (localStorage.getItem('hideSidebar') == 'hide') {
+                localStorage.removeItem("hideSidebar", "hide");
 
-
-
-
-            // if (localStorage.getItem('statusSidebar') == 'active') {
-            //     localStorage.removeItem("statusSidebar", "active");
-            //
-            // } else {
-            //     localStorage.setItem("statusSidebar", "active");
-            //     // console.log('сохранить пару ключ/значение.');
-            // }
+            } else {
+                localStorage.setItem("hideSidebar", "hide");
+            }
 
         });
 
         $('.sidebar__collapse').click(function(event) {
-            console.log('collapse');
+            console.log(localStorage.getItem('collapseSidebar'));
 
             $('.sidebar__list').toggleClass('sidebar__list_collapse');
             $('.sidebar__collapse').toggleClass('sidebar__collapse_collapse');
@@ -339,6 +355,14 @@ $(document).ready(function() {
                 $('.sidebar__list').slideUp();
             } else {
                 $('.sidebar__list').slideDown();
+            }
+
+            if (localStorage.getItem('collapseSidebar') == 'collapse') {
+                localStorage.removeItem("collapseSidebar", "collapse");
+
+            } else {
+                localStorage.setItem("collapseSidebar", "collapse");
+                // console.log('сохранить пару ключ/значение.');
             }
 
         });

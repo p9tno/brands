@@ -119,40 +119,41 @@ block content
     // begin individual
     section#individual.individual.section
         .container_center
-            .individual__content
-                .individual__caption
-                    h2.section__title(data-aos="fade-up")
-                        span Закажите<br> <b>индивидуальную<br> ﻿проверку</b> товарного<br> знака, ﻿которая покажет<br> ﻿все риски
-                    .section__subtitle(data-aos="fade-up")
-                        span + получите консультацию эксперта<br> Eurasian Brands уже через минуту
-                .individual__form
-                    form.form
+            .individual__bg(style="background-image: url('../img/individual_bg_main.webp')")
+                .individual__content
+                    .individual__caption
+                        h2.section__title(data-aos="fade-up")
+                            span Закажите<br> <b>индивидуальную<br> ﻿проверку</b> товарного<br> знака, ﻿которая покажет<br> ﻿все риски
+                        .section__subtitle(data-aos="fade-up")
+                            span + получите консультацию эксперта<br> Eurasian Brands уже через минуту
+                    .individual__form
+                        form.form
 
-                        .form__row
-                            label.form__file Прикрепить файл
-                                //- span Прикрепить файл
-                                input(type="file" id="file-input" class="file-input" name="file")
+                            .form__row
+                                label.form__file Прикрепить файл
+                                    //- span Прикрепить файл
+                                    input(type="file" id="file-input" class="file-input" name="file")
 
-                        .form__row
-                            input(type="tel" class="tel" required placeholder="Введите ваш номер")
+                            .form__row
+                                input(type="tel" class="tel" required placeholder="Введите ваш номер")
 
-                        .form__row
-                            button.btn.btn_didisabled_js(type="submit") Заказать бесплатную проверку
+                            .form__row
+                                button.btn.btn_didisabled_js(type="submit") Заказать бесплатную проверку
 
-                        .form__row
-                            .form__privacy
-                                label.form__check
-                                    input.check_checked_js(type="checkbox" checked="checked")
-                                    span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
-                .individual__lider.desktop
-                    .lider__icon
-                        i.icon-arrow_deg
-                    .lider__name
-                        span Клёнова Айя Ибрагимовна
-                    .lider__info
-                        span эксперт по товарным знакам
-                .individual__person
-                .individual__part
+                            .form__row
+                                .form__privacy
+                                    label.form__check
+                                        input.check_checked_js(type="checkbox" checked="checked")
+                                        span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
+                    .individual__lider
+                        .lider__icon
+                            i.icon-arrow_deg
+                        .lider__name
+                            span Клёнова Айя Ибрагимовна
+                        .lider__info
+                            span эксперт по товарным знакам
+                    .individual__person.mobile(style="background-image: url('../img/individual_person.webp')")
+                    .individual__part.mobile
 
 
     // end individual

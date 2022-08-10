@@ -121,3 +121,35 @@
             .modal-body 
                 .modalVideo__wraper
 // End modal modalVideo
+
+
+// Begin Modal modalQuiz
+.modal.fade.modalQuiz#modalQuiz
+    .modal-dialog
+        .modal-content
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .modal-header
+                .modal-title
+                    span <b>Стоимость какой услуги<br> вам нужно рассчитать?</b>
+            .modal-body
+                .modalQuiz__content
+                    ul
+                        each item in ['Регистрация товарного знака', 'Регистрация наименования места происхождения товара', 'Международная регистрация  по Мадридской системе и за рубежом', 'Регистрация общеизвестного товарного знака',]
+                            li
+                                a(href="#")=item
+                    .modalQuiz__subtitle
+                        span Если нужно услуги нет в нашем калькуляторе - <br> просто напишите на WhatsApp
+
+                    .modalQuiz__button.mobile
+                        a(href="#").btn.btn_success.btn_whatsapp_sm Написать в WhatsApp
+                    .modalQuiz__social_wrap.desktop
+                        .modalQuiz__social
+                            .social
+                                .social__label
+                                    span Время ответа всего <b>15 секунд</b>
+                                .social__button
+                                    a(href="https://wa.me/+77712101111" target="_blank")
+                                        i.icon-whatsapp
+                                        span.desktop Написать в WhatsApp
+
+// End modal modalQuiz

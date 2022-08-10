@@ -1,4 +1,5 @@
 .individual {
+
     @media (min-width: 768px) {
         .section__title {
             line-height: 1.25;
@@ -21,12 +22,7 @@
     }
 
     &_full {
-        @media (max-width: 767px) {
-            .individual__bg {
-                background-position: 75%;
 
-            }
-        }
         @media (min-width: 768px) {
             .individual__form {
                 width: 100%;
@@ -41,21 +37,23 @@
 
     }
 
-    // &__bg {
-    //     background-position: 65%;
-    //     background-size: cover;
-    //     background-repeat: no-repeat;
-    //
-    //     @media (min-width: 768px) {
-    //         background-position: center;
-    //
-    //     }
-    // }
+    &__bg {
+        @media (max-width: 767px) {
+            background-image: none!important;
+        }
+        background: #F9FAFD;
+
+        @media (min-width: 768px) {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
 
     &__content {
         position: relative;
-        background-color: #F9FAFD;
-        padding: 2em 1em;
+        overflow: hidden;
+        padding: 2em 1em 0;
 
         @media (min-width: 768px) {
             padding: 6.25em;
@@ -80,8 +78,13 @@
     }
 
     &__lider {
+        position: absolute;
+        bottom: 17em;
+        left: 1em;
+        width: 3.5em;
         @media (min-width: 768px) {
-            position: absolute;
+            bottom: auto;
+            left: auto;
             top: 24em;
             right: 40em;
             width: 9.875em;
@@ -103,13 +106,11 @@
     }
 
     &__person {
-        border: 1px solid #000;
-        position: absolute;
+        position: relative;
         bottom: 0;
-        right: 1em;
-        width: 38.125em;
-        height: 56.25em;
-        background-image: url("../img/individual_person.webp");
+        right: 2.5em;
+        width: 18.75em;
+        height: 27.6875em;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -117,14 +118,11 @@
     }
 
     &__part {
-        border: 1px solid #000;
         position: absolute;
         bottom: 0;
-        right: 1em;
-        width: 52.8125em;
-        /* 845/16 */
-        height: 25.9375em;
-        /* 415/16 */
+        right: 0;
+        width: 17.25em;
+        height: 8.5em;
         background-image: url("../img/individual_part.webp");
         background-position: center;
         background-repeat: no-repeat;

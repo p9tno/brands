@@ -389,3 +389,145 @@
     }
 
 }
+
+.modalQuiz {
+    .modal-dialog {
+        @media (min-width: 768px) {
+            width: 50em;
+        }
+    }
+
+    .modal-content {
+
+        @media (min-width: 768px) {
+            padding: 3.5em 5.625em;
+            background-image: url("../img/modalQuiz_bg.webp");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 1px;
+
+        }
+    }
+
+    .modal-header {
+        text-align: center;
+    }
+
+    .modal-title {
+        line-height: 1.4;
+    }
+
+    &__content {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            @media (min-width: 768px) {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin: 0 -1em;
+            }
+
+            li {
+                margin-bottom: 1em;
+                @media (min-width: 768px) {
+                    margin: 0 1em 2em;
+                    width: calc(50% - 2em);
+
+                }
+
+            }
+
+            a {
+                position: relative;
+                display: inline-block;
+                text-decoration: none;
+                color: #282828;
+                font-size: 0.75em;
+                padding-left: 3em;
+
+                @media (min-width: 768px) {
+                    line-height: 1.5;
+                    font-size: 1em;
+                }
+
+                &:before {
+                    content: '\e91d';
+                    font-family: 'icomoon';
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 0.5em;
+                    width: 4em;
+                    height: 4em;
+                    border-radius: 0.875em;
+                    background-color: $color_white;
+                    color: #C6C6C6;
+
+                    @media (min-width: 768px) {
+                        transition: 0.3s;
+                    }
+                }
+
+                @media (min-width: 768px) {
+                    &:hover {
+                        color: $color_info;
+
+                        &:before {
+                            background-color: $color_info;
+                            color: $color_white;
+
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+    }
+
+    &__subtitle {
+        text-align: center;
+        margin-bottom: 0.75em;
+        line-height: 1;
+        @media (min-width: 768px) {
+            line-height: 1.65;
+            margin-bottom: 1.625em;
+
+        }
+
+        span {
+            font-size: 0.7em;
+            font-weight: 500;
+            @media (min-width: 768px) {
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    &__button {
+        text-align: center;
+    }
+
+    @media (min-width: 768px) {
+        &__social_wrap {
+            position: relative;
+            height: 3.75em;
+        }
+
+        &__social {
+            position: absolute;
+            top: 0;
+            left: 14em;
+        }
+    }
+
+}
