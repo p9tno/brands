@@ -1,0 +1,757 @@
+extends ../layout/layout.pug
+block variable
+    -var path = '../';
+
+
+block content
+
+    // begin quiz
+    section#quiz.quiz.section
+        .container_center
+            h1.section__title
+                span Калькулятор стоимости услуг
+            .section__subtitle
+                span патентного центра Eurasian Brands
+
+            form.quiz-form(action='#')
+
+                // start quiz-container
+                #quiz.quiz-container
+                    // start quiz-main
+                    .quiz-main
+                        .quiz-wrap
+
+                            .quiz-line
+                                .quiz-line__bg(style='width: 25%;')
+                                //- p.quiz-line__text
+                                //-     span.quiz-line__bold
+                                //-         | Расчет готов на: 
+                                //-         span.quiz-line__current 10%
+
+                            // start quiz-question
+                            .quiz-question.quiz-question__photo.active(data-q='')
+
+                                .quiz-question__title 
+                                    span Выберите вид товарного знака
+
+                                .quiz-question__wrap.quiz-question__wrap_grid
+
+                                    // start quiz-question__photo-block
+                                    .quiz-question__photo-block
+                                        label.quiz-question__photo-label
+                                            input(type='radio' name='q-1')
+                                            img.quiz-question__photo-img(loading='lazy' src='../img/quiz/question/photo_1.png' alt='')
+                                            .quiz-question__check.quiz-question__photo-check
+                                                i.icon-check_mark
+                                            p.quiz-question__photo-text Словесный
+                                    // end quiz-question__photo-block
+
+                                    // start quiz-question__photo-block
+                                    .quiz-question__photo-block
+                                        label.quiz-question__photo-label
+                                            input(type='radio' name='q-1')
+                                            img.quiz-question__photo-img(loading='lazy' src='../img/quiz/question/photo_2.png' alt='')
+                                            .quiz-question__check.quiz-question__photo-check
+                                                i.icon-check_mark
+                                            p.quiz-question__photo-text Изобразительный
+                                    // end quiz-question__photo-block
+
+                                    // start quiz-question__photo-block
+                                    .quiz-question__photo-block
+                                        label.quiz-question__photo-label
+                                            input(type='radio' name='q-1')
+                                            img.quiz-question__photo-img(loading='lazy' src='../img/quiz/question/photo_3.png' alt='')
+                                            .quiz-question__check.quiz-question__photo-check
+                                                i.icon-check_mark
+                                            p.quiz-question__photo-text Звуковой
+                                    // end quiz-question__photo-block
+
+                                    // start quiz-question__photo-block
+                                    .quiz-question__photo-block
+                                        label.quiz-question__photo-label
+                                            input(type='radio' name='q-1')
+                                            img.quiz-question__photo-img(loading='lazy' src='../img/quiz/question/photo_4.png' alt='')
+                                            .quiz-question__check.quiz-question__photo-check
+                                                i.icon-check_mark
+                                            p.quiz-question__photo-text Комбинированный
+                                    // end quiz-question__photo-block
+
+                            // end quiz-question
+
+                            // start quiz-question
+                            .quiz-question.quiz-question__text(data-q='')
+
+                                .quiz-question__title Что вы планируете заказать?
+
+                                .quiz-question__wrap
+
+                                    .quiz-question__text-line
+                                        // start quiz-question__text-block
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='radio' name='q-1')
+                                                p Мебель со столешницей
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                                        // start quiz-question__text-block
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='radio' name='q-1')
+                                                p Дизайн-проект
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                                        // start quiz-question__text-block
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='radio' name='q-1')
+                                                p Столешницу
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                                        // start quiz-question__text-block
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='radio' name='q-1')
+                                                p Раковину
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                                        // start quiz-question__text-block
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='radio' name='q-1')
+                                                p Зеркало
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                                        // start quiz-question__text-block
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='radio' name='q-1')
+                                                p Зеркальный шкаф
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                                        // start quiz-question__text-block
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='radio' name='q-1')
+                                                p Мебель для стиральной машинки
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                                        // start quiz-question__text-block
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='radio' name='q-1')
+                                                p Пенал для ванной
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                                    .quiz-question__text-line
+
+                                        // start quiz-question__text-block
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='radio' name='q-1')
+                                                p Постирочную
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                                        // start quiz-question__text-block
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='radio' name='q-1')
+                                                p Угловую мебель
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                                        // start quiz-question__text-block
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='radio' name='q-1')
+                                                p Подвесную мебель
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                                        // start quiz-question__text-block
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='radio' name='q-1')
+                                                p Мебель с двумя раковинами
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                                        // start zuiz-question__text-block
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='radio' name='q-1')
+                                                p Шкаф на балкон и лоджию
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                                        // start quiz-question__text-block
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='radio' name='q-1')
+                                                p Классическую мебель
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                            // end quiz-question
+
+
+                            // start quiz-question
+                            .quiz-question.quiz-question__text.quiz-question__text-big(data-q='')
+                                .quiz-question__title Какой тип тумбы вам нравится?
+
+                                .quiz-question__wrap
+
+                                    .quiz-question__text-line
+                                        // start quiz-question__text-block hint
+                                        .quiz-question__text-block.quiz-question__text-block__hint
+                                            label.quiz-question__text-label
+                                                input(type='radio' name='q-1')
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                            .quiz-question__text-outer
+                                                p Подвесная
+                                                .round.quiz-question__text-hint.quiz-question__text-hint__text
+                                                    img(loading='lazy' src='img/quiz/hint.png' alt='')
+                                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                        // end quiz-question__text-block hint
+
+                                        // start quiz-question__text-block hint
+                                        .quiz-question__text-block.quiz-question__text-block__hint
+                                            label.quiz-question__text-label
+                                                input(type='radio' name='q-1')
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                            .quiz-question__text-outer
+                                                p Напольная
+                                                .quiz-question__text-hint.quiz-question__text-hint__video(data-fancybox='' href='https://youtu.be/m43rh-pI0P0')
+                                                    img(loading='lazy' src='img/main/play.png' alt='')
+                                        // end quiz-question__text-block hint
+
+
+                                    .quiz-question__text-line
+
+                                        // start quiz-question__text-block hint
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='radio' name='q-1')
+                                                p Напольная
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block hint
+
+                                        // start quiz-question__text-block hint
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='radio' name='q-1')
+                                                p Точно не знаю, нужна консультация
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block hint
+
+                            // end quiz-question
+
+                            // start quiz-question
+                            .quiz-question.quiz-question__text.quiz-question__text-big(data-q='')
+                                .quiz-question__title Какой тип тумбы вам нравится?
+
+                                .quiz-question__title-small Можно выбрать несколько вариантов ответа
+
+                                .quiz-question__wrap
+
+                                    .quiz-question__text-line
+
+                                        // start quiz-question__text-block hint
+                                        .quiz-question__text-block.quiz-question__text-block__hint
+                                            label.quiz-question__text-label
+                                                input(type='checkbox' name='q-1')
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                            .quiz-question__text-outer
+                                                p Подвесная
+                                                .round.quiz-question__text-hint.quiz-question__text-hint__text
+                                                    img(loading='lazy' src='img/quiz/hint.png' alt='')
+                                                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                        // end quiz-question__text-block hint
+
+                                        // start quiz-question__text-block hint
+                                        .quiz-question__text-block.quiz-question__text-block__hint
+                                            label.quiz-question__text-label
+                                                input(type='checkbox' name='q-1')
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                            .quiz-question__text-outer
+                                                p Напольная
+                                                .quiz-question__text-hint.quiz-question__text-hint__video(data-fancybox='' href='https://youtu.be/m43rh-pI0P0')
+                                                    img(loading='lazy' src='img/main/play.png' alt='')
+                                        // end quiz-question__text-block hint
+
+
+                                    .quiz-question__text-line
+                                        // start quiz-question__text-block
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='checkbox' name='q-1')
+                                                p Напольная
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                                        // start quiz-question__text-block
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='checkbox' name='q-1')
+                                                p Точно не знаю, нужна консультация
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                            // end quiz-question
+
+                            // start quiz-question
+                            .quiz-question.quiz-question__photo.quiz-question__photo-four(data-q='')
+                                .quiz-question__title Выберите цветовую гамму мебели
+                                .quiz-question__wrap
+
+                                    // start quiz-question__photo-block
+                                    .quiz-question__photo-block
+                                        label.quiz-question__photo-label
+                                            input(type='radio' name='q-1')
+                                            img.quiz-question__photo-img(loading='lazy' src='img/quiz/question-5/photo-1.jpg' alt='')
+                                            .quiz-question__check.quiz-question__photo-check
+                                                img(loading='lazy' src='img/main/check.png' alt='')
+                                            p.quiz-question__photo-text Белый
+                                    // end quiz-question__photo-block
+
+                                    // start quiz-question__photo-block
+                                    .quiz-question__photo-block
+                                        label.quiz-question__photo-label
+                                            input(type='radio' name='q-')
+                                            img.quiz-question__photo-img(loading='lazy' src='img/quiz/question-5/photo-2.jpg' alt='')
+                                            .quiz-question__check.quiz-question__photo-check
+                                                img(loading='lazy' src='img/main/check.png' alt='')
+                                            p.quiz-question__photo-text Бежевый, кремовый
+                                    // end quiz-question__photo-block
+
+                                    // start quiz-question__photo-block
+                                    .quiz-question__photo-block
+                                        label.quiz-question__photo-label
+                                            input(type='radio' name='q-')
+                                            img.quiz-question__photo-img(loading='lazy' src='img/quiz/question-5/photo-3.jpg' alt='')
+                                            .quiz-question__check.quiz-question__photo-check
+                                                img(loading='lazy' src='img/main/check.png' alt='')
+                                            p.quiz-question__photo-text Темные цвета
+                                    // end quiz-question__photo-block
+
+                                    // start quiz-question__photo-block
+                                    .quiz-question__photo-block
+                                        label.quiz-question__photo-label
+                                            input(type='radio' name='q-')
+                                            img.quiz-question__photo-img(loading='lazy' src='img/quiz/question-1/photo-3.png' alt='')
+                                            .quiz-question__check.quiz-question__photo-check
+                                                img(loading='lazy' src='img/main/check.png' alt='')
+                                            p.quiz-question__photo-text Точно не знаю, нужна консультация
+                                    // end quiz-question__photo-block
+
+
+                            // end quiz-question
+
+                            // start quiz-question
+                            .quiz-question.quiz-question__photo.quiz-question__photo-four(data-q='')
+                                .quiz-question__title Выберите цветовую гамму мебели
+                                .quiz-question__wrap
+
+                                    // start quiz-question__photo-block
+                                    .quiz-question__photo-block
+                                        label.quiz-question__photo-label
+                                            input(type='checkbox' name='q-1')
+                                            img.quiz-question__photo-img(loading='lazy' src='img/quiz/question-5/photo-1.jpg' alt='')
+                                            .quiz-question__check.quiz-question__photo-check
+                                                img(loading='lazy' src='img/main/check.png' alt='')
+                                            p.quiz-question__photo-text Белый
+                                    // end quiz-question__photo-block
+
+                                    // start quiz-question__photo-block
+                                    .quiz-question__photo-block
+                                        label.quiz-question__photo-label
+                                            input(type='checkbox' name='q-')
+                                            img.quiz-question__photo-img(loading='lazy' src='img/quiz/question-5/photo-2.jpg' alt='')
+                                            .quiz-question__check.quiz-question__photo-check
+                                                img(loading='lazy' src='img/main/check.png' alt='')
+                                            p.quiz-question__photo-text Бежевый, кремовый
+                                    // end quiz-question__photo-block
+
+                                    // start quiz-question__photo-block
+                                    .quiz-question__photo-block
+                                        label.quiz-question__photo-label
+                                            input(type='checkbox' name='q-')
+                                            img.quiz-question__photo-img(loading='lazy' src='img/quiz/question-5/photo-3.jpg' alt='')
+                                            .quiz-question__check.quiz-question__photo-check
+                                                img(loading='lazy' src='img/main/check.png' alt='')
+                                            p.quiz-question__photo-text Темные цвета
+                                    // end quiz-question__photo-block
+
+                                    // start quiz-question__photo-block
+                                    .quiz-question__photo-block
+                                        label.quiz-question__photo-label
+                                            input(type='checkbox' name='q-')
+                                            img.quiz-question__photo-img(loading='lazy' src='img/quiz/question-1/photo-3.png' alt='')
+                                            .quiz-question__check.quiz-question__photo-check
+                                                img(loading='lazy' src='img/main/check.png' alt='')
+                                            p.quiz-question__photo-text Точно не знаю, нужна консультация
+                                    // end quiz-question__photo-block
+
+                            // end quiz-question
+
+                            // start quiz-question
+                            .quiz-question(data-q='')
+                                .quiz-question__title Укажите размеры вашей ванной
+                                .quiz-question__slider-wrap
+                                    .quiz-question__slider-name Ширина:
+                                    .quiz-question__slider-value.quiz-question__slider-value-width
+                                        input(value='55' type='number' max='9999' min='0')
+                                        p см
+
+                                    //- .quiz-question__slider-value.quiz-question__slider-value-width 55 см
+                                    //- <div class="quiz-question__slider-value quiz-question__slider-value-width">55 см</div>
+                                input.quiz-question__slider-input-width(type='text')
+                                .quiz-question__slider.quiz-question__slider-width
+                                .quiz-question__slider-text
+                                    p 10 см
+                                    p 200 см
+                                .quiz-question__slider-wrap
+                                    .quiz-question__slider-name Длина:
+                                    .quiz-question__slider-value.quiz-question__slider-value-height
+                                        input(value='500' type='number' max='9999' min='0')
+                                        p мм
+                                input.quiz-question__slider-input-height(type='text')
+                                .quiz-question__slider.quiz-question__slider-height
+                                .quiz-question__slider-text
+                                    p 250 мм
+                                    p 3 000 мм
+                                .quiz-question__slider-input
+                                    label
+                                        input(type='checkbox' required='' name='')
+                                        .input-check
+                                            img(loading='lazy' src='img/main/check.png' alt='')
+                                        p Не знаю размеров
+                            // end quiz-question
+
+
+                            // start quiz-question
+                            .quiz-question.quiz-question__file(data-q='')
+                                .quiz-question__file-wrap
+                                    img.quiz-question__bg(loading='lazy' src='img/quiz/bg.png' alt='')
+                                    .quiz-question__title.quiz-question__file-title
+                                        | Прикрепите дизайн-проект ванной
+                                    label.send-form__file
+                                        input(type='file' required='')
+                                        p Файл не выбран
+                                        .send-form__file-btn Добавить
+                                    .quiz-question__slider-input.quiz-question__file-input
+                                        label
+                                            input(type='checkbox' required='' name='')
+                                            .input-check
+                                                img(loading='lazy' src='img/main/check.png' alt='')
+                                            p Нет дизайн-проекта
+                            // end quiz-question
+
+                            // start quiz-question
+                            .quiz-question.quiz-question__photo.quiz-question__photo-small(data-q='')
+                                .quiz-question__title Что дополнительно к мебели вам нужно? 
+                                .quiz-question__title-small Можно выбрать несколько вариантов ответа
+                                .quiz-question__wrap
+                                    // start quiz-question__photo-block
+                                    .quiz-question__photo-block
+                                        label.quiz-question__photo-label
+                                            input(type='checkbox' name='q-1')
+                                            img.quiz-question__photo-img(loading='lazy' src='img/quiz/question-9/photo-1.jpg' alt='')
+                                            .quiz-question__check.quiz-question__photo-check
+                                                img(loading='lazy' src='img/main/check.png' alt='')
+                                            p.quiz-question__photo-text
+                                                | Зеркало 
+                                                span Стоимость от 15 000 руб.
+                                    // end quiz-question__photo-block
+
+                                    // start quiz-question__photo-block
+                                    .quiz-question__photo-block
+                                        label.quiz-question__photo-label
+                                            input(type='checkbox' name='q-1')
+                                            img.quiz-question__photo-img(loading='lazy' src='img/quiz/question-9/photo-2.jpg' alt='')
+                                            .quiz-question__check.quiz-question__photo-check
+                                                img(loading='lazy' src='img/main/check.png' alt='')
+                                            p.quiz-question__photo-text
+                                                | Столешница 
+                                                span Стоимость от 15 000 руб.
+                                    // end quiz-question__photo-block
+
+                                    // start quiz-question__photo-block
+                                    .quiz-question__photo-block
+                                        label.quiz-question__photo-label
+                                            input(type='checkbox' name='q-1')
+                                            img.quiz-question__photo-img(loading='lazy' src='img/quiz/question-9/photo-3.jpg' alt='')
+                                            .quiz-question__check.quiz-question__photo-check
+                                                img(loading='lazy' src='img/main/check.png' alt='')
+                                            p.quiz-question__photo-text
+                                                | Раковина 
+                                                span Стоимость от 15 000 руб.
+                                    // end quiz-question__photo-block
+
+                                    // start quiz-question__photo-block
+                                    .quiz-question__photo-block
+                                        label.quiz-question__photo-label
+                                            input(type='checkbox' name='q-1')
+                                            img.quiz-question__photo-img(loading='lazy' src='img/quiz/question-9/photo-4.jpg' alt='')
+                                            .quiz-question__check.quiz-question__photo-check
+                                                img(loading='lazy' src='img/main/check.png' alt='')
+                                            p.quiz-question__photo-text
+                                                | Столешница с раковиной 
+                                                span Стоимость от 15 000 руб.
+                                    // end quiz-question__photo-block
+
+                                    // start quiz-question__photo-block
+                                    .quiz-question__photo-block
+                                        label.quiz-question__photo-label
+                                            input(type='checkbox' name='q-1')
+                                            img.quiz-question__photo-img(loading='lazy' src='img/quiz/question-9/photo-5.jpg' alt='')
+                                            .quiz-question__check.quiz-question__photo-check
+                                                img(loading='lazy' src='img/main/check.png' alt='')
+                                            p.quiz-question__photo-text Точно не знаю, нужна консультация
+                                    // end quiz-question__photo-block
+
+                            // end quiz-question
+
+                            // start quiz-question
+                            .quiz-question.quiz-question__text.quiz-question__text-big(data-q='')
+                                .quiz-question__title Прикрепите дизайн-проект ванной
+                                .quiz-question__wrap
+                                    img.quiz-question__bg(loading='lazy' src='img/quiz/bg.png' alt='')
+                                    .quiz-question__text-line
+                                        // start quiz-question__text-block
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='checkbox' name='q-1')
+                                                p Нет дизайн-проекта
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                                        // start quiz-question__text-block
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='checkbox' name='q-1')
+                                                p Да
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                                        // start quiz-question__text-block
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='checkbox' name='q-1')
+                                                p Да
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                            // end quiz-question
+
+                            // start quiz-question
+                            .quiz-question.quiz-question__text.quiz-question__text-big(data-q='')
+                                .quiz-question__title Что дополнительно к мебели вам нужно? 
+                                .quiz-question__wrap
+                                    img.quiz-question__bg(loading='lazy' src='img/quiz/bg.png' alt='')
+                                    .quiz-question__text-line
+                                        // start quiz-question__text-block
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='radio' name='q-1')
+                                                p Подвесная
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                                        // start quiz-question__text-block
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='radio' name='q-1')
+                                                p Напольная
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                                        // start quiz-question__text-block
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='radio' name='q-1')
+                                                p Напольная
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                                        // start quiz-question__text-block
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='radio' name='q-1')
+                                                p Точно не знаю, нужна консультация
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                            // end quiz-question
+
+                            // start quiz-question
+                            .quiz-question.quiz-question__text.quiz-question__file.quiz-question__text-big(data-q='')
+                                .quiz-question__title Прикрепите дизайн-проект ванной
+                                .quiz-question__wrap
+                                    img.quiz-question__bg(loading='lazy' src='img/quiz/bg.png' alt='')
+                                    .quiz-question__text-line
+                                        // start quiz-question__text-block
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='radio' name='q-1')
+                                                p Дизайн-проект готов
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                                        // start quiz-question__text-block
+                                        p.send-form__file-text Прикрепите фото или файл с дизайн-проектом
+                                        label.send-form__file
+                                            input(type='file' required='')
+                                            p Файл не выбран
+                                            .send-form__file-btn Добавить
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='radio' name='q-1')
+                                                p Дизайн-проект нужно подготовить
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                                        // start quiz-question__text-block
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='radio' name='q-1')
+                                                p Дизайн-проект не нужен
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                                        // start quiz-question__text-block
+                                        .quiz-question__text-block
+                                            label.quiz-question__text-label
+                                                input(type='radio' name='q-1')
+                                                p
+                                                    | Точно не знаю, нужна консультация
+                                                    | дизайнера
+                                                .quiz-question__check.quiz-question__text-check
+                                                    img(loading='lazy' src='img/main/check.png' alt='')
+                                        // end quiz-question__text-block
+
+                            // end quiz-question
+
+
+                        .quiz-footer
+                            .quiz-footer__hint
+                                .quiz-footer__img
+                                    img(loading='lazy' src='../img/quiz/hand.svg' alt='')
+                                span <b>Выберите вариант ответа</b> и нажмите кнопку “Далее”
+
+                            .quiz-arrow__wrap
+                                button.quiz-arrow.quiz-arrow__prev
+                                    p Назад
+                                button.quiz-arrow.quiz-arrow__next(disabled='')
+                                    p Далее
+
+                    // end quiz-main
+
+
+
+                    // start quiz-right
+                    .quiz-right
+                        .quiz-gift
+                            .quiz-gift__title 
+                                span В конце теста<br> получите:
+                            .quiz-gift__text
+                                span <b>консультацию</b> и бесплатную<br> проверку на уникальность
+
+                        .quiz-employee                            
+                            .quiz-employee__info
+                                .quiz-employee__name
+                                    span Айя Ибрагимовна
+                                .quiz-employee__job
+                                    span эксперт по товарным знакам
+                        .quiz-info
+                            span Обсудим шансы на регистрацию вашего<br> товарного знака, проведу бесплатную<br> проверку на тождество, отвечу на<br> вопросы, подготовлю КП.
+                        .quiz-employee__bg(style="background-image: url('../img/quiz/quiz_person.webp')")
+
+
+                    // end quiz-right
+
+                // end quiz-container
+
+                // start quiz-result
+                .quiz-result
+                    .quiz-result__wrap
+                        .quiz-result__header Отлично!
+                        .quiz-result__title Мы получили ваши ответы и приступаем к расчету стоимости
+                        .quiz-result__text Куда вам удобнее отправить?
+                        .quiz-result__messenger
+                            .catalog-messenger
+                                label.catalog-messenger__btn.active
+                                    input(value='Whatsapp' type='radio' checked='' name='messenger')
+                                    .catalog-messenger__icon.catalog-messenger__icon-whatsapp
+                                        img(loading='lazy' src='img/catalog/whatsapp.png' alt='')
+                                    p.catalog-messenger__text WhatsApp
+                                label.catalog-messenger__btn
+                                    input(value='Viber' type='radio' name='messenger')
+                                    .catalog-messenger__icon.catalog-messenger__icon-viber
+                                        img(loading='lazy' src='img/catalog/viber.png' alt='')
+                                    p.catalog-messenger__text Viber
+                                label.catalog-messenger__btn
+                                    input(value='Telegram' type='radio' name='messenger')
+                                    .catalog-messenger__icon.catalog-messenger__icon-telegram
+                                        img(loading='lazy' src='img/catalog/telegram.png' alt='')
+                                    p.catalog-messenger__text Telegram
+                                label.catalog-messenger__btn
+                                    input(value='' type='radio' name='messenger')
+                                    .catalog-messenger__icon.catalog-messenger__icon-call
+                                        img(loading='lazy' src='img/quiz/call.png' alt='')
+                                    p.catalog-messenger__text Позвоните мне
+                        input.input.phone.quiz-result__input(required='' type='tel' placeholder='Введите ваш номер')
+                        button.btn.quiz-result__btn Узнать стоимость + бонус
+                        .catalog-accept__wrap
+                            label.catalog-accept
+                                input(type='checkbox' required='' checked='' name='accept')
+                                .input-check
+                                    img(loading='lazy' src='img/main/check.png' alt='')
+                            p
+                                | Нажимая кнопку вы соглашаетесь с условиями 
+                                span.popup-politics__open Политики конфиденциальности
+                    img.quiz-result__phone(loading='lazy' src='img/quiz/result-phone.png' alt='')
+                // end quiz-container
+
+
+    // end quiz
