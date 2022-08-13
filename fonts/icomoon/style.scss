@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?gtbagk');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?gtbagk#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?gtbagk') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?gtbagk') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?gtbagk##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?657p8p');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?657p8p#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?657p8p') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?657p8p') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?657p8p##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,6 +27,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-info {
+  &:before {
+    content: $icon-info; 
+  }
+}
 .icon-calc {
   &:before {
     content: $icon-calc; 

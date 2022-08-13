@@ -16,9 +16,6 @@ let line;
 
 
 let quizScroll;
-
-
-
 if ($(window).width() < 600) {
     quizScroll = $("#quiz").offset().top - 120
     console.log('123')
@@ -170,6 +167,6 @@ function lineWidth() {
     lineCurrent = Math.round(questionNumber / total * 100)
     $('.quiz-line__current').text(lineCurrent + '%');
     line = lineStep * (questionNumber);
-    line = 'calc(' + line + '% - 10rem)';
+    line = 'calc(' + line + '% )';
     $('.quiz-line__bg').css('width', line)
 }

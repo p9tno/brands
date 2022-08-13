@@ -22,7 +22,7 @@ block content
                         .quiz-wrap
 
                             .quiz-line
-                                .quiz-line__bg(style='width: 25%;')
+                                .quiz-line__bg(style='width: 5%;')
                                 //- p.quiz-line__text
                                 //-     span.quiz-line__bold
                                 //-         | Расчет готов на: 
@@ -54,6 +54,10 @@ block content
                                             .quiz-question__check.quiz-question__photo-check
                                                 i.icon-check_mark
                                             p.quiz-question__photo-text Изобразительный
+
+                                        .quiz-question-video.js-youtubeModal#httuerixph8
+                                            i.icon-play
+
                                     // end quiz-question__photo-block
 
                                     // start quiz-question__photo-block
@@ -64,6 +68,10 @@ block content
                                             .quiz-question__check.quiz-question__photo-check
                                                 i.icon-check_mark
                                             p.quiz-question__photo-text Звуковой
+
+                                        .quiz-question-hint
+                                            i.icon-info
+                                            p Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                                     // end quiz-question__photo-block
 
                                     // start quiz-question__photo-block
@@ -79,141 +87,174 @@ block content
                             // end quiz-question
 
                             // start quiz-question
+                            .quiz-question.quiz-question__photo(data-q='')
+
+                                .quiz-question__title 
+                                    span Выберите вид товарного знака
+
+                                .quiz-question__wrap.quiz-question__wrap_grid
+
+                                    // start quiz-question__photo-block
+                                    .quiz-question__photo-block
+                                        label.quiz-question__photo-label
+                                            input(type='checkbox' name='q-1')
+                                            img.quiz-question__photo-img(loading='lazy' src='../img/quiz/question/photo_1.png' alt='')
+                                            .quiz-question__check.quiz-question__photo-check
+                                                i.icon-check_mark
+                                            p.quiz-question__photo-text Словесный
+                                    // end quiz-question__photo-block
+
+                                    // start quiz-question__photo-block
+                                    .quiz-question__photo-block
+                                        label.quiz-question__photo-label
+                                            input(type='checkbox' name='q-1')
+                                            img.quiz-question__photo-img(loading='lazy' src='../img/quiz/question/photo_2.png' alt='')
+                                            .quiz-question__check.quiz-question__photo-check
+                                                i.icon-check_mark
+                                            p.quiz-question__photo-text Изобразительный
+
+                                        .quiz-question-video.js-youtubeModal#httuerixph8
+                                            i.icon-play
+
+                                    // end quiz-question__photo-block
+
+                                    // start quiz-question__photo-block
+                                    .quiz-question__photo-block
+                                        label.quiz-question__photo-label
+                                            input(type='checkbox' name='q-1')
+                                            img.quiz-question__photo-img(loading='lazy' src='../img/quiz/question/photo_3.png' alt='')
+                                            .quiz-question__check.quiz-question__photo-check
+                                                i.icon-check_mark
+                                            p.quiz-question__photo-text Звуковой
+
+                                        .quiz-question-hint
+                                            i.icon-info
+                                            p Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                    // end quiz-question__photo-block
+
+                                    // start quiz-question__photo-block
+                                    .quiz-question__photo-block
+                                        label.quiz-question__photo-label
+                                            input(type='checkbox' name='q-1')
+                                            img.quiz-question__photo-img(loading='lazy' src='../img/quiz/question/photo_4.png' alt='')
+                                            .quiz-question__check.quiz-question__photo-check
+                                                i.icon-check_mark
+                                            p.quiz-question__photo-text Комбинированный
+                                    // end quiz-question__photo-block
+
+                            // end quiz-question
+
+                            // start quiz-question
                             .quiz-question.quiz-question__text(data-q='')
 
-                                .quiz-question__title Что вы планируете заказать?
+                                .quiz-question__title 
+                                    span Выберите вид товарного знака
 
                                 .quiz-question__wrap
 
-                                    .quiz-question__text-line
-                                        // start quiz-question__text-block
-                                        .quiz-question__text-block
-                                            label.quiz-question__text-label
-                                                input(type='radio' name='q-1')
-                                                p Мебель со столешницей
-                                                .quiz-question__check.quiz-question__text-check
-                                                    img(loading='lazy' src='img/main/check.png' alt='')
-                                        // end quiz-question__text-block
+                                    // start quiz-question__text-block
+                                    .quiz-question__text-block.width_sm.center
+                                        label.quiz-question__text-label
+                                            input(type='radio' name='q-1')
+                                            .quiz-question__check.quiz-question__text-check
+                                                i.icon-check_mark
+                                            p Словесный
+                                    // end quiz-question__text-block
 
-                                        // start quiz-question__text-block
-                                        .quiz-question__text-block
-                                            label.quiz-question__text-label
-                                                input(type='radio' name='q-1')
-                                                p Дизайн-проект
-                                                .quiz-question__check.quiz-question__text-check
-                                                    img(loading='lazy' src='img/main/check.png' alt='')
-                                        // end quiz-question__text-block
+                                    // start quiz-question__text-block
+                                    .quiz-question__text-block.width_sm.center
+                                        label.quiz-question__text-label
+                                            input(type='radio' name='q-1')
+                                            .quiz-question__check.quiz-question__text-check
+                                                i.icon-check_mark
+                                            p Изобразительный
+                                    // end quiz-question__text-block
 
-                                        // start quiz-question__text-block
-                                        .quiz-question__text-block
-                                            label.quiz-question__text-label
-                                                input(type='radio' name='q-1')
-                                                p Столешницу
-                                                .quiz-question__check.quiz-question__text-check
-                                                    img(loading='lazy' src='img/main/check.png' alt='')
-                                        // end quiz-question__text-block
+                                    // start quiz-question__text-block
+                                    .quiz-question__text-block.width_sm.center
+                                        label.quiz-question__text-label
+                                            input(type='radio' name='q-1')
+                                            .quiz-question__check.quiz-question__text-check
+                                                i.icon-check_mark
+                                            p Звуковой
+                                    // end quiz-question__text-block
 
-                                        // start quiz-question__text-block
-                                        .quiz-question__text-block
-                                            label.quiz-question__text-label
-                                                input(type='radio' name='q-1')
-                                                p Раковину
-                                                .quiz-question__check.quiz-question__text-check
-                                                    img(loading='lazy' src='img/main/check.png' alt='')
-                                        // end quiz-question__text-block
+                                    // start quiz-question__text-block
+                                    .quiz-question__text-block.width_sm.center
+                                        label.quiz-question__text-label
+                                            input(type='radio' name='q-1')
+                                            .quiz-question__check.quiz-question__text-check
+                                                i.icon-check_mark
+                                            p Комбинированный
+                                    // end quiz-question__text-block
 
-                                        // start quiz-question__text-block
-                                        .quiz-question__text-block
-                                            label.quiz-question__text-label
-                                                input(type='radio' name='q-1')
-                                                p Зеркало
-                                                .quiz-question__check.quiz-question__text-check
-                                                    img(loading='lazy' src='img/main/check.png' alt='')
-                                        // end quiz-question__text-block
 
-                                        // start quiz-question__text-block
-                                        .quiz-question__text-block
-                                            label.quiz-question__text-label
-                                                input(type='radio' name='q-1')
-                                                p Зеркальный шкаф
-                                                .quiz-question__check.quiz-question__text-check
-                                                    img(loading='lazy' src='img/main/check.png' alt='')
-                                        // end quiz-question__text-block
+                            // end quiz-question
 
-                                        // start quiz-question__text-block
-                                        .quiz-question__text-block
-                                            label.quiz-question__text-label
-                                                input(type='radio' name='q-1')
-                                                p Мебель для стиральной машинки
-                                                .quiz-question__check.quiz-question__text-check
-                                                    img(loading='lazy' src='img/main/check.png' alt='')
-                                        // end quiz-question__text-block
+                            // start quiz-question
+                            .quiz-question.quiz-question__text(data-q='')
 
-                                        // start quiz-question__text-block
-                                        .quiz-question__text-block
-                                            label.quiz-question__text-label
-                                                input(type='radio' name='q-1')
-                                                p Пенал для ванной
-                                                .quiz-question__check.quiz-question__text-check
-                                                    img(loading='lazy' src='img/main/check.png' alt='')
-                                        // end quiz-question__text-block
+                                .quiz-question__title 
+                                    span Какие услуги нужны дополнительно?
 
-                                    .quiz-question__text-line
+                                .quiz-question__wrap
 
-                                        // start quiz-question__text-block
-                                        .quiz-question__text-block
-                                            label.quiz-question__text-label
-                                                input(type='radio' name='q-1')
-                                                p Постирочную
-                                                .quiz-question__check.quiz-question__text-check
-                                                    img(loading='lazy' src='img/main/check.png' alt='')
-                                        // end quiz-question__text-block
+                                    // start quiz-question__text-block
+                                    .quiz-question__text-block.center
+                                        label.quiz-question__text-label
+                                            input(type='checkbox' name='q-1')
+                                            .quiz-question__check.quiz-question__text-check
+                                                i.icon-check_mark
+                                            p Международная регистрация по Мадридской системе Поясняющий текст в 1 или 2 строки
+                                    // end quiz-question__text-block
 
-                                        // start quiz-question__text-block
-                                        .quiz-question__text-block
-                                            label.quiz-question__text-label
-                                                input(type='radio' name='q-1')
-                                                p Угловую мебель
-                                                .quiz-question__check.quiz-question__text-check
-                                                    img(loading='lazy' src='img/main/check.png' alt='')
-                                        // end quiz-question__text-block
+                                    // start quiz-question__text-block
+                                    .quiz-question__text-block.center
+                                        label.quiz-question__text-label
+                                            input(type='checkbox' name='q-1')
+                                            .quiz-question__check.quiz-question__text-check
+                                                i.icon-check_mark
+                                            p Международная регистрация по Мадридской системе Поясняющий текст в 1 или 2 строки
+                                    // end quiz-question__text-block
 
-                                        // start quiz-question__text-block
-                                        .quiz-question__text-block
-                                            label.quiz-question__text-label
-                                                input(type='radio' name='q-1')
-                                                p Подвесную мебель
-                                                .quiz-question__check.quiz-question__text-check
-                                                    img(loading='lazy' src='img/main/check.png' alt='')
-                                        // end quiz-question__text-block
+                                    // start quiz-question__text-block
+                                    .quiz-question__text-block.center
+                                        label.quiz-question__text-label
+                                            input(type='checkbox' name='q-1')
+                                            .quiz-question__check.quiz-question__text-check
+                                                i.icon-check_mark
+                                            p Международная регистрация по Мадридской системе Поясняющий текст в 1 или 2 строки
+                                    // end quiz-question__text-block
 
-                                        // start quiz-question__text-block
-                                        .quiz-question__text-block
-                                            label.quiz-question__text-label
-                                                input(type='radio' name='q-1')
-                                                p Мебель с двумя раковинами
-                                                .quiz-question__check.quiz-question__text-check
-                                                    img(loading='lazy' src='img/main/check.png' alt='')
-                                        // end quiz-question__text-block
+                                    // start quiz-question__text-block
+                                    .quiz-question__text-block.center
+                                        label.quiz-question__text-label
+                                            input(type='checkbox' name='q-1')
+                                            .quiz-question__check.quiz-question__text-check
+                                                i.icon-check_mark
+                                            p Ничего не нужно
+                                    // end quiz-question__text-block
 
-                                        // start zuiz-question__text-block
-                                        .quiz-question__text-block
-                                            label.quiz-question__text-label
-                                                input(type='radio' name='q-1')
-                                                p Шкаф на балкон и лоджию
-                                                .quiz-question__check.quiz-question__text-check
-                                                    img(loading='lazy' src='img/main/check.png' alt='')
-                                        // end quiz-question__text-block
 
-                                        // start quiz-question__text-block
-                                        .quiz-question__text-block
-                                            label.quiz-question__text-label
-                                                input(type='radio' name='q-1')
-                                                p Классическую мебель
-                                                .quiz-question__check.quiz-question__text-check
-                                                    img(loading='lazy' src='img/main/check.png' alt='')
-                                        // end quiz-question__text-block
+                            // end quiz-question
 
+                            // start quiz-question
+                            .quiz-question.quiz-question__file(data-q='')
+                                .quiz-question__file-wrap
+                                    .quiz-question__bg(style="background-image: url('../img/quiz/quiz_calendar.webp')")
+                                    .quiz-question__title.quiz-question__file-title
+                                        span Прикрепите изображение знака
+                                    label.send-form__file
+                                        input(type='file' required='')
+                                        p Файл не выбран
+                                        .send-form__file-btn
+                                            span Добавить
+                                    .quiz-question__slider-input.quiz-question__file-input
+                                        label
+                                            input(type='checkbox' required='' name='')
+                                            .input-check
+                                                i.icon-check_mark
+                                            p Нет изображения
                             // end quiz-question
 
 
@@ -459,23 +500,7 @@ block content
                             // end quiz-question
 
 
-                            // start quiz-question
-                            .quiz-question.quiz-question__file(data-q='')
-                                .quiz-question__file-wrap
-                                    img.quiz-question__bg(loading='lazy' src='img/quiz/bg.png' alt='')
-                                    .quiz-question__title.quiz-question__file-title
-                                        | Прикрепите дизайн-проект ванной
-                                    label.send-form__file
-                                        input(type='file' required='')
-                                        p Файл не выбран
-                                        .send-form__file-btn Добавить
-                                    .quiz-question__slider-input.quiz-question__file-input
-                                        label
-                                            input(type='checkbox' required='' name='')
-                                            .input-check
-                                                img(loading='lazy' src='img/main/check.png' alt='')
-                                            p Нет дизайн-проекта
-                            // end quiz-question
+
 
                             // start quiz-question
                             .quiz-question.quiz-question__photo.quiz-question__photo-small(data-q='')
