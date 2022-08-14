@@ -56,7 +56,7 @@ $('.quiz-arrow__next, .quiz-question input[type="radio"]').click(function() {
     $('.quiz-hint').hide();
     $('.quiz-arrow__prev').css('display', 'flex');
 
-    if (questionNumber < total - 1) {
+    if (questionNumber < total) {
         setTimeout(() => {
             questionNumber++;
             $('.quiz-arrow__next').attr('disabled', 'true')
@@ -130,36 +130,36 @@ $('.quiz-arrow__prev').click(function() {
     lineWidth()
 });
 
-$('.quiz-result__input-phone').mask('+7(999)999-99-99')
+// $('.quiz-result__input-phone').mask('+7(999)999-99-99')
 
-$('.quiz-result__message').click(function() {
-    $('.quiz-result__message').removeClass('active');
-    $(this).addClass('active');
-    $('.quiz-result__input-message').val($(this).attr('data-message'));
-    let message = $(this).attr('data-message');
-
-
-    switch (message) {
-        case 'whatsapp':
-            $('.quiz-result__input-phone').attr('placeholder', 'Введите ваш телефон');
-            $('.quiz-result__input-phone').attr('type', 'tel');
-            $('.quiz-result__input-phone').mask('+7(999)999-99-99')
-            $('.quiz-result__input-mail').hide();
-            break;
-        case 'mail':
-            $('.quiz-result__input-phone').attr('placeholder', 'Введите ваш телефон');
-            $('.quiz-result__input-phone').attr('type', 'tel');
-            $('.quiz-result__input-phone').mask('+7(999)999-99-99')
-            $('.quiz-result__input-mail').css('display', 'block');
-            break;
-        case 'telegram':
-            $('.quiz-result__input-phone').attr('placeholder', 'Введите ваш телеграм');
-            $('.quiz-result__input-phone').attr('type', 'text');
-            $('.quiz-result__input-phone').unmask()
-            $('.quiz-result__input-mail').hide();
-            break;
-    }
-});
+// $('.quiz-result__message').click(function() {
+//     $('.quiz-result__message').removeClass('active');
+//     $(this).addClass('active');
+//     $('.quiz-result__input-message').val($(this).attr('data-message'));
+//     let message = $(this).attr('data-message');
+//
+//
+//     switch (message) {
+//         case 'whatsapp':
+//             $('.quiz-result__input-phone').attr('placeholder', 'Введите ваш телефон');
+//             $('.quiz-result__input-phone').attr('type', 'tel');
+//             $('.quiz-result__input-phone').mask('+7(999)999-99-99')
+//             $('.quiz-result__input-mail').hide();
+//             break;
+//         case 'mail':
+//             $('.quiz-result__input-phone').attr('placeholder', 'Введите ваш телефон');
+//             $('.quiz-result__input-phone').attr('type', 'tel');
+//             $('.quiz-result__input-phone').mask('+7(999)999-99-99')
+//             $('.quiz-result__input-mail').css('display', 'block');
+//             break;
+//         case 'telegram':
+//             $('.quiz-result__input-phone').attr('placeholder', 'Введите ваш телеграм');
+//             $('.quiz-result__input-phone').attr('type', 'text');
+//             $('.quiz-result__input-phone').unmask()
+//             $('.quiz-result__input-mail').hide();
+//             break;
+//     }
+// });
 
 let lineCurrent;
 
@@ -169,4 +169,5 @@ function lineWidth() {
     line = lineStep * (questionNumber);
     line = 'calc(' + line + '% )';
     $('.quiz-line__bg').css('width', line)
+    $('.quiz-step__current').text(questionNumber);
 }

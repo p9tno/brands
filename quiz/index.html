@@ -126,6 +126,7 @@
                 <!-- start quiz-main-->
                 <div class="quiz-main">
                   <div class="quiz-wrap">
+                    <div class="quiz-step"><span class="quiz-step__label">ШАГ </span><span class="quiz-step__current">1</span></div>
                     <div class="quiz-line">
                       <div class="quiz-line__bg" style="width: 5%;"></div>
                     </div>
@@ -312,10 +313,10 @@
                     <!-- start quiz-question-->
                     <div class="quiz-question quiz-question__file" data-q="">
                       <div class="quiz-question__file-wrap">
-                        <div class="quiz-question__bg" style="background-image: url('../img/quiz/quiz_calendar.webp')"></div>
+                        <div class="quiz-question__bg desktop" style="background-image: url('../img/quiz/quiz_calendar.webp')"></div>
                         <div class="quiz-question__title quiz-question__file-title"><span>Прикрепите изображение знака</span></div>
-                        <label class="send-form__file">
-                          <input type="file" required=""/>
+                        <label class="send-form__file" data-text="Файл не выбран">
+                          <input type="file" required="required"/>
                           <p>Файл не выбран</p>
                           <div class="send-form__file-btn"><span>Добавить</span></div>
                         </label>
@@ -330,425 +331,90 @@
                     </div>
                     <!-- end quiz-question-->
                     <!-- start quiz-question-->
-                    <div class="quiz-question quiz-question__text quiz-question__text-big" data-q="">
-                      <div class="quiz-question__title">Какой тип тумбы вам нравится?</div>
+                    <div class="quiz-question quiz-question__text" data-q="">
+                      <div class="quiz-question__bg desktop" style="background-image: url('../img/quiz/quiz_calendar.webp')"></div>
+                      <div class="quiz-question__title"> <span>Какие услуги нужны дополнительно?</span></div>
                       <div class="quiz-question__wrap">
-                        <div class="quiz-question__text-line">
-                          <!-- start quiz-question__text-block hint-->
-                          <div class="quiz-question__text-block quiz-question__text-block__hint">
-                            <label class="quiz-question__text-label">
-                              <input type="radio" name="q-1"/>
-                              <div class="quiz-question__check quiz-question__text-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            </label>
-                            <div class="quiz-question__text-outer">
-                              <p>Подвесная</p>
-                              <div class="round quiz-question__text-hint quiz-question__text-hint__text"><img loading="lazy" src="img/quiz/hint.png" alt=""/>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- end quiz-question__text-block hint-->
-                          <!-- start quiz-question__text-block hint-->
-                          <div class="quiz-question__text-block quiz-question__text-block__hint">
-                            <label class="quiz-question__text-label">
-                              <input type="radio" name="q-1"/>
-                              <div class="quiz-question__check quiz-question__text-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            </label>
-                            <div class="quiz-question__text-outer">
-                              <p>Напольная</p>
-                              <div class="quiz-question__text-hint quiz-question__text-hint__video" data-fancybox="" href="https://youtu.be/m43rh-pI0P0"><img loading="lazy" src="img/main/play.png" alt=""/></div>
-                            </div>
-                          </div>
-                          <!-- end quiz-question__text-block hint-->
+                        <!-- start quiz-question__text-block-->
+                        <div class="quiz-question__text-block">
+                          <label class="quiz-question__text-label">
+                            <input type="checkbox" name="q-1"/>
+                            <div class="quiz-question__check quiz-question__text-check"><i class="icon-check_mark"></i></div>
+                            <p>Международная регистрация по Мадридской системе Поясняющий текст в 1 или 2 строки</p>
+                          </label>
                         </div>
-                        <div class="quiz-question__text-line">
-                          <!-- start quiz-question__text-block hint-->
-                          <div class="quiz-question__text-block">
-                            <label class="quiz-question__text-label">
-                              <input type="radio" name="q-1"/>
-                              <p>Напольная</p>
-                              <div class="quiz-question__check quiz-question__text-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            </label>
-                          </div>
-                          <!-- end quiz-question__text-block hint-->
-                          <!-- start quiz-question__text-block hint-->
-                          <div class="quiz-question__text-block">
-                            <label class="quiz-question__text-label">
-                              <input type="radio" name="q-1"/>
-                              <p>Точно не знаю, нужна консультация</p>
-                              <div class="quiz-question__check quiz-question__text-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            </label>
-                          </div>
-                          <!-- end quiz-question__text-block hint-->
+                        <!-- end quiz-question__text-block-->
+                        <!-- start quiz-question__text-block-->
+                        <div class="quiz-question__text-block">
+                          <label class="quiz-question__text-label">
+                            <input type="checkbox" name="q-1"/>
+                            <div class="quiz-question__check quiz-question__text-check"><i class="icon-check_mark"></i></div>
+                            <p>Международная регистрация по Мадридской системе Поясняющий текст в 1 или 2 строки</p>
+                          </label>
                         </div>
+                        <!-- end quiz-question__text-block-->
+                        <!-- start quiz-question__text-block-->
+                        <div class="quiz-question__text-block">
+                          <label class="quiz-question__text-label">
+                            <input type="checkbox" name="q-1"/>
+                            <div class="quiz-question__check quiz-question__text-check"><i class="icon-check_mark"></i></div>
+                            <p>Международная регистрация по Мадридской системе Поясняющий текст в 1 или 2 строки</p>
+                          </label>
+                        </div>
+                        <!-- end quiz-question__text-block-->
+                        <!-- start quiz-question__text-block-->
+                        <div class="quiz-question__text-block">
+                          <label class="quiz-question__text-label">
+                            <input type="checkbox" name="q-1"/>
+                            <div class="quiz-question__check quiz-question__text-check"><i class="icon-check_mark"></i></div>
+                            <p>Ничего не нужно</p>
+                          </label>
+                        </div>
+                        <!-- end quiz-question__text-block-->
                       </div>
                     </div>
                     <!-- end quiz-question-->
                     <!-- start quiz-question-->
-                    <div class="quiz-question quiz-question__text quiz-question__text-big" data-q="">
-                      <div class="quiz-question__title">Какой тип тумбы вам нравится?</div>
-                      <div class="quiz-question__title-small">Можно выбрать несколько вариантов ответа</div>
+                    <div class="quiz-question quiz-question__text" data-q="">
+                      <div class="quiz-question__bg desktop" style="background-image: url('../img/quiz/quiz_calendar.webp')"></div>
+                      <div class="quiz-question__title"> <span>Выберите вид товарного знака</span></div>
                       <div class="quiz-question__wrap">
-                        <div class="quiz-question__text-line">
-                          <!-- start quiz-question__text-block hint-->
-                          <div class="quiz-question__text-block quiz-question__text-block__hint">
-                            <label class="quiz-question__text-label">
-                              <input type="checkbox" name="q-1"/>
-                              <div class="quiz-question__check quiz-question__text-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            </label>
-                            <div class="quiz-question__text-outer">
-                              <p>Подвесная</p>
-                              <div class="round quiz-question__text-hint quiz-question__text-hint__text"><img loading="lazy" src="img/quiz/hint.png" alt=""/>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- end quiz-question__text-block hint-->
-                          <!-- start quiz-question__text-block hint-->
-                          <div class="quiz-question__text-block quiz-question__text-block__hint">
-                            <label class="quiz-question__text-label">
-                              <input type="checkbox" name="q-1"/>
-                              <div class="quiz-question__check quiz-question__text-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            </label>
-                            <div class="quiz-question__text-outer">
-                              <p>Напольная</p>
-                              <div class="quiz-question__text-hint quiz-question__text-hint__video" data-fancybox="" href="https://youtu.be/m43rh-pI0P0"><img loading="lazy" src="img/main/play.png" alt=""/></div>
-                            </div>
-                          </div>
-                          <!-- end quiz-question__text-block hint-->
-                        </div>
-                        <div class="quiz-question__text-line">
-                          <!-- start quiz-question__text-block-->
-                          <div class="quiz-question__text-block">
-                            <label class="quiz-question__text-label">
-                              <input type="checkbox" name="q-1"/>
-                              <p>Напольная</p>
-                              <div class="quiz-question__check quiz-question__text-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            </label>
-                          </div>
-                          <!-- end quiz-question__text-block-->
-                          <!-- start quiz-question__text-block-->
-                          <div class="quiz-question__text-block">
-                            <label class="quiz-question__text-label">
-                              <input type="checkbox" name="q-1"/>
-                              <p>Точно не знаю, нужна консультация</p>
-                              <div class="quiz-question__check quiz-question__text-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            </label>
-                          </div>
-                          <!-- end quiz-question__text-block-->
-                        </div>
-                      </div>
-                    </div>
-                    <!-- end quiz-question-->
-                    <!-- start quiz-question-->
-                    <div class="quiz-question quiz-question__photo quiz-question__photo-four" data-q="">
-                      <div class="quiz-question__title">Выберите цветовую гамму мебели</div>
-                      <div class="quiz-question__wrap">
-                        <!-- start quiz-question__photo-block-->
-                        <div class="quiz-question__photo-block">
-                          <label class="quiz-question__photo-label">
-                            <input type="radio" name="q-1"/><img class="quiz-question__photo-img" loading="lazy" src="img/quiz/question-5/photo-1.jpg" alt=""/>
-                            <div class="quiz-question__check quiz-question__photo-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            <p class="quiz-question__photo-text">Белый</p>
+                        <!-- start quiz-question__text-block-->
+                        <div class="quiz-question__text-block width_sm">
+                          <label class="quiz-question__text-label">
+                            <input type="radio" name="q-1"/>
+                            <div class="quiz-question__check quiz-question__text-check"><i class="icon-check_mark"></i></div>
+                            <p>Словесный</p>
                           </label>
                         </div>
-                        <!-- end quiz-question__photo-block-->
-                        <!-- start quiz-question__photo-block-->
-                        <div class="quiz-question__photo-block">
-                          <label class="quiz-question__photo-label">
-                            <input type="radio" name="q-"/><img class="quiz-question__photo-img" loading="lazy" src="img/quiz/question-5/photo-2.jpg" alt=""/>
-                            <div class="quiz-question__check quiz-question__photo-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            <p class="quiz-question__photo-text">Бежевый, кремовый</p>
+                        <!-- end quiz-question__text-block-->
+                        <!-- start quiz-question__text-block-->
+                        <div class="quiz-question__text-block width_sm">
+                          <label class="quiz-question__text-label">
+                            <input type="radio" name="q-1"/>
+                            <div class="quiz-question__check quiz-question__text-check"><i class="icon-check_mark"></i></div>
+                            <p>Изобразительный</p>
                           </label>
                         </div>
-                        <!-- end quiz-question__photo-block-->
-                        <!-- start quiz-question__photo-block-->
-                        <div class="quiz-question__photo-block">
-                          <label class="quiz-question__photo-label">
-                            <input type="radio" name="q-"/><img class="quiz-question__photo-img" loading="lazy" src="img/quiz/question-5/photo-3.jpg" alt=""/>
-                            <div class="quiz-question__check quiz-question__photo-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            <p class="quiz-question__photo-text">Темные цвета</p>
+                        <!-- end quiz-question__text-block-->
+                        <!-- start quiz-question__text-block-->
+                        <div class="quiz-question__text-block width_sm">
+                          <label class="quiz-question__text-label">
+                            <input type="radio" name="q-1"/>
+                            <div class="quiz-question__check quiz-question__text-check"><i class="icon-check_mark"></i></div>
+                            <p>Звуковой</p>
                           </label>
                         </div>
-                        <!-- end quiz-question__photo-block-->
-                        <!-- start quiz-question__photo-block-->
-                        <div class="quiz-question__photo-block">
-                          <label class="quiz-question__photo-label">
-                            <input type="radio" name="q-"/><img class="quiz-question__photo-img" loading="lazy" src="img/quiz/question-1/photo-3.png" alt=""/>
-                            <div class="quiz-question__check quiz-question__photo-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            <p class="quiz-question__photo-text">Точно не знаю, нужна консультация</p>
+                        <!-- end quiz-question__text-block-->
+                        <!-- start quiz-question__text-block-->
+                        <div class="quiz-question__text-block width_sm">
+                          <label class="quiz-question__text-label">
+                            <input type="radio" name="q-1"/>
+                            <div class="quiz-question__check quiz-question__text-check"><i class="icon-check_mark"></i></div>
+                            <p>Комбинированный</p>
                           </label>
                         </div>
-                        <!-- end quiz-question__photo-block-->
-                      </div>
-                    </div>
-                    <!-- end quiz-question-->
-                    <!-- start quiz-question-->
-                    <div class="quiz-question quiz-question__photo quiz-question__photo-four" data-q="">
-                      <div class="quiz-question__title">Выберите цветовую гамму мебели</div>
-                      <div class="quiz-question__wrap">
-                        <!-- start quiz-question__photo-block-->
-                        <div class="quiz-question__photo-block">
-                          <label class="quiz-question__photo-label">
-                            <input type="checkbox" name="q-1"/><img class="quiz-question__photo-img" loading="lazy" src="img/quiz/question-5/photo-1.jpg" alt=""/>
-                            <div class="quiz-question__check quiz-question__photo-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            <p class="quiz-question__photo-text">Белый</p>
-                          </label>
-                        </div>
-                        <!-- end quiz-question__photo-block-->
-                        <!-- start quiz-question__photo-block-->
-                        <div class="quiz-question__photo-block">
-                          <label class="quiz-question__photo-label">
-                            <input type="checkbox" name="q-"/><img class="quiz-question__photo-img" loading="lazy" src="img/quiz/question-5/photo-2.jpg" alt=""/>
-                            <div class="quiz-question__check quiz-question__photo-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            <p class="quiz-question__photo-text">Бежевый, кремовый</p>
-                          </label>
-                        </div>
-                        <!-- end quiz-question__photo-block-->
-                        <!-- start quiz-question__photo-block-->
-                        <div class="quiz-question__photo-block">
-                          <label class="quiz-question__photo-label">
-                            <input type="checkbox" name="q-"/><img class="quiz-question__photo-img" loading="lazy" src="img/quiz/question-5/photo-3.jpg" alt=""/>
-                            <div class="quiz-question__check quiz-question__photo-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            <p class="quiz-question__photo-text">Темные цвета</p>
-                          </label>
-                        </div>
-                        <!-- end quiz-question__photo-block-->
-                        <!-- start quiz-question__photo-block-->
-                        <div class="quiz-question__photo-block">
-                          <label class="quiz-question__photo-label">
-                            <input type="checkbox" name="q-"/><img class="quiz-question__photo-img" loading="lazy" src="img/quiz/question-1/photo-3.png" alt=""/>
-                            <div class="quiz-question__check quiz-question__photo-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            <p class="quiz-question__photo-text">Точно не знаю, нужна консультация</p>
-                          </label>
-                        </div>
-                        <!-- end quiz-question__photo-block-->
-                      </div>
-                    </div>
-                    <!-- end quiz-question-->
-                    <!-- start quiz-question-->
-                    <div class="quiz-question" data-q="">
-                      <div class="quiz-question__title">Укажите размеры вашей ванной</div>
-                      <div class="quiz-question__slider-wrap">
-                        <div class="quiz-question__slider-name">Ширина:</div>
-                        <div class="quiz-question__slider-value quiz-question__slider-value-width">
-                          <input value="55" type="number" max="9999" min="0"/>
-                          <p>см</p>
-                        </div>
-                      </div>
-                      <input class="quiz-question__slider-input-width" type="text"/>
-                      <div class="quiz-question__slider quiz-question__slider-width"></div>
-                      <div class="quiz-question__slider-text">
-                        <p>10 см</p>
-                        <p>200 см</p>
-                      </div>
-                      <div class="quiz-question__slider-wrap">
-                        <div class="quiz-question__slider-name">Длина:</div>
-                        <div class="quiz-question__slider-value quiz-question__slider-value-height">
-                          <input value="500" type="number" max="9999" min="0"/>
-                          <p>мм</p>
-                        </div>
-                      </div>
-                      <input class="quiz-question__slider-input-height" type="text"/>
-                      <div class="quiz-question__slider quiz-question__slider-height"></div>
-                      <div class="quiz-question__slider-text">
-                        <p>250 мм</p>
-                        <p>3 000 мм</p>
-                      </div>
-                      <div class="quiz-question__slider-input">
-                        <label>
-                          <input type="checkbox" required="" name=""/>
-                          <div class="input-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                          <p>Не знаю размеров</p>
-                        </label>
-                      </div>
-                    </div>
-                    <!-- end quiz-question-->
-                    <!-- start quiz-question-->
-                    <div class="quiz-question quiz-question__photo quiz-question__photo-small" data-q="">
-                      <div class="quiz-question__title">Что дополнительно к мебели вам нужно? </div>
-                      <div class="quiz-question__title-small">Можно выбрать несколько вариантов ответа</div>
-                      <div class="quiz-question__wrap">
-                        <!-- start quiz-question__photo-block-->
-                        <div class="quiz-question__photo-block">
-                          <label class="quiz-question__photo-label">
-                            <input type="checkbox" name="q-1"/><img class="quiz-question__photo-img" loading="lazy" src="img/quiz/question-9/photo-1.jpg" alt=""/>
-                            <div class="quiz-question__check quiz-question__photo-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            <p class="quiz-question__photo-text">Зеркало <span>Стоимость от 15 000 руб.</span></p>
-                          </label>
-                        </div>
-                        <!-- end quiz-question__photo-block-->
-                        <!-- start quiz-question__photo-block-->
-                        <div class="quiz-question__photo-block">
-                          <label class="quiz-question__photo-label">
-                            <input type="checkbox" name="q-1"/><img class="quiz-question__photo-img" loading="lazy" src="img/quiz/question-9/photo-2.jpg" alt=""/>
-                            <div class="quiz-question__check quiz-question__photo-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            <p class="quiz-question__photo-text">Столешница <span>Стоимость от 15 000 руб.</span></p>
-                          </label>
-                        </div>
-                        <!-- end quiz-question__photo-block-->
-                        <!-- start quiz-question__photo-block-->
-                        <div class="quiz-question__photo-block">
-                          <label class="quiz-question__photo-label">
-                            <input type="checkbox" name="q-1"/><img class="quiz-question__photo-img" loading="lazy" src="img/quiz/question-9/photo-3.jpg" alt=""/>
-                            <div class="quiz-question__check quiz-question__photo-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            <p class="quiz-question__photo-text">Раковина <span>Стоимость от 15 000 руб.</span></p>
-                          </label>
-                        </div>
-                        <!-- end quiz-question__photo-block-->
-                        <!-- start quiz-question__photo-block-->
-                        <div class="quiz-question__photo-block">
-                          <label class="quiz-question__photo-label">
-                            <input type="checkbox" name="q-1"/><img class="quiz-question__photo-img" loading="lazy" src="img/quiz/question-9/photo-4.jpg" alt=""/>
-                            <div class="quiz-question__check quiz-question__photo-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            <p class="quiz-question__photo-text">Столешница с раковиной <span>Стоимость от 15 000 руб.</span></p>
-                          </label>
-                        </div>
-                        <!-- end quiz-question__photo-block-->
-                        <!-- start quiz-question__photo-block-->
-                        <div class="quiz-question__photo-block">
-                          <label class="quiz-question__photo-label">
-                            <input type="checkbox" name="q-1"/><img class="quiz-question__photo-img" loading="lazy" src="img/quiz/question-9/photo-5.jpg" alt=""/>
-                            <div class="quiz-question__check quiz-question__photo-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            <p class="quiz-question__photo-text">Точно не знаю, нужна консультация</p>
-                          </label>
-                        </div>
-                        <!-- end quiz-question__photo-block-->
-                      </div>
-                    </div>
-                    <!-- end quiz-question-->
-                    <!-- start quiz-question-->
-                    <div class="quiz-question quiz-question__text quiz-question__text-big" data-q="">
-                      <div class="quiz-question__title">Прикрепите дизайн-проект ванной</div>
-                      <div class="quiz-question__wrap"><img class="quiz-question__bg" loading="lazy" src="img/quiz/bg.png" alt=""/>
-                        <div class="quiz-question__text-line">
-                          <!-- start quiz-question__text-block-->
-                          <div class="quiz-question__text-block">
-                            <label class="quiz-question__text-label">
-                              <input type="checkbox" name="q-1"/>
-                              <p>Нет дизайн-проекта</p>
-                              <div class="quiz-question__check quiz-question__text-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            </label>
-                          </div>
-                          <!-- end quiz-question__text-block-->
-                          <!-- start quiz-question__text-block-->
-                          <div class="quiz-question__text-block">
-                            <label class="quiz-question__text-label">
-                              <input type="checkbox" name="q-1"/>
-                              <p>Да</p>
-                              <div class="quiz-question__check quiz-question__text-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            </label>
-                          </div>
-                          <!-- end quiz-question__text-block-->
-                          <!-- start quiz-question__text-block-->
-                          <div class="quiz-question__text-block">
-                            <label class="quiz-question__text-label">
-                              <input type="checkbox" name="q-1"/>
-                              <p>Да</p>
-                              <div class="quiz-question__check quiz-question__text-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            </label>
-                          </div>
-                          <!-- end quiz-question__text-block-->
-                        </div>
-                      </div>
-                    </div>
-                    <!-- end quiz-question-->
-                    <!-- start quiz-question-->
-                    <div class="quiz-question quiz-question__text quiz-question__text-big" data-q="">
-                      <div class="quiz-question__title">Что дополнительно к мебели вам нужно? </div>
-                      <div class="quiz-question__wrap"><img class="quiz-question__bg" loading="lazy" src="img/quiz/bg.png" alt=""/>
-                        <div class="quiz-question__text-line">
-                          <!-- start quiz-question__text-block-->
-                          <div class="quiz-question__text-block">
-                            <label class="quiz-question__text-label">
-                              <input type="radio" name="q-1"/>
-                              <p>Подвесная</p>
-                              <div class="quiz-question__check quiz-question__text-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            </label>
-                          </div>
-                          <!-- end quiz-question__text-block-->
-                          <!-- start quiz-question__text-block-->
-                          <div class="quiz-question__text-block">
-                            <label class="quiz-question__text-label">
-                              <input type="radio" name="q-1"/>
-                              <p>Напольная</p>
-                              <div class="quiz-question__check quiz-question__text-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            </label>
-                          </div>
-                          <!-- end quiz-question__text-block-->
-                          <!-- start quiz-question__text-block-->
-                          <div class="quiz-question__text-block">
-                            <label class="quiz-question__text-label">
-                              <input type="radio" name="q-1"/>
-                              <p>Напольная</p>
-                              <div class="quiz-question__check quiz-question__text-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            </label>
-                          </div>
-                          <!-- end quiz-question__text-block-->
-                          <!-- start quiz-question__text-block-->
-                          <div class="quiz-question__text-block">
-                            <label class="quiz-question__text-label">
-                              <input type="radio" name="q-1"/>
-                              <p>Точно не знаю, нужна консультация</p>
-                              <div class="quiz-question__check quiz-question__text-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            </label>
-                          </div>
-                          <!-- end quiz-question__text-block-->
-                        </div>
-                      </div>
-                    </div>
-                    <!-- end quiz-question-->
-                    <!-- start quiz-question-->
-                    <div class="quiz-question quiz-question__text quiz-question__file quiz-question__text-big" data-q="">
-                      <div class="quiz-question__title">Прикрепите дизайн-проект ванной</div>
-                      <div class="quiz-question__wrap"><img class="quiz-question__bg" loading="lazy" src="img/quiz/bg.png" alt=""/>
-                        <div class="quiz-question__text-line">
-                          <!-- start quiz-question__text-block-->
-                          <div class="quiz-question__text-block">
-                            <label class="quiz-question__text-label">
-                              <input type="radio" name="q-1"/>
-                              <p>Дизайн-проект готов</p>
-                              <div class="quiz-question__check quiz-question__text-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            </label>
-                          </div>
-                          <!-- end quiz-question__text-block-->
-                          <!-- start quiz-question__text-block-->
-                          <p class="send-form__file-text">Прикрепите фото или файл с дизайн-проектом</p>
-                          <label class="send-form__file">
-                            <input type="file" required=""/>
-                            <p>Файл не выбран</p>
-                            <div class="send-form__file-btn">Добавить</div>
-                          </label>
-                          <div class="quiz-question__text-block">
-                            <label class="quiz-question__text-label">
-                              <input type="radio" name="q-1"/>
-                              <p>Дизайн-проект нужно подготовить</p>
-                              <div class="quiz-question__check quiz-question__text-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            </label>
-                          </div>
-                          <!-- end quiz-question__text-block-->
-                          <!-- start quiz-question__text-block-->
-                          <div class="quiz-question__text-block">
-                            <label class="quiz-question__text-label">
-                              <input type="radio" name="q-1"/>
-                              <p>Дизайн-проект не нужен</p>
-                              <div class="quiz-question__check quiz-question__text-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            </label>
-                          </div>
-                          <!-- end quiz-question__text-block-->
-                          <!-- start quiz-question__text-block-->
-                          <div class="quiz-question__text-block">
-                            <label class="quiz-question__text-label">
-                              <input type="radio" name="q-1"/>
-                              <p>
-                                Точно не знаю, нужна консультация
-                                дизайнера
-                              </p>
-                              <div class="quiz-question__check quiz-question__text-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                            </label>
-                          </div>
-                          <!-- end quiz-question__text-block-->
-                        </div>
+                        <!-- end quiz-question__text-block-->
                       </div>
                     </div>
                     <!-- end quiz-question-->
@@ -769,7 +435,7 @@
                 </div>
                 <!-- end quiz-main-->
                 <!-- start quiz-right-->
-                <div class="quiz-right">
+                <div class="quiz-right desktop">
                   <div class="quiz-gift">
                     <div class="quiz-gift__title"> <span>В конце теста<br> получите:</span></div>
                     <div class="quiz-gift__text"><span><b>консультацию</b> и бесплатную<br> проверку на уникальность</span></div>
@@ -789,43 +455,37 @@
               <!-- start quiz-result-->
               <div class="quiz-result">
                 <div class="quiz-result__wrap">
-                  <div class="quiz-result__header">Отлично!</div>
-                  <div class="quiz-result__title">Мы получили ваши ответы и приступаем к расчету стоимости</div>
-                  <div class="quiz-result__text">Куда вам удобнее отправить?</div>
+                  <div class="quiz-result__title section__title"><span><b>Отлично!</b> Остался последний шаг!</span></div>
+                  <div class="quiz-result__text"><span>Выберите удобный мессенджер, куда прислать прайс на услуги + за вашим номером зафиксируем подарок</span></div>
                   <div class="quiz-result__messenger">
-                    <div class="catalog-messenger">
-                      <label class="catalog-messenger__btn active">
-                        <input value="Whatsapp" type="radio" checked="" name="messenger"/>
-                        <div class="catalog-messenger__icon catalog-messenger__icon-whatsapp"><img loading="lazy" src="img/catalog/whatsapp.png" alt=""/></div>
-                        <p class="catalog-messenger__text">WhatsApp</p>
-                      </label>
-                      <label class="catalog-messenger__btn">
-                        <input value="Viber" type="radio" name="messenger"/>
-                        <div class="catalog-messenger__icon catalog-messenger__icon-viber"><img loading="lazy" src="img/catalog/viber.png" alt=""/></div>
-                        <p class="catalog-messenger__text">Viber</p>
-                      </label>
-                      <label class="catalog-messenger__btn">
-                        <input value="Telegram" type="radio" name="messenger"/>
-                        <div class="catalog-messenger__icon catalog-messenger__icon-telegram"><img loading="lazy" src="img/catalog/telegram.png" alt=""/></div>
-                        <p class="catalog-messenger__text">Telegram</p>
-                      </label>
-                      <label class="catalog-messenger__btn">
-                        <input value="" type="radio" name="messenger"/>
-                        <div class="catalog-messenger__icon catalog-messenger__icon-call"><img loading="lazy" src="img/quiz/call.png" alt=""/></div>
-                        <p class="catalog-messenger__text">Позвоните мне</p>
-                      </label>
+                    <div class="form">
+                      <div class="form__label"><span>Куда прислать?</span></div>
+                      <div class="form__row">
+                        <select class="select" data-placeholder="Whatsapp">
+                          <option value=""></option>
+                          <option value="whatsapp">Whatsapp</option>
+                          <option value="Viber">Viber</option>
+                          <option value="Telegram">Telegram</option>
+                        </select>
+                      </div>
+                      <div class="form__row">
+                        <input class="tel" type="tel" required="required" placeholder="Введите ваш номер"/>
+                      </div>
+                      <div class="form__row">
+                        <button class="btn btn_didisabled_js quiz-result__btn">Получить расчет стоимости</button>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__privacy">
+                          <label class="form__check">
+                            <input class="check_checked_js" type="checkbox" checked="checked"/>
+                            <div class="input-check"><i class="icon-check_mark"></i></div><span>Вы соглашаетесь с <a href="#" target="_blank" class="privacy_js">с условиями обработки персональных данных</a></span>
+                          </label>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <input class="input phone quiz-result__input" required="" type="tel" placeholder="Введите ваш номер"/>
-                  <button class="btn quiz-result__btn">Узнать стоимость + бонус</button>
-                  <div class="catalog-accept__wrap">
-                    <label class="catalog-accept">
-                      <input type="checkbox" required="" checked="" name="accept"/>
-                      <div class="input-check"><img loading="lazy" src="img/main/check.png" alt=""/></div>
-                    </label>
-                    <p>Нажимая кнопку вы соглашаетесь с условиями <span class="popup-politics__open">Политики конфиденциальности</span></p>
-                  </div>
-                </div><img class="quiz-result__phone" loading="lazy" src="img/quiz/result-phone.png" alt=""/>
+                  <div class="quiz-result__phone"></div>
+                </div>
               </div>
               <!-- end quiz-container-->
             </form>
