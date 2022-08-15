@@ -371,6 +371,37 @@ $(document).ready(function() {
 
     openSidebar();
 
+    function hideClip() {
+        if (localStorage.getItem('hideClip') !== 'hide') {
+            $('.clip').addClass('hide');
+
+            setTimeout(function(){
+              $('.clip').removeClass('hide');
+              console.log('test');
+          }, 60000);
+        }
+
+        $('.clip-toggle-js').click(function(event) {
+            $('.clip').addClass('hide');
+
+            setTimeout(function(){
+              $('.clip').removeClass('hide');
+              console.log('test');
+            }, 60000);
+
+            if (localStorage.getItem('hideClip') == 'hide') {
+                localStorage.removeItem("hideClip", "hide");
+
+            } else {
+                localStorage.setItem("hideClip", "hide");
+                // console.log('сохранить пару ключ/значение.');
+            }
+
+        });
+
+    }
+    hideClip()
+
     function addNameFile() {
         $('input[type="file"]').change(function (e) {
             // console.log('change');
