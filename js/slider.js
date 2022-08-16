@@ -15,6 +15,7 @@ $(document).ready(function() {
             nextEl: '.icon-drop_right',
             prevEl: '.icon-drop_left',
         },
+        spaceBetween: 10,
     });
 
     const certificate = new Swiper('.certificate-swiper-js', {

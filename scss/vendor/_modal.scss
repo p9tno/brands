@@ -531,3 +531,62 @@
     }
 
 }
+
+.privacy {
+    .modal-dialog {
+        margin-top: 2em;
+        @media (min-width: 768px) {
+            width: 100em;
+        }
+    }
+
+    .modal-close {
+
+        @media (min-width: 768px) {
+            right: 2em;
+            top: 2em;
+        }
+
+    }
+
+    .modal-content {
+
+        @media (min-width: 768px) {
+            padding: 3.5em;
+
+        }
+    }
+
+}
+
+.commentModal {
+    .modal-dialog {
+        max-width: 18em;
+        width: 100%;
+        @media (min-width: 768px) {
+            max-width: 50em;
+        }
+    }
+
+    .modal-content {
+
+        @media (min-width: 768px) {
+            padding: 5em;
+
+        }
+
+        p {
+            text-align: center;
+            letter-spacing: 0.02em;
+            line-height: 1.5;
+            font-size: 0.625em;
+
+            @media (min-width: 768px) {
+                font-size: 1.125em;
+                line-height: 1.667;
+
+            }
+        }
+    }
+
+}

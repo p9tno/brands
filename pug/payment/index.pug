@@ -38,31 +38,51 @@ block content
 
                 .swiper.payment-swiper-js
                     .payment__list.swiper-wrapper.counter-wrap
-                        each item in [1,1]
+                        .payment__item.swiper-slide.counter-item
+                            .payment__head
+                                .payment__label
+                                    span От банков
 
-                            .payment__item.swiper-slide.counter-item
-                                .payment__head
-                                    .payment__label
-                                        span От банков
+                                ul.payment__logos
+                                    li
+                                        .payment__img
+                                            img(src="../img/payment_1.png")
+                                    li
+                                        .payment__img
+                                            img(src="../img/payment_2.png")
 
-                                    ul.payment__logos
+                            .payment__terms
+                                .payment__label
+                                    span Условия
+
+                                ul
+                                    each item in ['Срок: до 12 мес.', 'Без поручителей, справок и первого взноса', 'Процент одобрения: 50-60%']
                                         li
-                                            .payment__img
-                                                img(src="../img/payment_1.png")
+                                            span=item
+                            .payment__count
+                                span.counter-el
+
+                        .payment__item.swiper-slide.counter-item
+                            .payment__head
+                                .payment__label
+                                    span От банков
+
+                                ul.payment__logos
+                                    li
+                                        .payment__img
+                                            img(src="../img/logo.png")
+
+
+                            .payment__terms
+                                .payment__label
+                                    span Условия
+
+                                ul
+                                    each item in ['Срок: до 12 мес.', 'Без поручителей, справок и первого взноса', 'Процент одобрения: 50-60%']
                                         li
-                                            .payment__img
-                                                img(src="../img/payment_2.png")
-
-                                .payment__terms
-                                    .payment__label
-                                        span Условия
-
-                                    ul
-                                        each item in ['Срок: до 12 мес.', 'Без поручителей, справок и первого взноса', 'Процент одобрения: 50-60%']
-                                            li
-                                                span=item
-                                .payment__count
-                                    span.counter-el
+                                            span=item
+                            .payment__count
+                                span.counter-el
 
                     .payment__dotted
 
@@ -117,8 +137,8 @@ block content
                                     input.check_checked_js(type="checkbox" checked="checked")
                                     span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank" class="privacy_js">Политики конфиденциальности</a>
 
-
-                .consultation__lider.desktop
+                .consultation__person
+                .consultation__lider
                     .lider__icon
                         i.icon-arrow_deg
                     .lider__name

@@ -139,3 +139,25 @@ block content
 
 
     // end singleBlog
+
+    // begin blog
+    section#blog.blog.section
+        .container_center
+            .blog__caption.blog__caption_center
+                .section__subtitle
+                    span <b>Другие статьи по теме</b>
+            .blog__grid
+                each item in [1,2,3]
+                    .blog__item
+                        .blog__bg_wrap
+                            .blog__bg(style="background-image: url('../img/blog_bg.jpg')")
+                        .blog__date
+                            span 29 апреля 2022
+                        .blog__title
+                            a(href="#") Как зарегистрировать товарный знак в Казахстане
+                        .blog__description
+                            span Один из популярных вопросов, который волнует клиентов
+                        .blog__link.dotted
+                            a(href="#") Читать подробнее
+
+    // end blog

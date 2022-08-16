@@ -114,15 +114,17 @@ $(document).ready(function() {
     }
     collapsed();
 
-
-    $('.tabs-wrapper').each(function() {
-        let ths = $(this);
-        ths.find('.tab-item').not(':first').hide();
-        ths.find('.tab').click(function() {
-            ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
-            ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
-        }).eq(0).addClass('active');
-    });
+    function initTabs() {
+        $('.tabs-wrapper').each(function() {
+            let ths = $(this);
+            ths.find('.tab-item').not(':first').hide();
+            ths.find('.tab').click(function() {
+                ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
+                ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
+            }).eq(0).addClass('active');
+        });
+    };
+    initTabs();
 
     // for select2
     function addIcon(icon) {
@@ -165,12 +167,9 @@ $(document).ready(function() {
 
             if ( currentTop > HeaderTop ) {
                 $( 'header' ).addClass( 'stiky' );
-                // $( '.main_content' ).addClass( 'header-styky' );
-                // $('.header__top').hide(1300);
+
             } else {
                 $( 'header' ).removeClass( 'stiky' );
-                // $( '.main_content' ).removeClass( 'header-styky' );
-                // $('.header__top').show(1300);
             }
 
         }
@@ -183,9 +182,8 @@ $(document).ready(function() {
 
             $( '.js-youtubeModal' ).on( 'click', function () {
                 $('#modalVideo').modal('show');
-                console.log('click');
+                // console.log('click');
 
-                // создаем iframe со включенной опцией autoplay
                 let wrapp = $( this ).closest( '.js-youtubeModal' );
                 let videoId = wrapp.attr( 'id' );
                 let iframe_url = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1";
@@ -210,42 +208,29 @@ $(document).ready(function() {
     };
     uploadYoutubeVideoForModal();
 
-    // Видео youtube для страницы
-    // function uploadYoutubeVideo() {
-    //     if ( $( ".js-youtube" ) ) {
-    //
-    //         $( ".js-youtube" ).each( function () {
-    //             // Зная идентификатор видео на YouTube, легко можно найти его миниатюру
-    //             $( this ).css( 'background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)' );
-    //
-    //             // Добавляем иконку Play поверх миниатюры, чтобы было похоже на видеоплеер
-    //             $( this ).append( $( '<img src="../wp-content/themes/gymn/assets/img/play.png" alt="Play" class="video__play">' ) );
-    //
-    //         } );
-    //
-    //         $( '.video__play, .video__prev' ).on( 'click', function () {
-    //             // создаем iframe со включенной опцией autoplay
-    //             let wrapp = $( this ).closest( '.js-youtube' ),
-    //                 videoId = wrapp.attr( 'id' ),
-    //                 iframe_url = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1";
-    //
-    //             if ( $( this ).data( 'params' ) ) iframe_url += '&' + $( this ).data( 'params' );
-    //
-    //             // Высота и ширина iframe должны быть такими же, как и у родительского блока
-    //             let iframe = $( '<iframe/>', {
-    //                 'frameborder': '0',
-    //                 'src': iframe_url,
-    //                 'allow': "autoplay"
-    //             } )
-    //
-    //             // Заменяем миниатюру HTML5 плеером с YouTube
-    //             $( this ).closest( '.video__wrapper' ).append( iframe );
-    //
-    //         } );
-    //     }
-    // };
-    //
-    // uploadYoutubeVideo();
+    function openModalComment() {
+        if ( $( ".js-commentModal" ) ) {
+
+            $( '.js-commentModal' ).on( 'click', function (e) {
+                e.preventDefault();
+                $('#commentModal').modal('show');
+                console.log('click');
+
+                let wrapp = $( this ).closest( '.js-commentModal' );
+
+                let content = wrapp.attr('data-content')
+                console.log(content);
+
+                $(".commentModal__wraper").html(content);
+
+                $("#commentModal").on('hide.bs.modal', function () {
+                    $(".commentModal__wraper").html('');
+                });
+
+            } );
+        }
+    };
+    openModalComment();
 
     // https://github.com/michalsnik/aos
     AOS.init({
@@ -303,9 +288,6 @@ $(document).ready(function() {
 
 
     function openSidebar() {
-
-        console.log(localStorage.getItem('collapseSidebar'));
-        console.log(localStorage.getItem('hideSidebar'));
 
         if (localStorage.getItem('collapseSidebar') !== 'collapse') {
             $('.sidebar__collapse').addClass('sidebar__collapse_collapse');
@@ -377,17 +359,17 @@ $(document).ready(function() {
 
             setTimeout(function(){
               $('.clip').removeClass('hide');
-              console.log('test');
+              localStorage.setItem("hideClip", "hide");
+              // console.log('test');
           }, 60000);
         }
 
         $('.clip-toggle-js').click(function(event) {
             $('.clip').addClass('hide');
 
-            setTimeout(function(){
-              $('.clip').removeClass('hide');
-              console.log('test');
-            }, 60000);
+            // setTimeout(function(){
+            //   $('.clip').removeClass('hide');
+            // }, 60000);
 
             if (localStorage.getItem('hideClip') == 'hide') {
                 localStorage.removeItem("hideClip", "hide");
@@ -423,105 +405,6 @@ $(document).ready(function() {
     }
     addNameFile();
 
-
-
-    // function openDetailed() {
-    //     $('.btn-detailed').click(function() {
-    //         $(this).closest('.detailed').find('.detailed__icon').toggleClass('detailed__icon_active');
-    //
-    //         if ($(this).closest('.detailed').find('.detailed__content').is(':visible')) {
-    //             $(this).closest('.detailed').find('.detailed__content').hide('fast');
-    //         }
-    //         else {
-    //             $(this).closest('.detailed').find('.detailed__content').show('fast');
-    //         }
-    //     })
-    // };
-    // openDetailed();
-
-//     .detailed {
-//   margin-bottom: 10px;
-// }
-// .detailed__icon {
-//   position: absolute;
-//   top: 5px;
-//   right: 5px;
-//   font-size: 21px;
-//   font-weight: bold;
-//   transform: rotate(0deg);
-//   transition: transform 0.5s;
-// }
-// .detailed__icon_active {
-//   transform: rotate(180deg);
-// }
-// .detailed__content {
-//   display: none;
-// }
-
-// <div class="detailed">
-//
-//     <div class="detailed__button ' . $params[ 'position' ] . '">
-//         <button class="btn btn-detailed ' . $params[ 'size' ] .' '. $params[ 'color' ] . '" type="submit">
-//             <sapn>Подробнее</sapn><i class="icon-bottom detailed__icon"></i>
-//         </button>
-//     </div>
-//
-//     <div class="detailed__content">
-//         ' . $params[ 'content' ] . '
-//     </div>
-//
-// </div>
-
-
-
-
-
-
-
-    // start animate numbers
-    // function onVisible( selector, callback, repeat = false ) {
-    //
-    //     let options = {
-    //         threshold: [ 0.5 ]
-    //     };
-    //     let observer = new IntersectionObserver( onEntry, options );
-    //     let elements = document.querySelectorAll( selector );
-    //
-    //     for ( let elm of elements ) {
-    //         observer.observe( elm );
-    //     }
-    //
-    //     function onEntry( entry ) {
-    //         entry.forEach( change => {
-    //             let elem = change.target;
-    //             // console.log(change);
-    //             // console.log(elem.innerHTML);
-    //             if ( change.isIntersecting ) {
-    //                 if ( !elem.classList.contains( 'show' ) || repeat ) {
-    //                     elem.classList.add( 'show' );
-    //                     callback( elem );
-    //                 }
-    //             }
-    //         } );
-    //     }
-    // }
-    //
-    // onVisible( '.animate_numbers_js', function ( e ) {
-    //     animateNumber( e, e.innerHTML );
-    // } );
-    //
-    // function animateNumber( elem, final, duration = 1000 ) {
-    //     let start = 0;
-    //     console.log(final);
-    //
-    //     setInterval( function () {
-    //         if ( final >= start ) {
-    //             elem.innerHTML = start++;
-    //         }
-    //     }, duration / final  );
-    // }
-    // end animate numbers
-
     function addImgWrap() {
         $('.alignleft, .alignright').parent().addClass( "img__wrap" );
         $('.alignleft').parent().addClass( "img__wrap_left" );
@@ -529,14 +412,6 @@ $(document).ready(function() {
     }
     addImgWrap();
 
-    // function addGallerySlider() {
-    //     let gallery = $('.gallery');
-    //     let wrap = $('<div class="gallery-wrap"></div>');
-    //     gallery.addClass('swiper');
-    //     gallery.append(wrap);
-    //
-    // }
-    // addGallerySlider()
 });
 
 
@@ -583,9 +458,6 @@ $(document).ready(function() {
             $('input[name=languageCheckbox]').prop('checked', false);
 
         }
-
-        // $( 'body' ).toggleClass('dark_theme');
-        // console.log(localStorage.getItem('language'));
     });
 
     if (localStorage.getItem("language") == "kz") {
@@ -600,15 +472,12 @@ $(document).ready(function() {
 $(document).ready(function() {
 
     if (localStorage.getItem('showModalStop') == 'disable') {
-        // console.log('disable');
     } else {
         setTimeout(function () {
             $('#stop').modal('show');
         }, 5000);
 
         $('#closeModalStop').on('click', function() {
-            // console.log('stop modal hide click');
-
             localStorage.setItem('showModalStop', 'disable');
         })
     }

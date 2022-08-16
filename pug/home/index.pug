@@ -66,24 +66,23 @@ block content
                         .swiper__img
                             img(src="../img/hand.svg")
                     .commentsSlider.swiper-wrapper
-                        each item in [ { img: '1', name: 'Алагузова<br> Баян', info: 'Продюсер, бизнес-леди, глава компании "Shine Production", телеведущая, актриса, певица', commit: 'Из огромного выбора компаний на рынке Казахстана, мне порекомендовали именно "Eurasian Brands" как одних из лучших профессионалов в сфере регистрации и защиты авторского права. Команда "Eurasian Brands" выступила в роли моих представителей в качестве защитников в судебном процессе по авторским правам на сценарий и фильм "Станция судьбы".'}, { img: '2', name: 'Lorem.', info: 'глава компании "Shine Production"', commit: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, facilis.'}, { img: '3', name: ' Lorem ipsum.', info: ' Lorem.', commit: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae distinctio, rem aperiam porro fugiat dolores facere illum ipsum officia natus commodi aut vel sunt cupiditate consequatur eveniet vero, ea perspiciatis?'} ]
-                            .swiper-slide
-                                .commentsSlider__item
-                                    .commentsSlider__persone
-                                        .commentsSlider__foto(style="background-image: url('../img/persone_"+item.img+".png')")
-                                            .commentsSlider__play.js-youtubeModal#httuerixph8
-                                                i.icon-play
-                                        .commentsSlider__description
-                                            .commentsSlider__name
-                                                span!=item.name
-                                            .commentsSlider__info
-                                                span=item.info
 
+                        .swiper-slide
+                            .commentsSlider__item
+                                .commentsSlider__persone
+                                    .commentsSlider__foto(style="background-image: url('../img/persone_1.png')")
+                                        .commentsSlider__play.js-youtubeModal#httuerixph8
+                                            i.icon-play
+                                    .commentsSlider__description
+                                        .commentsSlider__name
+                                            span Алагузова<br> Баян
+                                        .commentsSlider__info
+                                            span Продюсер, бизнес-леди, глава компании "Shine Production", телеведущая, актриса, певица
 
-                                    .commentsSlider__content
-                                        i.icon-quote_2
-                                        span=item.commit
-                                        a(href="#") Читать полностью
+                                .commentsSlider__content
+                                    i.icon-quote_2
+                                    span Из огромного выбора компаний на рынке Казахстана, мне порекомендовали именно "Eurasian Brands" как одних из лучших профессионалов в сфере регистрации и защиты авторского права. Команда "Eurasian Brands" выступила в роли моих представителей в качестве защитников в судебном процессе по авторским правам на сценарий и фильм "Станция судьбы".
+                                    a(class="js-commentModal" href="#" data-content="<p>Из огромного выбора компаний на рынке Казахстана, мне порекомендовали именно 'Eurasian Brands' как одних из лучших профессионалов в сфере регистрации и защиты авторского права. Команда Eurasian Brands выступила в роли моих представителей в качестве защитников в судебном процессе по авторским правам на сценарий и фильм Станция судьбы</p> <p>Из огромного выбора компаний на рынке Казахстана, мне порекомендовали именно 'Eurasian Brands' как одних из лучших профессионалов в сфере регистрации и защиты авторского права. Команда Eurasian Brands выступила в роли моих представителей в качестве защитников в судебном процессе по авторским правам на сценарий и фильм Станция судьбы</p>") Читать полностью
 
                 .comments__control
                     .comments__arrows.desktop
