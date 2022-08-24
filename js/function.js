@@ -25,6 +25,22 @@ $(document).ready(function() {
     }
     showStop();
 
+    function showInfoModal() {
+        $('.info_modal_js').on('click', function (e) {
+            e.preventDefault();
+             $('#infoModal').modal('show');
+        });
+    }
+    showInfoModal();
+
+    $('.modal').on('show.bs.modal', () => {
+        // let openedModal = $('.modal.in:not(.popapCalc)');
+        let openedModal = $('.modal');
+        if (openedModal.length > 0) {
+            openedModal.modal('hide');
+        }
+    });
+
     function showCall() {
         $('.call_modal_js').on('click', function (e) {
             e.preventDefault();

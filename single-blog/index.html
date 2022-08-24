@@ -375,10 +375,12 @@
             </div>
             <div class="modal-body">
               <div class="modal-form">
-                <form class="form">
+                <form class="form" action="../send.php">
+                  <input type="hidden" name="subject" value="форма: Стойте, не уходите!"/>
+                  <input type="hidden" name="notspam" value=""/>
                   <div class="form__label"><span>Куда прислать презентацию?</span></div>
                   <div class="form__row">
-                    <select class="select" data-placeholder="Whatsapp">
+                    <select class="select" data-placeholder="Whatsapp" name="messenger">
                       <option value=""></option>
                       <option value="whatsapp">Whatsapp</option>
                       <option value="Viber">Viber</option>
@@ -386,7 +388,7 @@
                     </select>
                   </div>
                   <div class="form__row">
-                    <input class="tel" type="tel" required="required" placeholder="Введите ваш номер"/>
+                    <input class="tel" type="tel" name="tel" required="required" placeholder="Введите ваш номер"/>
                   </div>
                   <div class="form__row">
                     <button class="btn btn_didisabled_js" type="submit">Получить презентацию с ценами на услуги</button>
@@ -427,9 +429,11 @@
             </div>
             <div class="modal-body">
               <div class="modal-form">
-                <form class="form">
+                <form class="form" action="../send.php">
+                  <input type="hidden" name="subject" value="форма: Перезвоним"/>
+                  <input type="hidden" name="notspam" value=""/>
                   <div class="form__row">
-                    <input class="tel" type="tel" required="required" placeholder="Введите ваш номер"/>
+                    <input class="tel" type="tel" name="tel" required="required" placeholder="Введите ваш номер"/>
                   </div>
                   <div class="form__row">
                     <button class="btn btn_didisabled_js" type="submit">Жду звонка</button>
@@ -572,6 +576,15 @@
         </div>
       </div>
       <!-- End modal commentModal-->
+      <!-- Begin Modal info-->
+      <div class="modal fade infoModal" id="infoModal">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="infoModal__message"></div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal info-->
       <script src="../js/jquery.js"></script>
       <script src="../js/jquery.maskedinput.min.js"></script>
       <script src="../js/modal.js"></script>
@@ -584,6 +597,7 @@
       <script src="../js/aos.js"></script>
       <script src="../js/fancybox.min.js"></script>
       <script src="../js/quiz.js"></script>
+      <script src="../js/form.js"></script>
       <script src="../js/function.js"></script>
     </div>
   </body>

@@ -590,3 +590,43 @@
     }
 
 }
+
+.infoModal {
+    .modal-dialog {
+        @media (min-width: 768px) {
+            width: 24em;
+        }
+    }
+
+    .modal-content {
+
+        @media (min-width: 768px) {
+            padding: 4em 2em;
+
+        }
+
+ 
+    }
+    .modal-close {
+
+        @media (min-width: 768px) {
+            right: 1.5em;
+            top: 1.5em;
+        }
+
+    }
+    
+    &__message {
+        text-align: center;
+        letter-spacing: 0.02em;
+        line-height: 1.4;
+        font-size: 0.75em;
+
+        @media (min-width: 768px) {
+            font-size: 1.125em;
+            line-height: 1.667;
+
+        }
+
+    }
+}

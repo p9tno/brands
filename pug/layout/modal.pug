@@ -16,18 +16,22 @@
                     span <b>Как зарегистрировать товарный знак с первого раза:</b> 10 причин отказа  Казпатента и как их избежать
             .modal-body
                 .modal-form
-                    form.form
+                    form.form(action="../send.php")
+                        //- из какой формы на сайте
+                        input(type="hidden" name="subject" value="форма: Стойте, не уходите!")
+                        //- проверка спама
+                        input(type="hidden" name="notspam" value="")
                         .form__label
                             span Куда прислать презентацию?
                         .form__row
-                            select.select(data-placeholder="Whatsapp")
+                            select.select(data-placeholder="Whatsapp" name="messenger")
                                 option(value="")
                                 option(value="whatsapp") Whatsapp
                                 option(value="Viber") Viber
                                 option(value="Telegram") Telegram
 
                         .form__row
-                            input(type="tel" class="tel" required placeholder="Введите ваш номер")
+                            input(type="tel" class="tel" name="tel" required placeholder="Введите ваш номер")
 
                         .form__row
                             button.btn.btn_didisabled_js(type="submit") Получить презентацию с ценами на услуги
@@ -67,9 +71,14 @@
                     span Оставьте номер<br> <b>позвоним за 15 сек</b>
             .modal-body
                 .modal-form
-                    form.form
+                    form.form(action="../send.php")
+                        //- из какой формы на сайте
+                        input(type="hidden" name="subject" value="форма: Перезвоним")
+                        //- проверка спама
+                        input(type="hidden" name="notspam" value="")
+
                         .form__row
-                            input(type="tel" class="tel" required placeholder="Введите ваш номер")
+                            input(type="tel" class="tel" name="tel" required placeholder="Введите ваш номер")
 
                         .form__row
                             button.btn.btn_didisabled_js(type="submit") Жду звонка
@@ -197,3 +206,11 @@
             .modal-body
                 .commentModal__wraper
 // End modal commentModal
+
+// Begin Modal info
+.modal.fade.infoModal#infoModal
+    .modal-dialog
+        .modal-content
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .infoModal__message
+// End modal info

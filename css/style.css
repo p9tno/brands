@@ -5929,6 +5929,115 @@ body {
   font-weight: 500;
 }
 
+.banks__content {
+  background-image: url("../img/banks_bg.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  text-align: center;
+  padding: 2em 1em;
+}
+@media (min-width: 768px) {
+  .banks__content {
+    padding: 3.5em 10em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .banks__left {
+    width: 50em;
+  }
+}
+@media (min-width: 768px) {
+  .banks__buttons {
+    margin-top: 4em;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.banks__buttons .btn {
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+.banks__buttons .btn p {
+  margin: 0;
+  font-size: 0.75em;
+}
+@media (min-width: 768px) {
+  .banks__buttons .btn p {
+    font-size: 1em;
+  }
+}
+@media (min-width: 768px) {
+  .banks__buttons .btn {
+    margin-bottom: 0;
+    width: 24.375em;
+    padding-left: 2em;
+    padding-right: 4.75em;
+  }
+}
+.banks__buttons .btn_img {
+  flex: none;
+  width: 3em;
+  height: 3em;
+  margin-right: 1em;
+  font-size: 0.75em;
+}
+@media (min-width: 768px) {
+  .banks__buttons .btn_img {
+    font-size: 1em;
+  }
+}
+.banks__buttons .btn_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.banks__buttons .btn_kaspi {
+  background-color: #F14635;
+}
+.banks__buttons .btn_kaspi:hover {
+  background-color: #ef301d;
+}
+.banks__buttons .btn_kaspi:active {
+  background-color: #F14635;
+}
+.banks__buttons .btn_kaspi:disabled {
+  background-color: #e32310;
+}
+.banks__buttons .btn_national {
+  background-color: #00805F;
+}
+.banks__buttons .btn_national:hover {
+  background-color: #00674c;
+}
+.banks__buttons .btn_national:active {
+  background-color: #00805F;
+}
+.banks__buttons .btn_national:disabled {
+  background-color: #004d39;
+}
+.banks__phone {
+  width: 20.625em;
+  height: 29.5625em;
+  background-image: url("../img/banks_tel.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 0.6em;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .banks__phone {
+    margin: 0;
+    font-size: 1em;
+  }
+}
+
 @media (min-width: 768px) {
   .action__wrap {
     display: flex;
@@ -11001,6 +11110,35 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
 }
 @media (min-width: 768px) {
   .commentModal .modal-content p {
+    font-size: 1.125em;
+    line-height: 1.667;
+  }
+}
+
+@media (min-width: 768px) {
+  .infoModal .modal-dialog {
+    width: 24em;
+  }
+}
+@media (min-width: 768px) {
+  .infoModal .modal-content {
+    padding: 4em 2em;
+  }
+}
+@media (min-width: 768px) {
+  .infoModal .modal-close {
+    right: 1.5em;
+    top: 1.5em;
+  }
+}
+.infoModal__message {
+  text-align: center;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  font-size: 0.75em;
+}
+@media (min-width: 768px) {
+  .infoModal__message {
     font-size: 1.125em;
     line-height: 1.667;
   }
